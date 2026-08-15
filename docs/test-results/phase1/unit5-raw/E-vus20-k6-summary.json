@@ -1,0 +1,84 @@
+{
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {},
+        "name": "",
+        "path": ""
+    },
+    "metrics": {
+        "client_events_received_total": {
+            "count": 420,
+            "rate": 83.76751579154094
+        },
+        "http_reqs": {
+            "count": 20,
+            "rate": 3.988929323406712
+        },
+        "client_ttfc_seconds": {
+            "p(50)": 1.11,
+            "p(95)": 1.112,
+            "p(99)": 1.112,
+            "min": 1.047,
+            "max": 1.112
+        },
+        "data_received": {
+            "count": 54080,
+            "rate": 10786.064890491749
+        },
+        "vus_max": {
+            "max": 20,
+            "value": 20,
+            "min": 20
+        },
+        "sse_event": {
+            "count": 420,
+            "rate": 83.76751579154094
+        },
+        "http_req_duration": {
+            "p(95)": 5012.86187975,
+            "p(99)": 5013.06394475,
+            "min": 4910.547002,
+            "max": 5013.114461,
+            "p(50)": 5009.919731
+        },
+        "client_stream_duration_seconds": {
+            "min": 4.911,
+            "max": 5.014,
+            "p(50)": 5.0105,
+            "p(95)": 5.01305,
+            "p(99)": 5.01381
+        },
+        "client_stream_completed_total": {
+            "count": 20,
+            "rate": 3.988929323406712
+        },
+        "http_req_sending": {
+            "p(50)": 1109.337,
+            "p(95)": 1111.11560805,
+            "p(99)": 1111.360709,
+            "min": 1046.269209,
+            "max": 1111.360709
+        },
+        "data_sent": {
+            "count": 5320,
+            "rate": 1061.0552000261853
+        },
+        "iteration_duration": {
+            "p(50)": 5009.9942315,
+            "p(95)": 5013.0247413,
+            "p(99)": 5013.16581706,
+            "min": 4910.655461,
+            "max": 5013.201086
+        },
+        "iterations": {
+            "count": 20,
+            "rate": 3.988929323406712
+        },
+        "vus": {
+            "value": 19,
+            "min": 19,
+            "max": 20
+        }
+    }
+}

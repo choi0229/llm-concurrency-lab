@@ -1,0 +1,126 @@
+# Phase 1 baseline environment: mock-llm-fastapi + gateway-mvc-executor-java8
+# + prometheus + grafana only, on one shared network — per the project's
+# fairness principle (docs design section 9), no other Gateway is started
+# alongside this one so they never compete for host CPU/memory.
+#
+# All service platforms are pinned to linux/arm64 — do not remove `platform:`
+# lines. This host is Apple Silicon; removing them risks silent QEMU
+# emulation if an amd64-only layer gets cached, which would contaminate any
+# benchmark run (see docs/decisions/version-compatibility.md section 1).
+#
+# k6 is intentionally NOT a service here — it's invoked separately per
+# scenario (see load-test-k6/), since a load generator sharing this network's
+# resources 24/7 would itself be a confounding factor.
+
+networks:
+  llm-lab:
+    driver: bridge
+
+services:
+  mock-llm:
+    build:
+      context: ./mock-llm-fastapi
+    platform: linux/arm64
+    hostname: mock-llm
+    networks:
+      - llm-lab
+    environment:
+      # Fixed for Phase 1: Baseline saturation is what's under test, not
+      # Mock LLM's own admission control (see docs section 20, out of scope
+      # until Phase 2's FastAPI Bottleneck experiments).
+      MOCK_LLM_LOG_LEVEL: INFO
+      MOCK_LLM_MAX_CONCURRENT_PROCESSING: "0"
+      MOCK_LLM_MAX_WAITING: "0"
+    ports:
+      - "8000:8000"
+    # Generous, fixed limits — Mock LLM is the shared judge, not the subject
+    # under test, so it must never be the bottleneck. Still fixed (not
+    # unbounded) so every benchmark run has the same ceiling.
+    mem_limit: 1g
+    cpus: 2.0
+
+  gateway:
+    build:
+      context: ./gateway-mvc-executor-java8
+    platform: linux/arm64
+    hostname: gateway
+    networks:
+      - llm-lab
+    depends_on:
+      mock-llm:
+        condition: service_healthy
+    environment:
+      MOCK_LLM_BASE_URL: http://mock-llm:8000
+      # Baseline default Executor config — Screening (Unit 5) overrides these
+      # per-run via `docker compose run -e ...` or a scenario-specific
+      # override file, never by editing this file mid-experiment.
+      CHAT_CORE_POOL_SIZE: "10"
+      CHAT_MAX_POOL_SIZE: "10"
+      CHAT_QUEUE_CAPACITY: "100"
+      CHAT_REJECTION_POLICY: ABORT
+      CHAT_CONNECT_TIMEOUT_MS: "3000"
+      CHAT_READ_TIMEOUT_MS: "30000"
+      CHAT_TOTAL_TIMEOUT_MS: "60000"
+    ports:
+      - "8080:8080"
+    # The one resource-limited subject under test — fixed per design section 9.
+    mem_limit: 1g
+    cpus: 1.0
+
+  prometheus:
+    image: prom/prometheus:v3.13.2
+    platform: linux/arm64
+    networks:
+      - llm-lab
+    volumes:
+      - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    # --web.enable-remote-write-receiver: lets k6 push client-side metrics
+    # (client_ttfc_seconds, client_completed_total, ...) via
+    # `-o experimental-prometheus-rw` (built into k6 core, no xk6 extension —
+    # see docs/decisions/load-generator.md for why an extra xk6 extension
+    # would conflict with xk6-sse's pinned module path) so Client panels sit
+    # on the same Prometheus datasource/timeline as Gateway/Mock panels
+    # (Unit 5 section 4 requirement). Default two args below match the
+    # image's own default CMD (prom/prometheus:v3.13.2) — kept explicit here
+    # only because adding `command:` replaces the image default entirely.
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.enable-remote-write-receiver"
+    ports:
+      # Host port 9091, not 9090 — another unrelated project on this machine
+      # already binds 9090. Internal port stays 9090 (only host mapping changed).
+      - "9091:9090"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:9090/-/healthy"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    depends_on:
+      - gateway
+      - mock-llm
+
+  grafana:
+    image: grafana/grafana:13.1.3
+    platform: linux/arm64
+    networks:
+      - llm-lab
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/etc/grafana/dashboards:ro
+    ports:
+      - "3000:3000"
+    environment:
+      # Dev-only default credential for a local benchmark lab, not a public
+      # service — documented in README, not meant to be changed per-run.
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 15s
+    depends_on:
+      - prometheus

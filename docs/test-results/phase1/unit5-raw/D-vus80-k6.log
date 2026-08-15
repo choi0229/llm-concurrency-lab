@@ -1,0 +1,77 @@
+time="2026-08-11T14:37:28Z" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /scripts/01-concurrent-connections.js
+        output: Prometheus remote write (http://prometheus:9090/api/v1/write)
+
+     scenarios: (100.00%) 1 scenario, 80 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 80 iterations shared among 80 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 70/80 VUs, 10 complete and 0 interrupted iterations
+default   [  12% ] 80 VUs  00m01.0s/10m0s  10/80 shared iters
+
+running (00m02.0s), 70/80 VUs, 10 complete and 0 interrupted iterations
+default   [  12% ] 80 VUs  00m02.0s/10m0s  10/80 shared iters
+
+running (00m03.0s), 70/80 VUs, 10 complete and 0 interrupted iterations
+default   [  12% ] 80 VUs  00m03.0s/10m0s  10/80 shared iters
+
+running (00m04.0s), 70/80 VUs, 10 complete and 0 interrupted iterations
+default   [  12% ] 80 VUs  00m04.0s/10m0s  10/80 shared iters
+
+running (00m05.0s), 70/80 VUs, 10 complete and 0 interrupted iterations
+default   [  12% ] 80 VUs  00m05.0s/10m0s  10/80 shared iters
+
+running (00m06.0s), 20/80 VUs, 60 complete and 0 interrupted iterations
+default   [  75% ] 80 VUs  00m06.0s/10m0s  60/80 shared iters
+
+running (00m07.0s), 20/80 VUs, 60 complete and 0 interrupted iterations
+default   [  75% ] 80 VUs  00m07.0s/10m0s  60/80 shared iters
+
+running (00m08.0s), 20/80 VUs, 60 complete and 0 interrupted iterations
+default   [  75% ] 80 VUs  00m08.0s/10m0s  60/80 shared iters
+
+running (00m09.0s), 20/80 VUs, 60 complete and 0 interrupted iterations
+default   [  75% ] 80 VUs  00m09.0s/10m0s  60/80 shared iters
+
+running (00m10.0s), 00/80 VUs, 80 complete and 0 interrupted iterations
+default ✓ [ 100% ] 80 VUs  00m10.0s/10m0s  80/80 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_events_received_total.....: 1470   147.257901/s
+    client_stream_completed_total....: 70     7.012281/s
+    client_stream_duration_seconds...: p(50)=5.099 p(95)=9.981 p(99)=9.982 min=0.151    max=9.982
+    client_stream_failed_total.......: 10     1.001754/s
+    client_ttfc_seconds..............: p(50)=1.19  p(95)=6.105 p(99)=6.106 min=1.154    max=6.106
+    sse_event........................: 1470   147.257901/s
+
+    HTTP
+    http_req_duration................: p(50)=5.09s p(95)=9.98s p(99)=9.98s min=151.48ms max=9.98s
+    http_reqs........................: 80     8.014035/s
+
+    EXECUTION
+    iteration_duration...............: p(50)=5.09s p(95)=9.98s p(99)=9.98s min=151.55ms max=9.98s
+    iterations.......................: 80     8.014035/s
+    vus..............................: 20     min=20       max=70
+    vus_max..........................: 80     min=80       max=80
+
+    NETWORK
+    data_received....................: 191 kB 19 kB/s
+    data_sent........................: 21 kB  2.1 kB/s
+
+
+
+
+running (00m10.0s), 00/80 VUs, 80 complete and 0 interrupted iterations
+default ✓ [ 100% ] 80 VUs  00m10.0s/10m0s  80/80 shared iters
