@@ -9,7 +9,7 @@ Java 8 Spring MVC Baseline으로 시작해(Phase 1), 이후 Virtual Thread 등 �
 Servlet AsyncContext + 전용 `ThreadPoolExecutor` + `HttpURLConnection`(blocking) 구조에서,
 Bounded Queue/Abort(B) · SynchronousQueue/Thread-expansion(E) · Large Queue/CallerRuns(A) 세
 Executor 전략이 overload 시 어떤 비용을 치르는지 constant-arrival-rate 부하(1~12 req/s)로 24회
-반복 측정했다.
+반복 측정했다. 
 
 - **Final Report**: [`docs/test-results/phase1/phase1-final-report.md`](docs/test-results/phase1/phase1-final-report.md)
 - **Portfolio Summary**(README/면접용 요약): [`docs/portfolio/phase1-summary.md`](docs/portfolio/phase1-summary.md)
