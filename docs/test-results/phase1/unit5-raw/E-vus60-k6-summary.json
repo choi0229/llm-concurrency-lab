@@ -1,0 +1,88 @@
+{
+    "metrics": {
+        "client_events_received_total": {
+            "count": 1050,
+            "rate": 206.71750165949317
+        },
+        "client_ttfc_seconds": {
+            "p(99)": 1.184,
+            "min": 1.05,
+            "max": 1.184,
+            "p(50)": 1.182,
+            "p(95)": 1.184
+        },
+        "client_stream_failed_total": {
+            "count": 10,
+            "rate": 1.968738111042792
+        },
+        "data_received": {
+            "count": 137110,
+            "rate": 26993.36824050772
+        },
+        "client_stream_completed_total": {
+            "count": 50,
+            "rate": 9.84369055521396
+        },
+        "iteration_duration": {
+            "min": 156.047208,
+            "max": 5078.409753,
+            "p(50)": 5075.11169,
+            "p(95)": 5078.3226166,
+            "p(99)": 5078.38477594
+        },
+        "client_stream_duration_seconds": {
+            "p(99)": 5.07841,
+            "min": 0.156,
+            "max": 5.079,
+            "p(50)": 5.075,
+            "p(95)": 5.078
+        },
+        "data_sent": {
+            "rate": 3142.106025224296,
+            "count": 15960
+        },
+        "http_req_sending": {
+            "p(50)": 1180.638021,
+            "p(95)": 1183.28640415,
+            "p(99)": 1183.96805402,
+            "min": 155.864708,
+            "max": 1183.971292
+        },
+        "vus_max": {
+            "max": 60,
+            "value": 60,
+            "min": 60
+        },
+        "http_reqs": {
+            "count": 60,
+            "rate": 11.812428666256752
+        },
+        "iterations": {
+            "count": 60,
+            "rate": 11.812428666256752
+        },
+        "http_req_duration": {
+            "min": 155.977083,
+            "max": 5078.352044,
+            "p(50)": 5075.058336,
+            "p(95)": 5078.2545711,
+            "p(99)": 5078.32723981
+        },
+        "sse_event": {
+            "count": 1050,
+            "rate": 206.71750165949317
+        },
+        "vus": {
+            "min": 49,
+            "max": 50,
+            "value": 49
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    }
+}

@@ -1,0 +1,3992 @@
+{
+  "B-HEALTHY": {
+    "configuration": "B",
+    "load": "HEALTHY",
+    "n_reps": 1,
+    "arrival_rate_target": 1.0,
+    "completion_rate_per_s": {
+      "median": 0.9495268138801262,
+      "min": 0.9495268138801262,
+      "max": 0.9495268138801262,
+      "values": [
+        0.9495268138801262
+      ]
+    },
+    "completion_ratio": {
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "values": [
+        1.0
+      ]
+    },
+    "reject_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failure_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 1.006,
+      "min": 1.006,
+      "max": 1.006,
+      "values": [
+        1.006
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 1.009,
+      "min": 1.009,
+      "max": 1.009,
+      "values": [
+        1.009
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 1.015,
+      "min": 1.015,
+      "max": 1.015,
+      "values": [
+        1.015
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 1.75,
+      "min": 1.75,
+      "max": 1.75,
+      "values": [
+        1.75
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 2.425,
+      "min": 2.425,
+      "max": 2.425,
+      "values": [
+        2.425
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 2.485,
+      "min": 2.485,
+      "max": 2.485,
+      "values": [
+        2.485
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 0.0005,
+      "min": 0.0005,
+      "max": 0.0005,
+      "values": [
+        0.0005
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 0.0009499999999999999,
+      "min": 0.0009499999999999999,
+      "max": 0.0009499999999999999,
+      "values": [
+        0.0009499999999999999
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 0.00099,
+      "min": 0.00099,
+      "max": 0.00099,
+      "values": [
+        0.00099
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "pool_size_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 8.0,
+      "min": 8.0,
+      "max": 8.0,
+      "values": [
+        8.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 8.0,
+      "min": 8.0,
+      "max": 8.0,
+      "values": [
+        8.0
+      ]
+    },
+    "caller_runs": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 39.0,
+      "min": 39.0,
+      "max": 39.0,
+      "values": [
+        39.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.018539035144804473,
+      "min": 0.018539035144804473,
+      "max": 0.018539035144804473,
+      "values": [
+        0.018539035144804473
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.02279726432828062,
+      "min": 0.02279726432828062,
+      "max": 0.02279726432828062,
+      "values": [
+        0.02279726432828062
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 26023240.0,
+      "min": 26023240.0,
+      "max": 26023240.0,
+      "values": [
+        26023240.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 158552064.0,
+      "min": 158552064.0,
+      "max": 158552064.0,
+      "values": [
+        158552064.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 8.0,
+      "min": 8.0,
+      "max": 8.0,
+      "values": [
+        8.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "received": {
+      "median": 301.0,
+      "min": 301.0,
+      "max": 301.0,
+      "values": [
+        301.0
+      ]
+    },
+    "completed": {
+      "median": 301.0,
+      "min": 301.0,
+      "max": 301.0,
+      "values": [
+        301.0
+      ]
+    },
+    "rejected": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failed": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "gateway_received_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "dropped_iteration_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    }
+  },
+  "B-LOW": {
+    "configuration": "B",
+    "load": "LOW",
+    "n_reps": 1,
+    "arrival_rate_target": 2.0,
+    "completion_rate_per_s": {
+      "median": 1.2084592145015105,
+      "min": 1.2084592145015105,
+      "max": 1.2084592145015105,
+      "values": [
+        1.2084592145015105
+      ]
+    },
+    "completion_ratio": {
+      "median": 0.6655574043261231,
+      "min": 0.6655574043261231,
+      "max": 0.6655574043261231,
+      "values": [
+        0.6655574043261231
+      ]
+    },
+    "reject_rate": {
+      "median": 0.33444259567387685,
+      "min": 0.33444259567387685,
+      "max": 0.33444259567387685,
+      "values": [
+        0.33444259567387685
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failure_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 16.578,
+      "min": 16.578,
+      "max": 16.578,
+      "values": [
+        16.578
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 16.91035,
+      "min": 16.91035,
+      "max": 16.91035,
+      "values": [
+        16.91035
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 16.970019999999998,
+      "min": 16.970019999999998,
+      "max": 16.970019999999998,
+      "values": [
+        16.970019999999998
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 18.97222222222222,
+      "min": 18.97222222222222,
+      "max": 18.97222222222222,
+      "values": [
+        18.97222222222222
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 28.897222222222222,
+      "min": 28.897222222222222,
+      "max": 28.897222222222222,
+      "values": [
+        28.897222222222222
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 29.779444444444444,
+      "min": 29.779444444444444,
+      "max": 29.779444444444444,
+      "values": [
+        29.779444444444444
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 18.88888888888889,
+      "min": 18.88888888888889,
+      "max": 18.88888888888889,
+      "values": [
+        18.88888888888889
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 28.88888888888889,
+      "min": 28.88888888888889,
+      "max": 28.88888888888889,
+      "values": [
+        28.88888888888889
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 29.77777777777778,
+      "min": 29.77777777777778,
+      "max": 29.77777777777778,
+      "values": [
+        29.77777777777778
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "pool_size_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 20.0,
+      "min": 20.0,
+      "max": 20.0,
+      "values": [
+        20.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 30.0,
+      "min": 30.0,
+      "max": 30.0,
+      "values": [
+        30.0
+      ]
+    },
+    "caller_runs": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 45.0,
+      "min": 45.0,
+      "max": 45.0,
+      "values": [
+        45.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.023476778604439353,
+      "min": 0.023476778604439353,
+      "max": 0.023476778604439353,
+      "values": [
+        0.023476778604439353
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.0284022721817745,
+      "min": 0.0284022721817745,
+      "max": 0.0284022721817745,
+      "values": [
+        0.0284022721817745
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 30631664.0,
+      "min": 30631664.0,
+      "max": 30631664.0,
+      "values": [
+        30631664.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 157917184.0,
+      "min": 157917184.0,
+      "max": 157917184.0,
+      "values": [
+        157917184.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "received": {
+      "median": 601.0,
+      "min": 601.0,
+      "max": 601.0,
+      "values": [
+        601.0
+      ]
+    },
+    "completed": {
+      "median": 400.0,
+      "min": 400.0,
+      "max": 400.0,
+      "values": [
+        400.0
+      ]
+    },
+    "rejected": {
+      "median": 201.0,
+      "min": 201.0,
+      "max": 201.0,
+      "values": [
+        201.0
+      ]
+    },
+    "timeout": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failed": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "gateway_received_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "dropped_iteration_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    }
+  },
+  "B-STRESS": {
+    "configuration": "B",
+    "load": "STRESS",
+    "n_reps": 3,
+    "arrival_rate_target": 5.0,
+    "completion_rate_per_s": {
+      "median": 1.2195121951219512,
+      "min": 1.21580547112462,
+      "max": 1.2232415902140672,
+      "values": [
+        1.21580547112462,
+        1.2195121951219512,
+        1.2232415902140672
+      ]
+    },
+    "completion_ratio": {
+      "median": 0.26666666666666666,
+      "min": 0.2664890073284477,
+      "max": 0.26666666666666666,
+      "values": [
+        0.26666666666666666,
+        0.26666666666666666,
+        0.2664890073284477
+      ]
+    },
+    "reject_rate": {
+      "median": 0.7333333333333333,
+      "min": 0.7333333333333333,
+      "max": 0.7335109926715523,
+      "values": [
+        0.7333333333333333,
+        0.7333333333333333,
+        0.7335109926715523
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "failure_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 16.7955,
+      "min": 16.735,
+      "max": 16.803,
+      "values": [
+        16.803,
+        16.7955,
+        16.735
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 16.913050000000002,
+      "min": 16.83205,
+      "max": 16.93305,
+      "values": [
+        16.93305,
+        16.913050000000002,
+        16.83205
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 16.94349,
+      "min": 16.86607,
+      "max": 16.958029999999997,
+      "values": [
+        16.958029999999997,
+        16.94349,
+        16.86607
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 19.473684210526315,
+      "min": 19.473684210526315,
+      "max": 19.526315789473685,
+      "values": [
+        19.526315789473685,
+        19.473684210526315,
+        19.473684210526315
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 28.94736842105263,
+      "min": 28.94736842105263,
+      "max": 28.95263157894737,
+      "values": [
+        28.95263157894737,
+        28.94736842105263,
+        28.94736842105263
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 29.789473684210527,
+      "min": 29.789473684210527,
+      "max": 29.79052631578947,
+      "values": [
+        29.79052631578947,
+        29.789473684210527,
+        29.789473684210527
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 19.473684210526315,
+      "min": 19.473684210526315,
+      "max": 19.473684210526315,
+      "values": [
+        19.473684210526315,
+        19.473684210526315,
+        19.473684210526315
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 28.94736842105263,
+      "min": 28.94736842105263,
+      "max": 28.947368421052634,
+      "values": [
+        28.947368421052634,
+        28.94736842105263,
+        28.94736842105263
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 29.789473684210527,
+      "min": 29.789473684210527,
+      "max": 29.789473684210527,
+      "values": [
+        29.789473684210527,
+        29.789473684210527,
+        29.789473684210527
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "pool_size_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 20.0,
+      "min": 20.0,
+      "max": 20.0,
+      "values": [
+        20.0,
+        20.0,
+        20.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 30.0,
+      "min": 30.0,
+      "max": 30.0,
+      "values": [
+        30.0,
+        30.0,
+        30.0
+      ]
+    },
+    "caller_runs": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 46.0,
+      "min": 44.0,
+      "max": 47.0,
+      "values": [
+        47.0,
+        46.0,
+        44.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.028030510487595493,
+      "min": 0.02488564599630253,
+      "max": 0.028276401051057515,
+      "values": [
+        0.02488564599630253,
+        0.028276401051057515,
+        0.028030510487595493
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.035598576056957744,
+      "min": 0.033207969912779065,
+      "max": 0.03719851205951768,
+      "values": [
+        0.033207969912779065,
+        0.03719851205951768,
+        0.035598576056957744
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 30421656.0,
+      "min": 30343696.0,
+      "max": 30565736.0,
+      "values": [
+        30343696.0,
+        30421656.0,
+        30565736.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 167895040.0,
+      "min": 165093376.0,
+      "max": 169967616.0,
+      "values": [
+        165093376.0,
+        169967616.0,
+        167895040.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "received": {
+      "median": 1500.0,
+      "min": 1500.0,
+      "max": 1501.0,
+      "values": [
+        1500.0,
+        1500.0,
+        1501.0
+      ]
+    },
+    "completed": {
+      "median": 400.0,
+      "min": 400.0,
+      "max": 400.0,
+      "values": [
+        400.0,
+        400.0,
+        400.0
+      ]
+    },
+    "rejected": {
+      "median": 1100.0,
+      "min": 1100.0,
+      "max": 1101.0,
+      "values": [
+        1100.0,
+        1100.0,
+        1101.0
+      ]
+    },
+    "timeout": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "failed": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "gateway_received_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "dropped_iteration_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    }
+  },
+  "B-OVERLOAD": {
+    "configuration": "B",
+    "load": "OVERLOAD",
+    "n_reps": 3,
+    "arrival_rate_target": 12.0,
+    "completion_rate_per_s": {
+      "median": 1.2307692307692308,
+      "min": 1.2195121951219512,
+      "max": 1.2307692307692308,
+      "values": [
+        1.2195121951219512,
+        1.2307692307692308,
+        1.2307692307692308
+      ]
+    },
+    "completion_ratio": {
+      "median": 0.1111111111111111,
+      "min": 0.11108025548458761,
+      "max": 0.1111111111111111,
+      "values": [
+        0.1111111111111111,
+        0.11108025548458761,
+        0.1111111111111111
+      ]
+    },
+    "reject_rate": {
+      "median": 0.8888888888888888,
+      "min": 0.8888888888888888,
+      "max": 0.8889197445154123,
+      "values": [
+        0.8888888888888888,
+        0.8889197445154123,
+        0.8888888888888888
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "failure_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 16.725,
+      "min": 16.7245,
+      "max": 16.838,
+      "values": [
+        16.838,
+        16.7245,
+        16.725
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 16.80505,
+      "min": 16.798,
+      "max": 16.919050000000002,
+      "values": [
+        16.919050000000002,
+        16.798,
+        16.80505
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 16.83306,
+      "min": 16.82001,
+      "max": 16.94009,
+      "values": [
+        16.94009,
+        16.82001,
+        16.83306
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 19.473684210526315,
+      "min": 19.473684210526315,
+      "max": 19.473684210526315,
+      "values": [
+        19.473684210526315,
+        19.473684210526315,
+        19.473684210526315
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 28.94736842105263,
+      "min": 28.94736842105263,
+      "max": 28.94736842105263,
+      "values": [
+        28.94736842105263,
+        28.94736842105263,
+        28.94736842105263
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 29.789473684210527,
+      "min": 29.789473684210527,
+      "max": 29.789473684210527,
+      "values": [
+        29.789473684210527,
+        29.789473684210527,
+        29.789473684210527
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 19.473684210526315,
+      "min": 19.473684210526315,
+      "max": 19.473684210526315,
+      "values": [
+        19.473684210526315,
+        19.473684210526315,
+        19.473684210526315
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 28.94736842105263,
+      "min": 28.94736842105263,
+      "max": 28.94736842105263,
+      "values": [
+        28.94736842105263,
+        28.94736842105263,
+        28.94736842105263
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 29.789473684210527,
+      "min": 29.789473684210527,
+      "max": 29.789473684210527,
+      "values": [
+        29.789473684210527,
+        29.789473684210527,
+        29.789473684210527
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "pool_size_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 20.0,
+      "min": 20.0,
+      "max": 20.0,
+      "values": [
+        20.0,
+        20.0,
+        20.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 30.0,
+      "min": 30.0,
+      "max": 30.0,
+      "values": [
+        30.0,
+        30.0,
+        30.0
+      ]
+    },
+    "caller_runs": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 43.0,
+      "min": 42.0,
+      "max": 46.0,
+      "values": [
+        42.0,
+        43.0,
+        46.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.04615495189197804,
+      "min": 0.03553868023803223,
+      "max": 0.04631221054868407,
+      "values": [
+        0.03553868023803223,
+        0.04615495189197804,
+        0.04631221054868407
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.061197552097916136,
+      "min": 0.06081702876805503,
+      "max": 0.0631974721011159,
+      "values": [
+        0.06081702876805503,
+        0.0631974721011159,
+        0.061197552097916136
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 32202008.0,
+      "min": 31806432.0,
+      "max": 32357048.0,
+      "values": [
+        32202008.0,
+        31806432.0,
+        32357048.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 177471488.0,
+      "min": 175349760.0,
+      "max": 178339840.0,
+      "values": [
+        175349760.0,
+        178339840.0,
+        177471488.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "received": {
+      "median": 3600.0,
+      "min": 3600.0,
+      "max": 3601.0,
+      "values": [
+        3600.0,
+        3601.0,
+        3600.0
+      ]
+    },
+    "completed": {
+      "median": 400.0,
+      "min": 400.0,
+      "max": 400.0,
+      "values": [
+        400.0,
+        400.0,
+        400.0
+      ]
+    },
+    "rejected": {
+      "median": 3200.0,
+      "min": 3200.0,
+      "max": 3201.0,
+      "values": [
+        3200.0,
+        3201.0,
+        3200.0
+      ]
+    },
+    "timeout": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "failed": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "gateway_received_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "dropped_iteration_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    }
+  },
+  "E-HEALTHY": {
+    "configuration": "E",
+    "load": "HEALTHY",
+    "n_reps": 1,
+    "arrival_rate_target": 1.0,
+    "completion_rate_per_s": {
+      "median": 0.9525316455696202,
+      "min": 0.9525316455696202,
+      "max": 0.9525316455696202,
+      "values": [
+        0.9525316455696202
+      ]
+    },
+    "completion_ratio": {
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "values": [
+        1.0
+      ]
+    },
+    "reject_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failure_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 1.006,
+      "min": 1.006,
+      "max": 1.006,
+      "values": [
+        1.006
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 1.008,
+      "min": 1.008,
+      "max": 1.008,
+      "values": [
+        1.008
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 1.011,
+      "min": 1.011,
+      "max": 1.011,
+      "values": [
+        1.011
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 1.75,
+      "min": 1.75,
+      "max": 1.75,
+      "values": [
+        1.75
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 2.425,
+      "min": 2.425,
+      "max": 2.425,
+      "values": [
+        2.425
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 2.485,
+      "min": 2.485,
+      "max": 2.485,
+      "values": [
+        2.485
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 0.0005,
+      "min": 0.0005,
+      "max": 0.0005,
+      "values": [
+        0.0005
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 0.00095,
+      "min": 0.00095,
+      "max": 0.00095,
+      "values": [
+        0.00095
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 0.00099,
+      "min": 0.00099,
+      "max": 0.00099,
+      "values": [
+        0.00099
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "pool_size_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 8.0,
+      "min": 8.0,
+      "max": 8.0,
+      "values": [
+        8.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 8.0,
+      "min": 8.0,
+      "max": 8.0,
+      "values": [
+        8.0
+      ]
+    },
+    "caller_runs": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 40.0,
+      "min": 40.0,
+      "max": 40.0,
+      "values": [
+        40.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.018317344016863385,
+      "min": 0.018317344016863385,
+      "max": 0.018317344016863385,
+      "values": [
+        0.018317344016863385
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.02560307236868423,
+      "min": 0.02560307236868423,
+      "max": 0.02560307236868423,
+      "values": [
+        0.02560307236868423
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 26212800.0,
+      "min": 26212800.0,
+      "max": 26212800.0,
+      "values": [
+        26212800.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 159031296.0,
+      "min": 159031296.0,
+      "max": 159031296.0,
+      "values": [
+        159031296.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 8.0,
+      "min": 8.0,
+      "max": 8.0,
+      "values": [
+        8.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "received": {
+      "median": 301.0,
+      "min": 301.0,
+      "max": 301.0,
+      "values": [
+        301.0
+      ]
+    },
+    "completed": {
+      "median": 301.0,
+      "min": 301.0,
+      "max": 301.0,
+      "values": [
+        301.0
+      ]
+    },
+    "rejected": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failed": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "gateway_received_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "dropped_iteration_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    }
+  },
+  "E-LOW": {
+    "configuration": "E",
+    "load": "LOW",
+    "n_reps": 1,
+    "arrival_rate_target": 2.0,
+    "completion_rate_per_s": {
+      "median": 1.8987341772151898,
+      "min": 1.8987341772151898,
+      "max": 1.8987341772151898,
+      "values": [
+        1.8987341772151898
+      ]
+    },
+    "completion_ratio": {
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "values": [
+        1.0
+      ]
+    },
+    "reject_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failure_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 1.007,
+      "min": 1.007,
+      "max": 1.007,
+      "values": [
+        1.007
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 1.009,
+      "min": 1.009,
+      "max": 1.009,
+      "values": [
+        1.009
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 1.012,
+      "min": 1.012,
+      "max": 1.012,
+      "values": [
+        1.012
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 1.75,
+      "min": 1.75,
+      "max": 1.75,
+      "values": [
+        1.75
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 2.425,
+      "min": 2.425,
+      "max": 2.425,
+      "values": [
+        2.425
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 2.4850000000000003,
+      "min": 2.4850000000000003,
+      "max": 2.4850000000000003,
+      "values": [
+        2.4850000000000003
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 0.0005008347245409015,
+      "min": 0.0005008347245409015,
+      "max": 0.0005008347245409015,
+      "values": [
+        0.0005008347245409015
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 0.0009515859766277129,
+      "min": 0.0009515859766277129,
+      "max": 0.0009515859766277129,
+      "values": [
+        0.0009515859766277129
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 0.0009916527545909852,
+      "min": 0.0009916527545909852,
+      "max": 0.0009916527545909852,
+      "values": [
+        0.0009916527545909852
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "pool_size_peak": {
+      "median": 16.0,
+      "min": 16.0,
+      "max": 16.0,
+      "values": [
+        16.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 16.0,
+      "min": 16.0,
+      "max": 16.0,
+      "values": [
+        16.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 16.0,
+      "min": 16.0,
+      "max": 16.0,
+      "values": [
+        16.0
+      ]
+    },
+    "caller_runs": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 52.0,
+      "min": 52.0,
+      "max": 52.0,
+      "values": [
+        52.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.035258178252187904,
+      "min": 0.035258178252187904,
+      "max": 0.035258178252187904,
+      "values": [
+        0.035258178252187904
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.040404848581829814,
+      "min": 0.040404848581829814,
+      "max": 0.040404848581829814,
+      "values": [
+        0.040404848581829814
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 30729136.0,
+      "min": 30729136.0,
+      "max": 30729136.0,
+      "values": [
+        30729136.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 165150720.0,
+      "min": 165150720.0,
+      "max": 165150720.0,
+      "values": [
+        165150720.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 16.0,
+      "min": 16.0,
+      "max": 16.0,
+      "values": [
+        16.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "received": {
+      "median": 600.0,
+      "min": 600.0,
+      "max": 600.0,
+      "values": [
+        600.0
+      ]
+    },
+    "completed": {
+      "median": 600.0,
+      "min": 600.0,
+      "max": 600.0,
+      "values": [
+        600.0
+      ]
+    },
+    "rejected": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failed": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "gateway_received_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "dropped_iteration_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    }
+  },
+  "E-STRESS": {
+    "configuration": "E",
+    "load": "STRESS",
+    "n_reps": 3,
+    "arrival_rate_target": 5.0,
+    "completion_rate_per_s": {
+      "median": 4.735015772870662,
+      "min": 4.735015772870662,
+      "max": 4.75,
+      "values": [
+        4.735015772870662,
+        4.75,
+        4.735015772870662
+      ]
+    },
+    "completion_ratio": {
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "reject_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "failure_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 1.005,
+      "min": 1.005,
+      "max": 1.006,
+      "values": [
+        1.006,
+        1.005,
+        1.005
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 1.007,
+      "min": 1.007,
+      "max": 1.008,
+      "values": [
+        1.008,
+        1.007,
+        1.007
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 1.011,
+      "min": 1.01,
+      "max": 1.011,
+      "values": [
+        1.011,
+        1.01,
+        1.011
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 1.75,
+      "min": 1.75,
+      "max": 1.75,
+      "values": [
+        1.75,
+        1.75,
+        1.75
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 2.425,
+      "min": 2.425,
+      "max": 2.425,
+      "values": [
+        2.425,
+        2.425,
+        2.425
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 2.485,
+      "min": 2.485,
+      "max": 2.485,
+      "values": [
+        2.485,
+        2.485,
+        2.485
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 0.0005,
+      "min": 0.0005,
+      "max": 0.0005,
+      "values": [
+        0.0005,
+        0.0005,
+        0.0005
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 0.00095,
+      "min": 0.0009499999999999999,
+      "max": 0.00095,
+      "values": [
+        0.00095,
+        0.0009499999999999999,
+        0.00095
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 0.00099,
+      "min": 0.00099,
+      "max": 0.00099,
+      "values": [
+        0.00099,
+        0.00099,
+        0.00099
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "pool_size_peak": {
+      "median": 41.0,
+      "min": 41.0,
+      "max": 41.0,
+      "values": [
+        41.0,
+        41.0,
+        41.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 40.0,
+      "min": 40.0,
+      "max": 40.0,
+      "values": [
+        40.0,
+        40.0,
+        40.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 40.0,
+      "min": 40.0,
+      "max": 40.0,
+      "values": [
+        40.0,
+        40.0,
+        40.0
+      ]
+    },
+    "caller_runs": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 92.0,
+      "min": 90.0,
+      "max": 93.0,
+      "values": [
+        93.0,
+        92.0,
+        90.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.05406349206349207,
+      "min": 0.05380986545946324,
+      "max": 0.06015930310447401,
+      "values": [
+        0.06015930310447401,
+        0.05380986545946324,
+        0.05406349206349207
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.06521043366938706,
+      "min": 0.0652026081043242,
+      "max": 0.07040000000000006,
+      "values": [
+        0.07040000000000006,
+        0.06521043366938706,
+        0.0652026081043242
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 55141232.0,
+      "min": 55014272.0,
+      "max": 55723720.0,
+      "values": [
+        55014272.0,
+        55141232.0,
+        55723720.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 201711616.0,
+      "min": 196345856.0,
+      "max": 205811712.0,
+      "values": [
+        201711616.0,
+        196345856.0,
+        205811712.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 40.0,
+      "min": 39.0,
+      "max": 41.0,
+      "values": [
+        40.0,
+        39.0,
+        41.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "received": {
+      "median": 1501.0,
+      "min": 1501.0,
+      "max": 1501.0,
+      "values": [
+        1501.0,
+        1501.0,
+        1501.0
+      ]
+    },
+    "completed": {
+      "median": 1501.0,
+      "min": 1501.0,
+      "max": 1501.0,
+      "values": [
+        1501.0,
+        1501.0,
+        1501.0
+      ]
+    },
+    "rejected": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "timeout": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "failed": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "gateway_received_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "dropped_iteration_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    }
+  },
+  "E-OVERLOAD": {
+    "configuration": "E",
+    "load": "OVERLOAD",
+    "n_reps": 3,
+    "arrival_rate_target": 12.0,
+    "completion_rate_per_s": {
+      "median": 6.0,
+      "min": 5.9905063291139244,
+      "max": 6.012658227848101,
+      "values": [
+        6.0,
+        6.012658227848101,
+        5.9905063291139244
+      ]
+    },
+    "completion_ratio": {
+      "median": 0.5266666666666666,
+      "min": 0.5258333333333334,
+      "max": 0.5277777777777778,
+      "values": [
+        0.5266666666666666,
+        0.5277777777777778,
+        0.5258333333333334
+      ]
+    },
+    "reject_rate": {
+      "median": 0.47333333333333333,
+      "min": 0.4722222222222222,
+      "max": 0.4741666666666667,
+      "values": [
+        0.47333333333333333,
+        0.4722222222222222,
+        0.4741666666666667
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "failure_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 1.005,
+      "min": 1.004,
+      "max": 1.005,
+      "values": [
+        1.005,
+        1.005,
+        1.004
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 1.008,
+      "min": 1.007,
+      "max": 1.008,
+      "values": [
+        1.008,
+        1.008,
+        1.007
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 1.01108,
+      "min": 1.011,
+      "max": 1.012,
+      "values": [
+        1.011,
+        1.012,
+        1.01108
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 1.75,
+      "min": 1.7496056605543997,
+      "max": 1.75,
+      "values": [
+        1.75,
+        1.75,
+        1.7496056605543997
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 2.425,
+      "min": 2.42496056605544,
+      "max": 2.425,
+      "values": [
+        2.425,
+        2.425,
+        2.42496056605544
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 2.485,
+      "min": 2.484992113211088,
+      "max": 2.485,
+      "values": [
+        2.485,
+        2.485,
+        2.484992113211088
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 0.0005,
+      "min": 0.0005,
+      "max": 0.0005,
+      "values": [
+        0.0005,
+        0.0005,
+        0.0005
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 0.00095,
+      "min": 0.00095,
+      "max": 0.00095,
+      "values": [
+        0.00095,
+        0.00095,
+        0.00095
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 0.00099,
+      "min": 0.00099,
+      "max": 0.0009900000000000002,
+      "values": [
+        0.00099,
+        0.00099,
+        0.0009900000000000002
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "pool_size_peak": {
+      "median": 50.0,
+      "min": 50.0,
+      "max": 50.0,
+      "values": [
+        50.0,
+        50.0,
+        50.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 50.0,
+      "min": 50.0,
+      "max": 50.0,
+      "values": [
+        50.0,
+        50.0,
+        50.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 50.0,
+      "min": 50.0,
+      "max": 50.0,
+      "values": [
+        50.0,
+        50.0,
+        50.0
+      ]
+    },
+    "caller_runs": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 108.0,
+      "min": 106.0,
+      "max": 109.0,
+      "values": [
+        108.0,
+        106.0,
+        109.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.07580742977328739,
+      "min": 0.07119446702538099,
+      "max": 0.07648485786913381,
+      "values": [
+        0.07580742977328739,
+        0.07648485786913381,
+        0.07119446702538099
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.0999960001599936,
+      "min": 0.0976039041561663,
+      "max": 0.10319587216511333,
+      "values": [
+        0.10319587216511333,
+        0.0999960001599936,
+        0.0976039041561663
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 68864296.0,
+      "min": 68608120.0,
+      "max": 69118616.0,
+      "values": [
+        69118616.0,
+        68608120.0,
+        68864296.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 225255424.0,
+      "min": 222703616.0,
+      "max": 227430400.0,
+      "values": [
+        225255424.0,
+        227430400.0,
+        222703616.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 50.0,
+      "min": 50.0,
+      "max": 50.0,
+      "values": [
+        50.0,
+        50.0,
+        50.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "received": {
+      "median": 3600.0,
+      "min": 3600.0,
+      "max": 3600.0,
+      "values": [
+        3600.0,
+        3600.0,
+        3600.0
+      ]
+    },
+    "completed": {
+      "median": 1896.0,
+      "min": 1893.0,
+      "max": 1900.0,
+      "values": [
+        1896.0,
+        1900.0,
+        1893.0
+      ]
+    },
+    "rejected": {
+      "median": 1704.0,
+      "min": 1700.0,
+      "max": 1707.0,
+      "values": [
+        1704.0,
+        1700.0,
+        1707.0
+      ]
+    },
+    "timeout": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "failed": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "gateway_received_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "dropped_iteration_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    }
+  },
+  "A-HEALTHY": {
+    "configuration": "A",
+    "load": "HEALTHY",
+    "n_reps": 1,
+    "arrival_rate_target": 1.0,
+    "completion_rate_per_s": {
+      "median": 0.9493670886075949,
+      "min": 0.9493670886075949,
+      "max": 0.9493670886075949,
+      "values": [
+        0.9493670886075949
+      ]
+    },
+    "completion_ratio": {
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "values": [
+        1.0
+      ]
+    },
+    "reject_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failure_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 1.006,
+      "min": 1.006,
+      "max": 1.006,
+      "values": [
+        1.006
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 1.008,
+      "min": 1.008,
+      "max": 1.008,
+      "values": [
+        1.008
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 1.01002,
+      "min": 1.01002,
+      "max": 1.01002,
+      "values": [
+        1.01002
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 1.7474997746180316,
+      "min": 1.7474997746180316,
+      "max": 1.7474997746180316,
+      "values": [
+        1.7474997746180316
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 2.424749977461803,
+      "min": 2.424749977461803,
+      "max": 2.424749977461803,
+      "values": [
+        2.424749977461803
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 2.4849499954923604,
+      "min": 2.4849499954923604,
+      "max": 2.4849499954923604,
+      "values": [
+        2.4849499954923604
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 0.0005,
+      "min": 0.0005,
+      "max": 0.0005,
+      "values": [
+        0.0005
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 0.00095,
+      "min": 0.00095,
+      "max": 0.00095,
+      "values": [
+        0.00095
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 0.00099,
+      "min": 0.00099,
+      "max": 0.00099,
+      "values": [
+        0.00099
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "pool_size_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 8.0,
+      "min": 8.0,
+      "max": 8.0,
+      "values": [
+        8.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 8.0,
+      "min": 8.0,
+      "max": 8.0,
+      "values": [
+        8.0
+      ]
+    },
+    "caller_runs": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 39.0,
+      "min": 39.0,
+      "max": 39.0,
+      "values": [
+        39.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.018348856847171167,
+      "min": 0.018348856847171167,
+      "max": 0.018348856847171167,
+      "values": [
+        0.018348856847171167
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.023998080153587734,
+      "min": 0.023998080153587734,
+      "max": 0.023998080153587734,
+      "values": [
+        0.023998080153587734
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 26192664.0,
+      "min": 26192664.0,
+      "max": 26192664.0,
+      "values": [
+        26192664.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 157454336.0,
+      "min": 157454336.0,
+      "max": 157454336.0,
+      "values": [
+        157454336.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 8.0,
+      "min": 8.0,
+      "max": 8.0,
+      "values": [
+        8.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "received": {
+      "median": 300.0,
+      "min": 300.0,
+      "max": 300.0,
+      "values": [
+        300.0
+      ]
+    },
+    "completed": {
+      "median": 300.0,
+      "min": 300.0,
+      "max": 300.0,
+      "values": [
+        300.0
+      ]
+    },
+    "rejected": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "failed": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "gateway_received_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    },
+    "dropped_iteration_rate": {
+      "median": null,
+      "min": null,
+      "max": null,
+      "values": []
+    }
+  },
+  "A-LOW": {
+    "configuration": "A",
+    "load": "LOW",
+    "n_reps": 1,
+    "arrival_rate_target": 2.0,
+    "completion_rate_per_s": {
+      "median": 0.6440217391304348,
+      "min": 0.6440217391304348,
+      "max": 0.6440217391304348,
+      "values": [
+        0.6440217391304348
+      ]
+    },
+    "completion_ratio": {
+      "median": 0.395,
+      "min": 0.395,
+      "max": 0.395,
+      "values": [
+        0.395
+      ]
+    },
+    "reject_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.565,
+      "min": 0.565,
+      "max": 0.565,
+      "values": [
+        0.565
+      ]
+    },
+    "failure_rate": {
+      "median": 0.04,
+      "min": 0.04,
+      "max": 0.04,
+      "values": [
+        0.04
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 24.271,
+      "min": 24.271,
+      "max": 24.271,
+      "values": [
+        24.271
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 52.82019999999999,
+      "min": 52.82019999999999,
+      "max": 52.82019999999999,
+      "values": [
+        52.82019999999999
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 53.08212,
+      "min": 53.08212,
+      "max": 53.08212,
+      "values": [
+        53.08212
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 53.7890625,
+      "min": 53.7890625,
+      "max": 53.7890625,
+      "values": [
+        53.7890625
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 59.44237918215613,
+      "min": 59.44237918215613,
+      "max": 59.44237918215613,
+      "values": [
+        59.44237918215613
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 59.888475836431226,
+      "min": 59.888475836431226,
+      "max": 59.888475836431226,
+      "values": [
+        59.888475836431226
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 27.599999999999998,
+      "min": 27.599999999999998,
+      "max": 27.599999999999998,
+      "values": [
+        27.599999999999998
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 52.78260869565217,
+      "min": 52.78260869565217,
+      "max": 52.78260869565217,
+      "values": [
+        52.78260869565217
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 54.55652173913043,
+      "min": 54.55652173913043,
+      "max": 54.55652173913043,
+      "values": [
+        54.55652173913043
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 55.98451327433629,
+      "min": 55.98451327433629,
+      "max": 55.98451327433629,
+      "values": [
+        55.98451327433629
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 59.59845132743363,
+      "min": 59.59845132743363,
+      "max": 59.59845132743363,
+      "values": [
+        59.59845132743363
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 59.91969026548673,
+      "min": 59.91969026548673,
+      "max": 59.91969026548673,
+      "values": [
+        59.91969026548673
+      ]
+    },
+    "pool_size_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 100.0,
+      "min": 100.0,
+      "max": 100.0,
+      "values": [
+        100.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 116.0,
+      "min": 116.0,
+      "max": 116.0,
+      "values": [
+        116.0
+      ]
+    },
+    "caller_runs": {
+      "median": 33.0,
+      "min": 33.0,
+      "max": 33.0,
+      "values": [
+        33.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 48.0,
+      "min": 48.0,
+      "max": 48.0,
+      "values": [
+        48.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.02591752419151571,
+      "min": 0.02591752419151571,
+      "max": 0.02591752419151571,
+      "values": [
+        0.02591752419151571
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.045497725113744315,
+      "min": 0.045497725113744315,
+      "max": 0.045497725113744315,
+      "values": [
+        0.045497725113744315
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 42173984.0,
+      "min": 42173984.0,
+      "max": 42173984.0,
+      "values": [
+        42173984.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 192229376.0,
+      "min": 192229376.0,
+      "max": 192229376.0,
+      "values": [
+        192229376.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 16.0,
+      "min": 16.0,
+      "max": 16.0,
+      "values": [
+        16.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "received": {
+      "median": 600.0,
+      "min": 600.0,
+      "max": 600.0,
+      "values": [
+        600.0
+      ]
+    },
+    "completed": {
+      "median": 237.0,
+      "min": 237.0,
+      "max": 237.0,
+      "values": [
+        237.0
+      ]
+    },
+    "rejected": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    },
+    "timeout": {
+      "median": 339.0,
+      "min": 339.0,
+      "max": 339.0,
+      "values": [
+        339.0
+      ]
+    },
+    "failed": {
+      "median": 24.0,
+      "min": 24.0,
+      "max": 24.0,
+      "values": [
+        24.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": 1.6304347826086956,
+      "min": 1.6304347826086956,
+      "max": 1.6304347826086956,
+      "values": [
+        1.6304347826086956
+      ]
+    },
+    "gateway_received_rate": {
+      "median": 1.6304347826086956,
+      "min": 1.6304347826086956,
+      "max": 1.6304347826086956,
+      "values": [
+        1.6304347826086956
+      ]
+    },
+    "dropped_iteration_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0
+      ]
+    }
+  },
+  "A-STRESS": {
+    "configuration": "A",
+    "load": "STRESS",
+    "n_reps": 3,
+    "arrival_rate_target": 5.0,
+    "completion_rate_per_s": {
+      "median": 2.7934782608695654,
+      "min": 2.654891304347826,
+      "max": 2.847826086956522,
+      "values": [
+        2.847826086956522,
+        2.7934782608695654,
+        2.654891304347826
+      ]
+    },
+    "completion_ratio": {
+      "median": 0.6848767488341105,
+      "min": 0.6513333333333333,
+      "max": 0.6986666666666667,
+      "values": [
+        0.6986666666666667,
+        0.6848767488341105,
+        0.6513333333333333
+      ]
+    },
+    "reject_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.29513657561625584,
+      "min": 0.2813333333333333,
+      "max": 0.322,
+      "values": [
+        0.2813333333333333,
+        0.29513657561625584,
+        0.322
+      ]
+    },
+    "failure_rate": {
+      "median": 0.02,
+      "min": 0.019986675549633577,
+      "max": 0.02666666666666667,
+      "values": [
+        0.02,
+        0.019986675549633577,
+        0.02666666666666667
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 1.006,
+      "min": 1.005,
+      "max": 1.006,
+      "values": [
+        1.006,
+        1.005,
+        1.006
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 52.5252,
+      "min": 36.4234,
+      "max": 52.6613,
+      "values": [
+        52.6613,
+        52.5252,
+        36.4234
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 53.02812,
+      "min": 52.848839999999996,
+      "max": 53.067,
+      "values": [
+        53.02812,
+        53.067,
+        52.848839999999996
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 1.847457627118644,
+      "min": 1.8470654627539504,
+      "max": 1.8514285714285714,
+      "values": [
+        1.847457627118644,
+        1.8470654627539504,
+        1.8514285714285714
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 58.45679012345679,
+      "min": 58.42331932773109,
+      "max": 58.46074380165289,
+      "values": [
+        58.45679012345679,
+        58.42331932773109,
+        58.46074380165289
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 59.69135802469136,
+      "min": 59.68466386554622,
+      "max": 59.692148760330575,
+      "values": [
+        59.69135802469136,
+        59.68466386554622,
+        59.692148760330575
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 45.267857142857146,
+      "min": 29.333333333333332,
+      "max": 46.666666666666664,
+      "values": [
+        46.666666666666664,
+        45.267857142857146,
+        29.333333333333332
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 54.25909090909091,
+      "min": 53.70454545454545,
+      "max": 54.34057971014493,
+      "values": [
+        54.34057971014493,
+        54.25909090909091,
+        53.70454545454545
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 54.85181818181818,
+      "min": 54.74090909090909,
+      "max": 54.868115942028986,
+      "values": [
+        54.868115942028986,
+        54.85181818181818,
+        54.74090909090909
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 54.2407570960033,
+      "min": 53.94460594874026,
+      "max": 54.4614236756768,
+      "values": [
+        54.4614236756768,
+        54.2407570960033,
+        53.94460594874026
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 59.392105263157895,
+      "min": 59.324074074074076,
+      "max": 59.43205128205128,
+      "values": [
+        59.43205128205128,
+        59.392105263157895,
+        59.324074074074076
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 59.87842105263158,
+      "min": 59.864814814814814,
+      "max": 59.88641025641026,
+      "values": [
+        59.88641025641026,
+        59.87842105263158,
+        59.864814814814814
+      ]
+    },
+    "pool_size_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 100.0,
+      "min": 100.0,
+      "max": 100.0,
+      "values": [
+        100.0,
+        100.0,
+        100.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 140.0,
+      "min": 140.0,
+      "max": 140.0,
+      "values": [
+        140.0,
+        140.0,
+        140.0
+      ]
+    },
+    "caller_runs": {
+      "median": 875.0,
+      "min": 875.0,
+      "max": 876.0,
+      "values": [
+        875.0,
+        876.0,
+        875.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 66.0,
+      "min": 66.0,
+      "max": 81.0,
+      "values": [
+        81.0,
+        66.0,
+        66.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.04532586309747616,
+      "min": 0.043835136053303525,
+      "max": 0.0462999745213158,
+      "values": [
+        0.043835136053303525,
+        0.0462999745213158,
+        0.04532586309747616
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.06560524841987361,
+      "min": 0.06560000000000002,
+      "max": 0.07119715211391549,
+      "values": [
+        0.06560524841987361,
+        0.06560000000000002,
+        0.07119715211391549
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 69705600.0,
+      "min": 68866560.0,
+      "max": 70294240.0,
+      "values": [
+        70294240.0,
+        69705600.0,
+        68866560.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 228814848.0,
+      "min": 217657344.0,
+      "max": 247054336.0,
+      "values": [
+        228814848.0,
+        217657344.0,
+        247054336.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 40.0,
+      "min": 40.0,
+      "max": 40.0,
+      "values": [
+        40.0,
+        40.0,
+        40.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "received": {
+      "median": 1500.0,
+      "min": 1500.0,
+      "max": 1501.0,
+      "values": [
+        1500.0,
+        1501.0,
+        1500.0
+      ]
+    },
+    "completed": {
+      "median": 1028.0,
+      "min": 977.0,
+      "max": 1048.0,
+      "values": [
+        1048.0,
+        1028.0,
+        977.0
+      ]
+    },
+    "rejected": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "timeout": {
+      "median": 443.0,
+      "min": 422.0,
+      "max": 483.0,
+      "values": [
+        422.0,
+        443.0,
+        483.0
+      ]
+    },
+    "failed": {
+      "median": 30.0,
+      "min": 30.0,
+      "max": 40.0,
+      "values": [
+        30.0,
+        30.0,
+        40.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": 4.076086956521739,
+      "min": 4.076086956521739,
+      "max": 4.078804347826087,
+      "values": [
+        4.076086956521739,
+        4.078804347826087,
+        4.076086956521739
+      ]
+    },
+    "gateway_received_rate": {
+      "median": 4.076086956521739,
+      "min": 4.076086956521739,
+      "max": 4.078804347826087,
+      "values": [
+        4.076086956521739,
+        4.078804347826087,
+        4.076086956521739
+      ]
+    },
+    "dropped_iteration_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "A-OVERLOAD": {
+    "configuration": "A",
+    "load": "OVERLOAD",
+    "n_reps": 3,
+    "arrival_rate_target": 12.0,
+    "completion_rate_per_s": {
+      "median": 8.47554347826087,
+      "min": 8.469945355191257,
+      "max": 8.53804347826087,
+      "values": [
+        8.469945355191257,
+        8.47554347826087,
+        8.53804347826087
+      ]
+    },
+    "completion_ratio": {
+      "median": 0.8661482921410719,
+      "min": 0.860871980005554,
+      "max": 0.8725354068314357,
+      "values": [
+        0.860871980005554,
+        0.8661482921410719,
+        0.8725354068314357
+      ]
+    },
+    "reject_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "timeout_rate": {
+      "median": 0.09358511524576507,
+      "min": 0.08692029991668981,
+      "max": 0.09830602610386004,
+      "values": [
+        0.09830602610386004,
+        0.09358511524576507,
+        0.08692029991668981
+      ]
+    },
+    "failure_rate": {
+      "median": 0.04054429325187448,
+      "min": 0.04026659261316301,
+      "max": 0.040821993890585946,
+      "values": [
+        0.040821993890585946,
+        0.04026659261316301,
+        0.04054429325187448
+      ]
+    },
+    "ttfc_completed_p50": {
+      "median": 1.004,
+      "min": 1.004,
+      "max": 1.004,
+      "values": [
+        1.004,
+        1.004,
+        1.004
+      ]
+    },
+    "ttfc_completed_p95": {
+      "median": 1.019,
+      "min": 1.011,
+      "max": 8.0978,
+      "values": [
+        1.011,
+        1.019,
+        8.0978
+      ]
+    },
+    "ttfc_completed_p99": {
+      "median": 52.94446,
+      "min": 52.80318,
+      "max": 53.074059999999996,
+      "values": [
+        53.074059999999996,
+        52.94446,
+        52.80318
+      ]
+    },
+    "gateway_ttfb_p50": {
+      "median": 1.5810309973045822,
+      "min": 1.5794825076594072,
+      "max": 1.582132081796849,
+      "values": [
+        1.5794825076594072,
+        1.5810309973045822,
+        1.582132081796849
+      ]
+    },
+    "gateway_ttfb_p95": {
+      "median": 53.43767705382436,
+      "min": 53.42782738095238,
+      "max": 53.50639204545455,
+      "values": [
+        53.43767705382436,
+        53.50639204545455,
+        53.42782738095238
+      ]
+    },
+    "gateway_ttfb_p99": {
+      "median": 57.446323529411764,
+      "min": 57.24920634920635,
+      "max": 57.45367647058824,
+      "values": [
+        57.24920634920635,
+        57.45367647058824,
+        57.446323529411764
+      ]
+    },
+    "queue_wait_completed_p50": {
+      "median": 47.43055555555556,
+      "min": 42.0,
+      "max": 47.75,
+      "values": [
+        42.0,
+        47.75,
+        47.43055555555556
+      ]
+    },
+    "queue_wait_completed_p95": {
+      "median": 54.36594202898551,
+      "min": 54.27272727272727,
+      "max": 54.46830985915493,
+      "values": [
+        54.27272727272727,
+        54.46830985915493,
+        54.36594202898551
+      ]
+    },
+    "queue_wait_completed_p99": {
+      "median": 54.8731884057971,
+      "min": 54.85454545454545,
+      "max": 54.89366197183099,
+      "values": [
+        54.85454545454545,
+        54.89366197183099,
+        54.8731884057971
+      ]
+    },
+    "queue_wait_failed_p50": {
+      "median": 54.25097520053279,
+      "min": 54.15827185416526,
+      "max": 54.36528467243717,
+      "values": [
+        54.15827185416526,
+        54.25097520053279,
+        54.36528467243717
+      ]
+    },
+    "queue_wait_failed_p95": {
+      "median": 59.39413265306123,
+      "min": 59.37373737373737,
+      "max": 59.41623711340206,
+      "values": [
+        59.37373737373737,
+        59.39413265306123,
+        59.41623711340206
+      ]
+    },
+    "queue_wait_failed_p99": {
+      "median": 59.878826530612244,
+      "min": 59.87474747474747,
+      "max": 59.88324742268041,
+      "values": [
+        59.87474747474747,
+        59.878826530612244,
+        59.88324742268041
+      ]
+    },
+    "pool_size_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "active_thread_peak": {
+      "median": 10.0,
+      "min": 10.0,
+      "max": 10.0,
+      "values": [
+        10.0,
+        10.0,
+        10.0
+      ]
+    },
+    "queue_size_peak": {
+      "median": 100.0,
+      "min": 100.0,
+      "max": 100.0,
+      "values": [
+        100.0,
+        100.0,
+        100.0
+      ]
+    },
+    "async_active_peak": {
+      "median": 195.0,
+      "min": 195.0,
+      "max": 197.0,
+      "values": [
+        195.0,
+        197.0,
+        195.0
+      ]
+    },
+    "caller_runs": {
+      "median": 2975.0,
+      "min": 2973.0,
+      "max": 2977.0,
+      "values": [
+        2977.0,
+        2975.0,
+        2973.0
+      ]
+    },
+    "platform_thread_peak": {
+      "median": 124.0,
+      "min": 121.0,
+      "max": 129.0,
+      "values": [
+        129.0,
+        121.0,
+        124.0
+      ]
+    },
+    "cpu_avg_cores": {
+      "median": 0.0942721646434178,
+      "min": 0.09008046421027543,
+      "max": 0.09498473997687712,
+      "values": [
+        0.0942721646434178,
+        0.09008046421027543,
+        0.09498473997687712
+      ]
+    },
+    "cpu_peak_cores": {
+      "median": 0.1348000000000002,
+      "min": 0.1344,
+      "max": 0.15518758499320037,
+      "values": [
+        0.1348000000000002,
+        0.1344,
+        0.15518758499320037
+      ]
+    },
+    "heap_peak_bytes": {
+      "median": 130464544.0,
+      "min": 130290976.0,
+      "max": 130907288.0,
+      "values": [
+        130464544.0,
+        130290976.0,
+        130907288.0
+      ]
+    },
+    "rss_peak_bytes": {
+      "median": 310927360.0,
+      "min": 299298816.0,
+      "max": 317456384.0,
+      "values": [
+        317456384.0,
+        310927360.0,
+        299298816.0
+      ]
+    },
+    "mock_active_peak": {
+      "median": 95.0,
+      "min": 95.0,
+      "max": 97.0,
+      "values": [
+        95.0,
+        97.0,
+        95.0
+      ]
+    },
+    "mock_waiting_peak": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "received": {
+      "median": 3601.0,
+      "min": 3601.0,
+      "max": 3601.0,
+      "values": [
+        3601.0,
+        3601.0,
+        3601.0
+      ]
+    },
+    "completed": {
+      "median": 3119.0,
+      "min": 3100.0,
+      "max": 3142.0,
+      "values": [
+        3100.0,
+        3119.0,
+        3142.0
+      ]
+    },
+    "rejected": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "timeout": {
+      "median": 337.0,
+      "min": 313.0,
+      "max": 354.0,
+      "values": [
+        354.0,
+        337.0,
+        313.0
+      ]
+    },
+    "failed": {
+      "median": 146.0,
+      "min": 145.0,
+      "max": 147.0,
+      "values": [
+        147.0,
+        145.0,
+        146.0
+      ]
+    },
+    "actual_started_rate": {
+      "median": 9.785326086956522,
+      "min": 9.785326086956522,
+      "max": 9.83879781420765,
+      "values": [
+        9.83879781420765,
+        9.785326086956522,
+        9.785326086956522
+      ]
+    },
+    "gateway_received_rate": {
+      "median": 9.785326086956522,
+      "min": 9.785326086956522,
+      "max": 9.83879781420765,
+      "values": [
+        9.83879781420765,
+        9.785326086956522,
+        9.785326086956522
+      ]
+    },
+    "dropped_iteration_rate": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {},
+        "name": ""
+    },
+    "metrics": {
+        "vus_max": {
+            "value": 100,
+            "min": 100,
+            "max": 100
+        },
+        "iteration_duration": {
+            "p(95)": 23632.931053,
+            "p(99)": 23690.944095,
+            "min": 0.458542,
+            "max": 23740.574011,
+            "p(50)": 2.783
+        },
+        "iterations": {
+            "rate": 11.358893474348477,
+            "count": 3601
+        },
+        "http_req_duration": {
+            "max": 23740.228427,
+            "p(50)": 2.533667,
+            "p(95)": 23632.669344,
+            "p(99)": 23690.736136,
+            "min": 0.430125
+        },
+        "client_completed_total": {
+            "count": 400,
+            "rate": 1.2617487891528438
+        },
+        "http_req_sending": {
+            "p(50)": 2.352791,
+            "p(95)": 16730.339007,
+            "p(99)": 16785.260674,
+            "min": 0.397916,
+            "max": 16826.898133
+        },
+        "client_events_received_total": {
+            "count": 14400,
+            "rate": 45.422956409502376
+        },
+        "data_received": {
+            "count": 2448991,
+            "rate": 7725.028572240531
+        },
+        "client_ttfc_completed_seconds": {
+            "p(50)": 16.7245,
+            "p(95)": 16.798,
+            "p(99)": 16.82001,
+            "min": 1.001,
+            "max": 16.828
+        },
+        "sse_event": {
+            "count": 14400,
+            "rate": 45.422956409502376
+        },
+        "http_reqs": {
+            "count": 3601,
+            "rate": 11.358893474348477
+        },
+        "client_rejected_total": {
+            "rate": 10.097144685195634,
+            "count": 3201
+        },
+        "client_stream_duration_seconds": {
+            "p(50)": 0.003,
+            "p(95)": 23.633,
+            "p(99)": 23.691,
+            "min": 0,
+            "max": 23.741
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 30
+        },
+        "data_sent": {
+            "count": 957866,
+            "rate": 3021.4656641766946
+        },
+        "client_ttfc_seconds": {
+            "p(99)": 16.82001,
+            "min": 1.001,
+            "max": 16.828,
+            "p(50)": 16.7245,
+            "p(95)": 16.798
+        }
+    }
+}

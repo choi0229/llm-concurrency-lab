@@ -1,0 +1,486 @@
+=== A LOW(R2) ===
+=== [A-LOW-run1] 2026-08-13T14:18:37Z starting ===
+ Network llm-concurrency-lab_llm-lab Creating 
+ Network llm-concurrency-lab_llm-lab Created 
+ Container llm-concurrency-lab-mock-llm-1 Creating 
+ Container llm-concurrency-lab-mock-llm-1 Created 
+ Container llm-concurrency-lab-gateway-1 Creating 
+ Container llm-concurrency-lab-gateway-1 Created 
+ Container llm-concurrency-lab-prometheus-1 Creating 
+ Container llm-concurrency-lab-prometheus-1 Created 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[A-LOW-run1] preflight OK (drift=0s arch=arm64)
+[A-LOW-run1] warm-up done, waiting for drain before measurement...
+[A-LOW-run1] measurement done, waiting for drain...
+{
+  "configuration": "A",
+  "load": "LOW",
+  "run_number": 1,
+  "arrival_rate_target": 2.0,
+  "actual_started_rate": 1.6304347826086956,
+  "gateway_received_rate": 1.6304347826086956,
+  "dropped_iteration_rate": 0.0,
+  "measurement_window_s": 368.0,
+  "received": 600.0,
+  "completed": 237.0,
+  "rejected": 0.0,
+  "timeout": 339.0,
+  "failed": 24.0,
+  "caller_runs": 33.0,
+  "completion_rate_per_s": 0.6440217391304348,
+  "completion_ratio": 0.395,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.565,
+  "failure_rate": 0.04,
+  "ttfc_completed_p50": 24.271,
+  "ttfc_completed_p95": 52.82019999999999,
+  "ttfc_completed_p99": 53.08212,
+  "gateway_ttfb_p50": 53.7890625,
+  "gateway_ttfb_p95": 59.44237918215613,
+  "gateway_ttfb_p99": 59.888475836431226,
+  "queue_wait_completed_p50": 27.599999999999998,
+  "queue_wait_completed_p95": 52.78260869565217,
+  "queue_wait_completed_p99": 54.55652173913043,
+  "queue_wait_failed_p50": 55.98451327433629,
+  "queue_wait_failed_p95": 59.59845132743363,
+  "queue_wait_failed_p99": 59.91969026548673,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 10.0,
+  "queue_size_peak": 100.0,
+  "async_active_peak": 116.0,
+  "platform_thread_peak": 48.0,
+  "cpu_avg_cores": 0.02591752419151571,
+  "cpu_peak_cores": 0.045497725113744315,
+  "heap_peak_bytes": 42173984.0,
+  "rss_peak_bytes": 192229376.0,
+  "mock_active_peak": 16.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 600,
+  "invariant_ok": true,
+  "outcome_sum": 600.0
+}
+=== [A-LOW-run1] 2026-08-13T14:28:12Z done ===
+=== A STRESS(R5) rep1 ===
+=== [A-STRESS-run1] 2026-08-13T14:28:12Z starting ===
+ Container llm-concurrency-lab-mock-llm-1 Recreate 
+ Container llm-concurrency-lab-mock-llm-1 Recreated 
+ Container llm-concurrency-lab-gateway-1 Recreate 
+ Container llm-concurrency-lab-gateway-1 Recreated 
+ Container llm-concurrency-lab-prometheus-1 Recreate 
+ Container llm-concurrency-lab-prometheus-1 Recreated 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[A-STRESS-run1] preflight OK (drift=1s arch=arm64)
+[A-STRESS-run1] warm-up done, waiting for drain before measurement...
+[A-STRESS-run1] measurement done, waiting for drain...
+{
+  "configuration": "A",
+  "load": "STRESS",
+  "run_number": 1,
+  "arrival_rate_target": 5.0,
+  "actual_started_rate": 4.076086956521739,
+  "gateway_received_rate": 4.076086956521739,
+  "dropped_iteration_rate": 0.0,
+  "measurement_window_s": 368.0,
+  "received": 1500.0,
+  "completed": 1048.0,
+  "rejected": 0.0,
+  "timeout": 422.0,
+  "failed": 30.0,
+  "caller_runs": 875.0,
+  "completion_rate_per_s": 2.847826086956522,
+  "completion_ratio": 0.6986666666666667,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.2813333333333333,
+  "failure_rate": 0.02,
+  "ttfc_completed_p50": 1.006,
+  "ttfc_completed_p95": 52.6613,
+  "ttfc_completed_p99": 53.02812,
+  "gateway_ttfb_p50": 1.847457627118644,
+  "gateway_ttfb_p95": 58.45679012345679,
+  "gateway_ttfb_p99": 59.69135802469136,
+  "queue_wait_completed_p50": 46.666666666666664,
+  "queue_wait_completed_p95": 54.34057971014493,
+  "queue_wait_completed_p99": 54.868115942028986,
+  "queue_wait_failed_p50": 54.4614236756768,
+  "queue_wait_failed_p95": 59.43205128205128,
+  "queue_wait_failed_p99": 59.88641025641026,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 10.0,
+  "queue_size_peak": 100.0,
+  "async_active_peak": 140.0,
+  "platform_thread_peak": 81.0,
+  "cpu_avg_cores": 0.043835136053303525,
+  "cpu_peak_cores": 0.06560524841987361,
+  "heap_peak_bytes": 70294240.0,
+  "rss_peak_bytes": 228814848.0,
+  "mock_active_peak": 40.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 1500,
+  "invariant_ok": true,
+  "outcome_sum": 1500.0
+}
+=== [A-STRESS-run1] 2026-08-13T14:37:46Z done ===
+=== A STRESS(R5) rep2 ===
+=== [A-STRESS-run2] 2026-08-13T14:37:46Z starting ===
+ Container llm-concurrency-lab-mock-llm-1 Recreate 
+ Container llm-concurrency-lab-mock-llm-1 Recreated 
+ Container llm-concurrency-lab-gateway-1 Recreate 
+ Container llm-concurrency-lab-gateway-1 Recreated 
+ Container llm-concurrency-lab-prometheus-1 Recreate 
+ Container llm-concurrency-lab-prometheus-1 Recreated 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[A-STRESS-run2] preflight OK (drift=0s arch=arm64)
+[A-STRESS-run2] warm-up done, waiting for drain before measurement...
+[A-STRESS-run2] measurement done, waiting for drain...
+{
+  "configuration": "A",
+  "load": "STRESS",
+  "run_number": 2,
+  "arrival_rate_target": 5.0,
+  "actual_started_rate": 4.078804347826087,
+  "gateway_received_rate": 4.078804347826087,
+  "dropped_iteration_rate": 0.0,
+  "measurement_window_s": 368.0,
+  "received": 1501.0,
+  "completed": 1028.0,
+  "rejected": 0.0,
+  "timeout": 443.0,
+  "failed": 30.0,
+  "caller_runs": 876.0,
+  "completion_rate_per_s": 2.7934782608695654,
+  "completion_ratio": 0.6848767488341105,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.29513657561625584,
+  "failure_rate": 0.019986675549633577,
+  "ttfc_completed_p50": 1.005,
+  "ttfc_completed_p95": 52.5252,
+  "ttfc_completed_p99": 53.067,
+  "gateway_ttfb_p50": 1.8470654627539504,
+  "gateway_ttfb_p95": 58.42331932773109,
+  "gateway_ttfb_p99": 59.68466386554622,
+  "queue_wait_completed_p50": 45.267857142857146,
+  "queue_wait_completed_p95": 54.25909090909091,
+  "queue_wait_completed_p99": 54.85181818181818,
+  "queue_wait_failed_p50": 54.2407570960033,
+  "queue_wait_failed_p95": 59.392105263157895,
+  "queue_wait_failed_p99": 59.87842105263158,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 10.0,
+  "queue_size_peak": 100.0,
+  "async_active_peak": 140.0,
+  "platform_thread_peak": 66.0,
+  "cpu_avg_cores": 0.0462999745213158,
+  "cpu_peak_cores": 0.06560000000000002,
+  "heap_peak_bytes": 69705600.0,
+  "rss_peak_bytes": 217657344.0,
+  "mock_active_peak": 40.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 1501,
+  "invariant_ok": true,
+  "outcome_sum": 1501.0
+}
+=== [A-STRESS-run2] 2026-08-13T14:47:19Z done ===
+=== A STRESS(R5) rep3 ===
+=== [A-STRESS-run3] 2026-08-13T14:47:19Z starting ===
+ Container llm-concurrency-lab-mock-llm-1 Recreate 
+ Container llm-concurrency-lab-mock-llm-1 Recreated 
+ Container llm-concurrency-lab-gateway-1 Recreate 
+ Container llm-concurrency-lab-gateway-1 Recreated 
+ Container llm-concurrency-lab-prometheus-1 Recreate 
+ Container llm-concurrency-lab-prometheus-1 Recreated 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[A-STRESS-run3] preflight OK (drift=0s arch=arm64)
+[A-STRESS-run3] warm-up done, waiting for drain before measurement...
+[A-STRESS-run3] measurement done, waiting for drain...
+{
+  "configuration": "A",
+  "load": "STRESS",
+  "run_number": 3,
+  "arrival_rate_target": 5.0,
+  "actual_started_rate": 4.076086956521739,
+  "gateway_received_rate": 4.076086956521739,
+  "dropped_iteration_rate": 0.0,
+  "measurement_window_s": 368.0,
+  "received": 1500.0,
+  "completed": 977.0,
+  "rejected": 0.0,
+  "timeout": 483.0,
+  "failed": 40.0,
+  "caller_runs": 875.0,
+  "completion_rate_per_s": 2.654891304347826,
+  "completion_ratio": 0.6513333333333333,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.322,
+  "failure_rate": 0.02666666666666667,
+  "ttfc_completed_p50": 1.006,
+  "ttfc_completed_p95": 36.4234,
+  "ttfc_completed_p99": 52.848839999999996,
+  "gateway_ttfb_p50": 1.8514285714285714,
+  "gateway_ttfb_p95": 58.46074380165289,
+  "gateway_ttfb_p99": 59.692148760330575,
+  "queue_wait_completed_p50": 29.333333333333332,
+  "queue_wait_completed_p95": 53.70454545454545,
+  "queue_wait_completed_p99": 54.74090909090909,
+  "queue_wait_failed_p50": 53.94460594874026,
+  "queue_wait_failed_p95": 59.324074074074076,
+  "queue_wait_failed_p99": 59.864814814814814,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 10.0,
+  "queue_size_peak": 100.0,
+  "async_active_peak": 140.0,
+  "platform_thread_peak": 66.0,
+  "cpu_avg_cores": 0.04532586309747616,
+  "cpu_peak_cores": 0.07119715211391549,
+  "heap_peak_bytes": 68866560.0,
+  "rss_peak_bytes": 247054336.0,
+  "mock_active_peak": 40.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 1500,
+  "invariant_ok": true,
+  "outcome_sum": 1500.0
+}
+=== [A-STRESS-run3] 2026-08-13T14:56:52Z done ===
+=== A OVERLOAD(R12) rep1 ===
+=== [A-OVERLOAD-run1] 2026-08-13T14:56:52Z starting ===
+ Container llm-concurrency-lab-mock-llm-1 Recreate 
+ Container llm-concurrency-lab-mock-llm-1 Recreated 
+ Container llm-concurrency-lab-gateway-1 Recreate 
+ Container llm-concurrency-lab-gateway-1 Recreated 
+ Container llm-concurrency-lab-prometheus-1 Recreate 
+ Container llm-concurrency-lab-prometheus-1 Recreated 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[A-OVERLOAD-run1] preflight OK (drift=0s arch=arm64)
+[A-OVERLOAD-run1] warm-up done, waiting for drain before measurement...
+[A-OVERLOAD-run1] measurement done, waiting for drain...
+{
+  "configuration": "A",
+  "load": "OVERLOAD",
+  "run_number": 1,
+  "arrival_rate_target": 12.0,
+  "actual_started_rate": 9.83879781420765,
+  "gateway_received_rate": 9.83879781420765,
+  "dropped_iteration_rate": 0.0,
+  "measurement_window_s": 366.0,
+  "received": 3601.0,
+  "completed": 3100.0,
+  "rejected": 0.0,
+  "timeout": 354.0,
+  "failed": 147.0,
+  "caller_runs": 2977.0,
+  "completion_rate_per_s": 8.469945355191257,
+  "completion_ratio": 0.860871980005554,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.09830602610386004,
+  "failure_rate": 0.040821993890585946,
+  "ttfc_completed_p50": 1.004,
+  "ttfc_completed_p95": 1.011,
+  "ttfc_completed_p99": 53.074059999999996,
+  "gateway_ttfb_p50": 1.5794825076594072,
+  "gateway_ttfb_p95": 53.43767705382436,
+  "gateway_ttfb_p99": 57.24920634920635,
+  "queue_wait_completed_p50": 42.0,
+  "queue_wait_completed_p95": 54.27272727272727,
+  "queue_wait_completed_p99": 54.85454545454545,
+  "queue_wait_failed_p50": 54.15827185416526,
+  "queue_wait_failed_p95": 59.37373737373737,
+  "queue_wait_failed_p99": 59.87474747474747,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 10.0,
+  "queue_size_peak": 100.0,
+  "async_active_peak": 195.0,
+  "platform_thread_peak": 129.0,
+  "cpu_avg_cores": 0.0942721646434178,
+  "cpu_peak_cores": 0.1348000000000002,
+  "heap_peak_bytes": 130464544.0,
+  "rss_peak_bytes": 317456384.0,
+  "mock_active_peak": 95.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 3601,
+  "invariant_ok": true,
+  "outcome_sum": 3601.0
+}
+=== [A-OVERLOAD-run1] 2026-08-13T15:06:24Z done ===
+=== A OVERLOAD(R12) rep2 ===
+=== [A-OVERLOAD-run2] 2026-08-13T15:06:24Z starting ===
+ Container llm-concurrency-lab-mock-llm-1 Recreate 
+ Container llm-concurrency-lab-mock-llm-1 Recreated 
+ Container llm-concurrency-lab-gateway-1 Recreate 
+ Container llm-concurrency-lab-gateway-1 Recreated 
+ Container llm-concurrency-lab-prometheus-1 Recreate 
+ Container llm-concurrency-lab-prometheus-1 Recreated 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[A-OVERLOAD-run2] preflight OK (drift=0s arch=arm64)
+[A-OVERLOAD-run2] warm-up done, waiting for drain before measurement...
+[A-OVERLOAD-run2] measurement done, waiting for drain...
+{
+  "configuration": "A",
+  "load": "OVERLOAD",
+  "run_number": 2,
+  "arrival_rate_target": 12.0,
+  "actual_started_rate": 9.785326086956522,
+  "gateway_received_rate": 9.785326086956522,
+  "dropped_iteration_rate": 0.0,
+  "measurement_window_s": 368.0,
+  "received": 3601.0,
+  "completed": 3119.0,
+  "rejected": 0.0,
+  "timeout": 337.0,
+  "failed": 145.0,
+  "caller_runs": 2975.0,
+  "completion_rate_per_s": 8.47554347826087,
+  "completion_ratio": 0.8661482921410719,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.09358511524576507,
+  "failure_rate": 0.04026659261316301,
+  "ttfc_completed_p50": 1.004,
+  "ttfc_completed_p95": 1.019,
+  "ttfc_completed_p99": 52.94446,
+  "gateway_ttfb_p50": 1.5810309973045822,
+  "gateway_ttfb_p95": 53.50639204545455,
+  "gateway_ttfb_p99": 57.45367647058824,
+  "queue_wait_completed_p50": 47.75,
+  "queue_wait_completed_p95": 54.46830985915493,
+  "queue_wait_completed_p99": 54.89366197183099,
+  "queue_wait_failed_p50": 54.25097520053279,
+  "queue_wait_failed_p95": 59.39413265306123,
+  "queue_wait_failed_p99": 59.878826530612244,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 10.0,
+  "queue_size_peak": 100.0,
+  "async_active_peak": 197.0,
+  "platform_thread_peak": 121.0,
+  "cpu_avg_cores": 0.09008046421027543,
+  "cpu_peak_cores": 0.1344,
+  "heap_peak_bytes": 130290976.0,
+  "rss_peak_bytes": 310927360.0,
+  "mock_active_peak": 97.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 3601,
+  "invariant_ok": true,
+  "outcome_sum": 3601.0
+}
+=== [A-OVERLOAD-run2] 2026-08-13T15:15:57Z done ===
+=== A OVERLOAD(R12) rep3 ===
+=== [A-OVERLOAD-run3] 2026-08-13T15:15:57Z starting ===
+ Container llm-concurrency-lab-mock-llm-1 Recreate 
+ Container llm-concurrency-lab-mock-llm-1 Recreated 
+ Container llm-concurrency-lab-gateway-1 Recreate 
+ Container llm-concurrency-lab-gateway-1 Recreated 
+ Container llm-concurrency-lab-prometheus-1 Recreate 
+ Container llm-concurrency-lab-prometheus-1 Recreated 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[A-OVERLOAD-run3] preflight OK (drift=0s arch=arm64)
+[A-OVERLOAD-run3] warm-up done, waiting for drain before measurement...
+[A-OVERLOAD-run3] measurement done, waiting for drain...
+{
+  "configuration": "A",
+  "load": "OVERLOAD",
+  "run_number": 3,
+  "arrival_rate_target": 12.0,
+  "actual_started_rate": 9.785326086956522,
+  "gateway_received_rate": 9.785326086956522,
+  "dropped_iteration_rate": 0.0,
+  "measurement_window_s": 368.0,
+  "received": 3601.0,
+  "completed": 3142.0,
+  "rejected": 0.0,
+  "timeout": 313.0,
+  "failed": 146.0,
+  "caller_runs": 2973.0,
+  "completion_rate_per_s": 8.53804347826087,
+  "completion_ratio": 0.8725354068314357,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.08692029991668981,
+  "failure_rate": 0.04054429325187448,
+  "ttfc_completed_p50": 1.004,
+  "ttfc_completed_p95": 8.0978,
+  "ttfc_completed_p99": 52.80318,
+  "gateway_ttfb_p50": 1.582132081796849,
+  "gateway_ttfb_p95": 53.42782738095238,
+  "gateway_ttfb_p99": 57.446323529411764,
+  "queue_wait_completed_p50": 47.43055555555556,
+  "queue_wait_completed_p95": 54.36594202898551,
+  "queue_wait_completed_p99": 54.8731884057971,
+  "queue_wait_failed_p50": 54.36528467243717,
+  "queue_wait_failed_p95": 59.41623711340206,
+  "queue_wait_failed_p99": 59.88324742268041,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 10.0,
+  "queue_size_peak": 100.0,
+  "async_active_peak": 195.0,
+  "platform_thread_peak": 124.0,
+  "cpu_avg_cores": 0.09498473997687712,
+  "cpu_peak_cores": 0.15518758499320037,
+  "heap_peak_bytes": 130907288.0,
+  "rss_peak_bytes": 299298816.0,
+  "mock_active_peak": 95.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 3601,
+  "invariant_ok": true,
+  "outcome_sum": 3601.0
+}
+=== [A-OVERLOAD-run3] 2026-08-13T15:25:30Z done ===
+=== A RERUN DONE ===

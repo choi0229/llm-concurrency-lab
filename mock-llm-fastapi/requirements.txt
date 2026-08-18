@@ -1,0 +1,7 @@
+# Pinned to versions actually resolved and verified inside the Docker image
+# (linux/arm64, python:3.12-slim) — see docs/decisions/version-compatibility.md.
+# Official benchmark runs must use the Docker image, not the local venv.
+fastapi==0.141.1
+uvicorn[standard]==0.52.1
+prometheus-client==0.26.0
+pydantic==2.13.4

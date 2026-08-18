@@ -1,0 +1,58 @@
+time="2026-08-11T14:34:39Z" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /scripts/01-concurrent-connections.js
+        output: Prometheus remote write (http://prometheus:9090/api/v1/write)
+
+     scenarios: (100.00%) 1 scenario, 10 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 10 iterations shared among 10 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 10 VUs  00m01.0s/10m0s  00/10 shared iters
+
+running (00m02.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 10 VUs  00m02.0s/10m0s  00/10 shared iters
+
+running (00m03.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 10 VUs  00m03.0s/10m0s  00/10 shared iters
+
+running (00m04.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 10 VUs  00m04.0s/10m0s  00/10 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_events_received_total.....: 210    42.530298/s
+    client_stream_completed_total....: 10     2.025252/s
+    client_stream_duration_seconds...: p(50)=4.937 p(95)=4.938 p(99)=4.938 min=4.936 max=4.938
+    client_ttfc_seconds..............: p(50)=1.051 p(95)=1.051 p(99)=1.051 min=1.05  max=1.051
+    sse_event........................: 210    42.530298/s
+
+    HTTP
+    http_req_duration................: p(50)=4.93s p(95)=4.93s p(99)=4.93s min=4.93s max=4.93s
+    http_reqs........................: 10     2.025252/s
+
+    EXECUTION
+    iteration_duration...............: p(50)=4.93s p(95)=4.93s p(99)=4.93s min=4.93s max=4.93s
+    iterations.......................: 10     2.025252/s
+    vus..............................: 10     min=10      max=10
+    vus_max..........................: 10     min=10      max=10
+
+    NETWORK
+    data_received....................: 27 kB  5.5 kB/s
+    data_sent........................: 2.7 kB 539 B/s
+
+
+
+
+running (00m04.9s), 00/10 VUs, 10 complete and 0 interrupted iterations
+default ✓ [ 100% ] 10 VUs  00m04.9s/10m0s  10/10 shared iters

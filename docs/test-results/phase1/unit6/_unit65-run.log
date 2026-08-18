@@ -1,0 +1,201 @@
+=== B HEALTHY (1rps) ===
+=== [B-HEALTHY-run1] 2026-08-13T13:27:01Z starting ===
+ Network llm-concurrency-lab_llm-lab Creating 
+ Network llm-concurrency-lab_llm-lab Created 
+ Container llm-concurrency-lab-mock-llm-1 Creating 
+ Container llm-concurrency-lab-mock-llm-1 Created 
+ Container llm-concurrency-lab-gateway-1 Creating 
+ Container llm-concurrency-lab-gateway-1 Created 
+ Container llm-concurrency-lab-prometheus-1 Creating 
+ Container llm-concurrency-lab-prometheus-1 Created 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[B-HEALTHY-run1] preflight OK (drift=1s arch=arm64)
+[B-HEALTHY-run1] warm-up done, waiting for drain before measurement...
+[B-HEALTHY-run1] measurement done, waiting for drain...
+{
+  "configuration": "B",
+  "load": "HEALTHY",
+  "run_number": 1,
+  "arrival_rate_target": 1.0,
+  "measurement_window_s": 317.0,
+  "received": 301.0,
+  "completed": 301.0,
+  "rejected": 0.0,
+  "timeout": 0.0,
+  "failed": 0.0,
+  "caller_runs": 0.0,
+  "completion_rate_per_s": 0.9495268138801262,
+  "completion_ratio": 1.0,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.0,
+  "failure_rate": 0.0,
+  "ttfc_completed_p50": 1.006,
+  "ttfc_completed_p95": 1.009,
+  "ttfc_completed_p99": 1.015,
+  "gateway_ttfb_p50": 1.75,
+  "gateway_ttfb_p95": 2.425,
+  "gateway_ttfb_p99": 2.485,
+  "queue_wait_completed_p50": 0.0005,
+  "queue_wait_completed_p95": 0.0009499999999999999,
+  "queue_wait_completed_p99": 0.00099,
+  "queue_wait_failed_p50": 0.0,
+  "queue_wait_failed_p95": 0.0,
+  "queue_wait_failed_p99": 0.0,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 8.0,
+  "queue_size_peak": 0.0,
+  "async_active_peak": 8.0,
+  "platform_thread_peak": 39.0,
+  "cpu_avg_cores": 0.018539035144804473,
+  "cpu_peak_cores": 0.02279726432828062,
+  "heap_peak_bytes": 26023240.0,
+  "rss_peak_bytes": 158552064.0,
+  "mock_active_peak": 8.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 301,
+  "invariant_ok": true,
+  "outcome_sum": 301.0
+}
+=== [B-HEALTHY-run1] 2026-08-13T13:34:53Z done ===
+=== E HEALTHY (1rps) ===
+=== [E-HEALTHY-run1] 2026-08-13T13:34:53Z starting ===
+ Container llm-concurrency-lab-mock-llm-1 Recreate 
+ Container llm-concurrency-lab-mock-llm-1 Recreated 
+ Container llm-concurrency-lab-gateway-1 Recreate 
+ Container llm-concurrency-lab-gateway-1 Recreated 
+ Container llm-concurrency-lab-prometheus-1 Recreate 
+ Container llm-concurrency-lab-prometheus-1 Recreated 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[E-HEALTHY-run1] preflight OK (drift=0s arch=arm64)
+[E-HEALTHY-run1] warm-up done, waiting for drain before measurement...
+[E-HEALTHY-run1] measurement done, waiting for drain...
+{
+  "configuration": "E",
+  "load": "HEALTHY",
+  "run_number": 1,
+  "arrival_rate_target": 1.0,
+  "measurement_window_s": 316.0,
+  "received": 301.0,
+  "completed": 301.0,
+  "rejected": 0.0,
+  "timeout": 0.0,
+  "failed": 0.0,
+  "caller_runs": 0.0,
+  "completion_rate_per_s": 0.9525316455696202,
+  "completion_ratio": 1.0,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.0,
+  "failure_rate": 0.0,
+  "ttfc_completed_p50": 1.006,
+  "ttfc_completed_p95": 1.008,
+  "ttfc_completed_p99": 1.011,
+  "gateway_ttfb_p50": 1.75,
+  "gateway_ttfb_p95": 2.425,
+  "gateway_ttfb_p99": 2.485,
+  "queue_wait_completed_p50": 0.0005,
+  "queue_wait_completed_p95": 0.00095,
+  "queue_wait_completed_p99": 0.00099,
+  "queue_wait_failed_p50": 0.0,
+  "queue_wait_failed_p95": 0.0,
+  "queue_wait_failed_p99": 0.0,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 8.0,
+  "queue_size_peak": 0.0,
+  "async_active_peak": 8.0,
+  "platform_thread_peak": 40.0,
+  "cpu_avg_cores": 0.018317344016863385,
+  "cpu_peak_cores": 0.02560307236868423,
+  "heap_peak_bytes": 26212800.0,
+  "rss_peak_bytes": 159031296.0,
+  "mock_active_peak": 8.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 301,
+  "invariant_ok": true,
+  "outcome_sum": 301.0
+}
+=== [E-HEALTHY-run1] 2026-08-13T13:42:45Z done ===
+=== A HEALTHY (1rps) ===
+=== [A-HEALTHY-run1] 2026-08-13T13:42:45Z starting ===
+ Container llm-concurrency-lab-mock-llm-1 Recreate 
+ Container llm-concurrency-lab-mock-llm-1 Recreated 
+ Container llm-concurrency-lab-gateway-1 Recreate 
+ Container llm-concurrency-lab-gateway-1 Recreated 
+ Container llm-concurrency-lab-prometheus-1 Recreate 
+ Container llm-concurrency-lab-prometheus-1 Recreated 
+ Container llm-concurrency-lab-mock-llm-1 Starting 
+ Container llm-concurrency-lab-mock-llm-1 Started 
+ Container llm-concurrency-lab-mock-llm-1 Waiting 
+ Container llm-concurrency-lab-mock-llm-1 Healthy 
+ Container llm-concurrency-lab-gateway-1 Starting 
+ Container llm-concurrency-lab-gateway-1 Started 
+ Container llm-concurrency-lab-prometheus-1 Starting 
+ Container llm-concurrency-lab-prometheus-1 Started 
+[A-HEALTHY-run1] preflight OK (drift=0s arch=arm64)
+[A-HEALTHY-run1] warm-up done, waiting for drain before measurement...
+[A-HEALTHY-run1] measurement done, waiting for drain...
+{
+  "configuration": "A",
+  "load": "HEALTHY",
+  "run_number": 1,
+  "arrival_rate_target": 1.0,
+  "measurement_window_s": 316.0,
+  "received": 300.0,
+  "completed": 300.0,
+  "rejected": 0.0,
+  "timeout": 0.0,
+  "failed": 0.0,
+  "caller_runs": 0.0,
+  "completion_rate_per_s": 0.9493670886075949,
+  "completion_ratio": 1.0,
+  "reject_rate": 0.0,
+  "timeout_rate": 0.0,
+  "failure_rate": 0.0,
+  "ttfc_completed_p50": 1.006,
+  "ttfc_completed_p95": 1.008,
+  "ttfc_completed_p99": 1.01002,
+  "gateway_ttfb_p50": 1.7474997746180316,
+  "gateway_ttfb_p95": 2.424749977461803,
+  "gateway_ttfb_p99": 2.4849499954923604,
+  "queue_wait_completed_p50": 0.0005,
+  "queue_wait_completed_p95": 0.00095,
+  "queue_wait_completed_p99": 0.00099,
+  "queue_wait_failed_p50": 0.0,
+  "queue_wait_failed_p95": 0.0,
+  "queue_wait_failed_p99": 0.0,
+  "pool_size_peak": 10.0,
+  "active_thread_peak": 8.0,
+  "queue_size_peak": 0.0,
+  "async_active_peak": 8.0,
+  "platform_thread_peak": 39.0,
+  "cpu_avg_cores": 0.018348856847171167,
+  "cpu_peak_cores": 0.023998080153587734,
+  "heap_peak_bytes": 26192664.0,
+  "rss_peak_bytes": 157454336.0,
+  "mock_active_peak": 8.0,
+  "mock_waiting_peak": 0.0,
+  "mock_bottleneck": false,
+  "dropped_iterations": null,
+  "achieved_iterations": 300,
+  "invariant_ok": true,
+  "outcome_sum": 300.0
+}
+=== [A-HEALTHY-run1] 2026-08-13T13:50:36Z done ===
+=== UNIT6.5 DONE ===

@@ -1,0 +1,62 @@
+time="2026-08-11T14:39:53Z" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /scripts/01-concurrent-connections.js
+        output: Prometheus remote write (http://prometheus:9090/api/v1/write)
+
+     scenarios: (100.00%) 1 scenario, 60 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 60 iterations shared among 60 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 50/60 VUs, 10 complete and 0 interrupted iterations
+default   [  17% ] 60 VUs  00m01.0s/10m0s  10/60 shared iters
+
+running (00m02.0s), 50/60 VUs, 10 complete and 0 interrupted iterations
+default   [  17% ] 60 VUs  00m02.0s/10m0s  10/60 shared iters
+
+running (00m03.0s), 50/60 VUs, 10 complete and 0 interrupted iterations
+default   [  17% ] 60 VUs  00m03.0s/10m0s  10/60 shared iters
+
+running (00m04.0s), 50/60 VUs, 10 complete and 0 interrupted iterations
+default   [  17% ] 60 VUs  00m04.0s/10m0s  10/60 shared iters
+
+running (00m05.0s), 49/60 VUs, 11 complete and 0 interrupted iterations
+default   [  18% ] 60 VUs  00m05.0s/10m0s  11/60 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_events_received_total.....: 1050   206.717502/s
+    client_stream_completed_total....: 50     9.843691/s
+    client_stream_duration_seconds...: p(50)=5.075 p(95)=5.078 p(99)=5.07841 min=0.156    max=5.079
+    client_stream_failed_total.......: 10     1.968738/s
+    client_ttfc_seconds..............: p(50)=1.182 p(95)=1.184 p(99)=1.184   min=1.05     max=1.184
+    sse_event........................: 1050   206.717502/s
+
+    HTTP
+    http_req_duration................: p(50)=5.07s p(95)=5.07s p(99)=5.07s   min=155.97ms max=5.07s
+    http_reqs........................: 60     11.812429/s
+
+    EXECUTION
+    iteration_duration...............: p(50)=5.07s p(95)=5.07s p(99)=5.07s   min=156.04ms max=5.07s
+    iterations.......................: 60     11.812429/s
+    vus..............................: 49     min=49       max=50
+    vus_max..........................: 60     min=60       max=60
+
+    NETWORK
+    data_received....................: 137 kB 27 kB/s
+    data_sent........................: 16 kB  3.1 kB/s
+
+
+
+
+running (00m05.1s), 00/60 VUs, 60 complete and 0 interrupted iterations
+default ✓ [ 100% ] 60 VUs  00m05.1s/10m0s  60/60 shared iters
