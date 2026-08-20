@@ -1,0 +1,223 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-20T23:43:13.409+09:00  INFO 76958 --- [           main] c.l.gatewaymvc.GatewayApplication        : Starting GatewayApplication v0.1.0 using Java 21.0.11 with PID 76958 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-java21/build/libs/gateway-mvc-java21-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab)
+2026-08-20T23:43:13.410+09:00  INFO 76958 --- [           main] c.l.gatewaymvc.GatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-20T23:43:13.637+09:00  INFO 76958 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-20T23:43:13.642+09:00  INFO 76958 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-20T23:43:13.642+09:00  INFO 76958 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-20T23:43:13.651+09:00  INFO 76958 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 224 ms
+2026-08-20T23:43:13.745+09:00  INFO 76958 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-20T23:43:13.746+09:00  INFO 76958 --- [           main] c.l.gatewaymvc.GatewayApplication        : Started GatewayApplication in 0.466 seconds (process running for 0.634)
+2026-08-20T23:43:14.163+09:00  INFO 76958 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-20T23:43:14.163+09:00  INFO 76958 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-20T23:43:14.163+09:00  INFO 76958 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-20T23:43:22.108+09:00  INFO 76958 --- [    virtual-299] c.l.gatewaymvc.chat.ChatController       : [f96f1283-6e4f-4837-9d48-6e71547426f2] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.108+09:00  INFO 76958 --- [    virtual-301] c.l.gatewaymvc.chat.ChatController       : [3386f703-a735-49d5-9523-dbdfdbb6440f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.108+09:00  INFO 76958 --- [    virtual-115] c.l.gatewaymvc.chat.ChatController       : [439bc861-45f3-43b1-99dc-6447bb062e15] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.108+09:00  INFO 76958 --- [    virtual-125] c.l.gatewaymvc.chat.ChatController       : [3e059a7c-0495-4703-8086-4d5264ac312a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.108+09:00  INFO 76958 --- [    virtual-297] c.l.gatewaymvc.chat.ChatController       : [a3a2552d-fe8f-4804-898c-42b47bb894c3] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [     virtual-94] c.l.gatewaymvc.chat.ChatController       : [0d2adde0-c924-4ef3-8e04-049ee4022e3e] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-276] c.l.gatewaymvc.chat.ChatController       : [6137b57f-10be-4ed6-82f4-34db7fe49f6d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-157] c.l.gatewaymvc.chat.ChatController       : [6e6fa0cd-d34d-4a53-90e3-c7e89ea89c62] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-162] c.l.gatewaymvc.chat.ChatController       : [f65c65e6-f68c-4b37-bac0-b567cffa723a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-305] c.l.gatewaymvc.chat.ChatController       : [b9648c35-0b7d-4dd8-be37-935d307d1e14] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-288] c.l.gatewaymvc.chat.ChatController       : [e794b922-0c8c-4216-8537-9b1e8c9e91d4] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-141] c.l.gatewaymvc.chat.ChatController       : [c7b22e53-85b9-4ef1-90ac-637c079dd14e] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-173] c.l.gatewaymvc.chat.ChatController       : [c6ea4aed-2cec-44bd-8699-e68154a3f8c0] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-150] c.l.gatewaymvc.chat.ChatController       : [eb6d2196-c637-4c6c-bb67-ddf4c4477d5b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-179] c.l.gatewaymvc.chat.ChatController       : [f0a17e71-c0b2-4b1d-9902-d377c1ee8467] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-110] c.l.gatewaymvc.chat.ChatController       : [942e811c-b060-49dc-b8bb-025aeff99a2b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-298] c.l.gatewaymvc.chat.ChatController       : [7ff6c9c2-3fa9-4b49-8e20-b2287fbf059e] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-193] c.l.gatewaymvc.chat.ChatController       : [5261db4e-e762-41f9-b5da-b19a46eeb5de] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-317] c.l.gatewaymvc.chat.ChatController       : [3f5340a5-99a4-4b72-a7c9-32ee4a566349] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-180] c.l.gatewaymvc.chat.ChatController       : [4c372ff3-15c1-41d7-ab3b-3de452231ae0] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-152] c.l.gatewaymvc.chat.ChatController       : [1c211096-a4af-4928-b34f-557047ddb503] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-308] c.l.gatewaymvc.chat.ChatController       : [267fefec-794e-49ec-a1a7-25a594b1dce1] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-164] c.l.gatewaymvc.chat.ChatController       : [f8a0bbb7-a623-4822-b646-15cd2e71f708] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-321] c.l.gatewaymvc.chat.ChatController       : [b24fdb83-cffa-49c0-95ff-a440b351e9a6] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-232] c.l.gatewaymvc.chat.ChatController       : [6f1e2231-e541-478c-b4d1-59209bb792ff] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-192] c.l.gatewaymvc.chat.ChatController       : [773a2965-60e6-4881-81bd-6da78155b688] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-320] c.l.gatewaymvc.chat.ChatController       : [497bca81-082f-4f9c-98b1-ff325a681e24] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [     virtual-96] c.l.gatewaymvc.chat.ChatController       : [6cd08ed5-42f9-4a3b-888a-0cb7cf801bae] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-313] c.l.gatewaymvc.chat.ChatController       : [72b92b36-da4b-405b-a691-9f95edd6015a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-226] c.l.gatewaymvc.chat.ChatController       : [359a9c76-7ed4-4a6f-a654-38e12f76df2c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-175] c.l.gatewaymvc.chat.ChatController       : [7d6a2543-21e9-4ddf-9473-1d5cd64043de] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-264] c.l.gatewaymvc.chat.ChatController       : [a3735b03-9600-4db6-884d-2fed9a9f00a9] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-300] c.l.gatewaymvc.chat.ChatController       : [a9558331-5c0a-4d9e-81f9-5c6303d07970] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.202+09:00  INFO 76958 --- [    virtual-134] c.l.gatewaymvc.chat.ChatController       : [f525a2e6-7274-43e5-be32-06c180d42570] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-112] c.l.gatewaymvc.chat.ChatController       : [6957f289-aeb3-4d96-b2d1-3cf9f11eb80b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-268] c.l.gatewaymvc.chat.ChatController       : [b31f2d40-8809-410d-a0cf-4ddfd6bce168] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-158] c.l.gatewaymvc.chat.ChatController       : [3a6b0350-bb56-44a2-8044-360ea0cf8cf6] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-124] c.l.gatewaymvc.chat.ChatController       : [8ad3aed8-c359-4604-81c3-ddfcfad151f1] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-267] c.l.gatewaymvc.chat.ChatController       : [02090870-add4-450d-871b-fd5987503aba] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-241] c.l.gatewaymvc.chat.ChatController       : [9f1970ca-99de-4e07-a6b6-9e2adbaf1f93] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-323] c.l.gatewaymvc.chat.ChatController       : [743f1863-b6f1-4a1a-a215-45b3fb9e1392] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-170] c.l.gatewaymvc.chat.ChatController       : [c0630500-2f89-4fa6-9467-7003107c6256] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-254] c.l.gatewaymvc.chat.ChatController       : [7b05cf66-d783-4277-88a6-a118c906e9ba] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-184] c.l.gatewaymvc.chat.ChatController       : [9e4974e8-d08e-45d4-ad09-33eda69db8c9] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-147] c.l.gatewaymvc.chat.ChatController       : [e89842ba-4313-4dbe-83e2-136b2f9c6a12] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-246] c.l.gatewaymvc.chat.ChatController       : [6b8c8201-8508-49ad-96cf-2d6c08919aed] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-249] c.l.gatewaymvc.chat.ChatController       : [87e26f86-2199-4ebe-8ad8-5a1bb4e46196] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-312] c.l.gatewaymvc.chat.ChatController       : [a0862329-baca-4600-9270-a2445832c0ed] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-178] c.l.gatewaymvc.chat.ChatController       : [b0824d61-26a4-42b2-9565-fdd2e571ef67] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-322] c.l.gatewaymvc.chat.ChatController       : [8f42d187-d165-4e46-97bc-abd859a95ab5] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-167] c.l.gatewaymvc.chat.ChatController       : [84973795-0213-4e03-b9c2-774d7a8fa000] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-253] c.l.gatewaymvc.chat.ChatController       : [ad151fbd-b32f-4629-8ac8-35d07e76cf71] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-166] c.l.gatewaymvc.chat.ChatController       : [62f3fd93-a5ae-449a-b0b8-218b3e1c83b9] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-310] c.l.gatewaymvc.chat.ChatController       : [d1fa1102-6874-4bed-afa4-7b675159a38c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-182] c.l.gatewaymvc.chat.ChatController       : [179443ba-10cf-48b3-89cb-7322f319fefa] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-256] c.l.gatewaymvc.chat.ChatController       : [66d2ec4b-6a85-484e-8ec3-5ceed78f47f5] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-273] c.l.gatewaymvc.chat.ChatController       : [5e911e42-260c-40b6-ab68-2b9e3c1a46da] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-263] c.l.gatewaymvc.chat.ChatController       : [9a4aeba4-908d-4162-ac6b-08c5c3413266] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-161] c.l.gatewaymvc.chat.ChatController       : [f3b4d043-6a04-4361-9d66-a9c9e2f32474] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-208] c.l.gatewaymvc.chat.ChatController       : [16c327b0-7172-40f8-bf53-6a4b3c1af258] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-203] c.l.gatewaymvc.chat.ChatController       : [58737eb9-ca3c-4ae6-beca-cbfcc4461d22] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-135] c.l.gatewaymvc.chat.ChatController       : [48e31d4a-1239-4d97-bed4-c0dbd7d5ae9b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-154] c.l.gatewaymvc.chat.ChatController       : [2fdc2e7c-6bfd-4190-938f-876cee61c2c3] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [     virtual-97] c.l.gatewaymvc.chat.ChatController       : [9ef2cf1b-e3cb-4890-b5b8-3d3263eb0260] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-270] c.l.gatewaymvc.chat.ChatController       : [03ca2d62-aedd-4599-a801-a69153735c28] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-304] c.l.gatewaymvc.chat.ChatController       : [0741d2dd-ed03-47a7-97a7-d5dc624288a5] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-245] c.l.gatewaymvc.chat.ChatController       : [c780c0fa-152d-49f3-bd28-99ecff24e4db] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-275] c.l.gatewaymvc.chat.ChatController       : [fbd10019-f5ff-4075-b26d-5630afa32775] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-185] c.l.gatewaymvc.chat.ChatController       : [75b5b2a7-0359-44a5-8099-f10a63633b03] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-195] c.l.gatewaymvc.chat.ChatController       : [ff4925c6-d164-4441-9a49-765d1875bd63] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-117] c.l.gatewaymvc.chat.ChatController       : [9f5fe8d1-8ac8-49a9-8fb9-8f5e8d8f718b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-306] c.l.gatewaymvc.chat.ChatController       : [eb225776-3177-4003-b7b5-7b7ba614fc0a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.203+09:00  INFO 76958 --- [    virtual-128] c.l.gatewaymvc.chat.ChatController       : [55c8257b-7906-4b7f-9a5e-3372503bf5d2] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-169] c.l.gatewaymvc.chat.ChatController       : [fc4067a3-0f14-4ca4-bde7-e2a58e68bc2a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-146] c.l.gatewaymvc.chat.ChatController       : [3bd9fbe5-58fe-4f70-a905-1a220039c3d6] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-307] c.l.gatewaymvc.chat.ChatController       : [ebf0603e-48d3-466f-922c-d1c94655c140] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-133] c.l.gatewaymvc.chat.ChatController       : [b45488e5-24b3-4b3a-a367-f8d2247fdcee] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-234] c.l.gatewaymvc.chat.ChatController       : [367049b3-bad6-4464-bf48-719078933068] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-215] c.l.gatewaymvc.chat.ChatController       : [cd766532-22b2-4e4d-ab25-c2193c8da336] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-102] c.l.gatewaymvc.chat.ChatController       : [d6f533b3-99c3-4fa0-8bdd-dc81a2c69dcc] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.204+09:00  INFO 76958 --- [    virtual-144] c.l.gatewaymvc.chat.ChatController       : [9808eb90-c0ce-4097-a0ba-da4e32b6680f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-315] c.l.gatewaymvc.chat.ChatController       : [558159a0-4fe5-4439-9f23-4b2f1e624d1d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-302] c.l.gatewaymvc.chat.ChatController       : [134c3c8f-e629-449e-9588-08583d520ce1] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-200] c.l.gatewaymvc.chat.ChatController       : [a557a9e0-8d46-4f61-a979-b27af9a82bda] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-140] c.l.gatewaymvc.chat.ChatController       : [1ac61308-15a4-4826-aec0-6e473b77caa3] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-160] c.l.gatewaymvc.chat.ChatController       : [55ec1400-2ead-48f5-a054-6de27687a945] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-311] c.l.gatewaymvc.chat.ChatController       : [2ebcedeb-e30e-4e04-8116-a62750971048] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.205+09:00  INFO 76958 --- [    virtual-303] c.l.gatewaymvc.chat.ChatController       : [d62ea2ce-a067-4b36-8ca0-dd6bf7b997dd] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-284] c.l.gatewaymvc.chat.ChatController       : [fa641006-5910-49dc-8415-a739ba04850f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-239] c.l.gatewaymvc.chat.ChatController       : [06f57995-2a08-4682-97b4-6223187d99b2] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-286] c.l.gatewaymvc.chat.ChatController       : [2c6002f0-436b-460d-bf43-b9a3f00e3b08] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-250] c.l.gatewaymvc.chat.ChatController       : [d02309a0-4d45-43a8-81e5-04f64f7483c1] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-149] c.l.gatewaymvc.chat.ChatController       : [697cedf9-05d3-4264-af5b-53caf20c1c3c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-168] c.l.gatewaymvc.chat.ChatController       : [59c9905a-1acb-4c62-894c-491f98c56f77] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-229] c.l.gatewaymvc.chat.ChatController       : [423145c2-343a-4f5d-aa9b-38edf12d8bda] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-190] c.l.gatewaymvc.chat.ChatController       : [d3b72373-bf54-4b7f-b6c3-50f63019e55a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-291] c.l.gatewaymvc.chat.ChatController       : [2a29d748-05fc-4fe1-b76a-fa7212f12080] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-213] c.l.gatewaymvc.chat.ChatController       : [8c08ebd3-54df-478f-b269-f2af456c979e] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-199] c.l.gatewaymvc.chat.ChatController       : [1176c21b-4cbe-42cc-8099-fef7933918c1] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-172] c.l.gatewaymvc.chat.ChatController       : [debe2ac1-04f0-479e-85f3-d899f888de69] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-211] c.l.gatewaymvc.chat.ChatController       : [907c1883-9836-42bf-af02-3421551bea27] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-183] c.l.gatewaymvc.chat.ChatController       : [9a69db79-bf6a-43e5-bb76-eb53d5f51220] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-113] c.l.gatewaymvc.chat.ChatController       : [da7ae0b2-ef4f-4409-b692-72262ff764d2] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-198] c.l.gatewaymvc.chat.ChatController       : [d6fcb0da-59d4-4e90-be58-fe9b86045d1d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-143] c.l.gatewaymvc.chat.ChatController       : [bf05e938-3774-4289-9aa2-ba0801e22c55] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-156] c.l.gatewaymvc.chat.ChatController       : [7661dbd7-15e5-472a-9397-5088ab470422] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-217] c.l.gatewaymvc.chat.ChatController       : [4fa6411e-116e-4498-b0ad-9281324c4a3d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-247] c.l.gatewaymvc.chat.ChatController       : [fc9351fc-66fb-46a8-9e45-083a63c5e6c6] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-231] c.l.gatewaymvc.chat.ChatController       : [c83e446b-0f84-4d65-b140-3bdc781c3c0f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-181] c.l.gatewaymvc.chat.ChatController       : [6959456c-b447-4990-8ce3-59e9339ccd68] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-202] c.l.gatewaymvc.chat.ChatController       : [353b03b8-1cc3-4a64-b4ae-ea721de2ac41] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-155] c.l.gatewaymvc.chat.ChatController       : [17d78a48-29d7-4009-9be3-80aa66dde503] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-243] c.l.gatewaymvc.chat.ChatController       : [9d52a67b-c352-4d4e-8937-52a92e3ea240] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-165] c.l.gatewaymvc.chat.ChatController       : [cca8ea80-05c7-40fa-ba5b-8ddecda19551] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.207+09:00  INFO 76958 --- [    virtual-104] c.l.gatewaymvc.chat.ChatController       : [ab2762e6-def9-49f9-9a1f-dccfe4f2757b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-278] c.l.gatewaymvc.chat.ChatController       : [18a2eb4d-a2c1-4a59-a56a-f6d790010262] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-277] c.l.gatewaymvc.chat.ChatController       : [d2404267-5b57-4e79-9382-f1c95b44c899] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-139] c.l.gatewaymvc.chat.ChatController       : [227ecf97-b7ef-4260-9749-54b17eb1e07f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-123] c.l.gatewaymvc.chat.ChatController       : [43d03ade-d7d3-4234-9e9d-b8128ca5e5d5] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-255] c.l.gatewaymvc.chat.ChatController       : [0047983f-f1a1-4356-96e5-1eebe8d46bb9] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-196] c.l.gatewaymvc.chat.ChatController       : [ab9f4ab5-e68d-4ef0-b2b4-12cb04fdc80b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-212] c.l.gatewaymvc.chat.ChatController       : [0a2f7466-9dfc-445b-8f73-088c10e5b27d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-191] c.l.gatewaymvc.chat.ChatController       : [b0603b00-f35e-4d86-b9c0-ae9b5c52a8c7] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-216] c.l.gatewaymvc.chat.ChatController       : [7bb9b6d0-912b-4263-bb3a-4f34802b0166] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-289] c.l.gatewaymvc.chat.ChatController       : [a3210057-c648-445d-9c6a-2920a6517a95] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-209] c.l.gatewaymvc.chat.ChatController       : [6f7f949a-2555-45ba-a5ee-7318ab5f44a2] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-188] c.l.gatewaymvc.chat.ChatController       : [3fef9bf7-41c8-471c-b15d-3e144823e017] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-281] c.l.gatewaymvc.chat.ChatController       : [f8653185-eb58-4e45-86eb-ff5c8ce5290c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-280] c.l.gatewaymvc.chat.ChatController       : [2edfc269-a424-49ba-b8a0-d8b38b0a0c55] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-261] c.l.gatewaymvc.chat.ChatController       : [f9d70558-5bbe-4049-8bd9-b9c74021aecd] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-207] c.l.gatewaymvc.chat.ChatController       : [9eb9c48e-d4f5-4e72-b871-b752245920e9] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-101] c.l.gatewaymvc.chat.ChatController       : [a846a9f7-4ff3-44be-b267-5fbbc631e174] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-210] c.l.gatewaymvc.chat.ChatController       : [e9d24be3-3d19-4a47-9d4b-8c36778065c7] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-235] c.l.gatewaymvc.chat.ChatController       : [3018b670-ecd6-4dd5-bbd7-39d3f0184d7d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-153] c.l.gatewaymvc.chat.ChatController       : [eeff979e-0ad3-4faa-a700-8ae3aab4a54d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-227] c.l.gatewaymvc.chat.ChatController       : [7ea22a10-bd74-4361-a86f-e6a5d369e3a8] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-233] c.l.gatewaymvc.chat.ChatController       : [dd6d44b6-5cf6-4f4a-bf3e-3fe8c1cbaf00] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-148] c.l.gatewaymvc.chat.ChatController       : [5f547157-1e30-47fd-a4a0-2218417e2750] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-201] c.l.gatewaymvc.chat.ChatController       : [a780f61b-67e7-4228-b099-94cc84026897] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-151] c.l.gatewaymvc.chat.ChatController       : [61a93c79-63f1-47db-a1cc-8cf9840199fa] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [     virtual-99] c.l.gatewaymvc.chat.ChatController       : [3ea4c7ab-4f0b-4fc0-adee-31ffb0966c4b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-204] c.l.gatewaymvc.chat.ChatController       : [ec6ace61-7ea5-402b-bd7e-f4d298d68951] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-187] c.l.gatewaymvc.chat.ChatController       : [a878b8e7-8ed4-4374-aceb-fff0dcb847f4] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-137] c.l.gatewaymvc.chat.ChatController       : [0fb45b69-608d-4d32-81eb-2fe1d7352e8d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.208+09:00  INFO 76958 --- [    virtual-189] c.l.gatewaymvc.chat.ChatController       : [a6253f4a-8375-4bb3-9249-f406735596ca] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-274] c.l.gatewaymvc.chat.ChatController       : [0f4758ce-67a6-4ba2-a5f3-41f7306f8494] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-142] c.l.gatewaymvc.chat.ChatController       : [85289ab0-9451-4fec-9fee-7d525ee35ba1] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.209+09:00  INFO 76958 --- [    virtual-205] c.l.gatewaymvc.chat.ChatController       : [8e03bbb9-46a9-47c9-bcfd-bb384c433755] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-296] c.l.gatewaymvc.chat.ChatController       : [b6c92f89-e4c6-4b1d-8567-a8983f23c45f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-176] c.l.gatewaymvc.chat.ChatController       : [080ed306-ea1c-45e3-9ab7-7d357bf9aec0] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-272] c.l.gatewaymvc.chat.ChatController       : [046ec25a-64cb-487d-8e02-a7671f5cef01] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-266] c.l.gatewaymvc.chat.ChatController       : [6211d7a9-7020-4681-b9d8-1b5fbd50b1ff] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-103] c.l.gatewaymvc.chat.ChatController       : [4dc7ca0b-8052-4722-8403-18306b2b0541] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-224] c.l.gatewaymvc.chat.ChatController       : [71b0fd5e-9658-4d52-88c4-c186c19f485d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-177] c.l.gatewaymvc.chat.ChatController       : [3e6ef2e7-649f-405f-9b62-ab1bbff774cd] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-122] c.l.gatewaymvc.chat.ChatController       : [7377c7fe-7ae4-42f5-ae05-fc5d00785e5f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-236] c.l.gatewaymvc.chat.ChatController       : [fc93e87c-bdd4-4a73-aa04-4e29502d629a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.212+09:00  INFO 76958 --- [    virtual-258] c.l.gatewaymvc.chat.ChatController       : [562b9dbf-07e5-4f2c-a43c-d6131ddc3805] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-100] c.l.gatewaymvc.chat.ChatController       : [d8cb82a1-16da-4a6f-9b22-be6a6a16c3fa] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-265] c.l.gatewaymvc.chat.ChatController       : [8980b546-a733-48e7-bf99-716398e9b44e] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-294] c.l.gatewaymvc.chat.ChatController       : [6e3fc78b-b6a2-4708-bfdf-3fe102f487bf] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-242] c.l.gatewaymvc.chat.ChatController       : [f16329fa-9e2e-40b9-adbd-c8df5b72d866] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-106] c.l.gatewaymvc.chat.ChatController       : [b066d71b-363b-441b-9b0f-a70ffee05112] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-271] c.l.gatewaymvc.chat.ChatController       : [b601b540-c841-4b4a-a5cb-1a65c743f834] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-163] c.l.gatewaymvc.chat.ChatController       : [e13a82dd-266e-4468-8cca-45776ce92ac8] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-105] c.l.gatewaymvc.chat.ChatController       : [af369b91-6fc2-4d9a-8269-9f56850c73c8] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-279] c.l.gatewaymvc.chat.ChatController       : [711e56e4-8141-4c9f-9dcb-514172104374] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-290] c.l.gatewaymvc.chat.ChatController       : [6afe5a28-9871-4fb2-8a72-8376224d06c0] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-171] c.l.gatewaymvc.chat.ChatController       : [b7311432-ce86-4425-87dc-bc499db6e1b7] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-295] c.l.gatewaymvc.chat.ChatController       : [b55852ee-5720-438d-a0ea-1c5354ad85ab] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-292] c.l.gatewaymvc.chat.ChatController       : [91d60661-c8ec-499d-9b4f-83acee7fc9b3] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-269] c.l.gatewaymvc.chat.ChatController       : [f52e42cc-5d86-4d9f-a50f-b66ddc2652f0] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-186] c.l.gatewaymvc.chat.ChatController       : [1f6f93f4-9b69-479b-8dfa-31cf1430f779] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-214] c.l.gatewaymvc.chat.ChatController       : [ae96f717-d6c9-4c8a-a975-42f2eb42ede3] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-283] c.l.gatewaymvc.chat.ChatController       : [397ce221-9d16-49bf-8fa0-91b297c524b3] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-285] c.l.gatewaymvc.chat.ChatController       : [861ac55b-ad7c-445d-a6d2-175eca5c6f69] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-259] c.l.gatewaymvc.chat.ChatController       : [481c444a-292f-4127-ae73-33e3fbafaead] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-251] c.l.gatewaymvc.chat.ChatController       : [e8d137db-28da-497b-abbd-adc4b31b99fc] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-237] c.l.gatewaymvc.chat.ChatController       : [6c28fed1-3278-44da-818b-aec4eddf3bcd] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-248] c.l.gatewaymvc.chat.ChatController       : [7d3e48ef-57d1-4905-9929-ab60ec86a86b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-222] c.l.gatewaymvc.chat.ChatController       : [f470370e-b5d0-4fb9-814f-cc6931c9f069] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-109] c.l.gatewaymvc.chat.ChatController       : [8d6a1119-5c17-49c5-ba8d-64c9248f0c3c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-220] c.l.gatewaymvc.chat.ChatController       : [dc26d004-95a8-4f4f-8f7c-173c62b7d339] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [     virtual-93] c.l.gatewaymvc.chat.ChatController       : [d5365313-36d5-43c4-8612-89001bdb676c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-293] c.l.gatewaymvc.chat.ChatController       : [1d915856-1624-4c02-823b-73b5956f43ad] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-174] c.l.gatewaymvc.chat.ChatController       : [08bd8d12-2986-4f87-84e7-d99f6485ccd9] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-116] c.l.gatewaymvc.chat.ChatController       : [1bc8cae9-2f0e-44e3-bb26-da36304ee4c9] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-257] c.l.gatewaymvc.chat.ChatController       : [95f19a41-51eb-4973-a30b-ea5069850fc7] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-244] c.l.gatewaymvc.chat.ChatController       : [c4d83d50-9dce-447a-8af8-6890ef385d94] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-108] c.l.gatewaymvc.chat.ChatController       : [a60763ea-96fd-4213-9f89-0181a5c3368a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-223] c.l.gatewaymvc.chat.ChatController       : [e4fdefb4-9108-4280-a192-051982ae2fe6] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-282] c.l.gatewaymvc.chat.ChatController       : [80f48889-a0a2-4082-b623-2383f0f1373a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-252] c.l.gatewaymvc.chat.ChatController       : [03e8f624-b066-49c1-adac-e88fe9a70b10] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-145] c.l.gatewaymvc.chat.ChatController       : [ae087a66-2a53-435a-9346-b781a9b60e13] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-262] c.l.gatewaymvc.chat.ChatController       : [f4ab23ef-dbe6-4aa7-a83b-fb4de04b984b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-287] c.l.gatewaymvc.chat.ChatController       : [38287b2c-30d7-4606-89a8-91e04d72302d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-159] c.l.gatewaymvc.chat.ChatController       : [7f638afb-984c-46b8-bee9-096cf651dc60] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-260] c.l.gatewaymvc.chat.ChatController       : [988941e4-5362-46a5-b664-88681a757cda] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.213+09:00  INFO 76958 --- [    virtual-194] c.l.gatewaymvc.chat.ChatController       : [4348b4be-e657-4126-89b1-6245253f046f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:22.214+09:00  INFO 76958 --- [     virtual-95] c.l.gatewaymvc.chat.ChatController       : [e1263c38-071a-4bc5-9b8e-d19bc846f4a5] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T23:43:26.599+09:00  INFO 76958 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-20T23:43:26.602+09:00  INFO 76958 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

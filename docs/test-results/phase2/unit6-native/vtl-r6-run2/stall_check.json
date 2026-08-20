@@ -1,0 +1,5 @@
+{
+  "gateway_log_gaps_over_20s": [],
+  "mock_llm_log_gaps_over_20s": [],
+  "note": "A gap here does not by itself invalidate the run \u2014 check client_cohort.invariant_ok and whether the gap falls inside [measurement_start, measurement_end] before judging impact on measurement_window_completion_rate."
+}

@@ -1,0 +1,99 @@
+{
+    "metrics": {
+        "vus": {
+            "value": 3,
+            "min": 1,
+            "max": 24
+        },
+        "http_req_duration": {
+            "p(50)": 7899.947837,
+            "p(95)": 7952.335462,
+            "p(99)": 8151.799337,
+            "min": 347.266708,
+            "max": 8219.395545
+        },
+        "client_failed_mid_stream_total": {
+            "count": 20,
+            "rate": 0.03607699925108776
+        },
+        "http_reqs": {
+            "count": 901,
+            "rate": 1.6252688162615034
+        },
+        "client_ttfc_seconds": {
+            "p(50)": 1.006,
+            "p(95)": 1.008,
+            "p(99)": 1.05557,
+            "min": 1.002,
+            "max": 234.928
+        },
+        "sse_event": {
+            "count": 31958,
+            "rate": 57.64743710331313
+        },
+        "client_ttfc_completed_seconds": {
+            "p(50)": 1.006,
+            "p(95)": 1.008,
+            "p(99)": 1.0347499999999998,
+            "min": 1.002,
+            "max": 13.56
+        },
+        "iteration_duration": {
+            "p(50)": 7900.187795,
+            "p(95)": 7952.546504,
+            "p(99)": 8152.108838,
+            "min": 347.598458,
+            "max": 8219.552421
+        },
+        "client_events_received_total": {
+            "count": 31958,
+            "rate": 57.64743710331313
+        },
+        "data_sent": {
+            "count": 245973,
+            "rate": 443.6983868393905
+        },
+        "iterations": {
+            "count": 901,
+            "rate": 1.6252688162615034
+        },
+        "http_req_sending": {
+            "p(50)": 1005.382417,
+            "p(95)": 1007.746667,
+            "p(99)": 1016.185167,
+            "min": 347.223083,
+            "max": 1177.158834
+        },
+        "client_stream_duration_seconds": {
+            "min": 7.859,
+            "max": 242.016,
+            "p(50)": 7.902,
+            "p(95)": 20.441,
+            "p(99)": 239.27
+        },
+        "client_failed_no_event_total": {
+            "count": 3,
+            "rate": 0.005411549887663163
+        },
+        "vus_max": {
+            "max": 100,
+            "value": 100,
+            "min": 100
+        },
+        "client_completed_total": {
+            "count": 878,
+            "rate": 1.5837802671227525
+        },
+        "data_received": {
+            "count": 4080510,
+            "rate": 7360.627810702806
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    }
+}

@@ -1,0 +1,67 @@
+time="2026-08-20T23:42:48+09:00" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/load-test-k6/scenarios/01-concurrent-connections.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 100 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 100 iterations shared among 100 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 100 VUs  00m01.0s/10m0s  000/100 shared iters
+
+running (00m02.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 100 VUs  00m02.0s/10m0s  000/100 shared iters
+
+running (00m03.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 100 VUs  00m03.0s/10m0s  000/100 shared iters
+
+running (00m04.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 100 VUs  00m04.0s/10m0s  000/100 shared iters
+
+running (00m05.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 100 VUs  00m05.0s/10m0s  000/100 shared iters
+
+running (00m06.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 100 VUs  00m06.0s/10m0s  000/100 shared iters
+
+running (00m07.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 100 VUs  00m07.0s/10m0s  000/100 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_events_received_total.....: 3600   452.904647/s
+    client_stream_completed_total....: 100    12.580685/s
+    client_stream_duration_seconds...: avg=7.94477 min=7.942 med=7.945  max=7.947 p(90)=7.946 p(95)=7.946
+    client_ttfc_seconds..............: avg=1.03605 min=1.027 med=1.0365 max=1.043 p(90)=1.042 p(95)=1.042
+    sse_event........................: 3600   452.904647/s
+
+    HTTP
+    http_req_duration................: avg=7.94s   min=7.94s med=7.94s  max=7.94s p(90)=7.94s p(95)=7.94s
+    http_reqs........................: 100    12.580685/s
+
+    EXECUTION
+    iteration_duration...............: avg=7.94s   min=7.94s med=7.94s  max=7.94s p(90)=7.94s p(95)=7.94s
+    iterations.......................: 100    12.580685/s
+    vus..............................: 100    min=100      max=100
+    vus_max..........................: 100    min=100      max=100
+
+    NETWORK
+    data_received....................: 459 kB 58 kB/s
+    data_sent........................: 27 kB  3.4 kB/s
+
+
+
+
+running (00m07.9s), 000/100 VUs, 100 complete and 0 interrupted iterations
+default ✓ [ 100% ] 100 VUs  00m07.9s/10m0s  100/100 shared iters

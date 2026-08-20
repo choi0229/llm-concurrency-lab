@@ -1,0 +1,33 @@
+{
+  "environment": "native-macos-arm64",
+  "configuration": "pe",
+  "thread_mode": "PLATFORM",
+  "load": "r6",
+  "run_number": 3,
+  "arrival_rate_target": 6,
+  "k6_pre_allocated_vus": 100,
+  "warmup_duration_s": 120,
+  "measurement_duration_s": 300,
+  "mock_llm_workload": {"first_chunk_delay_ms": 1000, "chunk_interval_ms": 200, "chunk_count": 35, "chunk_size_bytes": 64},
+  "timeouts_ms": {"connect": 3000, "read": 30000, "total": 60000},
+  "resource_policy": {
+    "note": "No Docker cgroup CPU/memory limits on native macOS — see docs/decisions/phase2-formal-native-macos-environment.md. Both P-E and VT-Limited get unrestricted host CPU (no jdk.virtualThreadScheduler.parallelism override) and identical default JVM heap ergonomics (no -Xmx/-Xms).",
+    "available_processors": 10,
+    "heap_ergonomics": " size_t InitialHeapSize = 268435456 {product} {ergonomic}; size_t MaxHeapSize = 4294967296 {product} {ergonomic}; size_t SoftMaxHeapSize = 4294967296 {manageable} {ergonomic};"
+  },
+  "host": {
+    "arch": "arm64",
+    "power_source": "Now drawing from 'AC Power'",
+    "docker_desktop_running": false,
+    "clock_check": "sntp: clock_settime: Operation not permitted +2.005925 +/- 0.038579 time.apple.com 17.253.68.253 "
+  },
+  "k6_version": "k6 v1.8.0 (go1.26.6, darwin/arm64) Extensions:   github.com/phymbert/xk6-sse v0.1.11, k6/x/sse [js] ",
+  "mock_versions": "fastapi==0.141.1 prometheus_client==0.26.0 pydantic==2.13.4 uvicorn==0.52.1 ",
+  "jdk": "Eclipse Temurin 21.0.11+10-LTS (macOS aarch64)",
+  "jdk_version_output": "openjdk version \"21.0.11\" 2026-04-21 LTS OpenJDK Runtime Environment Temurin-21.0.11+10 (build 21.0.11+10-LTS) OpenJDK 64-Bit Server VM Temurin-21.0.11+10 (build 21.0.11+10-LTS, mixed mode, sharing) ",
+  "jdk_artifact": "OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.11_10.tar.gz",
+  "jdk_sha256_pinned": "6ebcf221c9b41507b14c098e93c6ead6440b8d9bd154f8ec666c4c73abbdb201",
+  "spring_boot": "4.1.0",
+  "spring_framework": "7.0.8",
+  "postflight_fail": ""
+}

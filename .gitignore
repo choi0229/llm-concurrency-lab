@@ -47,6 +47,12 @@ venv/
 ### Docker ###
 docker-compose.override.yml
 
+### Phase 2 Native Formal runtime (downloaded JDK/Prometheus/k6 binaries + Go
+### module cache, ~1.3GB) — fetched by scripts/setup-phase2-native-runtime.sh,
+### never committed. Checksums are recorded in docs/decisions/
+### phase2-formal-native-macos-environment.md, not by committing the binaries.
+.native-runtime/
+
 ### OS ###
 .DS_Store
 

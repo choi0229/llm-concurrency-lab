@@ -1,0 +1,67 @@
+time="2026-08-20T06:54:18+09:00" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/load-test-k6/scenarios/01-concurrent-connections.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 30 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 30 iterations shared among 30 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 30/30 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 30 VUs  00m01.0s/10m0s  00/30 shared iters
+
+running (00m02.0s), 30/30 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 30 VUs  00m02.0s/10m0s  00/30 shared iters
+
+running (00m03.0s), 30/30 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 30 VUs  00m03.0s/10m0s  00/30 shared iters
+
+running (00m04.0s), 30/30 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 30 VUs  00m04.0s/10m0s  00/30 shared iters
+
+running (00m05.0s), 30/30 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 30 VUs  00m05.0s/10m0s  00/30 shared iters
+
+running (00m06.0s), 30/30 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 30 VUs  00m06.0s/10m0s  00/30 shared iters
+
+running (00m07.0s), 30/30 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 30 VUs  00m07.0s/10m0s  00/30 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_events_received_total.....: 1080   136.452244/s
+    client_stream_completed_total....: 30     3.79034/s
+    client_stream_duration_seconds...: avg=7.913233 min=7.913 med=7.913 max=7.914 p(90)=7.914 p(95)=7.914
+    client_ttfc_seconds..............: avg=1.0295   min=1.028 med=1.029 max=1.031 p(90)=1.031 p(95)=1.031
+    sse_event........................: 1080   136.452244/s
+
+    HTTP
+    http_req_duration................: avg=7.91s    min=7.91s med=7.91s max=7.91s p(90)=7.91s p(95)=7.91s
+    http_reqs........................: 30     3.79034/s
+
+    EXECUTION
+    iteration_duration...............: avg=7.91s    min=7.91s med=7.91s max=7.91s p(90)=7.91s p(95)=7.91s
+    iterations.......................: 30     3.79034/s
+    vus..............................: 30     min=30       max=30
+    vus_max..........................: 30     min=30       max=30
+
+    NETWORK
+    data_received....................: 138 kB 17 kB/s
+    data_sent........................: 8.0 kB 1.0 kB/s
+
+
+
+
+running (00m07.9s), 00/30 VUs, 30 complete and 0 interrupted iterations
+default ✓ [ 100% ] 30 VUs  00m07.9s/10m0s  30/30 shared iters

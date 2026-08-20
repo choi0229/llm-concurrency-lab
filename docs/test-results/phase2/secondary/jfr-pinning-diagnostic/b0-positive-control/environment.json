@@ -1,0 +1,14 @@
+{
+  "experiment": "B-0 JFR Positive Control",
+  "purpose": "Verify the JFR settings/threshold used for B-1/B-2 can actually capture jdk.VirtualThreadPinned events, before trusting a 0-event result from the real Gateway workload.",
+  "code": "scripts/diagnostic-tools/JfrPositiveControl.java (standalone, NOT gateway-mvc-java21 production code)",
+  "workload": "5 virtual threads, sequentially entering a single shared synchronized monitor and Thread.sleep()ing ~300ms while holding it (known JDK 21 pinning trigger)",
+  "jfc_file": "phase2-vt-pinning.jfc (jdk.VirtualThreadPinned#enabled=true, stackTrace=true, threshold=0ms; based on default.jfc, same file reused for B-1/B-2)",
+  "jdk_version_output": "openjdk version \"21.0.11\" 2026-04-21 LTS OpenJDK Runtime Environment Temurin-21.0.11+10 (build 21.0.11+10-LTS) OpenJDK 64-Bit Server VM Temurin-21.0.11+10 (build 21.0.11+10-LTS, mixed mode, sharing) ",
+  "host_arch": "arm64",
+  "run_command": "java -XX:StartFlightRecording=filename=recording.jfr,settings=phase2-vt-pinning.jfc JfrPositiveControl",
+  "event_count": 5,
+  "duration_min_ms": 303,
+  "duration_max_ms": 305,
+  "verdict": "PASS - JFR pipeline confirmed able to capture jdk.VirtualThreadPinned events with this JFC/threshold"
+}

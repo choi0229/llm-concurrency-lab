@@ -1,0 +1,56 @@
+[0.138s][info][jfr,startup] Started recording 1. No limit specified, using maxsize=250MB as default.
+[0.138s][info][jfr,startup] 
+[0.138s][info][jfr,startup] Use jcmd 65155 JFR.dump name=1 to copy recording data to file.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-20T06:54:48.856+09:00  INFO 65155 --- [           main] c.l.gatewaymvc.GatewayApplication        : Starting GatewayApplication v0.1.0 using Java 21.0.11 with PID 65155 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-java21/build/libs/gateway-mvc-java21-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab)
+2026-08-20T06:54:48.857+09:00  INFO 65155 --- [           main] c.l.gatewaymvc.GatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-20T06:54:49.084+09:00  INFO 65155 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-20T06:54:49.089+09:00  INFO 65155 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-20T06:54:49.089+09:00  INFO 65155 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-20T06:54:49.096+09:00  INFO 65155 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 225 ms
+2026-08-20T06:54:49.191+09:00  INFO 65155 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-20T06:54:49.192+09:00  INFO 65155 --- [           main] c.l.gatewaymvc.GatewayApplication        : Started GatewayApplication in 0.465 seconds (process running for 0.738)
+2026-08-20T06:54:49.510+09:00  INFO 65155 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-20T06:54:49.510+09:00  INFO 65155 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-20T06:54:49.511+09:00  INFO 65155 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-20T06:55:19.595+09:00  INFO 65155 --- [     virtual-87] c.l.gatewaymvc.chat.ChatController       : [330db9e8-5b25-49f2-811e-f363c21a685c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.595+09:00  INFO 65155 --- [     virtual-82] c.l.gatewaymvc.chat.ChatController       : [e9e09f21-52e2-424d-8b20-8593da14f944] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.595+09:00  INFO 65155 --- [     virtual-78] c.l.gatewaymvc.chat.ChatController       : [eab9611c-a446-42cf-b286-da88b610452e] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.595+09:00  INFO 65155 --- [     virtual-76] c.l.gatewaymvc.chat.ChatController       : [763ac122-72aa-4029-a7d7-9a09eb45832d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.595+09:00  INFO 65155 --- [     virtual-90] c.l.gatewaymvc.chat.ChatController       : [7372dfad-6958-4f73-9454-57907286031b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.595+09:00  INFO 65155 --- [     virtual-86] c.l.gatewaymvc.chat.ChatController       : [ab858610-f561-457c-8e81-2c0c0c703601] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.595+09:00  INFO 65155 --- [     virtual-93] c.l.gatewaymvc.chat.ChatController       : [0576e1b1-f151-4667-be6c-c61d8301d41c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.595+09:00  INFO 65155 --- [     virtual-80] c.l.gatewaymvc.chat.ChatController       : [cf381403-1814-4c3e-a9f5-f6f0b7bd6ded] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.597+09:00  INFO 65155 --- [     virtual-95] c.l.gatewaymvc.chat.ChatController       : [d9fda8db-61cf-4b3e-a82a-983dbc7d024e] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.597+09:00  INFO 65155 --- [     virtual-92] c.l.gatewaymvc.chat.ChatController       : [a9e4b0b3-a05b-42f1-8451-092ede0e49f8] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.595+09:00  INFO 65155 --- [     virtual-96] c.l.gatewaymvc.chat.ChatController       : [d8ce7f21-f1c3-4b0a-8166-a9f3b78cd990] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.597+09:00  INFO 65155 --- [     virtual-91] c.l.gatewaymvc.chat.ChatController       : [760a0cae-6e67-450e-9218-5d4112572f3d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.597+09:00  INFO 65155 --- [     virtual-74] c.l.gatewaymvc.chat.ChatController       : [81d4dab7-b95b-4da5-8aac-b2773f028a2f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.597+09:00  INFO 65155 --- [     virtual-98] c.l.gatewaymvc.chat.ChatController       : [86a623d1-5e29-456c-bc24-db951119b6c1] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.597+09:00  INFO 65155 --- [     virtual-85] c.l.gatewaymvc.chat.ChatController       : [597133d8-b783-40e0-b59e-0ae112996ee0] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.597+09:00  INFO 65155 --- [     virtual-79] c.l.gatewaymvc.chat.ChatController       : [31e25379-d8c7-4ac4-8fee-ab411732c153] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.594+09:00  INFO 65155 --- [    virtual-102] c.l.gatewaymvc.chat.ChatController       : [4d1dde14-aab6-418c-8338-16f7a31d7b94] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.598+09:00  INFO 65155 --- [     virtual-99] c.l.gatewaymvc.chat.ChatController       : [0953da29-3e77-431b-ac30-785c0f536617] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.598+09:00  INFO 65155 --- [     virtual-84] c.l.gatewaymvc.chat.ChatController       : [f02e7f58-3cbe-4849-bea0-5c4a895dc7f6] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.598+09:00  INFO 65155 --- [     virtual-89] c.l.gatewaymvc.chat.ChatController       : [312d54c5-2f36-4b8d-8a63-ded79373c196] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.598+09:00  INFO 65155 --- [     virtual-77] c.l.gatewaymvc.chat.ChatController       : [9d643ba1-fc68-46ac-a027-eda059b6c3ad] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.598+09:00  INFO 65155 --- [     virtual-94] c.l.gatewaymvc.chat.ChatController       : [dcef9068-c784-42c7-86b3-e43147b58fe8] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.598+09:00  INFO 65155 --- [     virtual-81] c.l.gatewaymvc.chat.ChatController       : [36da4959-7b01-442f-a769-eb87ecd54d10] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.598+09:00  INFO 65155 --- [     virtual-97] c.l.gatewaymvc.chat.ChatController       : [5e949f18-bd58-4a81-96a8-adbb0ea68d85] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.598+09:00  INFO 65155 --- [     virtual-75] c.l.gatewaymvc.chat.ChatController       : [101927c2-7481-4dbf-b561-a5be8b64b57a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.599+09:00  INFO 65155 --- [     virtual-88] c.l.gatewaymvc.chat.ChatController       : [d5ac3daf-e6e5-44bc-85c7-f28635893e8f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.599+09:00  INFO 65155 --- [     virtual-83] c.l.gatewaymvc.chat.ChatController       : [ecef6524-d5a7-422c-a951-a3807493f376] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.599+09:00  INFO 65155 --- [    virtual-103] c.l.gatewaymvc.chat.ChatController       : [a1a04554-21a8-45d2-bc89-20bdca7970de] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.599+09:00  INFO 65155 --- [    virtual-101] c.l.gatewaymvc.chat.ChatController       : [92d8566d-ccee-48c5-939b-21172b5b9b87] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:19.600+09:00  INFO 65155 --- [    virtual-100] c.l.gatewaymvc.chat.ChatController       : [b34157d9-45dc-42c8-818b-e4fcc88e433c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T06:55:20.299+09:00  INFO 65155 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-20T06:55:20.303+09:00  INFO 65155 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

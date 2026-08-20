@@ -1,0 +1,53 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-19T20:40:48.033+09:00  INFO 11553 --- [           main] c.l.gatewaymvc.GatewayApplication        : Starting GatewayApplication v0.1.0 using Java 21.0.11 with PID 11553 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-java21/build/libs/gateway-mvc-java21-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab)
+2026-08-19T20:40:48.034+09:00  INFO 11553 --- [           main] c.l.gatewaymvc.GatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-19T20:40:48.302+09:00  INFO 11553 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-19T20:40:48.308+09:00  INFO 11553 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-19T20:40:48.308+09:00  INFO 11553 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-19T20:40:48.319+09:00  INFO 11553 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 264 ms
+2026-08-19T20:40:48.424+09:00  INFO 11553 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-19T20:40:48.426+09:00  INFO 11553 --- [           main] c.l.gatewaymvc.GatewayApplication        : Started GatewayApplication in 0.554 seconds (process running for 0.771)
+2026-08-19T20:40:48.716+09:00  INFO 11553 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19T20:40:48.716+09:00  INFO 11553 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-19T20:40:48.717+09:00  INFO 11553 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-19T20:41:03.240+09:00  INFO 11553 --- [chat-executor-1] c.l.gatewaymvc.chat.ChatController       : [2efbe235-4f8a-4bbe-b948-fd67c7d1b083] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:04.209+09:00  INFO 11553 --- [chat-executor-2] c.l.gatewaymvc.chat.ChatController       : [e7655543-b427-4990-91cb-03880c464c86] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:05.212+09:00  INFO 11553 --- [chat-executor-3] c.l.gatewaymvc.chat.ChatController       : [e11bd84c-5e5c-49f9-a44b-b06b1691ec3e] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:06.218+09:00  INFO 11553 --- [chat-executor-4] c.l.gatewaymvc.chat.ChatController       : [ea0839be-211f-4eac-a450-4acb41044dc4] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:07.225+09:00  INFO 11553 --- [chat-executor-5] c.l.gatewaymvc.chat.ChatController       : [55c10afd-d99c-48b7-9361-db4c1023dae1] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:08.231+09:00  INFO 11553 --- [chat-executor-6] c.l.gatewaymvc.chat.ChatController       : [0eca2724-d724-4c7e-b110-eae5631c8aac] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:09.219+09:00  INFO 11553 --- [chat-executor-7] c.l.gatewaymvc.chat.ChatController       : [781e48c8-ebdc-4ec1-bde4-9414ac4f9765] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:10.227+09:00  INFO 11553 --- [chat-executor-8] c.l.gatewaymvc.chat.ChatController       : [42d1f32f-8011-465d-a42b-a2257489afa9] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:11.225+09:00  INFO 11553 --- [chat-executor-9] c.l.gatewaymvc.chat.ChatController       : [abc648c2-40ff-469e-8a51-c64cc2fe710a] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:12.231+09:00  INFO 11553 --- [hat-executor-10] c.l.gatewaymvc.chat.ChatController       : [d0cf2882-9003-4430-9d05-8f68462a4071] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:13.225+09:00  INFO 11553 --- [chat-executor-3] c.l.gatewaymvc.chat.ChatController       : [2685c8ab-8b53-444b-b783-7ac6bc49c00d] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:14.229+09:00  INFO 11553 --- [chat-executor-4] c.l.gatewaymvc.chat.ChatController       : [0fe66b25-4f8b-4777-9ba4-c3f620e9fe48] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:15.212+09:00  INFO 11553 --- [chat-executor-5] c.l.gatewaymvc.chat.ChatController       : [8338b5d7-2a01-435f-a461-bf69f8eb9157] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:16.219+09:00  INFO 11553 --- [chat-executor-6] c.l.gatewaymvc.chat.ChatController       : [ca0b39aa-229e-4432-933d-143112491536] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:17.225+09:00  INFO 11553 --- [chat-executor-7] c.l.gatewaymvc.chat.ChatController       : [b4ca03ea-34cb-4b4f-bfb8-a4b75704e4f8] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:18.214+09:00  INFO 11553 --- [chat-executor-8] c.l.gatewaymvc.chat.ChatController       : [9b875353-c351-4f92-97b2-20fb1629c750] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:19.220+09:00  INFO 11553 --- [chat-executor-9] c.l.gatewaymvc.chat.ChatController       : [d78ef2bb-fe47-4f48-87ab-fd59d46d3e31] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:20.225+09:00  INFO 11553 --- [hat-executor-10] c.l.gatewaymvc.chat.ChatController       : [6882392b-c547-496c-996a-33e75338af63] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:21.234+09:00  INFO 11553 --- [chat-executor-3] c.l.gatewaymvc.chat.ChatController       : [1179d35c-fb06-467f-b551-fd8dc83321f6] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:22.228+09:00  INFO 11553 --- [chat-executor-4] c.l.gatewaymvc.chat.ChatController       : [5e0cf11a-991f-4d10-b6c2-ee1e5b23e8dc] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:23.233+09:00  INFO 11553 --- [chat-executor-5] c.l.gatewaymvc.chat.ChatController       : [3f763cad-50f2-4456-8d89-d87f517dec39] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:24.217+09:00  INFO 11553 --- [chat-executor-6] c.l.gatewaymvc.chat.ChatController       : [e3e8fb1d-2758-4f59-8f7f-aa4b59bfa725] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:25.224+09:00  INFO 11553 --- [chat-executor-7] c.l.gatewaymvc.chat.ChatController       : [e6de187e-f931-4f19-a8b6-afea1c46c979] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:26.230+09:00  INFO 11553 --- [chat-executor-8] c.l.gatewaymvc.chat.ChatController       : [b11002cb-d380-43eb-93ee-ab262e0e3a41] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:27.221+09:00  INFO 11553 --- [chat-executor-9] c.l.gatewaymvc.chat.ChatController       : [d585e4f0-0617-403f-ae4a-5aa26dae6cbf] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:28.225+09:00  INFO 11553 --- [hat-executor-10] c.l.gatewaymvc.chat.ChatController       : [b5e83353-6c23-4674-819d-98c72f7fc865] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:29.231+09:00  INFO 11553 --- [chat-executor-3] c.l.gatewaymvc.chat.ChatController       : [a7d09d65-eaf0-46d6-bfc2-2fc21d42d53c] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:30.233+09:00  INFO 11553 --- [chat-executor-4] c.l.gatewaymvc.chat.ChatController       : [4d491277-3740-401c-9d46-e2ce45d1c44b] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:31.234+09:00  INFO 11553 --- [chat-executor-5] c.l.gatewaymvc.chat.ChatController       : [26432492-af1e-44f4-893d-73d481e867a8] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:32.239+09:00  INFO 11553 --- [chat-executor-6] c.l.gatewaymvc.chat.ChatController       : [cd0be6d5-69d5-4c95-9e03-d7f9f9bc47f4] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-19T20:41:40.823+09:00  INFO 11553 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19T20:41:40.825+09:00  INFO 11553 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

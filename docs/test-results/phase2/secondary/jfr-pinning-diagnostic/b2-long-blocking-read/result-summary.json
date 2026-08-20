@@ -1,0 +1,12 @@
+{
+  "scenario": "b2-long-blocking-read",
+  "concurrency": 30,
+  "event_count": 0,
+  "duration_min_ms": null,
+  "duration_max_ms": null,
+  "representative_stack": null,
+  "gateway_completed": 30,
+  "gateway_failed": 0,
+  "gateway_timeout": 0,
+  "note": "gateway_completed/failed/timeout counted from Gateway-side 'outcome=' relay log (30x outcome=completed, 0 timeout/exception log lines). client_ttfc_seconds avg=30.029s confirms the ~30s blocking read was reproduced as configured (firstChunkDelayMs=30000). Separately, the k6 x/sse client itself only recorded 1 of 5 expected SSE events per stream before ending (client_stream_failed_total=30 in k6-summary.json) -- a k6-client-side SSE parsing artifact after the long idle gap, not a Gateway-side failure; investigate separately if k6 client accuracy is needed for future load tests."
+}

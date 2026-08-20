@@ -1,0 +1,115 @@
+time="2026-08-20T00:02:41+09:00" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/load-test-k6/scenarios/01-concurrent-connections.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 60 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 60 iterations shared among 60 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 60/60 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 60 VUs  00m01.0s/10m0s  00/60 shared iters
+
+running (00m02.0s), 60/60 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 60 VUs  00m02.0s/10m0s  00/60 shared iters
+
+running (00m03.0s), 60/60 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 60 VUs  00m03.0s/10m0s  00/60 shared iters
+
+running (00m04.0s), 60/60 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 60 VUs  00m04.0s/10m0s  00/60 shared iters
+
+running (00m05.0s), 60/60 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 60 VUs  00m05.0s/10m0s  00/60 shared iters
+
+running (00m06.0s), 60/60 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 60 VUs  00m06.0s/10m0s  00/60 shared iters
+
+running (00m07.0s), 60/60 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 60 VUs  00m07.0s/10m0s  00/60 shared iters
+
+running (00m08.0s), 40/60 VUs, 20 complete and 0 interrupted iterations
+default   [  33% ] 60 VUs  00m08.0s/10m0s  20/60 shared iters
+
+running (00m09.0s), 40/60 VUs, 20 complete and 0 interrupted iterations
+default   [  33% ] 60 VUs  00m09.0s/10m0s  20/60 shared iters
+
+running (00m10.0s), 40/60 VUs, 20 complete and 0 interrupted iterations
+default   [  33% ] 60 VUs  00m10.0s/10m0s  20/60 shared iters
+
+running (00m11.0s), 40/60 VUs, 20 complete and 0 interrupted iterations
+default   [  33% ] 60 VUs  00m11.0s/10m0s  20/60 shared iters
+
+running (00m12.0s), 40/60 VUs, 20 complete and 0 interrupted iterations
+default   [  33% ] 60 VUs  00m12.0s/10m0s  20/60 shared iters
+
+running (00m13.0s), 40/60 VUs, 20 complete and 0 interrupted iterations
+default   [  33% ] 60 VUs  00m13.0s/10m0s  20/60 shared iters
+
+running (00m14.0s), 40/60 VUs, 20 complete and 0 interrupted iterations
+default   [  33% ] 60 VUs  00m14.0s/10m0s  20/60 shared iters
+
+running (00m15.0s), 40/60 VUs, 20 complete and 0 interrupted iterations
+default   [  33% ] 60 VUs  00m15.0s/10m0s  20/60 shared iters
+
+running (00m16.0s), 20/60 VUs, 40 complete and 0 interrupted iterations
+default   [  67% ] 60 VUs  00m16.0s/10m0s  40/60 shared iters
+
+running (00m17.0s), 20/60 VUs, 40 complete and 0 interrupted iterations
+default   [  67% ] 60 VUs  00m17.0s/10m0s  40/60 shared iters
+
+running (00m18.0s), 20/60 VUs, 40 complete and 0 interrupted iterations
+default   [  67% ] 60 VUs  00m18.0s/10m0s  40/60 shared iters
+
+running (00m19.0s), 20/60 VUs, 40 complete and 0 interrupted iterations
+default   [  67% ] 60 VUs  00m19.0s/10m0s  40/60 shared iters
+
+running (00m20.0s), 20/60 VUs, 40 complete and 0 interrupted iterations
+default   [  67% ] 60 VUs  00m20.0s/10m0s  40/60 shared iters
+
+running (00m21.0s), 20/60 VUs, 40 complete and 0 interrupted iterations
+default   [  67% ] 60 VUs  00m21.0s/10m0s  40/60 shared iters
+
+running (00m22.0s), 20/60 VUs, 40 complete and 0 interrupted iterations
+default   [  67% ] 60 VUs  00m22.0s/10m0s  40/60 shared iters
+
+running (00m23.0s), 20/60 VUs, 40 complete and 0 interrupted iterations
+default   [  67% ] 60 VUs  00m23.0s/10m0s  40/60 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_events_received_total.....: 2160   91.103841/s
+    client_stream_completed_total....: 60     2.530662/s
+    client_stream_duration_seconds...: avg=15.812867 min=7.921 med=15.809 max=23.709 p(90)=23.709 p(95)=23.709
+    client_ttfc_seconds..............: avg=8.921183  min=1.027 med=8.925  max=16.811 p(90)=16.811 p(95)=16.811
+    sse_event........................: 2160   91.103841/s
+
+    HTTP
+    http_req_duration................: avg=15.81s    min=7.92s med=15.8s  max=23.7s  p(90)=23.7s  p(95)=23.7s 
+    http_reqs........................: 60     2.530662/s
+
+    EXECUTION
+    iteration_duration...............: avg=15.81s    min=7.92s med=15.8s  max=23.7s  p(90)=23.7s  p(95)=23.7s 
+    iterations.......................: 60     2.530662/s
+    vus..............................: 20     min=20      max=60
+    vus_max..........................: 60     min=60      max=60
+
+    NETWORK
+    data_received....................: 276 kB 12 kB/s
+    data_sent........................: 16 kB  678 B/s
+
+
+
+
+running (00m23.7s), 00/60 VUs, 60 complete and 0 interrupted iterations
+default ✓ [ 100% ] 60 VUs  00m23.7s/10m0s  60/60 shared iters

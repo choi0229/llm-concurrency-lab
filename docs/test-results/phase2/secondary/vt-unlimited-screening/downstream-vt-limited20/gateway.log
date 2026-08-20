@@ -1,0 +1,83 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-20T00:02:12.388+09:00  INFO 58664 --- [           main] c.l.gatewaymvc.GatewayApplication        : Starting GatewayApplication v0.1.0 using Java 21.0.11 with PID 58664 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-java21/build/libs/gateway-mvc-java21-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab)
+2026-08-20T00:02:12.390+09:00  INFO 58664 --- [           main] c.l.gatewaymvc.GatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-20T00:02:12.617+09:00  INFO 58664 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-20T00:02:12.622+09:00  INFO 58664 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-20T00:02:12.622+09:00  INFO 58664 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-20T00:02:12.631+09:00  INFO 58664 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 224 ms
+2026-08-20T00:02:12.726+09:00  INFO 58664 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-20T00:02:12.728+09:00  INFO 58664 --- [           main] c.l.gatewaymvc.GatewayApplication        : Started GatewayApplication in 0.465 seconds (process running for 0.634)
+2026-08-20T00:02:13.153+09:00  INFO 58664 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-20T00:02:13.153+09:00  INFO 58664 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-20T00:02:13.153+09:00  INFO 58664 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-38] c.l.gatewaymvc.chat.ChatController       : [7a6ccb2a-031b-4edb-abaf-72d3ea9b75e4] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-17] c.l.gatewaymvc.chat.ChatController       : [2e8a86b5-9c4e-4825-8988-74ef68f71a2a] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-22] c.l.gatewaymvc.chat.ChatController       : [470bcfc5-e1cb-4b74-a26c-915c07d90efd] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-49] c.l.gatewaymvc.chat.ChatController       : [c2225487-3834-4d95-b5e5-6c6df9e40beb] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-21] c.l.gatewaymvc.chat.ChatController       : [64b7509c-f9c5-4cc7-8012-77ed29e5d542] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-39] c.l.gatewaymvc.chat.ChatController       : [92b73f76-13a4-4734-92d1-effc2a72df88] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-53] c.l.gatewaymvc.chat.ChatController       : [83b99f01-07f1-42bd-8706-40ec8ef07630] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-13] c.l.gatewaymvc.chat.ChatController       : [0fb04add-10da-4604-9baf-db809a35499c] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-58] c.l.gatewaymvc.chat.ChatController       : [11239b9c-0571-4bd0-9e2d-15b67db585e7] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-55] c.l.gatewaymvc.chat.ChatController       : [b3db36c9-fbfa-4b57-8a88-d2144384a1d3] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-14] c.l.gatewaymvc.chat.ChatController       : [35f9e1cd-48c8-4c6a-95a4-48bc6e07f6ba] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-29] c.l.gatewaymvc.chat.ChatController       : [74c5808b-328c-4f1f-a140-3058abaefb17] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [nio-8080-exec-7] c.l.gatewaymvc.chat.ChatController       : [8bb79480-6cfb-471e-a040-b3616e5d29c0] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-45] c.l.gatewaymvc.chat.ChatController       : [56b79889-342b-4a1e-9afa-c67bf3031418] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-60] c.l.gatewaymvc.chat.ChatController       : [6c31d6e8-2596-4ad3-a134-5f63601c29f3] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-54] c.l.gatewaymvc.chat.ChatController       : [527f6e94-e2ba-40d6-a65c-c0644b893cda] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-25] c.l.gatewaymvc.chat.ChatController       : [fa1b2584-3e7c-459e-a22c-3105695fd6b8] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-28] c.l.gatewaymvc.chat.ChatController       : [be6a9da2-2a2d-421e-9e87-ac5fe365efb1] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-36] c.l.gatewaymvc.chat.ChatController       : [17ed906c-da3b-4be4-9e76-5f302efd640c] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-57] c.l.gatewaymvc.chat.ChatController       : [a9da7369-8e46-4630-b799-ca61db8261a2] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-30] c.l.gatewaymvc.chat.ChatController       : [b8598f02-bb8b-4490-a376-a2abab7a3271] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-23] c.l.gatewaymvc.chat.ChatController       : [3c068c75-8e97-440b-987d-61861c387d17] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-11] c.l.gatewaymvc.chat.ChatController       : [8c437110-afef-4b6e-a57b-664307c92f71] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-44] c.l.gatewaymvc.chat.ChatController       : [89360401-0814-49c5-8d4a-8c7136db7a00] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-19] c.l.gatewaymvc.chat.ChatController       : [92c28b40-cd7a-44b0-b239-6ddf37e13784] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-32] c.l.gatewaymvc.chat.ChatController       : [3726a4a1-cbbc-417d-8278-cf6b1b41edeb] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [nio-8080-exec-9] c.l.gatewaymvc.chat.ChatController       : [5cda667f-b968-4996-a52d-3d70e3626422] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-12] c.l.gatewaymvc.chat.ChatController       : [4b030b65-a838-41ae-bed5-91a830cc2f7b] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [nio-8080-exec-8] c.l.gatewaymvc.chat.ChatController       : [b61799a5-486a-4cb9-b2d0-8b68ffd4cde5] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-46] c.l.gatewaymvc.chat.ChatController       : [9cd1d926-c075-4125-a461-bcf38aad6fa6] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-43] c.l.gatewaymvc.chat.ChatController       : [0f697425-1154-4349-9ccd-ef82dc037342] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-33] c.l.gatewaymvc.chat.ChatController       : [d01d823d-178f-464d-8a46-6506ca43c49f] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-16] c.l.gatewaymvc.chat.ChatController       : [5fc376ae-c642-4a6a-9a47-231440401d91] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-56] c.l.gatewaymvc.chat.ChatController       : [f564fe8b-de68-4465-be17-282f6d9d1e00] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-35] c.l.gatewaymvc.chat.ChatController       : [5818df86-1a67-450f-a082-4df69f7deb52] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-47] c.l.gatewaymvc.chat.ChatController       : [19b77379-460e-4d99-ab45-2ad505426525] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [nio-8080-exec-5] c.l.gatewaymvc.chat.ChatController       : [f6409d52-64d9-4bf5-86a5-a50d1f34e02f] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-59] c.l.gatewaymvc.chat.ChatController       : [a28cf43b-2a69-46cf-b383-2869d2ada4eb] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-34] c.l.gatewaymvc.chat.ChatController       : [08029872-8fed-49cb-9d17-91c630714afc] rejected: chat task admission failed
+2026-08-20T00:02:13.314+09:00  WARN 58664 --- [io-8080-exec-50] c.l.gatewaymvc.chat.ChatController       : [3686ef39-9494-4d60-935e-baa985d8c73c] rejected: chat task admission failed
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-114] c.l.gatewaymvc.chat.ChatController       : [44b32287-5c15-4c57-b3eb-7ce882723ecb] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-100] c.l.gatewaymvc.chat.ChatController       : [c2a5d5e3-3750-4c63-a087-d2eec9353de7] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-122] c.l.gatewaymvc.chat.ChatController       : [213b8c9d-c853-4d97-ae74-cce7dca070ce] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-121] c.l.gatewaymvc.chat.ChatController       : [69917c41-986f-42ef-9627-404dfd208a76] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-123] c.l.gatewaymvc.chat.ChatController       : [fd451ffc-70d4-4643-8eb4-61a1defaecb4] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-105] c.l.gatewaymvc.chat.ChatController       : [2b193399-2b29-4cea-9afc-30628fbc0eeb] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-129] c.l.gatewaymvc.chat.ChatController       : [dd1f8ec9-73c0-4766-aa4d-d46572bc629f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-101] c.l.gatewaymvc.chat.ChatController       : [773bd5d1-9615-4638-a721-c0f46ac272cf] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-104] c.l.gatewaymvc.chat.ChatController       : [e854ed89-8038-4fa7-9cc5-72ae6cb083e4] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-127] c.l.gatewaymvc.chat.ChatController       : [dc9b1236-9583-4a15-95b0-5d926db244eb] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-112] c.l.gatewaymvc.chat.ChatController       : [538b7682-da83-4d66-ab96-d9849613d0cc] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.232+09:00  INFO 58664 --- [    virtual-116] c.l.gatewaymvc.chat.ChatController       : [71e72c70-7796-4d18-813e-d6a8b4fdf3cf] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-110] c.l.gatewaymvc.chat.ChatController       : [32b06704-8143-478a-a74e-72edeba03797] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-118] c.l.gatewaymvc.chat.ChatController       : [f651b5e5-8137-4b5e-b7c4-a5eb99f3e8c0] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-128] c.l.gatewaymvc.chat.ChatController       : [75e1bfaf-2e09-4c71-9f9b-f40c7e71e932] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-102] c.l.gatewaymvc.chat.ChatController       : [602a8ac8-5b58-47fa-a348-7a0963ac34d7] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-125] c.l.gatewaymvc.chat.ChatController       : [55c26faf-e81f-472f-b453-f25626205af9] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-120] c.l.gatewaymvc.chat.ChatController       : [f9181bf2-f2d4-4be5-8321-bcb974a32914] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-124] c.l.gatewaymvc.chat.ChatController       : [d7fdcd9a-db82-434c-b627-3f64130b023f] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:21.234+09:00  INFO 58664 --- [    virtual-126] c.l.gatewaymvc.chat.ChatController       : [5bf50e4b-3a87-48ac-85ec-d2c01db21ef1] relay finished: outcome=completed, releasedByThisCall=true
+2026-08-20T00:02:25.628+09:00  INFO 58664 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-20T00:02:25.633+09:00  INFO 58664 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

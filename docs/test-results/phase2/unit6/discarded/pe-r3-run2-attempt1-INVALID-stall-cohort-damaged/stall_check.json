@@ -1,0 +1,52 @@
+{
+  "gateway_log_gaps_over_20s": [
+    {
+      "gap_start": "2026-08-16T09:54:30",
+      "gap_end": "2026-08-16T09:56:42",
+      "gap_seconds": 132.0
+    },
+    {
+      "gap_start": "2026-08-16T09:58:00",
+      "gap_end": "2026-08-16T09:58:50",
+      "gap_seconds": 50.0
+    },
+    {
+      "gap_start": "2026-08-16T09:59:20",
+      "gap_end": "2026-08-16T10:00:23",
+      "gap_seconds": 63.0
+    },
+    {
+      "gap_start": "2026-08-16T10:00:53",
+      "gap_end": "2026-08-16T10:02:18",
+      "gap_seconds": 85.0
+    }
+  ],
+  "mock_llm_log_gaps_over_20s": [
+    {
+      "gap_start": "2026-08-16T09:54:30",
+      "gap_end": "2026-08-16T09:56:42",
+      "gap_seconds": 132.0
+    },
+    {
+      "gap_start": "2026-08-16T09:58:00",
+      "gap_end": "2026-08-16T09:58:50",
+      "gap_seconds": 50.0
+    },
+    {
+      "gap_start": "2026-08-16T09:59:20",
+      "gap_end": "2026-08-16T10:00:23",
+      "gap_seconds": 63.0
+    },
+    {
+      "gap_start": "2026-08-16T10:00:53",
+      "gap_end": "2026-08-16T10:02:18",
+      "gap_seconds": 85.0
+    },
+    {
+      "gap_start": "2026-08-16T10:02:47",
+      "gap_end": "2026-08-16T10:06:54",
+      "gap_seconds": 247.0
+    }
+  ],
+  "note": "A gap here does not by itself invalidate the run \u2014 check the run's outcome_cohort (should still equal k6's count) and whether the gap falls inside [measurement_start, measurement_end] before judging impact on measurement_window_completion_rate specifically."
+}

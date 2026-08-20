@@ -135,29 +135,70 @@ Source: [FastAPI SSE tutorial](https://fastapi.tiangolo.com/tutorial/server-sent
 - [x] Python base image 정확 태그/digest — `python:3.12-slim@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36` (linux/arm64), Dockerfile에 digest pin 완료
 - [ ] eclipse-temurin:8 이미지의 정확 태그(예: `8u492-b08-jdk-jammy`) 및 arm64 manifest 존재 여부 `docker manifest inspect`로 실측 (다음 단위: gateway-mvc-executor-java8 구현 시 검증 예정)
 
-## 6. Phase 2 — Java 21 / Spring Boot 4.x 버전 후보 (조사 시점 2026-08-16, WebSearch 기반)
+## 6. Phase 2 — Java 21 / Spring Boot 4.x 버전 (Unit 1→2, 실측 확정 + exact pin)
 
-Phase 1과 동일 원칙(공식 문서 우선, 추측 금지)을 Phase 2에도 적용한다. 아래는 **구현 착수 전 후보
-조사**이며, 실제 pin은 `docker manifest inspect`/`./gradlew dependencies`/`java -version` 실측으로
-Phase 2 구현 착수 시점에 재확인한다(Phase 1의 §1~§4가 실측으로 확정한 것과 동일한 절차).
+Phase 1과 동일 원칙(공식 문서 우선, 추측 금지, 실제 빌드로 검증)을 Phase 2에도 적용한다. 아래는
+**Phase 2 Unit 1(2026-08-16)에서 실제 Docker 빌드/`java -version`/`./gradlew dependencies`로 확정한
+값**이며, **Unit 2에서 JDK 이미지를 floating tag에서 exact tag로 재pin**했다.
 
-| 항목 | 후보 | 근거 |
+| 항목 | 조사 시점 후보 | **실측 확정값** | 확인 방법 |
+|---|---|---|---|
+| Gateway build/runtime JDK | Temurin 21, 후보 patch `21.0.12` | **Eclipse Temurin 21.0.11+10-LTS** — **후보와 다름, 실측이 우선** | `docker run eclipse-temurin:21.0.11_10-jdk-jammy java -version` |
+| Spring Boot | `4.1.0` | **4.1.0** (후보와 일치) | `./gradlew dependencies --configuration compileClasspath` |
+| Spring Framework | `7.0.8` | **7.0.8** (후보와 일치) | 위와 동일 — `org.springframework:spring-core:7.0.8`/`spring-web:7.0.8`/`spring-webmvc:7.0.8` 실측 |
+| Embedded Tomcat | `11.0.22` | **11.0.22** (후보와 일치) | 위와 동일 — `org.apache.tomcat.embed:tomcat-embed-core:11.0.22` |
+| Jakarta Servlet | `6.1` 베이스라인 | Tomcat 11.0.22에 번들 — `ChatController`가 `jakarta.servlet.AsyncContext` 등을 직접 import해 실제 컴파일 성공으로 간접 확인(`gradle compileJava` BUILD SUCCESSFUL) | 위 컴파일 성공 자체가 증거 |
+| Gradle Wrapper | `8.14 이상 또는 9.x` | **8.14** | `./gradlew --version`, 실제 `./gradlew clean build -x test` BUILD SUCCESSFUL |
+| Virtual Thread 최소 JDK | 21 | 21(Unit 1~2는 아직 VT 코드 없음 — Unit 3/4에서 실측 재확인) | Spring Boot 4.0.0 공식 문서 |
+
+**JDK patch 불일치 사례(Unit 1에서 발견)**: WebSearch 조사(Unit 1 착수 전)는 `21.0.12`(2026-08-04
+공개, Adoptium 뉴스)를 후보로 제시했지만, Unit 1 착수 시점에 pull한 floating tag(`eclipse-temurin:
+21-jdk-jammy`/`21-jre-jammy`) 이미지는 `21.0.11+10-LTS`를 담고 있었다.
+
+**Unit 2 exact pin(중요한 정정)**: Unit 1의 Dockerfile은 이 실측값(21.0.11)을 문서에 "확정"이라고
+적었지만 **Dockerfile 자체는 여전히 floating tag(`21-jdk-jammy`/`21-jre-jammy`)를 쓰고 있었다** — 즉
+문서와 실제 pin이 불일치했다(다음 `docker build`에서 Temurin이 21.0.12를 배포하면 조용히 patch가
+바뀔 수 있는 상태). Unit 2에서 **exact tag로 재pin**했다:
+
+```
+eclipse-temurin:21.0.11_10-jdk-jammy   (build stage)
+eclipse-temurin:21.0.11_10-jre-jammy   (runtime stage)
+```
+
+`docker manifest inspect`로 두 태그 모두 linux/arm64/v8 manifest 존재를 사전 확인했고, digest는:
+
+| 이미지 | Repo Digest |
+|---|---|
+| `eclipse-temurin:21.0.11_10-jdk-jammy` | `sha256:55fb9bf738f5d9b4a6c01b39337e3070d3e27370dd3c478fd1d5d3cd2233c6d8` |
+| `eclipse-temurin:21.0.11_10-jre-jammy` | `sha256:3097cbbebb7d490494a98aed2301f284b38f79eba158eef098c6fc8c8af11c23` |
+
+(이 digest는 Unit 1이 pull했던 floating tag 시점의 digest와 **동일**했다 — 즉 조사~Unit 2 사이에는
+아직 실제 patch 갱신이 없었다는 뜻이지만, floating tag를 계속 썼다면 향후 언제든 바뀔 수 있었다.)
+exact tag 재pin 후 `java -version`/`uname -m`을 재확인해 21.0.11+10-LTS·arm64(aarch64)가 그대로임을
+검증했다 — Dockerfile 변경이 실제 JDK를 바꾸지 않았음을 재확인.
+
+**Gradle wrapper 생성 환경과 Gateway runtime JDK는 서로 다른 것이다(Unit 2 정정)**: `gradle:
+8.14.0-jdk21`(wrapper 생성/검증용 Docker 이미지)의 Launcher JVM은 `Eclipse Adoptium 21.0.7+6-LTS`다
+— 이것은 **Gradle Wrapper 자체를 생성한 일회성 환경**의 JVM이며 Phase 2 Gateway가 실행되는 JVM이
+아니다. 명확히 구분해 기록한다:
+
+| 구분 | 값 | 비고 |
 |---|---|---|
-| JDK | **Eclipse Temurin 21**, 최신 패치(조사 시점 `21.0.12`, 2026-08-04 공개) | [Adoptium Latest Releases](https://adoptium.net/temurin/releases/), [Eclipse Temurin 8u492/11.0.31/17.0.19/21.0.11/25.0.3/26.0.1 Available](https://adoptium.net/news/2026/05/eclipse-temurin-8u492-11031-17019-21011-2503-2601-available) |
-| Spring Boot | **4.1.x**(조사 시점 최신 `4.1.0`, 2026-06-11 릴리스, 활성 지원 2027-07-31까지) — **3.5.x는 채택하지 않음**(2026-06-30 OSS EOL, 조사 시점 기준 이미 지원 종료) | [Spring Boot 4.1.0 available now](https://spring.io/blog/2026/06/10/spring-boot-4/), [HeroDevs — Spring Boot Versions, EOL Dates](https://www.herodevs.com/blog-posts/spring-boot-versions-eol-dates-and-latest-releases-april-2026) |
-| Spring Framework | 4.1.0이 resolve하는 **7.0.8** | [Spring Boot 4.1.0 available now](https://spring.io/blog/2026/06/10/spring-boot-4/) |
-| Servlet Container | Embedded **Tomcat 11.0.22**, **Jakarta Servlet 6.1** 베이스라인(→ Phase 1의 `javax.servlet` 네임스페이스를 `jakarta.servlet`으로 전환해야 함) | [Spring Boot 4.1.0 available now](https://spring.io/blog/2026/06/10/spring-boot-4/), Spring Framework 7.0 Release Notes |
-| Gradle | **8.14 이상 또는 9.x**(Spring Boot 4.1 Gradle 플러그인 공식 요구사항) — Phase 1의 JDK21/Gradle 호환 매트릭스(§3, JDK21→Gradle 8.5+)와 교집합을 취하면 실질적으로 8.14+ | Spring Boot Gradle Plugin 공식 문서, Gradle Compatibility Matrix |
-| Virtual Thread 최소 JDK | **21**(Spring Boot 4.0.0부터 virtual thread 지원의 baseline) | Spring Boot 4.0.0 관련 공식 문서/릴리스 노트 |
+| Gradle Wrapper 버전 | 8.14 | `gradle/wrapper/gradle-wrapper.properties`에 고정, 이후 모든 빌드가 이 버전으로 실행 |
+| Wrapper 생성 환경(참고 정보, formal metadata 아님) | `gradle:8.14.0-jdk21` 이미지, Launcher JVM Eclipse Adoptium 21.0.7+6-LTS | wrapper jar/스크립트를 한 번 생성하는 데만 쓰인 일회성 컨테이너 — Gateway 빌드/실행과 무관 |
+| **Gateway build JDK**(formal) | Eclipse Temurin **21.0.11+10-LTS** | `Dockerfile` build stage(`FROM eclipse-temurin:21.0.11_10-jdk-jammy`), `./gradlew clean build`가 실제 실행되는 JVM |
+| **Gateway runtime JDK**(formal) | Eclipse Temurin **21.0.11+10-LTS** | `Dockerfile` runtime stage(`FROM eclipse-temurin:21.0.11_10-jre-jammy`), 컨테이너 기동 시 `java -jar app.jar`를 실행하는 JVM |
 
-**중요한 발견 — Phase 2를 JDK 21 하나로 한정하는 근거**: Spring 공식 문서는 pinned virtual thread
-처리 개선을 위해 **JDK 24 이상을 권장**한다고 명시한다(JDK 24 이후 `synchronized` 관련 virtual
-thread 동작이 바뀌었기 때문 — JEP 계열 변경사항). 즉 **JDK 21에서 관측되는 pinning 양상은 JDK 24+
-에서는 재현되지 않을 수 있다** — 이것이 `docs/test-plan/phase2-design.md` §6이 "Phase 2 결과를
-모든 최신 JDK로 일반화하지 않는다"고 명시하는 근거이며, 추측이 아니라 이 조사에서 확인된 사실이다.
-Phase 2는 현재 널리 배포된 LTS(21)의 실제 동작을 측정하는 것이 목적이므로 21을 유지하고, JDK 24+
-비교는 Phase 2 범위 밖의 후속 과제로 남긴다.
+Formal environment.json에는 build/runtime JDK(21.0.11+10-LTS)만 기록한다 — wrapper 생성 환경의
+21.0.7은 재현성/문제 진단용 참고 정보일 뿐 Phase 2 결과에 영향을 주는 값이 아니다.
 
-**Status**: 후보 조사 완료(WebSearch 기반, 이 문서 조사 시점 기준). Phase 2 구현 착수 시 `docker
-manifest inspect`/실제 빌드로 정확 patch 버전을 재확인하고 이 표를 갱신한다 — Phase 1의 각 항목이
-"실측 확정"으로 바뀌었던 것과 동일한 절차를 따른다.
+**Status**: Unit 2에서 exact pin 완료. `gateway-mvc-java21/Dockerfile`이 이 버전들을 그대로 사용한다.
+
+**중요한 발견 — Phase 2를 JDK 21 하나로 한정하는 근거**: **[JEP 491: Synchronize Virtual Threads
+without Pinning](https://openjdk.org/jeps/491)**이 JDK 24에서 `synchronized` 블록/메서드로 인한
+virtual thread pinning 문제 자체를 해소했다(monitor를 carrier가 아닌 virtual thread에 결속). Spring
+공식 문서도 이를 근거로 pinning 처리 개선을 위해 **JDK 24 이상을 권장**한다. 즉 **JDK 21에서
+관측되는 pinning 양상은 JDK 24+에서는 재현되지 않을 수 있다** — 이것이 `docs/test-plan/
+phase2-design.md` §6이 "Phase 2 결과를 모든 최신 JDK로 일반화하지 않는다"고 명시하는 근거이며,
+추측이 아니라 이 조사에서 확인된 사실이다. Phase 2는 현재 널리 배포된 LTS(21)의 실제 동작을 측정하는
+것이 목적이므로 21을 유지하고, JDK 24+ 비교는 Phase 2 범위 밖의 후속 과제로 남긴다.

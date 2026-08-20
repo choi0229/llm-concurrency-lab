@@ -1,0 +1,28 @@
+{
+  "configuration": "pe",
+  "thread_mode": "PLATFORM",
+  "load": "r3",
+  "run_number": 1,
+  "arrival_rate_target": 3,
+  "k6_pre_allocated_vus": 100,
+  "warmup_duration_s": 120,
+  "measurement_duration_s": 300,
+  "mock_llm_workload": {"first_chunk_delay_ms": 1000, "chunk_interval_ms": 200, "chunk_count": 35, "chunk_size_bytes": 64},
+  "timeouts_ms": {"connect": 3000, "read": 30000, "total": 60000},
+  "resource_limits": {"gateway": {"cpus": 1.0, "mem_limit": "1g"}, "mock_llm": {"cpus": 2.0, "mem_limit": "1g"}},
+  "prometheus_scrape_interval_s": 5,
+  "k6_image": "k6-sse:dev (k6 v1.8.0 + xk6-sse v0.1.11)",
+  "log_level": "INFO",
+  "jdk": "Eclipse Temurin 21.0.11+10-LTS",
+  "jdk_image_digest": "eclipse-temurin:21.0.11_10-{jdk,jre}-jammy@sha256:55fb9bf738f5d9b4a6c01b39337e3070d3e27370dd3c478fd1d5d3cd2233c6d8 / sha256:3097cbbebb7d490494a98aed2301f284b38f79eba158eef098c6fc8c8af11c23",
+  "spring_boot": "4.1.0",
+  "spring_framework": "7.0.8",
+  "preflight": {
+    "host_arch": "arm64", "container_arch": "aarch64",
+    "clock_drift_s": 0, "post_run_clock_drift_s": 0,
+    "gateway_healthy": true, "mock_healthy": true, "prometheus_scrape_ok": true,
+    "unrelated_containers": [],
+    "timestamp_clock_domain": "docker_vm (not host) — see scripts/run-phase2-formal-benchmark.sh vm_epoch()"
+  },
+  "postflight_fail": ""
+}

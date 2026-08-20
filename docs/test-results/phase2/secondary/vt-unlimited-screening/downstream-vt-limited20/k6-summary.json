@@ -1,0 +1,93 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    },
+    "metrics": {
+        "client_ttfc_seconds": {
+            "avg": 1.0279000000000003,
+            "min": 1.027,
+            "med": 1.0274999999999999,
+            "max": 1.03,
+            "p(90)": 1.0291,
+            "p(95)": 1.03
+        },
+        "data_received": {
+            "rate": 12542.030989856356,
+            "count": 99520
+        },
+        "http_req_duration": {
+            "min": 12.603542,
+            "med": 14.006771,
+            "max": 7932.948958,
+            "p(90)": 7932.6130125,
+            "p(95)": 7932.7786577,
+            "avg": 2653.129306283334
+        },
+        "client_stream_completed_total": {
+            "rate": 2.5205046201479813,
+            "count": 20
+        },
+        "vus_max": {
+            "value": 60,
+            "min": 60,
+            "max": 60
+        },
+        "sse_event": {
+            "count": 720,
+            "rate": 90.73816632532733
+        },
+        "http_reqs": {
+            "count": 60,
+            "rate": 7.561513860443944
+        },
+        "client_stream_failed_total": {
+            "count": 40,
+            "rate": 5.0410092402959625
+        },
+        "iterations": {
+            "rate": 7.561513860443944,
+            "count": 60
+        },
+        "http_req_sending": {
+            "med": 13.8582085,
+            "max": 1030.210375,
+            "p(90)": 1027.5630709,
+            "p(95)": 1028.69555805,
+            "avg": 351.4211833,
+            "min": 12.384208
+        },
+        "data_sent": {
+            "count": 16080,
+            "rate": 2026.485714598977
+        },
+        "client_events_received_total": {
+            "count": 720,
+            "rate": 90.73816632532733
+        },
+        "iteration_duration": {
+            "avg": 2653.3617999999997,
+            "min": 12.629,
+            "med": 14.345625,
+            "max": 7934.499959,
+            "p(90)": 7932.7290089,
+            "p(95)": 7932.90522885
+        },
+        "vus": {
+            "value": 20,
+            "min": 20,
+            "max": 20
+        },
+        "client_stream_duration_seconds": {
+            "med": 0.014,
+            "max": 7.933,
+            "p(90)": 7.933,
+            "p(95)": 7.933,
+            "avg": 2.6531999999999996,
+            "min": 0.012
+        }
+    }
+}

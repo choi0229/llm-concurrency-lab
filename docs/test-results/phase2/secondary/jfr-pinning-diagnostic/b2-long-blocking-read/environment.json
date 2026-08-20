@@ -1,0 +1,15 @@
+{
+  "experiment": "b2-long-blocking-read",
+  "purpose": "JFR jdk.VirtualThreadPinned diagnostic against the real Gateway (VIRTUAL_LIMITED, HttpURLConnection SSE relay) — not Formal, not performance data.",
+  "thread_mode": "VIRTUAL_LIMITED",
+  "vus": 30,
+  "workload": {"first_chunk_delay_ms": 30000, "chunk_interval_ms": 200, "chunk_count": 5},
+  "chat_read_timeout_ms": 45000,
+  "jfc_file": "phase2-vt-pinning.jfc",
+  "jdk_version_output": "openjdk version \"21.0.11\" 2026-04-21 LTS OpenJDK Runtime Environment Temurin-21.0.11+10 (build 21.0.11+10-LTS) OpenJDK 64-Bit Server VM Temurin-21.0.11+10 (build 21.0.11+10-LTS, mixed mode, sharing) ",
+  "host_arch": "arm64",
+  "k6_exit_code": 0,
+  "client_stream_completed_total": 0,
+  "client_stream_failed_total": 30,
+  "postflight_fail": ""
+}

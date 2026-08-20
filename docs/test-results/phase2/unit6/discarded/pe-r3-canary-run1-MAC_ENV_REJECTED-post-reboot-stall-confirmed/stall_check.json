@@ -1,0 +1,17 @@
+{
+  "gateway_log_gaps_over_20s": [
+    {
+      "gap_start": "2026-08-17T01:37:54",
+      "gap_end": "2026-08-17T01:38:25",
+      "gap_seconds": 31.0
+    }
+  ],
+  "mock_llm_log_gaps_over_20s": [
+    {
+      "gap_start": "2026-08-17T01:37:54",
+      "gap_end": "2026-08-17T01:38:25",
+      "gap_seconds": 31.0
+    }
+  ],
+  "note": "A gap here does not by itself invalidate the run \u2014 check the run's outcome_cohort (should still equal k6's count) and whether the gap falls inside [measurement_start, measurement_end] before judging impact on measurement_window_completion_rate specifically."
+}

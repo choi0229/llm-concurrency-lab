@@ -1,0 +1,6 @@
+{
+  "measurement_start": 1787142099.421,
+  "measurement_end": 1787142399.421,
+  "drain_end": 1787142415,
+  "lifecycle_note": "Native macOS harness — continuous warm-up->measurement, single k6 process, no drain between them. measurement_start read back from k6's own setup()-emitted measurement_start_epoch_s Gauge (same single-source-of-truth mechanism as the Docker harness). Host clock only (no second/Docker-VM clock domain to compare against natively)."
+}

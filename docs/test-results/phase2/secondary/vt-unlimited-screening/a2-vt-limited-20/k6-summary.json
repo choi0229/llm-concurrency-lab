@@ -1,0 +1,93 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    },
+    "metrics": {
+        "client_ttfc_seconds": {
+            "p(90)": 1.029,
+            "p(95)": 1.02905,
+            "avg": 1.0261,
+            "min": 1.025,
+            "med": 1.0255,
+            "max": 1.03
+        },
+        "vus": {
+            "value": 20,
+            "min": 20,
+            "max": 20
+        },
+        "http_req_sending": {
+            "avg": 350.57662085,
+            "min": 11.466667,
+            "med": 13.3333955,
+            "max": 1029.862167,
+            "p(90)": 1025.6103334,
+            "p(95)": 1028.6199083
+        },
+        "iteration_duration": {
+            "p(90)": 7891.9016667000005,
+            "p(95)": 7892.04400275,
+            "avg": 2639.3020986333336,
+            "min": 12.041,
+            "med": 13.407708,
+            "max": 7892.279334
+        },
+        "vus_max": {
+            "min": 60,
+            "max": 60,
+            "value": 60
+        },
+        "sse_event": {
+            "count": 720,
+            "rate": 91.22580108923607
+        },
+        "http_reqs": {
+            "count": 60,
+            "rate": 7.602150090769673
+        },
+        "data_received": {
+            "count": 99520,
+            "rate": 12609.43295055663
+        },
+        "client_stream_completed_total": {
+            "count": 20,
+            "rate": 2.5340500302565574
+        },
+        "iterations": {
+            "count": 60,
+            "rate": 7.602150090769673
+        },
+        "client_stream_failed_total": {
+            "count": 40,
+            "rate": 5.068100060513115
+        },
+        "http_req_duration": {
+            "p(95)": 7891.8509167,
+            "avg": 2639.12357915,
+            "min": 11.490709,
+            "med": 13.36025,
+            "max": 7892.228041,
+            "p(90)": 7891.8314752999995
+        },
+        "client_stream_duration_seconds": {
+            "avg": 2.6390999999999996,
+            "min": 0.012,
+            "med": 0.013,
+            "max": 7.893,
+            "p(90)": 7.892,
+            "p(95)": 7.892
+        },
+        "client_events_received_total": {
+            "rate": 91.22580108923607,
+            "count": 720
+        },
+        "data_sent": {
+            "rate": 2037.3762243262722,
+            "count": 16080
+        }
+    }
+}

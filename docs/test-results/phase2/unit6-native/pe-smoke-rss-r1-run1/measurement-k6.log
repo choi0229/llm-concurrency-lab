@@ -1,0 +1,159 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/load-test-k6/scenarios/03-constant-arrival-rate-continuous.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1000 max VUs, 2m0s max duration (incl. graceful stop):
+              * arrival: 1.00 iterations/s for 30s (maxVUs: 20-1000, gracefulStop: 1m30s)
+
+
+running (0m01.0s), 0001/0020 VUs, 0 complete and 0 interrupted iterations
+arrival   [   3% ] 0001/0020 VUs  01.0s/30s  1.00 iters/s
+
+running (0m02.0s), 0002/0020 VUs, 0 complete and 0 interrupted iterations
+arrival   [   7% ] 0002/0020 VUs  02.0s/30s  1.00 iters/s
+
+running (0m03.0s), 0003/0020 VUs, 0 complete and 0 interrupted iterations
+arrival   [  10% ] 0003/0020 VUs  03.0s/30s  1.00 iters/s
+
+running (0m04.0s), 0004/0020 VUs, 0 complete and 0 interrupted iterations
+arrival   [  13% ] 0004/0020 VUs  04.0s/30s  1.00 iters/s
+
+running (0m05.0s), 0005/0020 VUs, 0 complete and 0 interrupted iterations
+arrival   [  17% ] 0005/0020 VUs  05.0s/30s  1.00 iters/s
+
+running (0m06.0s), 0006/0020 VUs, 0 complete and 0 interrupted iterations
+arrival   [  20% ] 0006/0020 VUs  06.0s/30s  1.00 iters/s
+
+running (0m07.0s), 0007/0020 VUs, 0 complete and 0 interrupted iterations
+arrival   [  23% ] 0007/0020 VUs  07.0s/30s  1.00 iters/s
+
+running (0m08.0s), 0007/0020 VUs, 1 complete and 0 interrupted iterations
+arrival   [  27% ] 0007/0020 VUs  08.0s/30s  1.00 iters/s
+
+running (0m09.0s), 0007/0020 VUs, 2 complete and 0 interrupted iterations
+arrival   [  30% ] 0007/0020 VUs  09.0s/30s  1.00 iters/s
+
+running (0m10.0s), 0007/0020 VUs, 3 complete and 0 interrupted iterations
+arrival   [  33% ] 0007/0020 VUs  10.0s/30s  1.00 iters/s
+
+running (0m11.0s), 0007/0020 VUs, 4 complete and 0 interrupted iterations
+arrival   [  37% ] 0007/0020 VUs  11.0s/30s  1.00 iters/s
+
+running (0m12.0s), 0007/0020 VUs, 5 complete and 0 interrupted iterations
+arrival   [  40% ] 0007/0020 VUs  12.0s/30s  1.00 iters/s
+
+running (0m13.0s), 0007/0020 VUs, 6 complete and 0 interrupted iterations
+arrival   [  43% ] 0007/0020 VUs  13.0s/30s  1.00 iters/s
+
+running (0m14.0s), 0007/0020 VUs, 7 complete and 0 interrupted iterations
+arrival   [  47% ] 0007/0020 VUs  14.0s/30s  1.00 iters/s
+
+running (0m15.0s), 0007/0020 VUs, 8 complete and 0 interrupted iterations
+arrival   [  50% ] 0007/0020 VUs  15.0s/30s  1.00 iters/s
+
+running (0m16.0s), 0007/0020 VUs, 9 complete and 0 interrupted iterations
+arrival   [  53% ] 0007/0020 VUs  16.0s/30s  1.00 iters/s
+
+running (0m17.0s), 0007/0020 VUs, 10 complete and 0 interrupted iterations
+arrival   [  57% ] 0007/0020 VUs  17.0s/30s  1.00 iters/s
+
+running (0m18.0s), 0007/0020 VUs, 11 complete and 0 interrupted iterations
+arrival   [  60% ] 0007/0020 VUs  18.0s/30s  1.00 iters/s
+
+running (0m19.0s), 0007/0020 VUs, 12 complete and 0 interrupted iterations
+arrival   [  63% ] 0007/0020 VUs  19.0s/30s  1.00 iters/s
+
+running (0m20.0s), 0007/0020 VUs, 13 complete and 0 interrupted iterations
+arrival   [  67% ] 0007/0020 VUs  20.0s/30s  1.00 iters/s
+
+running (0m21.0s), 0007/0020 VUs, 14 complete and 0 interrupted iterations
+arrival   [  70% ] 0007/0020 VUs  21.0s/30s  1.00 iters/s
+
+running (0m22.0s), 0007/0020 VUs, 15 complete and 0 interrupted iterations
+arrival   [  73% ] 0007/0020 VUs  22.0s/30s  1.00 iters/s
+
+running (0m23.0s), 0007/0020 VUs, 16 complete and 0 interrupted iterations
+arrival   [  77% ] 0007/0020 VUs  23.0s/30s  1.00 iters/s
+
+running (0m24.0s), 0007/0020 VUs, 17 complete and 0 interrupted iterations
+arrival   [  80% ] 0007/0020 VUs  24.0s/30s  1.00 iters/s
+
+running (0m25.0s), 0007/0020 VUs, 18 complete and 0 interrupted iterations
+arrival   [  83% ] 0007/0020 VUs  25.0s/30s  1.00 iters/s
+
+running (0m26.0s), 0007/0020 VUs, 19 complete and 0 interrupted iterations
+arrival   [  87% ] 0007/0020 VUs  26.0s/30s  1.00 iters/s
+
+running (0m27.0s), 0007/0020 VUs, 20 complete and 0 interrupted iterations
+arrival   [  90% ] 0007/0020 VUs  27.0s/30s  1.00 iters/s
+
+running (0m28.0s), 0007/0020 VUs, 21 complete and 0 interrupted iterations
+arrival   [  93% ] 0007/0020 VUs  28.0s/30s  1.00 iters/s
+
+running (0m29.0s), 0007/0020 VUs, 22 complete and 0 interrupted iterations
+arrival   [  97% ] 0007/0020 VUs  29.0s/30s  1.00 iters/s
+
+running (0m30.0s), 0007/0020 VUs, 23 complete and 0 interrupted iterations
+arrival   [ 100% ] 0007/0020 VUs  30.0s/30s  1.00 iters/s
+
+running (0m31.0s), 0007/0020 VUs, 24 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 0008/0020 VUs  30s  1.00 iters/s
+
+running (0m32.0s), 0006/0020 VUs, 25 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 0008/0020 VUs  30s  1.00 iters/s
+
+running (0m33.0s), 0005/0020 VUs, 26 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 0008/0020 VUs  30s  1.00 iters/s
+
+running (0m34.0s), 0004/0020 VUs, 27 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 0008/0020 VUs  30s  1.00 iters/s
+
+running (0m35.0s), 0003/0020 VUs, 28 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 0008/0020 VUs  30s  1.00 iters/s
+
+running (0m36.0s), 0002/0020 VUs, 29 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 0008/0020 VUs  30s  1.00 iters/s
+
+running (0m37.0s), 0001/0020 VUs, 30 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 0008/0020 VUs  30s  1.00 iters/s
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_completed_total.................: 21             0.554676/s
+    client_events_received_total...........: 756            19.96833/s
+    client_stream_duration_seconds.........: p(50)=7.845 p(95)=7.857 p(99)=7.8586 min=7.83  max=7.859
+    client_ttfc_completed_seconds..........: p(50)=1.007 p(95)=1.008 p(99)=1.0088 min=1.006 max=1.009
+    client_ttfc_seconds....................: p(50)=1.007 p(95)=1.008 p(99)=1.0088 min=1.006 max=1.009
+    measurement_iterations_started_total...: 21             0.554676/s
+    measurement_start_epoch_s..............: 1787136290.246 min=1787136290.246 max=1787136290.246
+    sse_event..............................: 1116           29.477058/s
+
+    HTTP
+    http_req_duration......................: p(50)=7.84s p(95)=7.85s p(99)=7.85s  min=7.82s max=7.85s
+    http_reqs..............................: 31             0.818807/s
+
+    EXECUTION
+    iteration_duration.....................: p(50)=7.84s p(95)=7.85s p(99)=7.85s  min=7.83s max=7.85s
+    iterations.............................: 31             0.818807/s
+    vus....................................: 1              min=1              max=7             
+    vus_max................................: 20             min=20             max=20            
+
+    NETWORK
+    data_received..........................: 142 kB         3.8 kB/s
+    data_sent..............................: 8.3 kB         219 B/s
+
+
+
+
+running (0m37.9s), 0000/0020 VUs, 31 complete and 0 interrupted iterations
+arrival ✓ [ 100% ] 0000/0020 VUs  30s  1.00 iters/s

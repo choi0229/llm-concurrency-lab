@@ -1,0 +1,8 @@
+{
+  "start_timestamp": 1786940080,
+  "run_launch_ts": 1786940080,
+  "measurement_start": 1786940090.974,
+  "measurement_end": 1786940110.974,
+  "drain_end": 1786940127,
+  "lifecycle_note": "continuous warm-up->measurement, single k6 process, no drain between them (docs/decisions/phase2-formal-linux-environment.md item 2/3). measurement_start is read back from k6's own setup()-emitted measurement_start_epoch_s Gauge (Unit 5.6 single-source-of-truth fix) — run_launch_ts is diagnostic only (this script's clock read just before launching k6), not the boundary source."
+}

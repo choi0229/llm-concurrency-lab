@@ -33,10 +33,46 @@ Executor 전략이 overload 시 어떤 비용을 치르는지 constant-arrival-r
 > **Phase 1은 freeze됐다.** 코드/결과/문서를 더 이상 수정하거나 추가 formal benchmark를 수행하지
 > 않는다 — 위 canonical 문서가 최종본이다.
 
-## Phase 2 — 설계 완료 (구현 전)
+## Phase 2 — Platform Thread vs Virtual Thread (`gateway-mvc-java21`) — 완료 (Frozen)
 
 Phase 1 결론("blocking I/O를 유지하는 한 overload 비용은 사라지지 않고 다른 형태로 이동한다")을
-바탕으로, 동일 Java 21 환경에서 Platform `ThreadPoolExecutor`와 `VirtualThreadPerTaskExecutor`를
-동일 outbound concurrency ceiling(50) 하에서 비교한다. 설계 문서(최종, 코드 미작성):
-[`docs/test-plan/phase2-design.md`](docs/test-plan/phase2-design.md). Java 21/Spring Boot 4.x
-버전 후보: `docs/decisions/version-compatibility.md` §6.
+바탕으로, 동일 Java 21 환경에서 Chat Executor 하나만 Platform `ThreadPoolExecutor`(P-E)와 Virtual
+Thread(VT-Limited, `Semaphore(50)` admission gate로 동일 concurrency ceiling 유지)로 바꿔 R3/R6/R8 ×
+3회 반복 = **18 valid run**(Primary Formal)을 측정하고, 이어서 JFR `jdk.VirtualThreadPinned`
+diagnostic과 VT-Unlimited(admission gate 없는 구성) screening을 Secondary로 추가 실행했다.
+
+- **Final Report**: [`docs/test-results/phase2/phase2-final-report.md`](docs/test-results/phase2/phase2-final-report.md)
+- **Portfolio Summary**(README/이력서/면접용 요약): [`docs/portfolio/phase2-summary.md`](docs/portfolio/phase2-summary.md)
+- **Primary canonical dataset**: `docs/test-results/phase2/unit6-native/{pe,vtl}-{r3,r6,r8}-run{1,2,3}/`
+  (18 valid runs, raw), [`_aggregated.json`](docs/test-results/phase2/unit6-native/_aggregated.json)
+  (median/min/max/CV, `scripts/aggregate_phase2_native_formal.py`) — 이 aggregate가 Phase 2 Primary
+  결과의 공식 수치 source of truth이며 Secondary 결과 반영 후에도 수정되지 않았다. Mac + Docker
+  Desktop discarded attempt(`docs/test-results/phase2/unit6/discarded/`)와 native macOS Functional
+  Smoke/RSS 검증/Stability Canary run은 **canonical dataset이 아니다**(harness 검증 전용, Formal
+  통계에 포함되지 않음).
+- **Secondary raw 결과**: `docs/test-results/phase2/secondary/jfr-pinning-diagnostic/`(B-0/B-1/B-2),
+  `docs/test-results/phase2/secondary/vt-unlimited-screening/`(A-1/A-2) — 각 조건 1회 관찰이며 Primary
+  18-run과 같은 반복측정 통계가 아니다.
+- **환경 설계**: Mac + Docker Desktop 환경 탈락 및 그 근거
+  [`docs/decisions/phase2-formal-linux-environment.md`](docs/decisions/phase2-formal-linux-environment.md),
+  최종 채택된 native macOS ARM64(Docker-free) 환경
+  [`docs/decisions/phase2-formal-native-macos-environment.md`](docs/decisions/phase2-formal-native-macos-environment.md).
+- 설계 문서: [`docs/test-plan/phase2-design.md`](docs/test-plan/phase2-design.md),
+  [`docs/test-plan/phase2-formal-protocol.md`](docs/test-plan/phase2-formal-protocol.md). Java 21/
+  Spring Boot 4.x 버전: `docs/decisions/version-compatibility.md` §6.
+
+**Primary 핵심 결과**: 동일 admission ceiling(=50)에서 completion throughput/rejection/TTFC는 반복
+측정 범위에서 실질적 차이를 확인하기 어려웠으나, JVM platform thread peak는 근접/과부하 구간(R6/R8)에서
+Virtual Thread가 약 50~52% 낮았다 — 다만 이 절감이 RSS/CPU 절감으로 일관되게 이어지지는 않았다(상세는
+Final Report §16-24).
+
+**Secondary 핵심 결과**: JFR positive control(intentional pinning 5/5 검출)로 detector pipeline을
+검증한 뒤, 실제 Gateway의 정상 SSE·~30초 blocking read 두 workload 모두에서 `jdk.VirtualThreadPinned`가
+관측되지 않았다(NOT OBSERVED UNDER TESTED CONDITIONS). Admission gate를 없앤 VT-Unlimited는 Gateway
+자신을 500 concurrent까지 clean하게 유지했지만 downstream(Mock) capacity 자체는 늘리지 못했다 —
+admission 없이는 초과 부하가 downstream waiting queue로 이동해 tail latency가 크게 늘어났다(최대
+16.7s/23.6s). **Virtual Thread는 downstream capacity 기반 admission control을 대체하지 않는다**(상세는
+Final Report §7/§8/§25).
+
+> **Phase 2는 freeze됐다.** 코드/결과/문서를 더 이상 수정하거나 추가 Benchmark·JFR diagnostic·
+> VT-Unlimited run을 수행하지 않는다 — 위 Final Report/Portfolio Summary가 최종본이다.

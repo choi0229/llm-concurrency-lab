@@ -1,0 +1,70 @@
+jdk.VirtualThreadPinned {
+  startTime = 06:51:19.503 (2026-08-20)
+  duration = 304 ms
+  eventThread = "" (javaThreadId = 29, virtual)
+  stackTrace = [
+    java.lang.VirtualThread.parkOnCarrierThread(boolean, long) line: 689
+    java.lang.VirtualThread.parkNanos(long) line: 648
+    java.lang.VirtualThread.sleepNanos(long) line: 807
+    java.lang.Thread.sleep(long) line: 507
+    JfrPositiveControl.lambda$main$0() line: 30
+    ...
+  ]
+}
+
+jdk.VirtualThreadPinned {
+  startTime = 06:51:19.808 (2026-08-20)
+  duration = 305 ms
+  eventThread = "" (javaThreadId = 34, virtual)
+  stackTrace = [
+    java.lang.VirtualThread.parkOnCarrierThread(boolean, long) line: 689
+    java.lang.VirtualThread.parkNanos(long) line: 648
+    java.lang.VirtualThread.sleepNanos(long) line: 807
+    java.lang.Thread.sleep(long) line: 507
+    JfrPositiveControl.lambda$main$0() line: 30
+    ...
+  ]
+}
+
+jdk.VirtualThreadPinned {
+  startTime = 06:51:20.113 (2026-08-20)
+  duration = 303 ms
+  eventThread = "" (javaThreadId = 33, virtual)
+  stackTrace = [
+    java.lang.VirtualThread.parkOnCarrierThread(boolean, long) line: 689
+    java.lang.VirtualThread.parkNanos(long) line: 648
+    java.lang.VirtualThread.sleepNanos(long) line: 807
+    java.lang.Thread.sleep(long) line: 507
+    JfrPositiveControl.lambda$main$0() line: 30
+    ...
+  ]
+}
+
+jdk.VirtualThreadPinned {
+  startTime = 06:51:20.416 (2026-08-20)
+  duration = 305 ms
+  eventThread = "" (javaThreadId = 32, virtual)
+  stackTrace = [
+    java.lang.VirtualThread.parkOnCarrierThread(boolean, long) line: 689
+    java.lang.VirtualThread.parkNanos(long) line: 648
+    java.lang.VirtualThread.sleepNanos(long) line: 807
+    java.lang.Thread.sleep(long) line: 507
+    JfrPositiveControl.lambda$main$0() line: 30
+    ...
+  ]
+}
+
+jdk.VirtualThreadPinned {
+  startTime = 06:51:20.721 (2026-08-20)
+  duration = 305 ms
+  eventThread = "" (javaThreadId = 31, virtual)
+  stackTrace = [
+    java.lang.VirtualThread.parkOnCarrierThread(boolean, long) line: 689
+    java.lang.VirtualThread.parkNanos(long) line: 648
+    java.lang.VirtualThread.sleepNanos(long) line: 807
+    java.lang.Thread.sleep(long) line: 507
+    JfrPositiveControl.lambda$main$0() line: 30
+    ...
+  ]
+}
+

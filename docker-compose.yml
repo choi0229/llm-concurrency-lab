@@ -67,6 +67,35 @@ services:
     mem_limit: 1g
     cpus: 1.0
 
+  # Phase 2 (docs/test-plan/phase2-design.md) — Unit 1 skeleton only. Not
+  # started by default (`profiles: [phase2]`) so Phase 1's `docker compose up`
+  # is completely unaffected. Shares the same mock-llm/network as Phase 1 for
+  # now; a dedicated Phase 2 compose file can split this out once Unit 2+
+  # needs per-run resource limits distinct from Phase 1's fixed cpus/mem
+  # (docs/decisions/phase2-module-structure.md).
+  gateway-java21:
+    profiles: ["phase2"]
+    build:
+      context: ./gateway-mvc-java21
+    platform: linux/arm64
+    hostname: gateway-java21
+    networks:
+      - llm-lab
+    depends_on:
+      mock-llm:
+        condition: service_healthy
+    environment:
+      MOCK_LLM_BASE_URL: http://mock-llm:8000
+      CHAT_CONNECT_TIMEOUT_MS: "3000"
+      CHAT_READ_TIMEOUT_MS: "30000"
+      CHAT_TOTAL_TIMEOUT_MS: "60000"
+    ports:
+      # Host port 8081, not 8080 — leaves Phase 1's gateway port untouched so
+      # both can be brought up on this host without colliding.
+      - "8081:8080"
+    mem_limit: 1g
+    cpus: 1.0
+
   prometheus:
     image: prom/prometheus:v3.13.2
     platform: linux/arm64

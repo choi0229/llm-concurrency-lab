@@ -1,0 +1,103 @@
+{
+    "root_group": {
+        "checks": {},
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {}
+    },
+    "metrics": {
+        "data_received": {
+            "count": 5793034,
+            "rate": 13604.996247609994
+        },
+        "vus": {
+            "max": 23,
+            "value": 3,
+            "min": 3
+        },
+        "http_req_duration": {
+            "max": 7872.762666,
+            "p(50)": 7843.003625,
+            "p(95)": 7855.741667,
+            "p(99)": 7861.1013248,
+            "min": 7825.50525
+        },
+        "client_events_received_total": {
+            "count": 32436,
+            "rate": 76.1762589840622
+        },
+        "vus_max": {
+            "max": 100,
+            "value": 100,
+            "min": 100
+        },
+        "http_reqs": {
+            "count": 1261,
+            "rate": 2.9614706677427067
+        },
+        "iteration_duration": {
+            "max": 7872.991375,
+            "p(50)": 7843.285625,
+            "p(95)": 7855.974334,
+            "p(99)": 7861.3068164,
+            "min": 7825.752167
+        },
+        "data_sent": {
+            "count": 337948,
+            "rate": 793.6741389550454
+        },
+        "sse_event": {
+            "count": 45396,
+            "rate": 106.61294403873744
+        },
+        "measurement_iterations_started_total": {
+            "count": 901,
+            "rate": 2.1160071940017278
+        },
+        "measurement_start_epoch_s": {
+            "value": 1787137445.696,
+            "min": 1787137445.696,
+            "max": 1787137445.696
+        },
+        "iterations": {
+            "count": 1261,
+            "rate": 2.9614706677427067
+        },
+        "client_ttfc_completed_seconds": {
+            "p(50)": 1.005,
+            "p(95)": 1.007,
+            "p(99)": 1.008,
+            "min": -1.045,
+            "max": 1.011
+        },
+        "http_req_sending": {
+            "p(50)": 1005.321333,
+            "p(95)": 1007.233875,
+            "p(99)": 1009.2855617499999,
+            "min": 1002.549666,
+            "max": 1030.333125
+        },
+        "client_stream_duration_seconds": {
+            "p(50)": 7.842,
+            "p(95)": 7.855,
+            "p(99)": 7.861,
+            "min": 5.782,
+            "max": 7.866
+        },
+        "client_ttfc_seconds": {
+            "p(50)": 1.005,
+            "p(95)": 1.007,
+            "p(99)": 1.008,
+            "min": -1.045,
+            "max": 1.011
+        },
+        "client_completed_total": {
+            "count": 901,
+            "rate": 2.1160071940017278
+        }
+    },
+    "setup_data": {
+        "measurementStartMs": 1787137445696
+    }
+}

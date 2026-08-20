@@ -1,0 +1,29 @@
+{
+  "label": "gateway-bound-n100",
+  "thread_mode": "VIRTUAL_UNLIMITED",
+  "vus": 100,
+  "mock_max_concurrent_processing": 0,
+  "mock_max_waiting": 0,
+  "k6_exit_code": 0,
+  "client_stream_completed_total": 100,
+  "client_stream_failed_total": 0,
+  "ttfc_seconds": {
+    "avg": 1.0375000000000005,
+    "min": 1.027,
+    "max": 1.043
+  },
+  "stream_duration_seconds": {
+    "avg": 7.965610000000002,
+    "min": 7.914,
+    "max": 7.978
+  },
+  "gateway_rejected_total": 0,
+  "jvm_threads_current_peak": 121.0,
+  "chat_virtual_tasks_active_peak": 100.0,
+  "mockllm_current_concurrency_peak": 0.0,
+  "mockllm_waiting_requests_peak": 0.0,
+  "rss_start_bytes": 197230592.0,
+  "rss_peak_bytes": 245366784.0,
+  "cpu_avg_cores": 0.11678253084623322,
+  "postflight_fail": ""
+}
