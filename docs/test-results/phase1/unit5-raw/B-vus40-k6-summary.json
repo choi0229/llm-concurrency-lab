@@ -1,0 +1,88 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    },
+    "metrics": {
+        "client_stream_completed_total": {
+            "count": 30,
+            "rate": 2.043874170988038
+        },
+        "http_reqs": {
+            "count": 40,
+            "rate": 2.725165561317384
+        },
+        "vus": {
+            "max": 30,
+            "value": 10,
+            "min": 10
+        },
+        "client_ttfc_seconds": {
+            "p(50)": 5.949,
+            "p(95)": 10.821,
+            "p(99)": 10.821,
+            "min": 1.054,
+            "max": 10.821
+        },
+        "client_stream_duration_seconds": {
+            "p(99)": 14.67761,
+            "min": 0.042,
+            "max": 14.678,
+            "p(50)": 7.3795,
+            "p(95)": 14.677
+        },
+        "http_req_sending": {
+            "p(50)": 3500.929689,
+            "p(95)": 10820.235019549998,
+            "p(99)": 10820.63038,
+            "min": 41.924334,
+            "max": 10820.63038
+        },
+        "iteration_duration": {
+            "p(95)": 14676.7353171,
+            "p(99)": 14677.325478249999,
+            "min": 42.0785,
+            "max": 14677.625632,
+            "p(50)": 7379.326712
+        },
+        "sse_event": {
+            "rate": 42.921357590748805,
+            "count": 630
+        },
+        "http_req_duration": {
+            "p(50)": 7379.256128499999,
+            "p(95)": 14676.6790841,
+            "p(99)": 14677.23189962,
+            "min": 42.007875,
+            "max": 14677.517591
+        },
+        "client_events_received_total": {
+            "rate": 42.921357590748805,
+            "count": 630
+        },
+        "client_stream_failed_total": {
+            "count": 10,
+            "rate": 0.681291390329346
+        },
+        "data_received": {
+            "count": 83030,
+            "rate": 5656.76241390456
+        },
+        "iterations": {
+            "count": 40,
+            "rate": 2.725165561317384
+        },
+        "vus_max": {
+            "value": 40,
+            "min": 40,
+            "max": 40
+        },
+        "data_sent": {
+            "count": 10640,
+            "rate": 724.8940393104242
+        }
+    }
+}

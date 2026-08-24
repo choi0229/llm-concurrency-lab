@@ -1,0 +1,99 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    },
+    "metrics": {
+        "iteration_duration": {
+            "p(50)": 7890.885461,
+            "p(95)": 60079.019945,
+            "p(99)": 60162.483528,
+            "min": 1004.025626,
+            "max": 60204.888944
+        },
+        "sse_event": {
+            "count": 121742,
+            "rate": 339.0072804933672
+        },
+        "client_stream_duration_seconds": {
+            "max": 60.206,
+            "p(50)": 7.891,
+            "p(95)": 60.08,
+            "p(99)": 60.163,
+            "min": 1.004
+        },
+        "vus_max": {
+            "value": 800,
+            "min": 800,
+            "max": 800
+        },
+        "http_req_sending": {
+            "max": 60015.827278,
+            "p(50)": 1004.450584,
+            "p(95)": 56919.312652,
+            "p(99)": 60006.63832,
+            "min": 5.510083
+        },
+        "client_ttfc_seconds": {
+            "min": 1.001,
+            "max": 59.814,
+            "p(50)": 1.005,
+            "p(95)": 53.289199999999994,
+            "p(99)": 57.48196
+        },
+        "iterations": {
+            "count": 3601,
+            "rate": 10.027477920985488
+        },
+        "client_ttfc_completed_seconds": {
+            "p(50)": 1.004,
+            "p(95)": 8.0978,
+            "p(99)": 52.80318,
+            "min": 1.001,
+            "max": 53.127
+        },
+        "data_received": {
+            "rate": 43393.302259875105,
+            "count": 15583109
+        },
+        "vus": {
+            "max": 195,
+            "value": 2,
+            "min": 2
+        },
+        "client_completed_total": {
+            "count": 3142,
+            "rate": 8.749329527280311
+        },
+        "http_reqs": {
+            "count": 3601,
+            "rate": 10.027477920985488
+        },
+        "http_req_duration": {
+            "max": 60204.616736,
+            "p(50)": 7890.64717,
+            "p(95)": 60078.825819,
+            "p(99)": 60162.243736,
+            "min": 1003.861292
+        },
+        "data_sent": {
+            "count": 957866,
+            "rate": 2667.30912698214
+        },
+        "client_failed_no_event_total": {
+            "count": 148,
+            "rate": 0.4121262794517779
+        },
+        "client_failed_mid_stream_total": {
+            "rate": 0.8660221142533981,
+            "count": 311
+        },
+        "client_events_received_total": {
+            "count": 121742,
+            "rate": 339.0072804933672
+        }
+    }
+}

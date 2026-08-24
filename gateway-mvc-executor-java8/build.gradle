@@ -1,0 +1,32 @@
+buildscript {
+    ext { springBootVersion = '1.5.22.RELEASE' }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.llmconcurrencylab'
+version = '0.1.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('io.prometheus:simpleclient:0.16.0')
+    compile('io.prometheus:simpleclient_common:0.16.0')
+    // JVM/process default exports (jvm_threads_*, jvm_memory_*, process_cpu_seconds_total,
+    // process_resident_memory_bytes, ...) — needed for Unit 5 Grafana Resource panels
+    // (JVM Platform Thread Count / Heap / Process RSS / CPU).
+    compile('io.prometheus:simpleclient_hotspot:0.16.0')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}

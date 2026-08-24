@@ -1,0 +1,73 @@
+time="2026-08-11T14:36:27Z" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /scripts/01-concurrent-connections.js
+        output: Prometheus remote write (http://prometheus:9090/api/v1/write)
+
+     scenarios: (100.00%) 1 scenario, 50 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 50 iterations shared among 50 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 50/50 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 50 VUs  00m01.0s/10m0s  00/50 shared iters
+
+running (00m02.0s), 50/50 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 50 VUs  00m02.0s/10m0s  00/50 shared iters
+
+running (00m03.0s), 50/50 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 50 VUs  00m03.0s/10m0s  00/50 shared iters
+
+running (00m04.0s), 50/50 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 50 VUs  00m04.0s/10m0s  00/50 shared iters
+
+running (00m05.0s), 23/50 VUs, 27 complete and 0 interrupted iterations
+default   [  54% ] 50 VUs  00m05.0s/10m0s  27/50 shared iters
+
+running (00m06.0s), 20/50 VUs, 30 complete and 0 interrupted iterations
+default   [  60% ] 50 VUs  00m06.0s/10m0s  30/50 shared iters
+
+running (00m07.0s), 20/50 VUs, 30 complete and 0 interrupted iterations
+default   [  60% ] 50 VUs  00m07.0s/10m0s  30/50 shared iters
+
+running (00m08.0s), 20/50 VUs, 30 complete and 0 interrupted iterations
+default   [  60% ] 50 VUs  00m08.0s/10m0s  30/50 shared iters
+
+running (00m09.0s), 20/50 VUs, 30 complete and 0 interrupted iterations
+default   [  60% ] 50 VUs  00m09.0s/10m0s  30/50 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_events_received_total.....: 1050   106.630488/s
+    client_stream_completed_total....: 50     5.077642/s
+    client_stream_duration_seconds...: p(50)=4.9885 p(95)=9.846 p(99)=9.846 min=4.939 max=9.846
+    client_ttfc_seconds..............: p(50)=1.1245 p(95)=5.992 p(99)=5.992 min=1.104 max=5.992
+    sse_event........................: 1050   106.630488/s
+
+    HTTP
+    http_req_duration................: p(50)=4.98s  p(95)=9.84s p(99)=9.84s min=4.93s max=9.84s
+    http_reqs........................: 50     5.077642/s
+
+    EXECUTION
+    iteration_duration...............: p(50)=4.98s  p(95)=9.84s p(99)=9.84s min=4.93s max=9.84s
+    iterations.......................: 50     5.077642/s
+    vus..............................: 20     min=20       max=50
+    vus_max..........................: 50     min=50       max=50
+
+    NETWORK
+    data_received....................: 135 kB 14 kB/s
+    data_sent........................: 13 kB  1.4 kB/s
+
+
+
+
+running (00m09.8s), 00/50 VUs, 50 complete and 0 interrupted iterations
+default ✓ [ 100% ] 50 VUs  00m09.8s/10m0s  50/50 shared iters

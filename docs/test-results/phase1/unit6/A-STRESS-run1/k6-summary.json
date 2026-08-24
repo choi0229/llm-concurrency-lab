@@ -1,0 +1,99 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    },
+    "metrics": {
+        "http_reqs": {
+            "count": 1500,
+            "rate": 4.175177640172598
+        },
+        "client_ttfc_completed_seconds": {
+            "max": 53.063,
+            "p(50)": 1.006,
+            "p(95)": 52.6613,
+            "p(99)": 53.02812,
+            "min": 1.001
+        },
+        "client_failed_mid_stream_total": {
+            "count": 422,
+            "rate": 1.1746166427685576
+        },
+        "vus_max": {
+            "min": 800,
+            "max": 800,
+            "value": 800
+        },
+        "data_received": {
+            "count": 5904855,
+            "rate": 16435.879042974244
+        },
+        "client_ttfc_seconds": {
+            "p(95)": 59.06255,
+            "p(99)": 59.15824,
+            "min": 1.001,
+            "max": 59.22,
+            "p(50)": 1.008
+        },
+        "iteration_duration": {
+            "p(99)": 60199.25159126,
+            "min": 1003.4645,
+            "max": 60205.048195,
+            "p(50)": 7996.522879,
+            "p(95)": 60150.870074599996
+        },
+        "iterations": {
+            "count": 1500,
+            "rate": 4.175177640172598
+        },
+        "client_events_received_total": {
+            "rate": 127.71033365759943,
+            "count": 45882
+        },
+        "http_req_sending": {
+            "p(50)": 1007.59325,
+            "p(95)": 59063.0128895,
+            "p(99)": 59163.07082018,
+            "min": 15.492875,
+            "max": 59219.009902
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 140
+        },
+        "http_req_duration": {
+            "max": 60204.789778,
+            "p(50)": 7996.2869415000005,
+            "p(95)": 60150.5253773,
+            "p(99)": 60198.956702929994,
+            "min": 1003.320876
+        },
+        "client_failed_no_event_total": {
+            "count": 30,
+            "rate": 0.08350355280345197
+        },
+        "sse_event": {
+            "count": 45882,
+            "rate": 127.71033365759943
+        },
+        "client_completed_total": {
+            "count": 1048,
+            "rate": 2.9170574446005886
+        },
+        "client_stream_duration_seconds": {
+            "p(99)": 60.201,
+            "min": 1.004,
+            "max": 60.207,
+            "p(50)": 7.996,
+            "p(95)": 60.152
+        },
+        "data_sent": {
+            "count": 399000,
+            "rate": 1110.597252285911
+        }
+    }
+}

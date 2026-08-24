@@ -1,0 +1,84 @@
+{
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {},
+        "name": "",
+        "path": ""
+    },
+    "metrics": {
+        "data_received": {
+            "rate": 5506.464530506439,
+            "count": 27040
+        },
+        "client_events_received_total": {
+            "rate": 42.76470234490947,
+            "count": 210
+        },
+        "data_sent": {
+            "count": 2660,
+            "rate": 541.6862297021867
+        },
+        "iteration_duration": {
+            "p(50)": 4908.72919,
+            "p(95)": 4909.8809732,
+            "p(99)": 4910.08836344,
+            "min": 4907.931336,
+            "max": 4910.140211
+        },
+        "http_reqs": {
+            "count": 10,
+            "rate": 2.0364143973766415
+        },
+        "http_req_sending": {
+            "p(50)": 1045.972501,
+            "p(95)": 1046.849667,
+            "p(99)": 1046.849667,
+            "min": 1045.075376,
+            "max": 1046.849667
+        },
+        "http_req_duration": {
+            "p(95)": 4909.814531800001,
+            "p(99)": 4910.030141560001,
+            "min": 4907.526252,
+            "max": 4910.084044,
+            "p(50)": 4908.6300645
+        },
+        "iterations": {
+            "count": 10,
+            "rate": 2.0364143973766415
+        },
+        "vus": {
+            "value": 10,
+            "min": 10,
+            "max": 10
+        },
+        "vus_max": {
+            "value": 10,
+            "min": 10,
+            "max": 10
+        },
+        "sse_event": {
+            "rate": 42.76470234490947,
+            "count": 210
+        },
+        "client_ttfc_seconds": {
+            "max": 1.047,
+            "p(50)": 1.047,
+            "p(95)": 1.047,
+            "p(99)": 1.047,
+            "min": 1.046
+        },
+        "client_stream_duration_seconds": {
+            "p(50)": 4.909,
+            "p(95)": 4.91,
+            "p(99)": 4.91,
+            "min": 4.908,
+            "max": 4.91
+        },
+        "client_stream_completed_total": {
+            "count": 10,
+            "rate": 2.0364143973766415
+        }
+    }
+}

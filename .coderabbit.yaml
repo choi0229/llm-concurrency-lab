@@ -1,0 +1,26 @@
+# .coderabbit.yaml
+language: "ko-KR"
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  auto_review:
+    enabled: true
+    drafts: true
+
+  # 100개 파일 제한 초과 방지를 위한 제외 경로 필터
+  path_filters:
+    - "!docs/**"
+    - "!**/*.md"
+    - "!**/*.json"
+    - "!**/*.csv"
+    - "!**/*.html"
+    - "!gradle/**"
+    - "!gradlew"
+    - "!gradlew.bat"
+    - "!**/build/**"
+    - "!**/target/**"
+    - "!**/.gradle/**"

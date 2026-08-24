@@ -1,0 +1,84 @@
+{
+    "metrics": {
+        "iterations": {
+            "rate": 2.033528443209104,
+            "count": 10
+        },
+        "http_req_sending": {
+            "p(50)": 1043.6240005,
+            "p(95)": 1044.606708,
+            "p(99)": 1044.606708,
+            "min": 1042.833375,
+            "max": 1044.606708
+        },
+        "http_req_duration": {
+            "min": 4915.787044,
+            "max": 4917.120419,
+            "p(50)": 4916.229252499999,
+            "p(95)": 4916.8079129,
+            "p(99)": 4917.05791778
+        },
+        "data_received": {
+            "count": 27040,
+            "rate": 5498.660910437417
+        },
+        "vus_max": {
+            "value": 10,
+            "min": 10,
+            "max": 10
+        },
+        "sse_event": {
+            "count": 210,
+            "rate": 42.70409730739119
+        },
+        "iteration_duration": {
+            "p(50)": 4916.3050645,
+            "p(95)": 4916.8890376,
+            "p(99)": 4917.15284272,
+            "min": 4915.890794,
+            "max": 4917.218794
+        },
+        "vus": {
+            "value": 10,
+            "min": 10,
+            "max": 10
+        },
+        "client_events_received_total": {
+            "count": 210,
+            "rate": 42.70409730739119
+        },
+        "client_ttfc_seconds": {
+            "p(50)": 1.044,
+            "p(95)": 1.044,
+            "p(99)": 1.044,
+            "min": 1.043,
+            "max": 1.044
+        },
+        "http_reqs": {
+            "rate": 2.033528443209104,
+            "count": 10
+        },
+        "client_stream_duration_seconds": {
+            "p(50)": 4.916,
+            "p(95)": 4.917,
+            "p(99)": 4.917,
+            "min": 4.915,
+            "max": 4.917
+        },
+        "client_stream_completed_total": {
+            "count": 10,
+            "rate": 2.033528443209104
+        },
+        "data_sent": {
+            "count": 2660,
+            "rate": 540.9185658936217
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    }
+}

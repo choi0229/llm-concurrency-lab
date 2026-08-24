@@ -1,0 +1,28 @@
+{
+  "configuration": "A",
+  "load": "STRESS",
+  "run_number": 1,
+  "executor": {
+    "core_pool_size": 10, "max_pool_size": 10,
+    "queue_capacity": 100, "rejection_policy": "CALLER_RUNS"
+  },
+  "arrival_rate_target": 5,
+  "k6_pre_allocated_vus": 800,
+  "warmup_duration_s": 120,
+  "measurement_duration_s": 300,
+  "mock_llm_workload": {"first_chunk_delay_ms": 1000, "chunk_interval_ms": 200, "chunk_count": 20, "chunk_size_bytes": 64},
+  "timeouts_ms": {"connect": 3000, "read": 30000, "total": 60000},
+  "resource_limits": {"gateway": {"cpus": 1.0, "mem_limit": "1g"}, "mock_llm": {"cpus": 2.0, "mem_limit": "1g"}},
+  "prometheus_scrape_interval_s": 5,
+  "k6_image": "k6-sse:dev (k6 v1.8.0 + xk6-sse v0.1.11)",
+  "log_level": "INFO",
+  "jdk": "Eclipse Temurin 8", "spring_boot": "1.5.22.RELEASE",
+  "preflight": {
+    "host_arch": "arm64", "container_arch": "aarch64",
+    "clock_drift_s": 1, "post_run_clock_drift_s": 0,
+    "gateway_healthy": true, "mock_healthy": true,
+    "prometheus_scrape_ok": true, "async_active_before": 0, "queue_size_before": 0,
+    "unrelated_containers": [],
+    "timestamp_clock_domain": "docker_vm (not host) — see scripts/run-formal-benchmark.sh vm_epoch()"
+  }
+}

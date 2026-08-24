@@ -1,0 +1,64 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+### VS Code ###
+.vscode/
+**/src/main/resources/static/**
+.env
+
+### QueryDSL ###
+/src/main/generated/.DS_Store
+
+### Python (mock-llm-fastapi) ###
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+### Docker ###
+docker-compose.override.yml
+
+### OS ###
+.DS_Store
+
+### Phase 1 discarded raw benchmark data (~85MB) ###
+# Why-discarded is preserved via README.md in each dir (kept out of ignore);
+# the raw per-run JSON/log data itself is not — see each README for the
+# canonical doc section that explains the discard. Official 24-run data
+# (docs/test-results/phase1/unit6/) and calibration-only data
+# (unit6-metric-calibration/) are NOT covered by this rule and stay tracked.
+docs/test-results/phase1/unit6-attempt1-discarded/*
+!docs/test-results/phase1/unit6-attempt1-discarded/README.md
+docs/test-results/phase1/unit6-attempt2-discarded/*
+!docs/test-results/phase1/unit6-attempt2-discarded/README.md
+docs/test-results/phase1/unit6-A-rerun-old/*
+!docs/test-results/phase1/unit6-A-rerun-old/README.md

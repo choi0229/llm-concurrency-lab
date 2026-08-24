@@ -1,0 +1,15 @@
+# scrape_interval is fixed per docs/decisions/monitoring-baseline.md — do not
+# change per-experiment; a different interval is itself an experiment, not a
+# baseline setting.
+global:
+  scrape_interval: 5s
+  scrape_timeout: 4s
+
+scrape_configs:
+  - job_name: gateway-mvc-executor-java8
+    static_configs:
+      - targets: ["gateway:8080"]
+
+  - job_name: mock-llm-fastapi
+    static_configs:
+      - targets: ["mock-llm:8000"]

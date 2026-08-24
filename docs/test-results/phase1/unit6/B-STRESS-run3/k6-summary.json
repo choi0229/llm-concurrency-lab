@@ -1,0 +1,95 @@
+{
+    "metrics": {
+        "client_rejected_total": {
+            "rate": 3.4540492903559987,
+            "count": 1101
+        },
+        "data_received": {
+            "count": 2047891,
+            "rate": 6424.628933039451
+        },
+        "client_events_received_total": {
+            "count": 14400,
+            "rate": 45.175576549615236
+        },
+        "vus": {
+            "value": 3,
+            "min": 3,
+            "max": 30
+        },
+        "client_ttfc_completed_seconds": {
+            "max": 16.966,
+            "p(50)": 16.735,
+            "p(95)": 16.83205,
+            "p(99)": 16.86607,
+            "min": 1.004
+        },
+        "http_req_sending": {
+            "max": 16965.523174,
+            "p(50)": 2.606375,
+            "p(95)": 16803.048966,
+            "p(99)": 16840.498257,
+            "min": 0.631833
+        },
+        "http_req_duration": {
+            "p(99)": 23807.338053,
+            "min": 0.678125,
+            "max": 23951.528011,
+            "p(50)": 2.765875,
+            "p(95)": 23710.122595
+        },
+        "client_stream_duration_seconds": {
+            "p(50)": 0.003,
+            "p(95)": 23.71,
+            "p(99)": 23.808,
+            "min": 0,
+            "max": 23.951
+        },
+        "client_ttfc_seconds": {
+            "p(50)": 16.735,
+            "p(95)": 16.83205,
+            "p(99)": 16.86607,
+            "min": 1.004,
+            "max": 16.966
+        },
+        "iterations": {
+            "rate": 4.7089264167342,
+            "count": 1501
+        },
+        "iteration_duration": {
+            "p(50)": 2.986167,
+            "p(95)": 23710.426637,
+            "p(99)": 23807.569928,
+            "min": 0.740708,
+            "max": 23951.749011
+        },
+        "client_completed_total": {
+            "count": 400,
+            "rate": 1.254877126378201
+        },
+        "sse_event": {
+            "count": 14400,
+            "rate": 45.175576549615236
+        },
+        "data_sent": {
+            "count": 399266,
+            "rate": 1252.5744268512972
+        },
+        "http_reqs": {
+            "count": 1501,
+            "rate": 4.7089264167342
+        },
+        "vus_max": {
+            "value": 100,
+            "min": 100,
+            "max": 100
+        }
+    },
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {},
+        "name": ""
+    }
+}
