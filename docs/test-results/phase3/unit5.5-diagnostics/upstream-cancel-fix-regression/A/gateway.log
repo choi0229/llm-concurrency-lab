@@ -1,0 +1,27 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-08-22 15:39:47.134  INFO 6589 --- [           main] c.l.gatewaymvc.GatewayApplication        : Starting GatewayApplication using Java 1.8.0_504 on userui-MacBookAir.local with PID 6589 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-blocking-spring5/build/libs/gateway-mvc-blocking-spring5-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-blocking-spring5)
+2026-08-22 15:39:47.136  INFO 6589 --- [           main] c.l.gatewaymvc.GatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-22 15:39:47.839  INFO 6589 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-22 15:39:48.004  INFO 6589 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-22 15:39:48.005  INFO 6589 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-08-22 15:39:48.069  INFO 6589 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-22 15:39:48.069  INFO 6589 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 898 ms
+2026-08-22 15:39:48.434  INFO 6589 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-08-22 15:39:48.457  INFO 6589 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-22 15:39:48.469  INFO 6589 --- [           main] c.l.gatewaymvc.GatewayApplication        : Started GatewayApplication in 1.646 seconds (JVM running for 1.928)
+2026-08-22 15:39:48.652  INFO 6589 --- [nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-22 15:39:48.653  INFO 6589 --- [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-22 15:39:48.653  INFO 6589 --- [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-22 15:39:48.733  INFO 6589 --- [nio-8081-exec-3] c.l.gatewaymvc.chat.ChatController       : [5b342cf5-1aef-48dd-bdfb-d00fcf459e68] request start
+2026-08-22 15:39:49.252  INFO 6589 --- [nio-8081-exec-4] c.l.gatewaymvc.chat.ChatController       : [fa2a4914-db0f-49bb-9969-fac79e4bc967] request start
+2026-08-22 15:39:49.252  WARN 6589 --- [nio-8081-exec-4] c.l.gatewaymvc.chat.ChatController       : [fa2a4914-db0f-49bb-9969-fac79e4bc967] rejected: admission ceiling reached
+2026-08-22 15:39:49.253  INFO 6589 --- [nio-8081-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [fa2a4914-db0f-49bb-9969-fac79e4bc967] terminal: outcome=rejected
+2026-08-22 15:39:52.863  INFO 6589 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [5b342cf5-1aef-48dd-bdfb-d00fcf459e68] terminal: outcome=completed

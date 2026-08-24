@@ -1,0 +1,44 @@
+Unit 7 Formal Canary -- RSS sampler PID verification
+Run: p3a-r3-canary (P3-A, R3, Canary label -- NOT part of the 27-run canonical matrix)
+Purpose: directly verify the Unit 6 Screening PID-capture bug (RSS sampler tracked a process that
+was NOT the actual Gateway JVM, via `$!` after an env/nohup chain) does not recur in this harness,
+which instead resolves the PID via `pgrep -f "<jar basename>"` AFTER the Gateway's own health
+check passes (scripts/run-phase3-native-formal-benchmark.sh).
+
+1. GATEWAY_PID recorded by the harness (gateway.pid): 25671
+
+2. Command line of PID 25671, captured by the harness immediately after pgrep resolution via
+   `ps -o command= -p 25671` (gateway.cmdline.txt):
+
+   /Users/user/Documents/GitHub/llm-concurrency-lab/.native-runtime/zulu8.96.0.205-ca-jdk8.0.504-macosx_aarch64/Contents/Home/bin/java
+   -jar /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-blocking-spring5/build/libs/gateway-mvc-blocking-spring5-0.1.0.jar
+
+   -> This IS the actual P3-A (gateway-mvc-blocking-spring5) jar, not an unrelated process --
+      matches the expected config for this run (CFG=A) exactly.
+
+3. RSS sampler target: the same $GATEWAY_PID (25671) -- rss-samples.csv's `ps -o rss= -p 25671`
+   loop uses the identical variable set by pgrep resolution above; there is no second, independent
+   PID resolution for the RSS sampler that could diverge from the one verified in step 2.
+
+4. RSS sample plausibility (rss-samples.csv, 421 samples at 1Hz over the run's ~428s lifetime):
+   - First sample (process_start + ~5s, still warming up): 306,320 KiB (~299 MB)
+   - Last sample (just before drain_end): 449,280 KiB (~439 MB)
+   - Values are in the expected order of magnitude for a JVM process with Tomcat + a 50-worker
+     blocking-outbound thread pool under sustained load -- NOT the ~1,500 KiB (~1.5 MB) flat,
+     implausible reading the Unit 6 Screening bug produced for a process that was not actually the
+     Gateway JVM.
+   - Values change meaningfully over time (not a flat/stuck reading), consistent with a sampler
+     actually attached to a live, active process.
+
+5. Window-filtered result (from result.json, [measurement_start, measurement_end] only):
+   rss_measurement_start_bytes  = 413,155,328  (~394 MB)
+   rss_measurement_peak_bytes   = 460,013,568  (~439 MB)
+   rss_measurement_delta_bytes  =  46,858,240  (~45 MB growth during the 300s measurement window)
+
+   None of these are null, none are 0, none match the Unit 6 Screening bug's signature.
+
+CONCLUSION: RSS sampler PID == actual Gateway JVM PID for this entire run. The Unit 6 Screening
+PID-capture bug is confirmed NOT present in this Formal harness. RSS numbers from this harness are
+authoritative for the 27-run Formal matrix (pending that matrix's own execution and validity gates
+-- this Canary's own RSS numbers are pipeline-validation only, not a Formal result, per protocol
+Sec 29/user directive Sec 20).

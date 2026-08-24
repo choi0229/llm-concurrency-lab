@@ -1,0 +1,8 @@
+{
+  "blockhound_version": "1.0.17.RELEASE",
+  "reactor_core_version": "3.4.34",
+  "java_version": "1.8.0_504 (Azul Zulu 8.96.0.205, macOS ARM64 native)",
+  "jvm_args_needed": "none (JDK 13+ AllowRedefinitionToAddDeleteMethods flag not applicable to Java 8)",
+  "result": "PASS",
+  "detected": "reactor.blockhound.BlockingOperationError: Blocking call! java.lang.Thread.sleep"
+}

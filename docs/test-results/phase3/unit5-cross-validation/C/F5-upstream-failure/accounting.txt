@@ -1,0 +1,13 @@
+=== counter deltas ===
+gateway_requests_started_total delta=1
+gateway_requests_total{outcome="upstream_error",} delta=1
+gateway_upstream_cancel_total delta=1
+=== gauge postflight ===
+gateway_active_streams = 0
+gateway_admission_active = 0
+gateway_upstream_active = 0
+servlet_write_executor_active = (absent)
+servlet_write_executor_queue_depth = (absent)
+servlet_write_stream_buffered_frames = (absent)
+outbound_blocking_executor_active = (absent)
+reactor_netty_connection_provider_pending_connections{id="-1602673704",name="gateway-webclient-pool",remote_address="127.0.0.1:18999",} = 0

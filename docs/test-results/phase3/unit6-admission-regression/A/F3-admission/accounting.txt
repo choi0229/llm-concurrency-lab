@@ -1,0 +1,14 @@
+=== counter deltas ===
+gateway_admission_rejected_total delta=1
+gateway_requests_started_total delta=2
+gateway_requests_total{outcome="completed",} delta=1
+gateway_requests_total{outcome="rejected",} delta=1
+=== gauge postflight ===
+gateway_active_streams = 0
+gateway_admission_active = 0
+gateway_upstream_active = 0
+servlet_write_executor_active = 0
+servlet_write_executor_queue_depth = 0
+servlet_write_stream_buffered_frames = 0
+outbound_blocking_executor_active = 0
+reactor_netty_connection_provider_pending_connections = (absent)

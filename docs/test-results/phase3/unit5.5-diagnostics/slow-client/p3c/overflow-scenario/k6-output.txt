@@ -1,0 +1,71 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/scripts/diagnostic-tools/slow-client-k6.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 1 iterations for each of 1 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m01.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m02.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m02.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m03.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m03.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m04.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m04.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m05.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m05.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m06.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m06.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m07.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m07.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m08.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m08.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m09.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m09.0s/10m0s  0/1 iters, 1 per VU
+time="2026-08-22T15:57:51+09:00" level=info msg="slow-client done: events=61 elapsedMs=9327" source=console
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    slow_client_bytes_received_total....: 3933673 421708.380387/s
+    slow_client_events_received_total...: 61      6.539489/s
+    sse_event...........................: 61      6.539489/s
+
+    HTTP
+    http_req_duration...................: avg=9.32s min=9.32s med=9.32s max=9.32s p(90)=9.32s p(95)=9.32s
+    http_reqs...........................: 1       0.107205/s
+
+    EXECUTION
+    iteration_duration..................: avg=9.32s min=9.32s med=9.32s max=9.32s p(90)=9.32s p(95)=9.32s
+    iterations..........................: 1       0.107205/s
+    vus.................................: 1       min=1           max=1
+    vus_max.............................: 1       min=1           max=1
+
+    NETWORK
+    data_received.......................: 3.9 MB  422 kB/s
+    data_sent...........................: 266 B   29 B/s
+
+
+
+
+running (00m09.3s), 0/1 VUs, 1 complete and 0 interrupted iterations
+default ✓ [ 100% ] 1 VUs  00m09.3s/10m0s  1/1 iters, 1 per VU

@@ -1,0 +1,185 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-08-23 01:03:32.183  INFO 9653 --- [           main] c.l.gatewaymvc.GatewayApplication        : Starting GatewayApplication using Java 1.8.0_504 on userui-MacBookAir.local with PID 9653 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-webclient/build/libs/gateway-mvc-webclient-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-webclient)
+2026-08-23 01:03:32.185  INFO 9653 --- [           main] c.l.gatewaymvc.GatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-23 01:03:32.976  INFO 9653 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2026-08-23 01:03:33.140  INFO 9653 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-23 01:03:33.140  INFO 9653 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-08-23 01:03:33.203  INFO 9653 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-23 01:03:33.203  INFO 9653 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 986 ms
+2026-08-23 01:03:33.561 ERROR 9653 --- [           main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2026-08-23 01:03:33.843  INFO 9653 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-08-23 01:03:33.867  INFO 9653 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2026-08-23 01:03:33.877  INFO 9653 --- [           main] c.l.gatewaymvc.GatewayApplication        : Started GatewayApplication in 1.994 seconds (JVM running for 2.315)
+2026-08-23 01:03:34.184  INFO 9653 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-23 01:03:34.184  INFO 9653 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-23 01:03:34.185  INFO 9653 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-23 01:03:34.248  INFO 9653 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [9c39b98d-dc5c-4e30-94cd-efe5617ebde1] request start
+2026-08-23 01:03:34.594  INFO 9653 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [9c39b98d-dc5c-4e30-94cd-efe5617ebde1] terminal: outcome=completed
+2026-08-23 01:03:34.607  INFO 9653 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [7a87b81b-dddd-4d2f-b76f-62e57cada45c] request start
+2026-08-23 01:03:34.765  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [7a87b81b-dddd-4d2f-b76f-62e57cada45c] terminal: outcome=completed
+2026-08-23 01:03:34.782  INFO 9653 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [43e13a74-9ef6-4574-9a3a-24bcae18fb96] request start
+2026-08-23 01:03:34.944  INFO 9653 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [43e13a74-9ef6-4574-9a3a-24bcae18fb96] terminal: outcome=completed
+2026-08-23 01:03:34.962  INFO 9653 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [143a81a3-5fcc-4663-9957-d0586cc999aa] request start
+2026-08-23 01:03:35.122  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [143a81a3-5fcc-4663-9957-d0586cc999aa] terminal: outcome=completed
+2026-08-23 01:03:35.139  INFO 9653 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [eeecc359-d9fb-4b9c-9d5c-70c5485a987d] request start
+2026-08-23 01:03:35.297  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [eeecc359-d9fb-4b9c-9d5c-70c5485a987d] terminal: outcome=completed
+2026-08-23 01:03:36.346  INFO 9653 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [77104915-44cc-4e54-951a-2efea9396110] request start
+2026-08-23 01:03:36.683  INFO 9653 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [c89e7abd-24e5-40da-b0e0-cd3de80ed3ef] request start
+2026-08-23 01:03:37.016  INFO 9653 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [917752bc-6985-4ce1-9a5f-11d639ca5dab] request start
+2026-08-23 01:03:37.347  INFO 9653 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [4394c6b2-5861-41d9-a88d-3ed3ce80d1fb] request start
+2026-08-23 01:03:37.682  INFO 9653 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [a3489ea0-0585-47fc-828a-c55db40bb6db] request start
+2026-08-23 01:03:38.016  INFO 9653 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [67a4a67e-206b-4a60-b591-038847c82229] request start
+2026-08-23 01:03:38.348  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [8a504d70-681d-4289-9988-054f92415f53] request start
+2026-08-23 01:03:38.680  INFO 9653 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [a2344367-1f15-4b17-b016-e3cb34bf4df6] request start
+2026-08-23 01:03:39.016  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [071e505b-37e5-4bc7-aba3-cdebaeb348f5] request start
+2026-08-23 01:03:39.349  INFO 9653 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [ff2898a1-87b3-4497-9ddc-64c4fe2eee4b] request start
+2026-08-23 01:03:39.680  INFO 9653 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [8a21f0a6-2328-474c-b8aa-26d5437d9193] request start
+2026-08-23 01:03:40.016  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [94ac92c1-736e-4110-887a-fa125eb922a3] request start
+2026-08-23 01:03:40.348  INFO 9653 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [95d5e3bd-0939-41a4-b555-63f91e8530f7] request start
+2026-08-23 01:03:40.680  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [6a2f2e4e-8743-4739-86f1-f6a8a0b78f5d] request start
+2026-08-23 01:03:41.015  INFO 9653 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [91c0f379-7a6e-43ba-ba6e-e4c5d8273293] request start
+2026-08-23 01:03:41.348  INFO 9653 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [40003f60-22f6-4275-a43b-efe60bd280bf] request start
+2026-08-23 01:03:41.682  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [21ff04fb-f16d-44b4-9c24-5a1b25748a29] request start
+2026-08-23 01:03:42.013  INFO 9653 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [9b5a2832-54fc-4441-9ba7-d7fce3884bf9] request start
+2026-08-23 01:03:42.349  INFO 9653 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [ebe75281-0c5a-459c-9125-3bf16a3a8e1c] request start
+2026-08-23 01:03:42.682  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [8805d87b-5364-4fe5-922a-6822fd304e34] request start
+2026-08-23 01:03:43.014  INFO 9653 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [ce48be6d-8efa-4d46-8bf0-1fbeb350c6a6] request start
+2026-08-23 01:03:43.348  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [fb123894-fced-4202-9330-2a3cb1b06156] request start
+2026-08-23 01:03:43.682  INFO 9653 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [89f9c5cc-6f9f-4c64-8bba-328095bcfbac] request start
+2026-08-23 01:03:44.013  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [a17acb9e-7241-4d12-9b35-3c5deb445af8] request start
+2026-08-23 01:03:44.195  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [77104915-44cc-4e54-951a-2efea9396110] terminal: outcome=completed
+2026-08-23 01:03:44.348  INFO 9653 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [831d2e0d-6859-4b83-b2a3-ab17073d7ad3] request start
+2026-08-23 01:03:44.524  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [c89e7abd-24e5-40da-b0e0-cd3de80ed3ef] terminal: outcome=completed
+2026-08-23 01:03:44.682  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [98179137-bfb2-474e-9cab-012b68a759d5] request start
+2026-08-23 01:03:44.864  INFO 9653 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [917752bc-6985-4ce1-9a5f-11d639ca5dab] terminal: outcome=completed
+2026-08-23 01:03:45.013  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [f1147f04-c71d-4fe5-983e-6103ad833ae3] request start
+2026-08-23 01:03:45.196  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [4394c6b2-5861-41d9-a88d-3ed3ce80d1fb] terminal: outcome=completed
+2026-08-23 01:03:45.349  INFO 9653 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [9013889e-68fe-4493-a289-d20ab3a032cb] request start
+2026-08-23 01:03:45.529  INFO 9653 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [a3489ea0-0585-47fc-828a-c55db40bb6db] terminal: outcome=completed
+2026-08-23 01:03:45.681  INFO 9653 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [866da653-ecc0-47f5-a96f-87c19f207e2f] request start
+2026-08-23 01:03:45.870  INFO 9653 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [67a4a67e-206b-4a60-b591-038847c82229] terminal: outcome=completed
+2026-08-23 01:03:46.013  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [ba1e54ce-e1a2-4e0f-8b2f-fcd817e99a55] request start
+2026-08-23 01:03:46.180  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [8a504d70-681d-4289-9988-054f92415f53] terminal: outcome=completed
+2026-08-23 01:03:46.347  INFO 9653 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [285ccbd9-7bb8-4d3a-8661-97fd9953b654] request start
+2026-08-23 01:03:46.532  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [a2344367-1f15-4b17-b016-e3cb34bf4df6] terminal: outcome=completed
+2026-08-23 01:03:46.682  INFO 9653 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [78cf6fbe-4b7c-4860-bb41-21f509df437f] request start
+2026-08-23 01:03:46.852  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [071e505b-37e5-4bc7-aba3-cdebaeb348f5] terminal: outcome=completed
+2026-08-23 01:03:47.013  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [6fe49f3e-c9f8-4c61-9ef0-55fe639f5287] request start
+2026-08-23 01:03:47.185  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [ff2898a1-87b3-4497-9ddc-64c4fe2eee4b] terminal: outcome=completed
+2026-08-23 01:03:47.348  INFO 9653 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [923f892b-a802-4648-83aa-340c97f594fb] request start
+2026-08-23 01:03:47.535  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [8a21f0a6-2328-474c-b8aa-26d5437d9193] terminal: outcome=completed
+2026-08-23 01:03:47.682  INFO 9653 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [51a7606c-b50a-47fe-977c-a5adc94aa88d] request start
+2026-08-23 01:03:47.858  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [94ac92c1-736e-4110-887a-fa125eb922a3] terminal: outcome=completed
+2026-08-23 01:03:48.015  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [cb12cb9a-d9f9-4219-9323-1cb3622e5a05] request start
+2026-08-23 01:03:48.183  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [95d5e3bd-0939-41a4-b555-63f91e8530f7] terminal: outcome=completed
+2026-08-23 01:03:48.346  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [f1799a63-0b8b-4e9d-9a41-33ac2fb68ff5] request start
+2026-08-23 01:03:48.519  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [6a2f2e4e-8743-4739-86f1-f6a8a0b78f5d] terminal: outcome=completed
+2026-08-23 01:03:48.681  INFO 9653 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [2e9f6d2b-0fb1-4e8c-afb5-c811e355f275] request start
+2026-08-23 01:03:48.863  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [91c0f379-7a6e-43ba-ba6e-e4c5d8273293] terminal: outcome=completed
+2026-08-23 01:03:49.015  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [1d5a9bc5-5e9a-4acf-9dd3-9933bd9cccfb] request start
+2026-08-23 01:03:49.190  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [40003f60-22f6-4275-a43b-efe60bd280bf] terminal: outcome=completed
+2026-08-23 01:03:49.346  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [e868d2b2-2966-4191-b864-26ae9b795022] request start
+2026-08-23 01:03:49.545  INFO 9653 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [21ff04fb-f16d-44b4-9c24-5a1b25748a29] terminal: outcome=completed
+2026-08-23 01:03:49.682  INFO 9653 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [c518b359-b7d6-461d-b385-56af7fb28772] request start
+2026-08-23 01:03:49.840  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [9b5a2832-54fc-4441-9ba7-d7fce3884bf9] terminal: outcome=completed
+2026-08-23 01:03:50.014  INFO 9653 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [7443538f-1025-46d8-9806-fcfbf044dc47] request start
+2026-08-23 01:03:50.195  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [ebe75281-0c5a-459c-9125-3bf16a3a8e1c] terminal: outcome=completed
+2026-08-23 01:03:50.346  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [074922bf-f7b7-429f-87bc-022b5e54e035] request start
+2026-08-23 01:03:50.514  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [8805d87b-5364-4fe5-922a-6822fd304e34] terminal: outcome=completed
+2026-08-23 01:03:50.681  INFO 9653 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [8025032a-a1d2-476d-84c7-d89468da4065] request start
+2026-08-23 01:03:50.846  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [ce48be6d-8efa-4d46-8bf0-1fbeb350c6a6] terminal: outcome=completed
+2026-08-23 01:03:51.014  INFO 9653 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [098e0402-8ab3-4b5a-97cc-b5dc0306fae7] request start
+2026-08-23 01:03:51.173  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [fb123894-fced-4202-9330-2a3cb1b06156] terminal: outcome=completed
+2026-08-23 01:03:51.348  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [1c6e3902-f2ee-4ad2-87bb-4baeada43e29] request start
+2026-08-23 01:03:51.519  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [89f9c5cc-6f9f-4c64-8bba-328095bcfbac] terminal: outcome=completed
+2026-08-23 01:03:51.681  INFO 9653 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [af76fe3f-e5ca-4d2c-af66-965778b33240] request start
+2026-08-23 01:03:51.852  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [a17acb9e-7241-4d12-9b35-3c5deb445af8] terminal: outcome=completed
+2026-08-23 01:03:52.015  INFO 9653 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [1e385160-3bb9-4b4e-9620-1289bcb51b31] request start
+2026-08-23 01:03:52.177  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [831d2e0d-6859-4b83-b2a3-ab17073d7ad3] terminal: outcome=completed
+2026-08-23 01:03:52.348  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [a67e7bda-9282-4426-9366-9d0633ade21d] request start
+2026-08-23 01:03:52.508  INFO 9653 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [98179137-bfb2-474e-9cab-012b68a759d5] terminal: outcome=completed
+2026-08-23 01:03:52.680  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [08e23c19-7643-49aa-bf21-0d73684c8839] request start
+2026-08-23 01:03:52.858  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [f1147f04-c71d-4fe5-983e-6103ad833ae3] terminal: outcome=completed
+2026-08-23 01:03:53.014  INFO 9653 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [a6878643-faf2-4f72-aa0a-4ac7dd29a07a] request start
+2026-08-23 01:03:53.182  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [9013889e-68fe-4493-a289-d20ab3a032cb] terminal: outcome=completed
+2026-08-23 01:03:53.346  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [ac265987-e871-4af1-927a-a9c81f47d8fa] request start
+2026-08-23 01:03:53.513  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [866da653-ecc0-47f5-a96f-87c19f207e2f] terminal: outcome=completed
+2026-08-23 01:03:53.679  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [0093773e-b009-407c-8666-10ff6a5e8a23] request start
+2026-08-23 01:03:53.848  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [ba1e54ce-e1a2-4e0f-8b2f-fcd817e99a55] terminal: outcome=completed
+2026-08-23 01:03:54.016  INFO 9653 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [c0c668b2-4af6-425d-88c9-d364274ca46e] request start
+2026-08-23 01:03:54.188  INFO 9653 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [285ccbd9-7bb8-4d3a-8661-97fd9953b654] terminal: outcome=completed
+2026-08-23 01:03:54.348  INFO 9653 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [a8d88c67-6323-4524-a00b-594de5c5ee8f] request start
+2026-08-23 01:03:54.517  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [78cf6fbe-4b7c-4860-bb41-21f509df437f] terminal: outcome=completed
+2026-08-23 01:03:54.679  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [81957e5e-b6b1-4f13-a2f1-1fce1760e240] request start
+2026-08-23 01:03:54.853  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [6fe49f3e-c9f8-4c61-9ef0-55fe639f5287] terminal: outcome=completed
+2026-08-23 01:03:55.014  INFO 9653 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [890c1294-ee09-46b3-884c-0492992ba239] request start
+2026-08-23 01:03:55.193  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [923f892b-a802-4648-83aa-340c97f594fb] terminal: outcome=completed
+2026-08-23 01:03:55.347  INFO 9653 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [5735ac1b-ed3f-4f5c-b597-8b34c9a186b9] request start
+2026-08-23 01:03:55.523  INFO 9653 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [51a7606c-b50a-47fe-977c-a5adc94aa88d] terminal: outcome=completed
+2026-08-23 01:03:55.679  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [9428c7c9-487d-45c7-b207-0deff7c76b25] request start
+2026-08-23 01:03:55.836  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [cb12cb9a-d9f9-4219-9323-1cb3622e5a05] terminal: outcome=completed
+2026-08-23 01:03:56.015  INFO 9653 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [a7151dfc-f3cc-4260-b193-e8cbc4e6bfb6] request start
+2026-08-23 01:03:56.187  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [f1799a63-0b8b-4e9d-9a41-33ac2fb68ff5] terminal: outcome=completed
+2026-08-23 01:03:56.347  INFO 9653 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [8ce655f5-579b-4315-a21f-36605bda678a] request start
+2026-08-23 01:03:56.516  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [2e9f6d2b-0fb1-4e8c-afb5-c811e355f275] terminal: outcome=completed
+2026-08-23 01:03:56.680  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [ac91103b-da14-4a2e-b2ec-82dc0ade15bc] request start
+2026-08-23 01:03:56.842  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [1d5a9bc5-5e9a-4acf-9dd3-9933bd9cccfb] terminal: outcome=completed
+2026-08-23 01:03:57.015  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [96b8d6b7-7df6-43ca-87f1-f5d32f1ba053] request start
+2026-08-23 01:03:57.170  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [e868d2b2-2966-4191-b864-26ae9b795022] terminal: outcome=completed
+2026-08-23 01:03:57.346  INFO 9653 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [26a8dc01-6c04-4f07-8bcb-c2cec54c2ef2] request start
+2026-08-23 01:03:57.511  INFO 9653 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [c518b359-b7d6-461d-b385-56af7fb28772] terminal: outcome=completed
+2026-08-23 01:03:57.681  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [0cb8ad7d-bba5-47f6-a71e-a498cebffa43] request start
+2026-08-23 01:03:57.847  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [7443538f-1025-46d8-9806-fcfbf044dc47] terminal: outcome=completed
+2026-08-23 01:03:58.014  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [ce0fcfcf-ec92-4f80-9a53-879606430c71] request start
+2026-08-23 01:03:58.175  INFO 9653 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [074922bf-f7b7-429f-87bc-022b5e54e035] terminal: outcome=completed
+2026-08-23 01:03:58.348  INFO 9653 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [d12be440-ccc9-490e-bc6a-e1573576a51c] request start
+2026-08-23 01:03:58.518  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [8025032a-a1d2-476d-84c7-d89468da4065] terminal: outcome=completed
+2026-08-23 01:03:58.682  INFO 9653 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [c165bc0f-85d9-4e1f-a15e-ecb6d69f2448] request start
+2026-08-23 01:03:58.854  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [098e0402-8ab3-4b5a-97cc-b5dc0306fae7] terminal: outcome=completed
+2026-08-23 01:03:59.013  INFO 9653 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [d901e308-3cd1-45e7-84a1-00f0d2b85174] request start
+2026-08-23 01:03:59.180  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [1c6e3902-f2ee-4ad2-87bb-4baeada43e29] terminal: outcome=completed
+2026-08-23 01:03:59.347  INFO 9653 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [fc506c26-ec71-4179-a276-628110c98d4b] request start
+2026-08-23 01:03:59.525  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [af76fe3f-e5ca-4d2c-af66-965778b33240] terminal: outcome=completed
+2026-08-23 01:03:59.681  INFO 9653 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [c2ff7151-85cb-45f6-ab5b-68a682f55b2e] request start
+2026-08-23 01:03:59.859  INFO 9653 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [1e385160-3bb9-4b4e-9620-1289bcb51b31] terminal: outcome=completed
+2026-08-23 01:04:00.013  INFO 9653 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [95ca04a0-7139-4afb-a40f-b0ebc5aa6370] request start
+2026-08-23 01:04:00.181  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [a67e7bda-9282-4426-9366-9d0633ade21d] terminal: outcome=completed
+2026-08-23 01:04:00.348  INFO 9653 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [ac4325b8-f1b2-482d-b744-107a1fc28b83] request start
+2026-08-23 01:04:00.532  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [08e23c19-7643-49aa-bf21-0d73684c8839] terminal: outcome=completed
+2026-08-23 01:04:00.681  INFO 9653 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [1de1cd4b-7365-49b6-9d52-81697323c179] request start
+2026-08-23 01:04:00.849  INFO 9653 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [a6878643-faf2-4f72-aa0a-4ac7dd29a07a] terminal: outcome=completed
+2026-08-23 01:04:01.015  INFO 9653 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [d305d765-0bfa-473f-ac0e-48decc42cc9d] request start
+2026-08-23 01:04:01.187  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [ac265987-e871-4af1-927a-a9c81f47d8fa] terminal: outcome=completed
+2026-08-23 01:04:01.348  INFO 9653 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [350fb2db-ee11-4c7d-ab6a-de7051b3f5a1] request start
+2026-08-23 01:04:01.510  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [0093773e-b009-407c-8666-10ff6a5e8a23] terminal: outcome=completed
+2026-08-23 01:04:01.855  INFO 9653 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [c0c668b2-4af6-425d-88c9-d364274ca46e] terminal: outcome=completed
+2026-08-23 01:04:02.194  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [a8d88c67-6323-4524-a00b-594de5c5ee8f] terminal: outcome=completed
+2026-08-23 01:04:02.514  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [81957e5e-b6b1-4f13-a2f1-1fce1760e240] terminal: outcome=completed
+2026-08-23 01:04:02.841  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [890c1294-ee09-46b3-884c-0492992ba239] terminal: outcome=completed
+2026-08-23 01:04:03.168  INFO 9653 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [5735ac1b-ed3f-4f5c-b597-8b34c9a186b9] terminal: outcome=completed
+2026-08-23 01:04:03.518  INFO 9653 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [9428c7c9-487d-45c7-b207-0deff7c76b25] terminal: outcome=completed
+2026-08-23 01:04:03.846  INFO 9653 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [a7151dfc-f3cc-4260-b193-e8cbc4e6bfb6] terminal: outcome=completed
+2026-08-23 01:04:04.174  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [8ce655f5-579b-4315-a21f-36605bda678a] terminal: outcome=completed
+2026-08-23 01:04:04.506  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [ac91103b-da14-4a2e-b2ec-82dc0ade15bc] terminal: outcome=completed
+2026-08-23 01:04:04.855  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [96b8d6b7-7df6-43ca-87f1-f5d32f1ba053] terminal: outcome=completed
+2026-08-23 01:04:05.180  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [26a8dc01-6c04-4f07-8bcb-c2cec54c2ef2] terminal: outcome=completed
+2026-08-23 01:04:05.512  INFO 9653 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [0cb8ad7d-bba5-47f6-a71e-a498cebffa43] terminal: outcome=completed
+2026-08-23 01:04:05.860  INFO 9653 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [ce0fcfcf-ec92-4f80-9a53-879606430c71] terminal: outcome=completed
+2026-08-23 01:04:06.187  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [d12be440-ccc9-490e-bc6a-e1573576a51c] terminal: outcome=completed
+2026-08-23 01:04:06.522  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [c165bc0f-85d9-4e1f-a15e-ecb6d69f2448] terminal: outcome=completed
+2026-08-23 01:04:06.847  INFO 9653 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [d901e308-3cd1-45e7-84a1-00f0d2b85174] terminal: outcome=completed
+2026-08-23 01:04:07.193  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [fc506c26-ec71-4179-a276-628110c98d4b] terminal: outcome=completed
+2026-08-23 01:04:07.529  INFO 9653 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [c2ff7151-85cb-45f6-ab5b-68a682f55b2e] terminal: outcome=completed
+2026-08-23 01:04:07.853  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [95ca04a0-7139-4afb-a40f-b0ebc5aa6370] terminal: outcome=completed
+2026-08-23 01:04:08.199  INFO 9653 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [ac4325b8-f1b2-482d-b744-107a1fc28b83] terminal: outcome=completed
+2026-08-23 01:04:08.536  INFO 9653 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [1de1cd4b-7365-49b6-9d52-81697323c179] terminal: outcome=completed
+2026-08-23 01:04:08.861  INFO 9653 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [d305d765-0bfa-473f-ac0e-48decc42cc9d] terminal: outcome=completed
+2026-08-23 01:04:09.195  INFO 9653 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [350fb2db-ee11-4c7d-ab6a-de7051b3f5a1] terminal: outcome=completed

@@ -1,0 +1,9 @@
+=== ResourceTopologySpike.java result (raw reactor-netty-http 1.0.39, no Spring) ===
+server threads used: reactor-http-nio-8, reactor-http-nio-4, reactor-http-nio-6
+client threads used: reactor-http-nio-7, reactor-http-nio-3, reactor-http-nio-5
+intersection of that particular sample: []  (round-robin assignment just didn't overlap this run)
+total distinct reactor-http-nio-* threads alive in JVM: 10
+availableProcessors: 10
+=> exactly 10, not 20 -- server (HttpServer.create(), no .runOn()) and client
+   (HttpClient.create(), no .runOn()) are drawing from the SAME 10-thread global pool
+   (reactor.netty.http.HttpResources singleton), not two independent 10-thread pools.

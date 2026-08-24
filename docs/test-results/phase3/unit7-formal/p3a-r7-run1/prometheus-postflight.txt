@@ -1,0 +1,310 @@
+# HELP jvm_gc_overhead_percent An approximation of the percent of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1]
+# TYPE jvm_gc_overhead_percent gauge
+jvm_gc_overhead_percent 5.6666666666666664E-5
+# HELP jvm_memory_max_bytes The maximum amount of memory in bytes that can be used for memory management
+# TYPE jvm_memory_max_bytes gauge
+jvm_memory_max_bytes{area="heap",id="PS Survivor Space",} 2.1495808E7
+jvm_memory_max_bytes{area="heap",id="PS Old Gen",} 2.863661056E9
+jvm_memory_max_bytes{area="heap",id="PS Eden Space",} 1.386217472E9
+jvm_memory_max_bytes{area="nonheap",id="Metaspace",} -1.0
+jvm_memory_max_bytes{area="nonheap",id="Code Cache",} 1.34217728E8
+jvm_memory_max_bytes{area="nonheap",id="Compressed Class Space",} 1.073741824E9
+# HELP process_files_max_files The maximum file descriptor count
+# TYPE process_files_max_files gauge
+process_files_max_files 10240.0
+# HELP servlet_write_queue_wait_seconds  
+# TYPE servlet_write_queue_wait_seconds summary
+servlet_write_queue_wait_seconds_count 91984.0
+servlet_write_queue_wait_seconds_sum 1.977637996
+# HELP servlet_write_queue_wait_seconds_max  
+# TYPE servlet_write_queue_wait_seconds_max gauge
+servlet_write_queue_wait_seconds_max 8.04083E-4
+# HELP tomcat_servlet_error_total  
+# TYPE tomcat_servlet_error_total counter
+tomcat_servlet_error_total{name="dispatcherServlet",} 0.0
+# HELP jvm_buffer_memory_used_bytes An estimate of the memory that the Java virtual machine is using for this buffer pool
+# TYPE jvm_buffer_memory_used_bytes gauge
+jvm_buffer_memory_used_bytes{id="direct",} 255904.0
+jvm_buffer_memory_used_bytes{id="mapped",} 0.0
+# HELP jvm_threads_states_threads The current number of threads
+# TYPE jvm_threads_states_threads gauge
+jvm_threads_states_threads{state="runnable",} 5.0
+jvm_threads_states_threads{state="blocked",} 0.0
+jvm_threads_states_threads{state="waiting",} 62.0
+jvm_threads_states_threads{state="timed-waiting",} 34.0
+jvm_threads_states_threads{state="new",} 0.0
+jvm_threads_states_threads{state="terminated",} 0.0
+# HELP jvm_classes_unloaded_classes_total The total number of classes unloaded since the Java virtual machine has started execution
+# TYPE jvm_classes_unloaded_classes_total counter
+jvm_classes_unloaded_classes_total 0.0
+# HELP jvm_gc_memory_allocated_bytes_total Incremented for an increase in the size of the (young) heap memory pool after one GC to before the next
+# TYPE jvm_gc_memory_allocated_bytes_total counter
+jvm_gc_memory_allocated_bytes_total 9.517424E8
+# HELP system_cpu_usage The "recent cpu usage" of the system the application is running in
+# TYPE system_cpu_usage gauge
+system_cpu_usage 0.0625
+# HELP tomcat_sessions_active_current_sessions  
+# TYPE tomcat_sessions_active_current_sessions gauge
+tomcat_sessions_active_current_sessions 0.0
+# HELP process_cpu_usage The "recent cpu usage" for the Java Virtual Machine process
+# TYPE process_cpu_usage gauge
+process_cpu_usage 0.007706666666666666
+# HELP tomcat_connections_current_connections  
+# TYPE tomcat_connections_current_connections gauge
+tomcat_connections_current_connections{name="http-nio-8081",} 2.0
+# HELP gateway_stream_duration_seconds_max  
+# TYPE gateway_stream_duration_seconds_max gauge
+gateway_stream_duration_seconds_max 7.885266917
+# HELP gateway_stream_duration_seconds  
+# TYPE gateway_stream_duration_seconds summary
+gateway_stream_duration_seconds_count 2940.0
+gateway_stream_duration_seconds_sum 20663.931420492
+# HELP servlet_write_duration_seconds_max  
+# TYPE servlet_write_duration_seconds_max gauge
+servlet_write_duration_seconds_max 0.001106375
+# HELP servlet_write_duration_seconds  
+# TYPE servlet_write_duration_seconds summary
+servlet_write_duration_seconds_count 94608.0
+servlet_write_duration_seconds_sum 1.619004208
+# HELP servlet_write_executor_queue_depth  
+# TYPE servlet_write_executor_queue_depth gauge
+servlet_write_executor_queue_depth 0.0
+# HELP jvm_memory_usage_after_gc_percent The percentage of long-lived heap pool used after the last GC event, in the range [0..1]
+# TYPE jvm_memory_usage_after_gc_percent gauge
+jvm_memory_usage_after_gc_percent{area="heap",pool="long-lived",} 0.00707102398084922
+# HELP gateway_active_streams  
+# TYPE gateway_active_streams gauge
+gateway_active_streams 0.0
+# HELP tomcat_global_request_max_seconds  
+# TYPE tomcat_global_request_max_seconds gauge
+tomcat_global_request_max_seconds{name="http-nio-8081",} 7.887
+# HELP tomcat_sessions_rejected_sessions_total  
+# TYPE tomcat_sessions_rejected_sessions_total counter
+tomcat_sessions_rejected_sessions_total 0.0
+# HELP jvm_classes_loaded_classes The number of classes that are currently loaded in the Java virtual machine
+# TYPE jvm_classes_loaded_classes gauge
+jvm_classes_loaded_classes 7710.0
+# HELP gateway_timeout_total  
+# TYPE gateway_timeout_total counter
+gateway_timeout_total 0.0
+# HELP gateway_admission_rejected_total  
+# TYPE gateway_admission_rejected_total counter
+gateway_admission_rejected_total 312.0
+# HELP tomcat_global_error_total  
+# TYPE tomcat_global_error_total counter
+tomcat_global_error_total{name="http-nio-8081",} 312.0
+# HELP tomcat_servlet_request_max_seconds  
+# TYPE tomcat_servlet_request_max_seconds gauge
+tomcat_servlet_request_max_seconds{name="dispatcherServlet",} 0.019
+# HELP jvm_buffer_total_capacity_bytes An estimate of the total capacity of the buffers in this pool
+# TYPE jvm_buffer_total_capacity_bytes gauge
+jvm_buffer_total_capacity_bytes{id="direct",} 255904.0
+jvm_buffer_total_capacity_bytes{id="mapped",} 0.0
+# HELP http_server_requests_seconds Duration of HTTP server request handling
+# TYPE http_server_requests_seconds summary
+http_server_requests_seconds_count{exception="None",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 396.0
+http_server_requests_seconds_sum{exception="None",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.912067547
+http_server_requests_seconds_count{exception="None",method="GET",outcome="SUCCESS",status="200",uri="/healthz",} 2.0
+http_server_requests_seconds_sum{exception="None",method="GET",outcome="SUCCESS",status="200",uri="/healthz",} 0.018554709
+# HELP http_server_requests_seconds_max Duration of HTTP server request handling
+# TYPE http_server_requests_seconds_max gauge
+http_server_requests_seconds_max{exception="None",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.002521
+http_server_requests_seconds_max{exception="None",method="GET",outcome="SUCCESS",status="200",uri="/healthz",} 0.0
+# HELP gateway_write_overflow_total  
+# TYPE gateway_write_overflow_total counter
+gateway_write_overflow_total 0.0
+# HELP tomcat_cache_access_total  
+# TYPE tomcat_cache_access_total counter
+tomcat_cache_access_total 0.0
+# HELP tomcat_sessions_active_max_sessions  
+# TYPE tomcat_sessions_active_max_sessions gauge
+tomcat_sessions_active_max_sessions 0.0
+# HELP gateway_upstream_active  
+# TYPE gateway_upstream_active gauge
+gateway_upstream_active 0.0
+# HELP application_ready_time_seconds Time taken for the application to be ready to service requests
+# TYPE application_ready_time_seconds gauge
+application_ready_time_seconds{main_application_class="com.llmconcurrencylab.gatewaymvc.GatewayApplication",} 0.86
+# HELP gateway_first_chunk_relay_seconds  
+# TYPE gateway_first_chunk_relay_seconds summary
+gateway_first_chunk_relay_seconds_count 2628.0
+gateway_first_chunk_relay_seconds_sum 2634.233491328
+# HELP gateway_first_chunk_relay_seconds_max  
+# TYPE gateway_first_chunk_relay_seconds_max gauge
+gateway_first_chunk_relay_seconds_max 1.011012167
+# HELP logback_events_total Number of log events that were enabled by the effective log level
+# TYPE logback_events_total counter
+logback_events_total{level="warn",} 312.0
+logback_events_total{level="debug",} 0.0
+logback_events_total{level="error",} 0.0
+logback_events_total{level="trace",} 0.0
+logback_events_total{level="info",} 5886.0
+# HELP outbound_blocking_executor_rejected_total  
+# TYPE outbound_blocking_executor_rejected_total counter
+outbound_blocking_executor_rejected_total 0.0
+# HELP gateway_watchdog_activated_total  
+# TYPE gateway_watchdog_activated_total counter
+gateway_watchdog_activated_total 0.0
+# HELP process_uptime_seconds The uptime of the Java virtual machine
+# TYPE process_uptime_seconds gauge
+process_uptime_seconds 429.179
+# HELP jvm_memory_used_bytes The amount of used memory
+# TYPE jvm_memory_used_bytes gauge
+jvm_memory_used_bytes{area="heap",id="PS Survivor Space",} 1.6075152E7
+jvm_memory_used_bytes{area="heap",id="PS Old Gen",} 2.0249016E7
+jvm_memory_used_bytes{area="heap",id="PS Eden Space",} 1.2897804E8
+jvm_memory_used_bytes{area="nonheap",id="Metaspace",} 4.245832E7
+jvm_memory_used_bytes{area="nonheap",id="Code Cache",} 2.3864704E7
+jvm_memory_used_bytes{area="nonheap",id="Compressed Class Space",} 5222728.0
+# HELP outbound_blocking_executor_active  
+# TYPE outbound_blocking_executor_active gauge
+outbound_blocking_executor_active 0.0
+# HELP jvm_gc_memory_promoted_bytes_total Count of positive increases in the size of the old generation memory pool before GC to after GC
+# TYPE jvm_gc_memory_promoted_bytes_total counter
+jvm_gc_memory_promoted_bytes_total 1.4664896E7
+# HELP servlet_write_executor_active  
+# TYPE servlet_write_executor_active gauge
+servlet_write_executor_active 0.0
+# HELP tomcat_threads_config_max_threads  
+# TYPE tomcat_threads_config_max_threads gauge
+tomcat_threads_config_max_threads{name="http-nio-8081",} 200.0
+# HELP jvm_gc_max_data_size_bytes Max size of long-lived heap memory pool
+# TYPE jvm_gc_max_data_size_bytes gauge
+jvm_gc_max_data_size_bytes 2.863661056E9
+# HELP jvm_gc_live_data_size_bytes Size of long-lived heap memory pool after reclamation
+# TYPE jvm_gc_live_data_size_bytes gauge
+jvm_gc_live_data_size_bytes 1.31978E7
+# HELP tomcat_connections_keepalive_current_connections  
+# TYPE tomcat_connections_keepalive_current_connections gauge
+tomcat_connections_keepalive_current_connections{name="http-nio-8081",} 1.0
+# HELP tomcat_sessions_alive_max_seconds  
+# TYPE tomcat_sessions_alive_max_seconds gauge
+tomcat_sessions_alive_max_seconds 0.0
+# HELP gateway_bytes_relayed_total  
+# TYPE gateway_bytes_relayed_total counter
+gateway_bytes_relayed_total 1.0207152E7
+# HELP tomcat_connections_config_max_connections  
+# TYPE tomcat_connections_config_max_connections gauge
+tomcat_connections_config_max_connections{name="http-nio-8081",} 8192.0
+# HELP tomcat_sessions_created_sessions_total  
+# TYPE tomcat_sessions_created_sessions_total counter
+tomcat_sessions_created_sessions_total 0.0
+# HELP tomcat_threads_current_threads  
+# TYPE tomcat_threads_current_threads gauge
+tomcat_threads_current_threads{name="http-nio-8081",} 31.0
+# HELP gateway_client_disconnect_total  
+# TYPE gateway_client_disconnect_total counter
+gateway_client_disconnect_total 0.0
+# HELP gateway_requests_total  
+# TYPE gateway_requests_total counter
+gateway_requests_total{outcome="rejected",} 312.0
+gateway_requests_total{outcome="completed",} 2628.0
+# HELP process_files_open_files The open file descriptor count
+# TYPE process_files_open_files gauge
+process_files_open_files 31.0
+# HELP tomcat_cache_hit_total  
+# TYPE tomcat_cache_hit_total counter
+tomcat_cache_hit_total 0.0
+# HELP tomcat_threads_busy_threads  
+# TYPE tomcat_threads_busy_threads gauge
+tomcat_threads_busy_threads{name="http-nio-8081",} 1.0
+# HELP tomcat_sessions_expired_sessions_total  
+# TYPE tomcat_sessions_expired_sessions_total counter
+tomcat_sessions_expired_sessions_total 0.0
+# HELP application_started_time_seconds Time taken to start the application
+# TYPE application_started_time_seconds gauge
+application_started_time_seconds{main_application_class="com.llmconcurrencylab.gatewaymvc.GatewayApplication",} 0.856
+# HELP outbound_blocking_executor_queue_depth  
+# TYPE outbound_blocking_executor_queue_depth gauge
+outbound_blocking_executor_queue_depth 0.0
+# HELP tomcat_servlet_request_seconds  
+# TYPE tomcat_servlet_request_seconds summary
+tomcat_servlet_request_seconds_count{name="dispatcherServlet",} 3339.0
+tomcat_servlet_request_seconds_sum{name="dispatcherServlet",} 3.426
+# HELP disk_total_bytes Total space for path
+# TYPE disk_total_bytes gauge
+disk_total_bytes{path="/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-blocking-spring5/.",} 4.94332366848E11
+# HELP gateway_admission_active  
+# TYPE gateway_admission_active gauge
+gateway_admission_active 0.0
+# HELP process_start_time_seconds Start time of the process since unix epoch.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.787468049325E9
+# HELP gateway_requests_started_total  
+# TYPE gateway_requests_started_total counter
+gateway_requests_started_total 2940.0
+# HELP jvm_buffer_count_buffers An estimate of the number of buffers in the pool
+# TYPE jvm_buffer_count_buffers gauge
+jvm_buffer_count_buffers{id="direct",} 39.0
+jvm_buffer_count_buffers{id="mapped",} 0.0
+# HELP jvm_memory_committed_bytes The amount of memory in bytes that is committed for the Java virtual machine to use
+# TYPE jvm_memory_committed_bytes gauge
+jvm_memory_committed_bytes{area="heap",id="PS Survivor Space",} 2.1495808E7
+jvm_memory_committed_bytes{area="heap",id="PS Old Gen",} 1.87695104E8
+jvm_memory_committed_bytes{area="heap",id="PS Eden Space",} 1.47849216E8
+jvm_memory_committed_bytes{area="nonheap",id="Metaspace",} 4.5973504E7
+jvm_memory_committed_bytes{area="nonheap",id="Code Cache",} 2.4117248E7
+jvm_memory_committed_bytes{area="nonheap",id="Compressed Class Space",} 5865472.0
+# HELP outbound_blocking_executor_pool_size  
+# TYPE outbound_blocking_executor_pool_size gauge
+outbound_blocking_executor_pool_size 50.0
+# HELP jvm_threads_peak_threads The peak live thread count since the Java virtual machine started or peak was reset
+# TYPE jvm_threads_peak_threads gauge
+jvm_threads_peak_threads 101.0
+# HELP jvm_gc_pause_seconds Time spent in GC pause
+# TYPE jvm_gc_pause_seconds summary
+jvm_gc_pause_seconds_count{action="end of major GC",cause="Metadata GC Threshold",} 1.0
+jvm_gc_pause_seconds_sum{action="end of major GC",cause="Metadata GC Threshold",} 0.023
+jvm_gc_pause_seconds_count{action="end of minor GC",cause="Metadata GC Threshold",} 1.0
+jvm_gc_pause_seconds_sum{action="end of minor GC",cause="Metadata GC Threshold",} 0.003
+jvm_gc_pause_seconds_count{action="end of minor GC",cause="Allocation Failure",} 6.0
+jvm_gc_pause_seconds_sum{action="end of minor GC",cause="Allocation Failure",} 0.034
+# HELP jvm_gc_pause_seconds_max Time spent in GC pause
+# TYPE jvm_gc_pause_seconds_max gauge
+jvm_gc_pause_seconds_max{action="end of major GC",cause="Metadata GC Threshold",} 0.0
+jvm_gc_pause_seconds_max{action="end of minor GC",cause="Metadata GC Threshold",} 0.0
+jvm_gc_pause_seconds_max{action="end of minor GC",cause="Allocation Failure",} 0.008
+# HELP servlet_write_executor_rejected_total  
+# TYPE servlet_write_executor_rejected_total counter
+servlet_write_executor_rejected_total 0.0
+# HELP tomcat_global_request_seconds  
+# TYPE tomcat_global_request_seconds summary
+tomcat_global_request_seconds_count{name="http-nio-8081",} 3338.0
+tomcat_global_request_seconds_sum{name="http-nio-8081",} 20667.374
+# HELP outbound_blocking_task_duration_seconds_max  
+# TYPE outbound_blocking_task_duration_seconds_max gauge
+outbound_blocking_task_duration_seconds_max 7.885128959
+# HELP outbound_blocking_task_duration_seconds  
+# TYPE outbound_blocking_task_duration_seconds summary
+outbound_blocking_task_duration_seconds_count 2628.0
+outbound_blocking_task_duration_seconds_sum 20663.214711634
+# HELP disk_free_bytes Usable space for path
+# TYPE disk_free_bytes gauge
+disk_free_bytes{path="/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-blocking-spring5/.",} 3.34098014208E11
+# HELP tomcat_global_sent_bytes_total  
+# TYPE tomcat_global_sent_bytes_total counter
+tomcat_global_sent_bytes_total{name="http-nio-8081",} 1.7050407E7
+# HELP jvm_threads_daemon_threads The current number of live daemon threads
+# TYPE jvm_threads_daemon_threads gauge
+jvm_threads_daemon_threads 97.0
+# HELP jvm_threads_live_threads The current number of live threads including both daemon and non-daemon threads
+# TYPE jvm_threads_live_threads gauge
+jvm_threads_live_threads 101.0
+# HELP system_load_average_1m The sum of the number of runnable entities queued to available processors and the number of runnable entities running on the available processors averaged over a period of time
+# TYPE system_load_average_1m gauge
+system_load_average_1m 1.39306640625
+# HELP servlet_write_executor_pool_size  
+# TYPE servlet_write_executor_pool_size gauge
+servlet_write_executor_pool_size 8.0
+# HELP system_cpu_count The number of processors available to the Java virtual machine
+# TYPE system_cpu_count gauge
+system_cpu_count 10.0
+# HELP outbound_blocking_executor_largest_pool_size  
+# TYPE outbound_blocking_executor_largest_pool_size gauge
+outbound_blocking_executor_largest_pool_size 50.0
+# HELP servlet_write_stream_buffered_frames  
+# TYPE servlet_write_stream_buffered_frames gauge
+servlet_write_stream_buffered_frames 0.0
+# HELP tomcat_global_received_bytes_total  
+# TYPE tomcat_global_received_bytes_total counter
+tomcat_global_received_bytes_total{name="http-nio-8081",} 246960.0

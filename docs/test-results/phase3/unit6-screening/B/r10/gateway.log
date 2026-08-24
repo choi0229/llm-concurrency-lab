@@ -1,0 +1,622 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-08-23 01:05:44.259  INFO 13856 --- [           main] c.l.gatewaymvc.GatewayApplication        : Starting GatewayApplication using Java 1.8.0_504 on userui-MacBookAir.local with PID 13856 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-webclient/build/libs/gateway-mvc-webclient-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-webclient)
+2026-08-23 01:05:44.261  INFO 13856 --- [           main] c.l.gatewaymvc.GatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-23 01:05:45.007  INFO 13856 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2026-08-23 01:05:45.203  INFO 13856 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-23 01:05:45.204  INFO 13856 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-08-23 01:05:45.265  INFO 13856 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-23 01:05:45.265  INFO 13856 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 974 ms
+2026-08-23 01:05:45.612 ERROR 13856 --- [           main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2026-08-23 01:05:45.877  INFO 13856 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-08-23 01:05:45.904  INFO 13856 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2026-08-23 01:05:45.914  INFO 13856 --- [           main] c.l.gatewaymvc.GatewayApplication        : Started GatewayApplication in 1.931 seconds (JVM running for 2.221)
+2026-08-23 01:05:46.321  INFO 13856 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-23 01:05:46.321  INFO 13856 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-23 01:05:46.322  INFO 13856 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-23 01:05:46.386  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [d48f5395-70a3-4acc-838b-cae9118da379] request start
+2026-08-23 01:05:46.729  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [d48f5395-70a3-4acc-838b-cae9118da379] terminal: outcome=completed
+2026-08-23 01:05:46.741  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [7ebda896-259f-49dc-b3b9-cb219a02f5c7] request start
+2026-08-23 01:05:46.901  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [7ebda896-259f-49dc-b3b9-cb219a02f5c7] terminal: outcome=completed
+2026-08-23 01:05:46.919  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [a5ed6e77-1af3-4b92-97a5-2df485f5c360] request start
+2026-08-23 01:05:47.080  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [a5ed6e77-1af3-4b92-97a5-2df485f5c360] terminal: outcome=completed
+2026-08-23 01:05:47.098  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [01237be7-68cd-4ddb-aff5-de90bd783ee1] request start
+2026-08-23 01:05:47.258  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [01237be7-68cd-4ddb-aff5-de90bd783ee1] terminal: outcome=completed
+2026-08-23 01:05:47.275  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [8430c7b2-c969-4453-9b80-29fb626667ae] request start
+2026-08-23 01:05:47.434  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [8430c7b2-c969-4453-9b80-29fb626667ae] terminal: outcome=completed
+2026-08-23 01:05:48.491  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [5c899ecc-4efd-4067-93e1-95f0580d9c11] request start
+2026-08-23 01:05:48.591  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [962f7e82-d8d9-4309-84df-819bcb1cdcf9] request start
+2026-08-23 01:05:48.692  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [d286abb6-a151-4487-a1ab-ad8929ab2296] request start
+2026-08-23 01:05:48.790  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [a07ef6ea-963c-485a-924f-3393324aec6b] request start
+2026-08-23 01:05:48.891  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [6b39a099-ff01-49b6-8c60-5d9b503d2331] request start
+2026-08-23 01:05:48.991  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [e3fcc618-265b-4669-b89a-39149a2f6ac4] request start
+2026-08-23 01:05:49.091  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [8cf96b54-4015-4432-961f-60f55e1b99c6] request start
+2026-08-23 01:05:49.192  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [4c60bbc8-02e3-4e32-95c0-78f16508a371] request start
+2026-08-23 01:05:49.293  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [5b680d96-d69b-481b-a476-0569b8460d2e] request start
+2026-08-23 01:05:49.394  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [7b4dec79-2b98-4785-9806-d3ef779bacef] request start
+2026-08-23 01:05:49.493  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [f27ea333-c154-4c30-8790-3ba1c43f1241] request start
+2026-08-23 01:05:49.591  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [8f281e4b-da88-4167-ab46-858814415e3d] request start
+2026-08-23 01:05:49.691  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [f5160ba7-154d-46af-b6d5-668ecd4bca12] request start
+2026-08-23 01:05:49.792  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [bc65654c-9073-4a16-83cd-fb2988ce998d] request start
+2026-08-23 01:05:49.893  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [547e0bbc-d9dd-4e28-a1fd-199755d96f4d] request start
+2026-08-23 01:05:49.993  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [cfb85897-088d-4087-8e27-00193ff5ab74] request start
+2026-08-23 01:05:50.093  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [b63e8ae8-6dd7-434e-a434-2054070081c5] request start
+2026-08-23 01:05:50.193  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [dd61fcc7-000c-4943-8723-34d687f5bfa4] request start
+2026-08-23 01:05:50.292  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [cd5c6300-7647-4722-9587-cded40ad19a2] request start
+2026-08-23 01:05:50.393  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [da02ceee-393e-4b9a-bfd4-3a0d92fa6166] request start
+2026-08-23 01:05:50.493  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [ef68426f-73b8-4a0e-8351-83080823c4b1] request start
+2026-08-23 01:05:50.592  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [77963199-05c6-44fc-8616-a1cab7e940af] request start
+2026-08-23 01:05:50.691  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [f146c28f-c3ab-4d13-a9ea-d0750469f335] request start
+2026-08-23 01:05:50.791  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [2ff27295-dd8e-475f-a4e4-737dcc33726d] request start
+2026-08-23 01:05:50.891  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [c79d37ff-21d9-43c0-a25b-0ed1316d1b5e] request start
+2026-08-23 01:05:50.992  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [c534f8ed-a42c-4ee2-a1c4-d9f794a8ea90] request start
+2026-08-23 01:05:51.093  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [8acdeb4c-d5ce-4d42-9e0f-c40de5513ed8] request start
+2026-08-23 01:05:51.192  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [93550aa6-a9da-40b4-9f67-c5dfb1ceec5b] request start
+2026-08-23 01:05:51.293  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [21211ce7-c333-4e3a-95d6-fcb2cf748cf0] request start
+2026-08-23 01:05:51.393  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [1e5e4b89-12bf-4bb7-98dc-f4c9676fcff9] request start
+2026-08-23 01:05:51.494  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [3cf430dd-cc86-4f3d-ab64-f90c52b361cb] request start
+2026-08-23 01:05:51.592  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [bd55623b-8788-43d3-9d08-b2379072b799] request start
+2026-08-23 01:05:51.693  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [e07e1e87-0966-44fc-ac68-457de97f758c] request start
+2026-08-23 01:05:51.791  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [b308cfba-64dd-452e-81e4-87668d2c0245] request start
+2026-08-23 01:05:51.891  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [116db49a-8b23-4a37-b3e5-f92ce725207d] request start
+2026-08-23 01:05:51.991  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [236dd02c-a2e2-42ab-b58c-2632f875d094] request start
+2026-08-23 01:05:52.091  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [597fef33-1958-49f4-b6b0-f13388289d6c] request start
+2026-08-23 01:05:52.193  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [da162d5b-8d6b-41f6-b357-c1ac65163da4] request start
+2026-08-23 01:05:52.294  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [05fb7e43-ab8d-4c27-ac69-c4a4ce9bf610] request start
+2026-08-23 01:05:52.392  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [0b856512-2982-4e09-bb6d-f48df42c28f3] request start
+2026-08-23 01:05:52.493  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [ab195bb4-6b80-45e0-b474-c51ef1d3fe75] request start
+2026-08-23 01:05:52.591  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [e6a6a75d-b241-4125-9760-de9e9e25bae7] request start
+2026-08-23 01:05:52.690  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [86be1bdd-3c79-4274-a8f1-83bc0c182830] request start
+2026-08-23 01:05:52.791  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [50215688-65ea-41ff-95f5-4d21e0dbffac] request start
+2026-08-23 01:05:52.891  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [cc3ca9a6-41bc-4421-9320-9d1cb010731e] request start
+2026-08-23 01:05:52.991  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [79cc2f73-5867-4e59-ace6-df9e7692512d] request start
+2026-08-23 01:05:53.091  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [517697f1-6da4-48d4-b1fc-61b86de65edd] request start
+2026-08-23 01:05:53.192  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [ce75ed3a-60e6-4d6c-b4dc-e40c83f92c67] request start
+2026-08-23 01:05:53.293  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [4425b264-d2f0-4e8c-bacf-c2417a8ee45d] request start
+2026-08-23 01:05:53.393  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [992295de-8fa0-4e04-ab35-35123f453315] request start
+2026-08-23 01:05:53.494  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [f76f2932-107a-4c37-9607-4798e0fb2da6] request start
+2026-08-23 01:05:53.494  WARN 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [f76f2932-107a-4c37-9607-4798e0fb2da6] rejected: admission ceiling reached
+2026-08-23 01:05:53.494  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.RequestLifecycle     : [f76f2932-107a-4c37-9607-4798e0fb2da6] terminal: outcome=rejected
+2026-08-23 01:05:53.590  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [8ba87696-d4fa-4e9d-b453-063b0c51e4a5] request start
+2026-08-23 01:05:53.590  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [8ba87696-d4fa-4e9d-b453-063b0c51e4a5] rejected: admission ceiling reached
+2026-08-23 01:05:53.591  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [8ba87696-d4fa-4e9d-b453-063b0c51e4a5] terminal: outcome=rejected
+2026-08-23 01:05:53.691  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [4d420df0-cc4c-490d-bfdd-8faccd337a39] request start
+2026-08-23 01:05:53.691  WARN 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [4d420df0-cc4c-490d-bfdd-8faccd337a39] rejected: admission ceiling reached
+2026-08-23 01:05:53.691  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.RequestLifecycle     : [4d420df0-cc4c-490d-bfdd-8faccd337a39] terminal: outcome=rejected
+2026-08-23 01:05:53.791  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [d6931e64-01f7-4679-b190-18c6cd17b172] request start
+2026-08-23 01:05:53.791  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [d6931e64-01f7-4679-b190-18c6cd17b172] rejected: admission ceiling reached
+2026-08-23 01:05:53.791  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [d6931e64-01f7-4679-b190-18c6cd17b172] terminal: outcome=rejected
+2026-08-23 01:05:53.891  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [32dac7d7-641e-4461-9d95-1679a0b4639d] request start
+2026-08-23 01:05:53.891  WARN 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [32dac7d7-641e-4461-9d95-1679a0b4639d] rejected: admission ceiling reached
+2026-08-23 01:05:53.891  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.RequestLifecycle     : [32dac7d7-641e-4461-9d95-1679a0b4639d] terminal: outcome=rejected
+2026-08-23 01:05:53.991  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [ca491793-f0ba-48f7-8329-edbb7dd66d49] request start
+2026-08-23 01:05:53.991  WARN 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [ca491793-f0ba-48f7-8329-edbb7dd66d49] rejected: admission ceiling reached
+2026-08-23 01:05:53.991  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [ca491793-f0ba-48f7-8329-edbb7dd66d49] terminal: outcome=rejected
+2026-08-23 01:05:54.092  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [5901e3e4-f718-49c7-ab87-4e60d3717b16] request start
+2026-08-23 01:05:54.092  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [5901e3e4-f718-49c7-ab87-4e60d3717b16] rejected: admission ceiling reached
+2026-08-23 01:05:54.092  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [5901e3e4-f718-49c7-ab87-4e60d3717b16] terminal: outcome=rejected
+2026-08-23 01:05:54.193  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [fa89cc6f-e943-4578-b53d-ac1a4675fec0] request start
+2026-08-23 01:05:54.193  WARN 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [fa89cc6f-e943-4578-b53d-ac1a4675fec0] rejected: admission ceiling reached
+2026-08-23 01:05:54.193  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.RequestLifecycle     : [fa89cc6f-e943-4578-b53d-ac1a4675fec0] terminal: outcome=rejected
+2026-08-23 01:05:54.293  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [0ec98613-8973-4c70-aece-f13d32fcbde2] request start
+2026-08-23 01:05:54.293  WARN 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [0ec98613-8973-4c70-aece-f13d32fcbde2] rejected: admission ceiling reached
+2026-08-23 01:05:54.293  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.RequestLifecycle     : [0ec98613-8973-4c70-aece-f13d32fcbde2] terminal: outcome=rejected
+2026-08-23 01:05:54.392  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [16a281c3-aad3-4912-a750-b04f653ff47d] request start
+2026-08-23 01:05:54.393  WARN 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [16a281c3-aad3-4912-a750-b04f653ff47d] rejected: admission ceiling reached
+2026-08-23 01:05:54.393  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.RequestLifecycle     : [16a281c3-aad3-4912-a750-b04f653ff47d] terminal: outcome=rejected
+2026-08-23 01:05:54.492  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [f2cd507b-65ee-4e37-b51a-178c7b5d8119] request start
+2026-08-23 01:05:54.493  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [f2cd507b-65ee-4e37-b51a-178c7b5d8119] rejected: admission ceiling reached
+2026-08-23 01:05:54.493  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [f2cd507b-65ee-4e37-b51a-178c7b5d8119] terminal: outcome=rejected
+2026-08-23 01:05:54.591  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [81068f5b-db6a-4e68-af01-9cb99edba83f] request start
+2026-08-23 01:05:54.591  WARN 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [81068f5b-db6a-4e68-af01-9cb99edba83f] rejected: admission ceiling reached
+2026-08-23 01:05:54.591  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.RequestLifecycle     : [81068f5b-db6a-4e68-af01-9cb99edba83f] terminal: outcome=rejected
+2026-08-23 01:05:54.693  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [ac3a6880-3dd9-4c1f-9d4f-23bb3309b957] request start
+2026-08-23 01:05:54.693  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [ac3a6880-3dd9-4c1f-9d4f-23bb3309b957] rejected: admission ceiling reached
+2026-08-23 01:05:54.693  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [ac3a6880-3dd9-4c1f-9d4f-23bb3309b957] terminal: outcome=rejected
+2026-08-23 01:05:54.792  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [e18cf341-eff3-4002-bb42-814241b0dfcb] request start
+2026-08-23 01:05:54.792  WARN 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [e18cf341-eff3-4002-bb42-814241b0dfcb] rejected: admission ceiling reached
+2026-08-23 01:05:54.792  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.RequestLifecycle     : [e18cf341-eff3-4002-bb42-814241b0dfcb] terminal: outcome=rejected
+2026-08-23 01:05:54.892  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [6e99a919-6684-4795-87ac-ec7819dbeb09] request start
+2026-08-23 01:05:54.892  WARN 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [6e99a919-6684-4795-87ac-ec7819dbeb09] rejected: admission ceiling reached
+2026-08-23 01:05:54.892  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.RequestLifecycle     : [6e99a919-6684-4795-87ac-ec7819dbeb09] terminal: outcome=rejected
+2026-08-23 01:05:54.991  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [89475afe-1a03-47de-85b6-9a2810c64642] request start
+2026-08-23 01:05:54.991  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [89475afe-1a03-47de-85b6-9a2810c64642] rejected: admission ceiling reached
+2026-08-23 01:05:54.991  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [89475afe-1a03-47de-85b6-9a2810c64642] terminal: outcome=rejected
+2026-08-23 01:05:55.090  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [070942be-6bc9-483c-a47b-679c62e7d496] request start
+2026-08-23 01:05:55.090  WARN 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [070942be-6bc9-483c-a47b-679c62e7d496] rejected: admission ceiling reached
+2026-08-23 01:05:55.090  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.RequestLifecycle     : [070942be-6bc9-483c-a47b-679c62e7d496] terminal: outcome=rejected
+2026-08-23 01:05:55.192  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [520c02b0-739b-475f-8e33-60c832c31f47] request start
+2026-08-23 01:05:55.192  WARN 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [520c02b0-739b-475f-8e33-60c832c31f47] rejected: admission ceiling reached
+2026-08-23 01:05:55.192  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.RequestLifecycle     : [520c02b0-739b-475f-8e33-60c832c31f47] terminal: outcome=rejected
+2026-08-23 01:05:55.292  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [ed77efd3-7471-4ba3-b46d-d32c2366cd8a] request start
+2026-08-23 01:05:55.292  WARN 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [ed77efd3-7471-4ba3-b46d-d32c2366cd8a] rejected: admission ceiling reached
+2026-08-23 01:05:55.293  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.RequestLifecycle     : [ed77efd3-7471-4ba3-b46d-d32c2366cd8a] terminal: outcome=rejected
+2026-08-23 01:05:55.392  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [0c99010b-5111-4d60-b543-a3fab91b06f1] request start
+2026-08-23 01:05:55.393  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [0c99010b-5111-4d60-b543-a3fab91b06f1] rejected: admission ceiling reached
+2026-08-23 01:05:55.393  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [0c99010b-5111-4d60-b543-a3fab91b06f1] terminal: outcome=rejected
+2026-08-23 01:05:55.493  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [93c24347-39a0-49d8-9698-5d9f7d3c85f3] request start
+2026-08-23 01:05:55.493  WARN 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [93c24347-39a0-49d8-9698-5d9f7d3c85f3] rejected: admission ceiling reached
+2026-08-23 01:05:55.494  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.RequestLifecycle     : [93c24347-39a0-49d8-9698-5d9f7d3c85f3] terminal: outcome=rejected
+2026-08-23 01:05:55.591  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [fadb7894-817a-44ee-99a8-9655fd0077e7] request start
+2026-08-23 01:05:55.591  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [fadb7894-817a-44ee-99a8-9655fd0077e7] rejected: admission ceiling reached
+2026-08-23 01:05:55.591  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [fadb7894-817a-44ee-99a8-9655fd0077e7] terminal: outcome=rejected
+2026-08-23 01:05:55.692  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [b11bc0a6-56c4-4f35-8ad8-9d770e1b32e4] request start
+2026-08-23 01:05:55.692  WARN 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [b11bc0a6-56c4-4f35-8ad8-9d770e1b32e4] rejected: admission ceiling reached
+2026-08-23 01:05:55.693  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.RequestLifecycle     : [b11bc0a6-56c4-4f35-8ad8-9d770e1b32e4] terminal: outcome=rejected
+2026-08-23 01:05:55.792  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [72f1f7af-37d9-425b-a290-21ea1f240ea6] request start
+2026-08-23 01:05:55.793  WARN 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [72f1f7af-37d9-425b-a290-21ea1f240ea6] rejected: admission ceiling reached
+2026-08-23 01:05:55.793  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.RequestLifecycle     : [72f1f7af-37d9-425b-a290-21ea1f240ea6] terminal: outcome=rejected
+2026-08-23 01:05:55.893  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [3631b1cb-9d1e-4725-ab7c-468d68e28e84] request start
+2026-08-23 01:05:55.893  WARN 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [3631b1cb-9d1e-4725-ab7c-468d68e28e84] rejected: admission ceiling reached
+2026-08-23 01:05:55.893  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [3631b1cb-9d1e-4725-ab7c-468d68e28e84] terminal: outcome=rejected
+2026-08-23 01:05:55.991  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [38cb5a11-4ad5-42a8-a3f6-130381b5582b] request start
+2026-08-23 01:05:55.991  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [38cb5a11-4ad5-42a8-a3f6-130381b5582b] rejected: admission ceiling reached
+2026-08-23 01:05:55.991  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [38cb5a11-4ad5-42a8-a3f6-130381b5582b] terminal: outcome=rejected
+2026-08-23 01:05:56.091  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [ed31fdc6-97ce-4be0-a3e5-91d61f5183ce] request start
+2026-08-23 01:05:56.091  WARN 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [ed31fdc6-97ce-4be0-a3e5-91d61f5183ce] rejected: admission ceiling reached
+2026-08-23 01:05:56.091  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.RequestLifecycle     : [ed31fdc6-97ce-4be0-a3e5-91d61f5183ce] terminal: outcome=rejected
+2026-08-23 01:05:56.191  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [7c420492-6df0-4769-80a5-ca9a1097a1b8] request start
+2026-08-23 01:05:56.191  WARN 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [7c420492-6df0-4769-80a5-ca9a1097a1b8] rejected: admission ceiling reached
+2026-08-23 01:05:56.191  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.RequestLifecycle     : [7c420492-6df0-4769-80a5-ca9a1097a1b8] terminal: outcome=rejected
+2026-08-23 01:05:56.292  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [3e148e2d-4766-40ae-94bd-54fc97630d44] request start
+2026-08-23 01:05:56.292  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [3e148e2d-4766-40ae-94bd-54fc97630d44] rejected: admission ceiling reached
+2026-08-23 01:05:56.293  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [3e148e2d-4766-40ae-94bd-54fc97630d44] terminal: outcome=rejected
+2026-08-23 01:05:56.322  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [5c899ecc-4efd-4067-93e1-95f0580d9c11] terminal: outcome=completed
+2026-08-23 01:05:56.392  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [787277d3-5cf3-48c0-a343-5e6bf19fa462] request start
+2026-08-23 01:05:56.419  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [962f7e82-d8d9-4309-84df-819bcb1cdcf9] terminal: outcome=completed
+2026-08-23 01:05:56.493  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [c8216292-4bba-4fea-9818-6b283d5fdaf7] request start
+2026-08-23 01:05:56.547  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [d286abb6-a151-4487-a1ab-ad8929ab2296] terminal: outcome=completed
+2026-08-23 01:05:56.593  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [5b93f286-8c60-4fdf-a114-23e0cd4b5506] request start
+2026-08-23 01:05:56.620  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [a07ef6ea-963c-485a-924f-3393324aec6b] terminal: outcome=completed
+2026-08-23 01:05:56.692  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [26d76da8-7908-45b4-9144-8bcaa39b6180] request start
+2026-08-23 01:05:56.718  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [6b39a099-ff01-49b6-8c60-5d9b503d2331] terminal: outcome=completed
+2026-08-23 01:05:56.793  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [6c96ba63-60dc-4b6d-b954-6611bad924b9] request start
+2026-08-23 01:05:56.821  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [e3fcc618-265b-4669-b89a-39149a2f6ac4] terminal: outcome=completed
+2026-08-23 01:05:56.891  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [46507de7-ea2d-4bb7-b5ad-7b14594b8e94] request start
+2026-08-23 01:05:56.921  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [8cf96b54-4015-4432-961f-60f55e1b99c6] terminal: outcome=completed
+2026-08-23 01:05:56.992  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [0cfc7a68-1492-46d0-93de-e9102ddd9e59] request start
+2026-08-23 01:05:57.022  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [4c60bbc8-02e3-4e32-95c0-78f16508a371] terminal: outcome=completed
+2026-08-23 01:05:57.091  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [5a3192b8-0565-490b-9601-4f707836c14f] request start
+2026-08-23 01:05:57.121  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [5b680d96-d69b-481b-a476-0569b8460d2e] terminal: outcome=completed
+2026-08-23 01:05:57.191  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [9b122d0d-e78e-42bd-8c31-f87e04fdaa95] request start
+2026-08-23 01:05:57.222  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [7b4dec79-2b98-4785-9806-d3ef779bacef] terminal: outcome=completed
+2026-08-23 01:05:57.291  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [cb6fd558-9ec2-46a2-a94e-77a502ebefd3] request start
+2026-08-23 01:05:57.323  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [f27ea333-c154-4c30-8790-3ba1c43f1241] terminal: outcome=completed
+2026-08-23 01:05:57.391  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [91470322-c272-4a4e-9269-561e7efd7a60] request start
+2026-08-23 01:05:57.421  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [8f281e4b-da88-4167-ab46-858814415e3d] terminal: outcome=completed
+2026-08-23 01:05:57.492  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [8aa527dc-b861-4fb8-9076-370dadefac44] request start
+2026-08-23 01:05:57.527  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [f5160ba7-154d-46af-b6d5-668ecd4bca12] terminal: outcome=completed
+2026-08-23 01:05:57.591  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [b5dadd37-a6e4-4b18-867f-0d6b09648c66] request start
+2026-08-23 01:05:57.623  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [bc65654c-9073-4a16-83cd-fb2988ce998d] terminal: outcome=completed
+2026-08-23 01:05:57.691  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [fe132933-64f4-49c9-9a41-4efee44af801] request start
+2026-08-23 01:05:57.727  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [547e0bbc-d9dd-4e28-a1fd-199755d96f4d] terminal: outcome=completed
+2026-08-23 01:05:57.792  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [1eab0597-38c2-48a0-8b0d-6d0267f05932] request start
+2026-08-23 01:05:57.825  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [cfb85897-088d-4087-8e27-00193ff5ab74] terminal: outcome=completed
+2026-08-23 01:05:57.891  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [8ef01e3e-a0e4-4c52-83d5-58ab25a5010a] request start
+2026-08-23 01:05:57.955  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [b63e8ae8-6dd7-434e-a434-2054070081c5] terminal: outcome=completed
+2026-08-23 01:05:57.992  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [18d35572-f752-44fd-a5e5-32001560a2af] request start
+2026-08-23 01:05:58.028  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [dd61fcc7-000c-4943-8723-34d687f5bfa4] terminal: outcome=completed
+2026-08-23 01:05:58.091  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [963b57f5-7f0b-4aaf-94b8-a26a34cbea94] request start
+2026-08-23 01:05:58.130  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [cd5c6300-7647-4722-9587-cded40ad19a2] terminal: outcome=completed
+2026-08-23 01:05:58.191  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [efa8c470-805e-40ff-a337-5f32e3123702] request start
+2026-08-23 01:05:58.229  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [da02ceee-393e-4b9a-bfd4-3a0d92fa6166] terminal: outcome=completed
+2026-08-23 01:05:58.291  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [856adb18-d16f-45ad-9820-12ce36ec438e] request start
+2026-08-23 01:05:58.331  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [ef68426f-73b8-4a0e-8351-83080823c4b1] terminal: outcome=completed
+2026-08-23 01:05:58.391  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [d5d76410-c9c7-42e3-aeb4-4754550834de] request start
+2026-08-23 01:05:58.431  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [77963199-05c6-44fc-8616-a1cab7e940af] terminal: outcome=completed
+2026-08-23 01:05:58.492  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [9581e03f-1a8d-4fa7-9f0a-7137b32e7eb8] request start
+2026-08-23 01:05:58.534  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [f146c28f-c3ab-4d13-a9ea-d0750469f335] terminal: outcome=completed
+2026-08-23 01:05:58.592  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [6a37108e-f2f6-4c8a-9a74-e4c98651df38] request start
+2026-08-23 01:05:58.631  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [2ff27295-dd8e-475f-a4e4-737dcc33726d] terminal: outcome=completed
+2026-08-23 01:05:58.692  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [5c714f15-ca0f-42ef-a15b-d733bfbb9ed2] request start
+2026-08-23 01:05:58.735  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [c79d37ff-21d9-43c0-a25b-0ed1316d1b5e] terminal: outcome=completed
+2026-08-23 01:05:58.792  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [1e578f6e-986d-408e-af85-f7e914b69b40] request start
+2026-08-23 01:05:58.833  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [c534f8ed-a42c-4ee2-a1c4-d9f794a8ea90] terminal: outcome=completed
+2026-08-23 01:05:58.892  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [a0d4bd86-50e8-498c-8cae-150d07d45577] request start
+2026-08-23 01:05:58.936  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [8acdeb4c-d5ce-4d42-9e0f-c40de5513ed8] terminal: outcome=completed
+2026-08-23 01:05:58.992  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [d02bbba3-1d5b-480c-8736-345b232acf8f] request start
+2026-08-23 01:05:59.035  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [93550aa6-a9da-40b4-9f67-c5dfb1ceec5b] terminal: outcome=completed
+2026-08-23 01:05:59.092  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [6bf44d91-1271-4ac0-8ae5-0ed040f323b6] request start
+2026-08-23 01:05:59.137  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [21211ce7-c333-4e3a-95d6-fcb2cf748cf0] terminal: outcome=completed
+2026-08-23 01:05:59.193  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [3268a512-7712-43b5-9721-37017a8ef9fe] request start
+2026-08-23 01:05:59.235  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [1e5e4b89-12bf-4bb7-98dc-f4c9676fcff9] terminal: outcome=completed
+2026-08-23 01:05:59.290  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [0e3e4ab0-e1de-44ac-b33f-0dc031b3c52e] request start
+2026-08-23 01:05:59.337  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [3cf430dd-cc86-4f3d-ab64-f90c52b361cb] terminal: outcome=completed
+2026-08-23 01:05:59.391  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [87f7c368-d64a-4eb2-ac12-37b0b5f6fa91] request start
+2026-08-23 01:05:59.437  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [bd55623b-8788-43d3-9d08-b2379072b799] terminal: outcome=completed
+2026-08-23 01:05:59.492  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [7f7f99a5-0c1c-4072-90f2-13de992b9c94] request start
+2026-08-23 01:05:59.539  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [e07e1e87-0966-44fc-ac68-457de97f758c] terminal: outcome=completed
+2026-08-23 01:05:59.593  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [01c1b438-ffee-4600-8e49-44ddee04d7a5] request start
+2026-08-23 01:05:59.638  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [b308cfba-64dd-452e-81e4-87668d2c0245] terminal: outcome=completed
+2026-08-23 01:05:59.690  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [bdfe183c-0a37-4d66-8c6a-7d51384ac73a] request start
+2026-08-23 01:05:59.738  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [116db49a-8b23-4a37-b3e5-f92ce725207d] terminal: outcome=completed
+2026-08-23 01:05:59.791  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [2bfb5dbe-401f-4334-a8da-ea04b2ef9e25] request start
+2026-08-23 01:05:59.839  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [236dd02c-a2e2-42ab-b58c-2632f875d094] terminal: outcome=completed
+2026-08-23 01:05:59.890  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [1512420c-7510-4b6e-a125-ade851692280] request start
+2026-08-23 01:05:59.939  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [597fef33-1958-49f4-b6b0-f13388289d6c] terminal: outcome=completed
+2026-08-23 01:05:59.991  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [80cf884f-293f-4fc3-96e1-c3f06447ec21] request start
+2026-08-23 01:06:00.041  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [da162d5b-8d6b-41f6-b357-c1ac65163da4] terminal: outcome=completed
+2026-08-23 01:06:00.092  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [acb19b95-046f-4cc4-8ac2-f2fa25bde944] request start
+2026-08-23 01:06:00.141  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [05fb7e43-ab8d-4c27-ac69-c4a4ce9bf610] terminal: outcome=completed
+2026-08-23 01:06:00.192  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [9b869fe5-0229-4ee2-b87e-249cfb17d60c] request start
+2026-08-23 01:06:00.242  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [0b856512-2982-4e09-bb6d-f48df42c28f3] terminal: outcome=completed
+2026-08-23 01:06:00.291  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [ca23332a-3df5-4107-a66e-8a2c140bc3a6] request start
+2026-08-23 01:06:00.342  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [ab195bb4-6b80-45e0-b474-c51ef1d3fe75] terminal: outcome=completed
+2026-08-23 01:06:00.390  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [9906af22-3162-49a4-806f-116bee4403ef] request start
+2026-08-23 01:06:00.443  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [e6a6a75d-b241-4125-9760-de9e9e25bae7] terminal: outcome=completed
+2026-08-23 01:06:00.491  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [7a30c239-286c-4c87-b4bc-eeff510c3b74] request start
+2026-08-23 01:06:00.545  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [86be1bdd-3c79-4274-a8f1-83bc0c182830] terminal: outcome=completed
+2026-08-23 01:06:00.591  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [b487d4c1-c9d9-41d0-8dfe-3d4030c04750] request start
+2026-08-23 01:06:00.644  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [50215688-65ea-41ff-95f5-4d21e0dbffac] terminal: outcome=completed
+2026-08-23 01:06:00.692  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [26074405-2efc-42f4-b98f-2b809134284a] request start
+2026-08-23 01:06:00.745  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [cc3ca9a6-41bc-4421-9320-9d1cb010731e] terminal: outcome=completed
+2026-08-23 01:06:00.792  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [5695102a-cb26-419e-9b00-9cded826a1b4] request start
+2026-08-23 01:06:00.846  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [79cc2f73-5867-4e59-ace6-df9e7692512d] terminal: outcome=completed
+2026-08-23 01:06:00.892  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [f8c7b7b3-d3d6-445c-8dd3-4e0c1e712eb2] request start
+2026-08-23 01:06:00.948  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [517697f1-6da4-48d4-b1fc-61b86de65edd] terminal: outcome=completed
+2026-08-23 01:06:00.991  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [73d4ea70-ed3c-4242-a1a7-207b7f79ccc3] request start
+2026-08-23 01:06:01.047  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [ce75ed3a-60e6-4d6c-b4dc-e40c83f92c67] terminal: outcome=completed
+2026-08-23 01:06:01.092  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [b4a7e624-20c0-4cff-bac5-b907840d3237] request start
+2026-08-23 01:06:01.149  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [4425b264-d2f0-4e8c-bacf-c2417a8ee45d] terminal: outcome=completed
+2026-08-23 01:06:01.192  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [09c626bd-6799-4a41-a2ad-8d4565fd2122] request start
+2026-08-23 01:06:01.249  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [992295de-8fa0-4e04-ab35-35123f453315] terminal: outcome=completed
+2026-08-23 01:06:01.292  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [163713e1-257c-42fa-8c18-eddaa640a2e9] request start
+2026-08-23 01:06:01.390  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [0eedce8d-aeb4-4ea4-91ba-654e560778d7] request start
+2026-08-23 01:06:01.390  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [0eedce8d-aeb4-4ea4-91ba-654e560778d7] rejected: admission ceiling reached
+2026-08-23 01:06:01.390  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [0eedce8d-aeb4-4ea4-91ba-654e560778d7] terminal: outcome=rejected
+2026-08-23 01:06:01.490  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [f9b07291-eb09-49f0-87ae-725621e64c2c] request start
+2026-08-23 01:06:01.490  WARN 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [f9b07291-eb09-49f0-87ae-725621e64c2c] rejected: admission ceiling reached
+2026-08-23 01:06:01.490  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.RequestLifecycle     : [f9b07291-eb09-49f0-87ae-725621e64c2c] terminal: outcome=rejected
+2026-08-23 01:06:01.590  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [5b9b4b63-2205-4fbe-ad32-a9f98207c9c1] request start
+2026-08-23 01:06:01.591  WARN 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [5b9b4b63-2205-4fbe-ad32-a9f98207c9c1] rejected: admission ceiling reached
+2026-08-23 01:06:01.591  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.RequestLifecycle     : [5b9b4b63-2205-4fbe-ad32-a9f98207c9c1] terminal: outcome=rejected
+2026-08-23 01:06:01.691  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [70c3673e-1a53-4772-a5d9-0a44ce79483e] request start
+2026-08-23 01:06:01.691  WARN 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [70c3673e-1a53-4772-a5d9-0a44ce79483e] rejected: admission ceiling reached
+2026-08-23 01:06:01.691  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.RequestLifecycle     : [70c3673e-1a53-4772-a5d9-0a44ce79483e] terminal: outcome=rejected
+2026-08-23 01:06:01.792  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [752db05b-7dc2-4285-a2d3-e079505924ac] request start
+2026-08-23 01:06:01.793  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [752db05b-7dc2-4285-a2d3-e079505924ac] rejected: admission ceiling reached
+2026-08-23 01:06:01.793  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [752db05b-7dc2-4285-a2d3-e079505924ac] terminal: outcome=rejected
+2026-08-23 01:06:01.892  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [faf83411-42b2-4668-9d44-d0c21957bfb6] request start
+2026-08-23 01:06:01.892  WARN 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [faf83411-42b2-4668-9d44-d0c21957bfb6] rejected: admission ceiling reached
+2026-08-23 01:06:01.892  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.RequestLifecycle     : [faf83411-42b2-4668-9d44-d0c21957bfb6] terminal: outcome=rejected
+2026-08-23 01:06:01.991  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [b6d56306-c4eb-438d-abc8-d0eec0e30b35] request start
+2026-08-23 01:06:01.992  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [b6d56306-c4eb-438d-abc8-d0eec0e30b35] rejected: admission ceiling reached
+2026-08-23 01:06:01.992  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [b6d56306-c4eb-438d-abc8-d0eec0e30b35] terminal: outcome=rejected
+2026-08-23 01:06:02.091  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [6dc6063d-28b8-4bb6-b28c-ac7086bd981f] request start
+2026-08-23 01:06:02.092  WARN 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [6dc6063d-28b8-4bb6-b28c-ac7086bd981f] rejected: admission ceiling reached
+2026-08-23 01:06:02.092  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.RequestLifecycle     : [6dc6063d-28b8-4bb6-b28c-ac7086bd981f] terminal: outcome=rejected
+2026-08-23 01:06:02.192  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [b58df1a3-5e9e-4c39-b70c-9346b51758e8] request start
+2026-08-23 01:06:02.193  WARN 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [b58df1a3-5e9e-4c39-b70c-9346b51758e8] rejected: admission ceiling reached
+2026-08-23 01:06:02.193  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.RequestLifecycle     : [b58df1a3-5e9e-4c39-b70c-9346b51758e8] terminal: outcome=rejected
+2026-08-23 01:06:02.292  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [a10f856e-c033-4bff-a12c-e0e59ad1f208] request start
+2026-08-23 01:06:02.293  WARN 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [a10f856e-c033-4bff-a12c-e0e59ad1f208] rejected: admission ceiling reached
+2026-08-23 01:06:02.293  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [a10f856e-c033-4bff-a12c-e0e59ad1f208] terminal: outcome=rejected
+2026-08-23 01:06:02.392  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [64ffa020-d887-4a83-b623-82374a5b4af0] request start
+2026-08-23 01:06:02.392  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [64ffa020-d887-4a83-b623-82374a5b4af0] rejected: admission ceiling reached
+2026-08-23 01:06:02.393  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [64ffa020-d887-4a83-b623-82374a5b4af0] terminal: outcome=rejected
+2026-08-23 01:06:02.491  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [ab15ff2f-ff40-4092-abbf-c0df1bb1353a] request start
+2026-08-23 01:06:02.491  WARN 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [ab15ff2f-ff40-4092-abbf-c0df1bb1353a] rejected: admission ceiling reached
+2026-08-23 01:06:02.491  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.RequestLifecycle     : [ab15ff2f-ff40-4092-abbf-c0df1bb1353a] terminal: outcome=rejected
+2026-08-23 01:06:02.591  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [71d61f46-cf16-47ef-bc1f-9b63b7df3482] request start
+2026-08-23 01:06:02.591  WARN 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [71d61f46-cf16-47ef-bc1f-9b63b7df3482] rejected: admission ceiling reached
+2026-08-23 01:06:02.591  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.RequestLifecycle     : [71d61f46-cf16-47ef-bc1f-9b63b7df3482] terminal: outcome=rejected
+2026-08-23 01:06:02.691  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [b5fb19e6-4364-4d2a-9cd3-b788f5c2abba] request start
+2026-08-23 01:06:02.691  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [b5fb19e6-4364-4d2a-9cd3-b788f5c2abba] rejected: admission ceiling reached
+2026-08-23 01:06:02.691  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [b5fb19e6-4364-4d2a-9cd3-b788f5c2abba] terminal: outcome=rejected
+2026-08-23 01:06:02.791  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [d02c2bab-d1ab-4c60-82da-4a244f261aba] request start
+2026-08-23 01:06:02.792  WARN 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [d02c2bab-d1ab-4c60-82da-4a244f261aba] rejected: admission ceiling reached
+2026-08-23 01:06:02.792  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.RequestLifecycle     : [d02c2bab-d1ab-4c60-82da-4a244f261aba] terminal: outcome=rejected
+2026-08-23 01:06:02.892  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [dfcc7134-822f-47cf-97e4-22a6485d6443] request start
+2026-08-23 01:06:02.893  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [dfcc7134-822f-47cf-97e4-22a6485d6443] rejected: admission ceiling reached
+2026-08-23 01:06:02.893  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [dfcc7134-822f-47cf-97e4-22a6485d6443] terminal: outcome=rejected
+2026-08-23 01:06:02.991  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [077f22fb-b4ef-418d-8a54-91c7e58b455d] request start
+2026-08-23 01:06:02.991  WARN 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [077f22fb-b4ef-418d-8a54-91c7e58b455d] rejected: admission ceiling reached
+2026-08-23 01:06:02.991  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.RequestLifecycle     : [077f22fb-b4ef-418d-8a54-91c7e58b455d] terminal: outcome=rejected
+2026-08-23 01:06:03.090  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [e83949f8-743e-4e17-b807-3bd047dfc9e6] request start
+2026-08-23 01:06:03.090  WARN 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [e83949f8-743e-4e17-b807-3bd047dfc9e6] rejected: admission ceiling reached
+2026-08-23 01:06:03.090  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.RequestLifecycle     : [e83949f8-743e-4e17-b807-3bd047dfc9e6] terminal: outcome=rejected
+2026-08-23 01:06:03.192  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [0000b18f-3c18-4179-89af-215c525f7554] request start
+2026-08-23 01:06:03.192  WARN 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [0000b18f-3c18-4179-89af-215c525f7554] rejected: admission ceiling reached
+2026-08-23 01:06:03.192  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [0000b18f-3c18-4179-89af-215c525f7554] terminal: outcome=rejected
+2026-08-23 01:06:03.293  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [aa9a10b0-5d2c-406f-87b0-b22d8b8484bc] request start
+2026-08-23 01:06:03.293  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [aa9a10b0-5d2c-406f-87b0-b22d8b8484bc] rejected: admission ceiling reached
+2026-08-23 01:06:03.293  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [aa9a10b0-5d2c-406f-87b0-b22d8b8484bc] terminal: outcome=rejected
+2026-08-23 01:06:03.392  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [9a20749d-6fc6-458e-8710-f3fbfb6856b0] request start
+2026-08-23 01:06:03.393  WARN 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [9a20749d-6fc6-458e-8710-f3fbfb6856b0] rejected: admission ceiling reached
+2026-08-23 01:06:03.393  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.RequestLifecycle     : [9a20749d-6fc6-458e-8710-f3fbfb6856b0] terminal: outcome=rejected
+2026-08-23 01:06:03.492  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [1afeb1fe-69a8-4215-ae8c-f4dfb0e7402d] request start
+2026-08-23 01:06:03.492  WARN 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [1afeb1fe-69a8-4215-ae8c-f4dfb0e7402d] rejected: admission ceiling reached
+2026-08-23 01:06:03.492  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.RequestLifecycle     : [1afeb1fe-69a8-4215-ae8c-f4dfb0e7402d] terminal: outcome=rejected
+2026-08-23 01:06:03.591  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [bcce25fb-7c50-4879-b3d9-0997d9562769] request start
+2026-08-23 01:06:03.591  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [bcce25fb-7c50-4879-b3d9-0997d9562769] rejected: admission ceiling reached
+2026-08-23 01:06:03.591  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [bcce25fb-7c50-4879-b3d9-0997d9562769] terminal: outcome=rejected
+2026-08-23 01:06:03.691  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [7ea2c823-6c19-4a0f-8467-81667c06f878] request start
+2026-08-23 01:06:03.691  WARN 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [7ea2c823-6c19-4a0f-8467-81667c06f878] rejected: admission ceiling reached
+2026-08-23 01:06:03.691  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.RequestLifecycle     : [7ea2c823-6c19-4a0f-8467-81667c06f878] terminal: outcome=rejected
+2026-08-23 01:06:03.790  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [a1fe7957-f76e-4929-8736-ea5872a7ee8d] request start
+2026-08-23 01:06:03.790  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [a1fe7957-f76e-4929-8736-ea5872a7ee8d] rejected: admission ceiling reached
+2026-08-23 01:06:03.790  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [a1fe7957-f76e-4929-8736-ea5872a7ee8d] terminal: outcome=rejected
+2026-08-23 01:06:03.892  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [e75b5662-9861-4b68-9229-f4f19e10e7f0] request start
+2026-08-23 01:06:03.892  WARN 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [e75b5662-9861-4b68-9229-f4f19e10e7f0] rejected: admission ceiling reached
+2026-08-23 01:06:03.892  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.RequestLifecycle     : [e75b5662-9861-4b68-9229-f4f19e10e7f0] terminal: outcome=rejected
+2026-08-23 01:06:03.991  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [6a11758b-7ec2-496a-9646-15d62fb8e500] request start
+2026-08-23 01:06:03.991  WARN 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [6a11758b-7ec2-496a-9646-15d62fb8e500] rejected: admission ceiling reached
+2026-08-23 01:06:03.992  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.RequestLifecycle     : [6a11758b-7ec2-496a-9646-15d62fb8e500] terminal: outcome=rejected
+2026-08-23 01:06:04.092  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [2d31afdc-5dca-42ac-906b-423818cb69ec] request start
+2026-08-23 01:06:04.092  WARN 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [2d31afdc-5dca-42ac-906b-423818cb69ec] rejected: admission ceiling reached
+2026-08-23 01:06:04.093  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [2d31afdc-5dca-42ac-906b-423818cb69ec] terminal: outcome=rejected
+2026-08-23 01:06:04.192  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [910ed0ae-6fd6-4c3c-bd0a-3f3944022464] request start
+2026-08-23 01:06:04.192  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [910ed0ae-6fd6-4c3c-bd0a-3f3944022464] rejected: admission ceiling reached
+2026-08-23 01:06:04.192  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [910ed0ae-6fd6-4c3c-bd0a-3f3944022464] terminal: outcome=rejected
+2026-08-23 01:06:04.235  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [787277d3-5cf3-48c0-a343-5e6bf19fa462] terminal: outcome=completed
+2026-08-23 01:06:04.292  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [ac113e70-0b20-4526-bd89-57c00c5a8a7c] request start
+2026-08-23 01:06:04.317  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [c8216292-4bba-4fea-9818-6b283d5fdaf7] terminal: outcome=completed
+2026-08-23 01:06:04.392  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [3936275f-b700-480a-9284-995f7c8df818] request start
+2026-08-23 01:06:04.436  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [5b93f286-8c60-4fdf-a114-23e0cd4b5506] terminal: outcome=completed
+2026-08-23 01:06:04.493  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [9d9857be-a593-4692-a397-97e7f15a16c1] request start
+2026-08-23 01:06:04.518  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [26d76da8-7908-45b4-9144-8bcaa39b6180] terminal: outcome=completed
+2026-08-23 01:06:04.590  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [7ba90537-132c-4fa6-bd2e-9bfb28b83360] request start
+2026-08-23 01:06:04.636  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [6c96ba63-60dc-4b6d-b954-6611bad924b9] terminal: outcome=completed
+2026-08-23 01:06:04.690  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [97102bb3-286e-4205-bf2d-806cdf9b8d60] request start
+2026-08-23 01:06:04.718  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [46507de7-ea2d-4bb7-b5ad-7b14594b8e94] terminal: outcome=completed
+2026-08-23 01:06:04.791  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [93ad5171-8bc9-4017-a909-2d7f899bf868] request start
+2026-08-23 01:06:04.825  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [0cfc7a68-1492-46d0-93de-e9102ddd9e59] terminal: outcome=completed
+2026-08-23 01:06:04.891  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [677d038e-6f90-4d43-bcd9-0b69f019fec7] request start
+2026-08-23 01:06:04.920  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [5a3192b8-0565-490b-9601-4f707836c14f] terminal: outcome=completed
+2026-08-23 01:06:04.992  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [25be958a-bbef-443e-b66e-5d8dbc1fcafc] request start
+2026-08-23 01:06:05.028  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [9b122d0d-e78e-42bd-8c31-f87e04fdaa95] terminal: outcome=completed
+2026-08-23 01:06:05.092  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [f683bf66-4c68-4499-91e0-162796da4545] request start
+2026-08-23 01:06:05.121  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [cb6fd558-9ec2-46a2-a94e-77a502ebefd3] terminal: outcome=completed
+2026-08-23 01:06:05.192  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [4f339b50-5cd3-44d2-b5f0-73f907c38f95] request start
+2026-08-23 01:06:05.230  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [91470322-c272-4a4e-9269-561e7efd7a60] terminal: outcome=completed
+2026-08-23 01:06:05.292  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [849fa415-4369-45cf-9471-1a77049b7b2a] request start
+2026-08-23 01:06:05.322  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [8aa527dc-b861-4fb8-9076-370dadefac44] terminal: outcome=completed
+2026-08-23 01:06:05.392  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [02630aec-deba-4515-af42-3375d555df76] request start
+2026-08-23 01:06:05.431  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [b5dadd37-a6e4-4b18-867f-0d6b09648c66] terminal: outcome=completed
+2026-08-23 01:06:05.492  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [24284edd-5de3-4f2a-b3cc-b2bba53614ea] request start
+2026-08-23 01:06:05.523  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [fe132933-64f4-49c9-9a41-4efee44af801] terminal: outcome=completed
+2026-08-23 01:06:05.591  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [da4b12d1-51aa-45c3-89d0-ffebfa104d66] request start
+2026-08-23 01:06:05.631  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [1eab0597-38c2-48a0-8b0d-6d0267f05932] terminal: outcome=completed
+2026-08-23 01:06:05.690  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [378d479f-e734-4454-9502-4926b1d3b107] request start
+2026-08-23 01:06:05.724  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [8ef01e3e-a0e4-4c52-83d5-58ab25a5010a] terminal: outcome=completed
+2026-08-23 01:06:05.790  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [0a345cc0-12a9-4121-8aa1-6eaf0b0172b0] request start
+2026-08-23 01:06:05.832  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [18d35572-f752-44fd-a5e5-32001560a2af] terminal: outcome=completed
+2026-08-23 01:06:05.891  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [1a59cd91-15b7-4123-b3d4-764dff89b220] request start
+2026-08-23 01:06:05.926  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [963b57f5-7f0b-4aaf-94b8-a26a34cbea94] terminal: outcome=completed
+2026-08-23 01:06:05.991  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [441322dd-6350-48d5-badc-87a04ffcbc39] request start
+2026-08-23 01:06:06.033  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [efa8c470-805e-40ff-a337-5f32e3123702] terminal: outcome=completed
+2026-08-23 01:06:06.092  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [febd085a-edbc-4d35-8560-78cc0505bbdc] request start
+2026-08-23 01:06:06.128  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [856adb18-d16f-45ad-9820-12ce36ec438e] terminal: outcome=completed
+2026-08-23 01:06:06.192  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [8827a617-4c55-4ea2-8258-f69e3fcac5ce] request start
+2026-08-23 01:06:06.235  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [d5d76410-c9c7-42e3-aeb4-4754550834de] terminal: outcome=completed
+2026-08-23 01:06:06.292  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [903f9e16-3fad-4a53-9802-ef7a8c135bbf] request start
+2026-08-23 01:06:06.329  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [9581e03f-1a8d-4fa7-9f0a-7137b32e7eb8] terminal: outcome=completed
+2026-08-23 01:06:06.392  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [fc5b6ede-f6c1-41c9-ba30-5d72783b8a84] request start
+2026-08-23 01:06:06.435  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [6a37108e-f2f6-4c8a-9a74-e4c98651df38] terminal: outcome=completed
+2026-08-23 01:06:06.491  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [2f50367a-2703-47ac-91d2-013c3be31e40] request start
+2026-08-23 01:06:06.529  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [5c714f15-ca0f-42ef-a15b-d733bfbb9ed2] terminal: outcome=completed
+2026-08-23 01:06:06.592  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [95f9a9b7-94a0-4616-b171-40300c2de0be] request start
+2026-08-23 01:06:06.637  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [1e578f6e-986d-408e-af85-f7e914b69b40] terminal: outcome=completed
+2026-08-23 01:06:06.692  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [df142be6-78ac-46c3-965c-38e8a0b96f27] request start
+2026-08-23 01:06:06.730  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [a0d4bd86-50e8-498c-8cae-150d07d45577] terminal: outcome=completed
+2026-08-23 01:06:06.790  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [7cd34493-c9e3-4506-a142-4943618b64a5] request start
+2026-08-23 01:06:06.837  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [d02bbba3-1d5b-480c-8736-345b232acf8f] terminal: outcome=completed
+2026-08-23 01:06:06.890  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [1697134c-0f36-448d-9cc2-666f25bca0f6] request start
+2026-08-23 01:06:06.931  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [6bf44d91-1271-4ac0-8ae5-0ed040f323b6] terminal: outcome=completed
+2026-08-23 01:06:06.991  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [8d44aa39-20a8-44ed-b078-b9716641fb6a] request start
+2026-08-23 01:06:07.037  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [3268a512-7712-43b5-9721-37017a8ef9fe] terminal: outcome=completed
+2026-08-23 01:06:07.091  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [fdbbe389-b6cd-4552-ad28-b616a78c7526] request start
+2026-08-23 01:06:07.133  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [0e3e4ab0-e1de-44ac-b33f-0dc031b3c52e] terminal: outcome=completed
+2026-08-23 01:06:07.192  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [8c808fd4-78f7-4139-ae37-561e98e37377] request start
+2026-08-23 01:06:07.231  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [87f7c368-d64a-4eb2-ac12-37b0b5f6fa91] terminal: outcome=completed
+2026-08-23 01:06:07.292  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [450d9cdc-ac61-4f18-b043-da9e8883d988] request start
+2026-08-23 01:06:07.334  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [7f7f99a5-0c1c-4072-90f2-13de992b9c94] terminal: outcome=completed
+2026-08-23 01:06:07.392  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [e4ecdc5a-1b8b-4498-b3a7-05a80a834eb6] request start
+2026-08-23 01:06:07.440  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [01c1b438-ffee-4600-8e49-44ddee04d7a5] terminal: outcome=completed
+2026-08-23 01:06:07.491  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [f638430b-0659-4459-8b3f-9856822de114] request start
+2026-08-23 01:06:07.536  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [bdfe183c-0a37-4d66-8c6a-7d51384ac73a] terminal: outcome=completed
+2026-08-23 01:06:07.592  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [9947645a-7cd6-476f-8840-20fa01612af3] request start
+2026-08-23 01:06:07.632  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [2bfb5dbe-401f-4334-a8da-ea04b2ef9e25] terminal: outcome=completed
+2026-08-23 01:06:07.692  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [a0e8e8c7-333f-4df5-a0df-96f8cd7d8228] request start
+2026-08-23 01:06:07.738  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [1512420c-7510-4b6e-a125-ade851692280] terminal: outcome=completed
+2026-08-23 01:06:07.791  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [8d181e12-9cc3-4376-924d-af1498754d20] request start
+2026-08-23 01:06:07.833  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [80cf884f-293f-4fc3-96e1-c3f06447ec21] terminal: outcome=completed
+2026-08-23 01:06:07.890  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [a6660c18-a759-40c0-86ec-4732933cab01] request start
+2026-08-23 01:06:07.937  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [acb19b95-046f-4cc4-8ac2-f2fa25bde944] terminal: outcome=completed
+2026-08-23 01:06:07.991  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [3b8659e8-4b03-4b6c-a473-655387674ec9] request start
+2026-08-23 01:06:08.034  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [9b869fe5-0229-4ee2-b87e-249cfb17d60c] terminal: outcome=completed
+2026-08-23 01:06:08.091  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [164ab875-8a41-4a56-bbd1-cd4ecd0eae7e] request start
+2026-08-23 01:06:08.141  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [ca23332a-3df5-4107-a66e-8a2c140bc3a6] terminal: outcome=completed
+2026-08-23 01:06:08.192  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [df75b3ae-3a60-4734-a8bc-250e98cc3f0e] request start
+2026-08-23 01:06:08.236  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [9906af22-3162-49a4-806f-116bee4403ef] terminal: outcome=completed
+2026-08-23 01:06:08.292  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [62b15ee7-7e8b-4de6-a477-4c8d3a338f89] request start
+2026-08-23 01:06:08.342  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [7a30c239-286c-4c87-b4bc-eeff510c3b74] terminal: outcome=completed
+2026-08-23 01:06:08.392  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [034a4d47-c41c-4d72-8911-f93e5e51dce6] request start
+2026-08-23 01:06:08.438  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [b487d4c1-c9d9-41d0-8dfe-3d4030c04750] terminal: outcome=completed
+2026-08-23 01:06:08.491  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [6c72e9f0-188b-4982-a07c-c1d6f657b276] request start
+2026-08-23 01:06:08.543  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [26074405-2efc-42f4-b98f-2b809134284a] terminal: outcome=completed
+2026-08-23 01:06:08.591  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [5134cb57-afbf-447f-bcec-3def4c9934ac] request start
+2026-08-23 01:06:08.639  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [5695102a-cb26-419e-9b00-9cded826a1b4] terminal: outcome=completed
+2026-08-23 01:06:08.692  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [d7d5695e-c9e4-4a43-ad20-e02870bf5bf0] request start
+2026-08-23 01:06:08.745  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [f8c7b7b3-d3d6-445c-8dd3-4e0c1e712eb2] terminal: outcome=completed
+2026-08-23 01:06:08.791  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [dfb7157c-e71d-482c-9d29-49ce108251be] request start
+2026-08-23 01:06:08.840  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [73d4ea70-ed3c-4242-a1a7-207b7f79ccc3] terminal: outcome=completed
+2026-08-23 01:06:08.890  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [43f52fcb-a30d-463c-a853-6fda90f8134a] request start
+2026-08-23 01:06:08.946  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [b4a7e624-20c0-4cff-bac5-b907840d3237] terminal: outcome=completed
+2026-08-23 01:06:08.990  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [dfbcf118-b9fe-4ccd-b5ee-3dbb39f8acc2] request start
+2026-08-23 01:06:09.041  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [09c626bd-6799-4a41-a2ad-8d4565fd2122] terminal: outcome=completed
+2026-08-23 01:06:09.091  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [c542fbfd-8ded-42ba-8c69-2b707b915323] request start
+2026-08-23 01:06:09.147  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [163713e1-257c-42fa-8c18-eddaa640a2e9] terminal: outcome=completed
+2026-08-23 01:06:09.192  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [84cd14d5-49d5-4775-8aa6-7d14747d0b31] request start
+2026-08-23 01:06:09.292  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [36a62264-15a1-4645-be4c-bff9d665cf55] request start
+2026-08-23 01:06:09.292  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [36a62264-15a1-4645-be4c-bff9d665cf55] rejected: admission ceiling reached
+2026-08-23 01:06:09.292  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [36a62264-15a1-4645-be4c-bff9d665cf55] terminal: outcome=rejected
+2026-08-23 01:06:09.392  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [556655fc-929c-4a77-9746-f8c35823ddba] request start
+2026-08-23 01:06:09.392  WARN 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [556655fc-929c-4a77-9746-f8c35823ddba] rejected: admission ceiling reached
+2026-08-23 01:06:09.392  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.RequestLifecycle     : [556655fc-929c-4a77-9746-f8c35823ddba] terminal: outcome=rejected
+2026-08-23 01:06:09.493  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [23332617-5394-40de-803c-f1678ab7e52f] request start
+2026-08-23 01:06:09.493  WARN 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [23332617-5394-40de-803c-f1678ab7e52f] rejected: admission ceiling reached
+2026-08-23 01:06:09.493  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.RequestLifecycle     : [23332617-5394-40de-803c-f1678ab7e52f] terminal: outcome=rejected
+2026-08-23 01:06:09.591  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [8a5d4506-0b71-4aa8-8d10-bcdfd6e6072b] request start
+2026-08-23 01:06:09.591  WARN 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [8a5d4506-0b71-4aa8-8d10-bcdfd6e6072b] rejected: admission ceiling reached
+2026-08-23 01:06:09.591  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [8a5d4506-0b71-4aa8-8d10-bcdfd6e6072b] terminal: outcome=rejected
+2026-08-23 01:06:09.692  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [889fbac5-23f2-4677-8639-94304e62563e] request start
+2026-08-23 01:06:09.692  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [889fbac5-23f2-4677-8639-94304e62563e] rejected: admission ceiling reached
+2026-08-23 01:06:09.692  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [889fbac5-23f2-4677-8639-94304e62563e] terminal: outcome=rejected
+2026-08-23 01:06:09.791  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [2839a602-2e52-49df-8ab1-b4f048c35bc5] request start
+2026-08-23 01:06:09.791  WARN 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [2839a602-2e52-49df-8ab1-b4f048c35bc5] rejected: admission ceiling reached
+2026-08-23 01:06:09.791  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.RequestLifecycle     : [2839a602-2e52-49df-8ab1-b4f048c35bc5] terminal: outcome=rejected
+2026-08-23 01:06:09.891  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [f5c41449-4cda-4150-8889-9231434336cc] request start
+2026-08-23 01:06:09.892  WARN 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [f5c41449-4cda-4150-8889-9231434336cc] rejected: admission ceiling reached
+2026-08-23 01:06:09.892  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.RequestLifecycle     : [f5c41449-4cda-4150-8889-9231434336cc] terminal: outcome=rejected
+2026-08-23 01:06:09.990  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [574456be-10f2-4898-b7ee-f72f866d2394] request start
+2026-08-23 01:06:09.990  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [574456be-10f2-4898-b7ee-f72f866d2394] rejected: admission ceiling reached
+2026-08-23 01:06:09.990  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [574456be-10f2-4898-b7ee-f72f866d2394] terminal: outcome=rejected
+2026-08-23 01:06:10.089  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [27cfb2b3-5048-45fd-afcc-c1071ec4dbf2] request start
+2026-08-23 01:06:10.090  WARN 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [27cfb2b3-5048-45fd-afcc-c1071ec4dbf2] rejected: admission ceiling reached
+2026-08-23 01:06:10.090  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.RequestLifecycle     : [27cfb2b3-5048-45fd-afcc-c1071ec4dbf2] terminal: outcome=rejected
+2026-08-23 01:06:10.192  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [fa171a85-364f-4ad9-ad83-3d8610719dfa] request start
+2026-08-23 01:06:10.192  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [fa171a85-364f-4ad9-ad83-3d8610719dfa] rejected: admission ceiling reached
+2026-08-23 01:06:10.192  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [fa171a85-364f-4ad9-ad83-3d8610719dfa] terminal: outcome=rejected
+2026-08-23 01:06:10.292  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [b5e8bf6e-9424-4894-89e5-e876700d29cd] request start
+2026-08-23 01:06:10.292  WARN 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [b5e8bf6e-9424-4894-89e5-e876700d29cd] rejected: admission ceiling reached
+2026-08-23 01:06:10.292  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.RequestLifecycle     : [b5e8bf6e-9424-4894-89e5-e876700d29cd] terminal: outcome=rejected
+2026-08-23 01:06:10.392  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [9de2975a-3316-44c3-9f8e-fd40812d9f12] request start
+2026-08-23 01:06:10.392  WARN 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [9de2975a-3316-44c3-9f8e-fd40812d9f12] rejected: admission ceiling reached
+2026-08-23 01:06:10.392  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.RequestLifecycle     : [9de2975a-3316-44c3-9f8e-fd40812d9f12] terminal: outcome=rejected
+2026-08-23 01:06:10.492  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [8c438d3b-b20e-45d3-b5a1-6e5599ac68e3] request start
+2026-08-23 01:06:10.492  WARN 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [8c438d3b-b20e-45d3-b5a1-6e5599ac68e3] rejected: admission ceiling reached
+2026-08-23 01:06:10.493  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [8c438d3b-b20e-45d3-b5a1-6e5599ac68e3] terminal: outcome=rejected
+2026-08-23 01:06:10.592  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [ec2793cc-9ecd-48e1-89f5-c8258e3e57be] request start
+2026-08-23 01:06:10.592  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [ec2793cc-9ecd-48e1-89f5-c8258e3e57be] rejected: admission ceiling reached
+2026-08-23 01:06:10.592  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [ec2793cc-9ecd-48e1-89f5-c8258e3e57be] terminal: outcome=rejected
+2026-08-23 01:06:10.692  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [de41a790-298d-4153-bae0-d4418067717a] request start
+2026-08-23 01:06:10.692  WARN 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [de41a790-298d-4153-bae0-d4418067717a] rejected: admission ceiling reached
+2026-08-23 01:06:10.692  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.RequestLifecycle     : [de41a790-298d-4153-bae0-d4418067717a] terminal: outcome=rejected
+2026-08-23 01:06:10.792  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [9f86fa59-58fd-491b-b007-fe9f4a652f33] request start
+2026-08-23 01:06:10.792  WARN 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [9f86fa59-58fd-491b-b007-fe9f4a652f33] rejected: admission ceiling reached
+2026-08-23 01:06:10.792  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.RequestLifecycle     : [9f86fa59-58fd-491b-b007-fe9f4a652f33] terminal: outcome=rejected
+2026-08-23 01:06:10.891  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [74afef00-d033-4cf8-b868-51b4e6b4ad8f] request start
+2026-08-23 01:06:10.892  WARN 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [74afef00-d033-4cf8-b868-51b4e6b4ad8f] rejected: admission ceiling reached
+2026-08-23 01:06:10.892  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.RequestLifecycle     : [74afef00-d033-4cf8-b868-51b4e6b4ad8f] terminal: outcome=rejected
+2026-08-23 01:06:10.992  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [fe9d011e-3bed-4e10-adb1-f522a57149b4] request start
+2026-08-23 01:06:10.992  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [fe9d011e-3bed-4e10-adb1-f522a57149b4] rejected: admission ceiling reached
+2026-08-23 01:06:10.992  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [fe9d011e-3bed-4e10-adb1-f522a57149b4] terminal: outcome=rejected
+2026-08-23 01:06:11.090  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [364b1b2e-2079-4dd8-b941-823628bc6c01] request start
+2026-08-23 01:06:11.090  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [364b1b2e-2079-4dd8-b941-823628bc6c01] rejected: admission ceiling reached
+2026-08-23 01:06:11.090  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [364b1b2e-2079-4dd8-b941-823628bc6c01] terminal: outcome=rejected
+2026-08-23 01:06:11.190  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [2bc276f8-dd05-4c98-8a5f-18a09af95942] request start
+2026-08-23 01:06:11.190  WARN 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [2bc276f8-dd05-4c98-8a5f-18a09af95942] rejected: admission ceiling reached
+2026-08-23 01:06:11.190  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.RequestLifecycle     : [2bc276f8-dd05-4c98-8a5f-18a09af95942] terminal: outcome=rejected
+2026-08-23 01:06:11.290  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [d71c39a5-11ac-42b9-b876-bcd6f7110d37] request start
+2026-08-23 01:06:11.290  WARN 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.ChatController       : [d71c39a5-11ac-42b9-b876-bcd6f7110d37] rejected: admission ceiling reached
+2026-08-23 01:06:11.290  INFO 13856 --- [nio-8082-exec-2] c.l.gatewaymvc.chat.RequestLifecycle     : [d71c39a5-11ac-42b9-b876-bcd6f7110d37] terminal: outcome=rejected
+2026-08-23 01:06:11.392  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [9ab3758c-b61a-49b2-b9da-73ca09136c38] request start
+2026-08-23 01:06:11.393  WARN 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [9ab3758c-b61a-49b2-b9da-73ca09136c38] rejected: admission ceiling reached
+2026-08-23 01:06:11.393  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [9ab3758c-b61a-49b2-b9da-73ca09136c38] terminal: outcome=rejected
+2026-08-23 01:06:11.492  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [e8fb5ac7-8325-46f1-83e4-2ed92fa31b3a] request start
+2026-08-23 01:06:11.493  WARN 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [e8fb5ac7-8325-46f1-83e4-2ed92fa31b3a] rejected: admission ceiling reached
+2026-08-23 01:06:11.493  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.RequestLifecycle     : [e8fb5ac7-8325-46f1-83e4-2ed92fa31b3a] terminal: outcome=rejected
+2026-08-23 01:06:11.592  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [8ce0aabd-a2e5-4ea9-99a3-ce1c47af3cc5] request start
+2026-08-23 01:06:11.592  WARN 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [8ce0aabd-a2e5-4ea9-99a3-ce1c47af3cc5] rejected: admission ceiling reached
+2026-08-23 01:06:11.593  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.RequestLifecycle     : [8ce0aabd-a2e5-4ea9-99a3-ce1c47af3cc5] terminal: outcome=rejected
+2026-08-23 01:06:11.692  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [f3723211-8485-46ae-8505-35cbe3b1d478] request start
+2026-08-23 01:06:11.692  WARN 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [f3723211-8485-46ae-8505-35cbe3b1d478] rejected: admission ceiling reached
+2026-08-23 01:06:11.692  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.RequestLifecycle     : [f3723211-8485-46ae-8505-35cbe3b1d478] terminal: outcome=rejected
+2026-08-23 01:06:11.792  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [ed1edce9-64e5-4706-8219-97eaaa9fba16] request start
+2026-08-23 01:06:11.792  WARN 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [ed1edce9-64e5-4706-8219-97eaaa9fba16] rejected: admission ceiling reached
+2026-08-23 01:06:11.792  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.RequestLifecycle     : [ed1edce9-64e5-4706-8219-97eaaa9fba16] terminal: outcome=rejected
+2026-08-23 01:06:11.891  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [63b8ee5d-1208-4f1b-893e-e937610d3254] request start
+2026-08-23 01:06:11.891  WARN 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [63b8ee5d-1208-4f1b-893e-e937610d3254] rejected: admission ceiling reached
+2026-08-23 01:06:11.891  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.RequestLifecycle     : [63b8ee5d-1208-4f1b-893e-e937610d3254] terminal: outcome=rejected
+2026-08-23 01:06:11.991  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [2d7da457-da0a-4e19-9664-61e9b679c87a] request start
+2026-08-23 01:06:11.991  WARN 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [2d7da457-da0a-4e19-9664-61e9b679c87a] rejected: admission ceiling reached
+2026-08-23 01:06:11.991  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.RequestLifecycle     : [2d7da457-da0a-4e19-9664-61e9b679c87a] terminal: outcome=rejected
+2026-08-23 01:06:12.091  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [53aaf79a-13c3-4546-9a77-49f3257729c3] request start
+2026-08-23 01:06:12.091  WARN 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [53aaf79a-13c3-4546-9a77-49f3257729c3] rejected: admission ceiling reached
+2026-08-23 01:06:12.091  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.RequestLifecycle     : [53aaf79a-13c3-4546-9a77-49f3257729c3] terminal: outcome=rejected
+2026-08-23 01:06:12.123  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [ac113e70-0b20-4526-bd89-57c00c5a8a7c] terminal: outcome=completed
+2026-08-23 01:06:12.190  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [1e879a30-e8a7-47cf-b93f-2aed90039cdc] request start
+2026-08-23 01:06:12.223  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [3936275f-b700-480a-9284-995f7c8df818] terminal: outcome=completed
+2026-08-23 01:06:12.291  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [96411349-81ab-4ee2-862b-19f88b04416e] request start
+2026-08-23 01:06:12.324  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [9d9857be-a593-4692-a397-97e7f15a16c1] terminal: outcome=completed
+2026-08-23 01:06:12.392  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [4561bafe-83b9-410f-8910-0a8f8e0d6824] request start
+2026-08-23 01:06:12.424  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [7ba90537-132c-4fa6-bd2e-9bfb28b83360] terminal: outcome=completed
+2026-08-23 01:06:12.492  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [d9dc6f9f-268e-4a11-a299-d9075deffef7] request start
+2026-08-23 01:06:12.525  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [97102bb3-286e-4205-bf2d-806cdf9b8d60] terminal: outcome=completed
+2026-08-23 01:06:12.591  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [5d7417d3-4bf4-45b7-bc83-8f63ce0e25a6] request start
+2026-08-23 01:06:12.625  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [93ad5171-8bc9-4017-a909-2d7f899bf868] terminal: outcome=completed
+2026-08-23 01:06:12.691  INFO 13856 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [0a33651d-ac79-4894-b17d-56df6b4bf257] request start
+2026-08-23 01:06:12.728  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [677d038e-6f90-4d43-bcd9-0b69f019fec7] terminal: outcome=completed
+2026-08-23 01:06:12.792  INFO 13856 --- [nio-8082-exec-6] c.l.gatewaymvc.chat.ChatController       : [f2826430-f65d-4b4a-900c-baac5337d1cf] request start
+2026-08-23 01:06:12.828  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [25be958a-bbef-443e-b66e-5d8dbc1fcafc] terminal: outcome=completed
+2026-08-23 01:06:12.891  INFO 13856 --- [nio-8082-exec-8] c.l.gatewaymvc.chat.ChatController       : [042317b1-9717-432c-a671-f2fb972ac8c6] request start
+2026-08-23 01:06:12.929  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [f683bf66-4c68-4499-91e0-162796da4545] terminal: outcome=completed
+2026-08-23 01:06:12.991  INFO 13856 --- [io-8082-exec-10] c.l.gatewaymvc.chat.ChatController       : [626f137a-5205-4bb9-8153-dee3b0bc4d20] request start
+2026-08-23 01:06:13.028  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [4f339b50-5cd3-44d2-b5f0-73f907c38f95] terminal: outcome=completed
+2026-08-23 01:06:13.090  INFO 13856 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [88bd0d4d-8a2a-45fb-af20-d1acb7c3f576] request start
+2026-08-23 01:06:13.131  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [849fa415-4369-45cf-9471-1a77049b7b2a] terminal: outcome=completed
+2026-08-23 01:06:13.190  INFO 13856 --- [nio-8082-exec-5] c.l.gatewaymvc.chat.ChatController       : [36e5e343-5878-4117-b0f3-4aaf543272e8] request start
+2026-08-23 01:06:13.230  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [02630aec-deba-4515-af42-3375d555df76] terminal: outcome=completed
+2026-08-23 01:06:13.290  INFO 13856 --- [nio-8082-exec-7] c.l.gatewaymvc.chat.ChatController       : [82d58c8a-9aa6-4ab7-b1a7-7ab1d248b47d] request start
+2026-08-23 01:06:13.332  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [24284edd-5de3-4f2a-b3cc-b2bba53614ea] terminal: outcome=completed
+2026-08-23 01:06:13.391  INFO 13856 --- [nio-8082-exec-9] c.l.gatewaymvc.chat.ChatController       : [b0e8416a-b016-4733-acc0-ef14e0e57366] request start
+2026-08-23 01:06:13.423  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [da4b12d1-51aa-45c3-89d0-ffebfa104d66] terminal: outcome=completed
+2026-08-23 01:06:13.492  INFO 13856 --- [nio-8082-exec-1] c.l.gatewaymvc.chat.ChatController       : [dd06ae92-d1c5-42eb-b8c6-f985abf0f819] request start
+2026-08-23 01:06:13.534  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [378d479f-e734-4454-9502-4926b1d3b107] terminal: outcome=completed
+2026-08-23 01:06:13.626  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [0a345cc0-12a9-4121-8aa1-6eaf0b0172b0] terminal: outcome=completed
+2026-08-23 01:06:13.736  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [1a59cd91-15b7-4123-b3d4-764dff89b220] terminal: outcome=completed
+2026-08-23 01:06:13.829  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [441322dd-6350-48d5-badc-87a04ffcbc39] terminal: outcome=completed
+2026-08-23 01:06:13.936  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [febd085a-edbc-4d35-8560-78cc0505bbdc] terminal: outcome=completed
+2026-08-23 01:06:14.031  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [8827a617-4c55-4ea2-8258-f69e3fcac5ce] terminal: outcome=completed
+2026-08-23 01:06:14.138  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [903f9e16-3fad-4a53-9802-ef7a8c135bbf] terminal: outcome=completed
+2026-08-23 01:06:14.232  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [fc5b6ede-f6c1-41c9-ba30-5d72783b8a84] terminal: outcome=completed
+2026-08-23 01:06:14.338  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [2f50367a-2703-47ac-91d2-013c3be31e40] terminal: outcome=completed
+2026-08-23 01:06:14.433  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [95f9a9b7-94a0-4616-b171-40300c2de0be] terminal: outcome=completed
+2026-08-23 01:06:14.539  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [df142be6-78ac-46c3-965c-38e8a0b96f27] terminal: outcome=completed
+2026-08-23 01:06:14.635  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [7cd34493-c9e3-4506-a142-4943618b64a5] terminal: outcome=completed
+2026-08-23 01:06:14.724  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [1697134c-0f36-448d-9cc2-666f25bca0f6] terminal: outcome=completed
+2026-08-23 01:06:14.837  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [8d44aa39-20a8-44ed-b078-b9716641fb6a] terminal: outcome=completed
+2026-08-23 01:06:14.925  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [fdbbe389-b6cd-4552-ad28-b616a78c7526] terminal: outcome=completed
+2026-08-23 01:06:15.038  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [8c808fd4-78f7-4139-ae37-561e98e37377] terminal: outcome=completed
+2026-08-23 01:06:15.126  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [450d9cdc-ac61-4f18-b043-da9e8883d988] terminal: outcome=completed
+2026-08-23 01:06:15.240  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [e4ecdc5a-1b8b-4498-b3a7-05a80a834eb6] terminal: outcome=completed
+2026-08-23 01:06:15.327  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [f638430b-0659-4459-8b3f-9856822de114] terminal: outcome=completed
+2026-08-23 01:06:15.441  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [9947645a-7cd6-476f-8840-20fa01612af3] terminal: outcome=completed
+2026-08-23 01:06:15.542  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [a0e8e8c7-333f-4df5-a0df-96f8cd7d8228] terminal: outcome=completed
+2026-08-23 01:06:15.642  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [8d181e12-9cc3-4376-924d-af1498754d20] terminal: outcome=completed
+2026-08-23 01:06:15.730  INFO 13856 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [a6660c18-a759-40c0-86ec-4732933cab01] terminal: outcome=completed
+2026-08-23 01:06:15.844  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [3b8659e8-4b03-4b6c-a473-655387674ec9] terminal: outcome=completed
+2026-08-23 01:06:15.931  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [164ab875-8a41-4a56-bbd1-cd4ecd0eae7e] terminal: outcome=completed
+2026-08-23 01:06:16.045  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [df75b3ae-3a60-4734-a8bc-250e98cc3f0e] terminal: outcome=completed
+2026-08-23 01:06:16.134  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [62b15ee7-7e8b-4de6-a477-4c8d3a338f89] terminal: outcome=completed
+2026-08-23 01:06:16.249  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [034a4d47-c41c-4d72-8911-f93e5e51dce6] terminal: outcome=completed
+2026-08-23 01:06:16.335  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [6c72e9f0-188b-4982-a07c-c1d6f657b276] terminal: outcome=completed
+2026-08-23 01:06:16.449  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [5134cb57-afbf-447f-bcec-3def4c9934ac] terminal: outcome=completed
+2026-08-23 01:06:16.536  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [d7d5695e-c9e4-4a43-ad20-e02870bf5bf0] terminal: outcome=completed
+2026-08-23 01:06:16.650  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [dfb7157c-e71d-482c-9d29-49ce108251be] terminal: outcome=completed
+2026-08-23 01:06:16.736  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [43f52fcb-a30d-463c-a853-6fda90f8134a] terminal: outcome=completed
+2026-08-23 01:06:16.852  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [dfbcf118-b9fe-4ccd-b5ee-3dbb39f8acc2] terminal: outcome=completed
+2026-08-23 01:06:16.939  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [c542fbfd-8ded-42ba-8c69-2b707b915323] terminal: outcome=completed
+2026-08-23 01:06:17.054  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [84cd14d5-49d5-4775-8aa6-7d14747d0b31] terminal: outcome=completed
+2026-08-23 01:06:20.040  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [1e879a30-e8a7-47cf-b93f-2aed90039cdc] terminal: outcome=completed
+2026-08-23 01:06:20.135  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [96411349-81ab-4ee2-862b-19f88b04416e] terminal: outcome=completed
+2026-08-23 01:06:20.242  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [4561bafe-83b9-410f-8910-0a8f8e0d6824] terminal: outcome=completed
+2026-08-23 01:06:20.337  INFO 13856 --- [servlet-write-7] c.l.gatewaymvc.chat.RequestLifecycle     : [d9dc6f9f-268e-4a11-a299-d9075deffef7] terminal: outcome=completed
+2026-08-23 01:06:20.443  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [5d7417d3-4bf4-45b7-bc83-8f63ce0e25a6] terminal: outcome=completed
+2026-08-23 01:06:20.539  INFO 13856 --- [servlet-write-4] c.l.gatewaymvc.chat.RequestLifecycle     : [0a33651d-ac79-4894-b17d-56df6b4bf257] terminal: outcome=completed
+2026-08-23 01:06:20.645  INFO 13856 --- [servlet-write-1] c.l.gatewaymvc.chat.RequestLifecycle     : [f2826430-f65d-4b4a-900c-baac5337d1cf] terminal: outcome=completed
+2026-08-23 01:06:20.739  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [042317b1-9717-432c-a671-f2fb972ac8c6] terminal: outcome=completed
+2026-08-23 01:06:20.845  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [626f137a-5205-4bb9-8153-dee3b0bc4d20] terminal: outcome=completed
+2026-08-23 01:06:20.941  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [88bd0d4d-8a2a-45fb-af20-d1acb7c3f576] terminal: outcome=completed
+2026-08-23 01:06:21.046  INFO 13856 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [36e5e343-5878-4117-b0f3-4aaf543272e8] terminal: outcome=completed
+2026-08-23 01:06:21.142  INFO 13856 --- [servlet-write-2] c.l.gatewaymvc.chat.RequestLifecycle     : [82d58c8a-9aa6-4ab7-b1a7-7ab1d248b47d] terminal: outcome=completed
+2026-08-23 01:06:21.247  INFO 13856 --- [servlet-write-6] c.l.gatewaymvc.chat.RequestLifecycle     : [b0e8416a-b016-4733-acc0-ef14e0e57366] terminal: outcome=completed
+2026-08-23 01:06:21.343  INFO 13856 --- [servlet-write-5] c.l.gatewaymvc.chat.RequestLifecycle     : [dd06ae92-d1c5-42eb-b8c6-f985abf0f819] terminal: outcome=completed

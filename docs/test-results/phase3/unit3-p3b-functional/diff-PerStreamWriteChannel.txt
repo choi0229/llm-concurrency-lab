@@ -1,0 +1,27 @@
+106a107,120
+>      *
+>      * <p>P3-B-specific note (Unit 3 §6): this method is the "lifecycle signal" a Reactor Netty
+>      * event-loop thread is allowed to send directly (the ADR's callback rule permits that). But if
+>      * the buffer already happens to be empty at the moment this is called, the naive
+>      * implementation would run {@code lifecycle.tryTerminate("completed")} — which calls
+>      * {@code AsyncContext.complete()}, a Servlet-container operation — inline on THAT calling
+>      * thread. A Smoke A run caught this by logging real thread names: the terminal log line showed
+>      * up on a {@code reactor-http-nio-*} thread, not a {@code servlet-write-*} one (see
+>      * docs/test-results/phase3/unit3-p3b-functional/SUMMARY.md). No {@code PrintWriter} call is
+>      * involved in that path (markTerminal() only clears an already-empty buffer), so it isn't a
+>      * correctness bug, but it does cross the "Reactor callback never does Servlet-side work"
+>      * boundary the ADR asks for — so here (unlike P3-A's byte-identical copy of this class, which
+>      * never receives calls from a Reactor thread and therefore doesn't need this) the empty-buffer
+>      * fast path is dispatched through the shared write executor instead of run inline.
+128c142,150
+<             lifecycle.tryTerminate("completed");
+---
+>             try {
+>                 writeExecutor.execute(() -> lifecycle.tryTerminate("completed"));
+>             } catch (RejectedExecutionException e) {
+>                 // Degraded but still correct: better to finalize inline than to leave the request
+>                 // hanging because the write executor happened to be saturated at this exact moment.
+>                 log.warn("[{}] write executor rejected the completion-finalize task, finalizing inline",
+>                         lifecycle.requestId());
+>                 lifecycle.tryTerminate("completed");
+>             }

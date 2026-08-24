@@ -1,0 +1,11 @@
+=== ConnectionProvider maxConnections=1, pendingAcquireMaxCount=1, pendingAcquireTimeout=300ms evidence ===
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+8월 22, 2026 1:15:32 오후 io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
+경고: Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+=== PoolSpike result (maxConnections=1, pendingAcquireMaxCount=0, pendingAcquireTimeout=300ms) ===
+request1 (holds sole connection 3s): OK:ok
+request2 (fired ~100ms later while pool full): ERROR:reactor.netty.internal.shaded.reactor.pool.PoolAcquireTimeoutException:Pool#acquire(Duration) has been pending for more than the configured timeout of 300ms
+request2 time-to-error (ms, measured from its own start, excludes the 100ms delay): 313
+total wall time (ms): 3254

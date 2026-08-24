@@ -1,0 +1,10 @@
+=== Candidate B: data.takeUntilOther(deadlineErrorMono) -- LEAK: does not cancel main source when 'other' terminates via onError ===
+[case1 normal-completion] items=3 sawError=false elapsedMs=84 timerCancelledPromptly=true
+[case2 deadline-fires-first] items=3 error=TimeoutException:absolute-deadline-exceeded elapsedMs=306 dataCancelledAt+150ms=false
+[case2 deadline-fires-first] dataCancelledAt+1150ms=false itemsStillGrowing(count)=3
+[case3 downstream-cancel] dataCancelled=true timerCancelled=true
+[case4 upstream-error-first] error=IllegalStateException:simulated-upstream-error timerCancelled=true
+ALL CASES DONE
+=== Candidate B leak proof: raw upstream Flux.interval tick count keeps growing after downstream saw the timeout error ===
+rawTicks at termination (~300ms): 3
+rawTicks after +2000ms more: 23 (if still growing => upstream interval NOT cancelled => leak)

@@ -1,0 +1,52 @@
+Compiled from "ConnectionProvider.java"
+public class reactor.netty.resources.ConnectionProvider$ConnectionPoolSpec<SPEC extends reactor.netty.resources.ConnectionProvider$ConnectionPoolSpec<SPEC>> implements java.util.function.Supplier<SPEC> {
+  static final java.time.Duration EVICT_IN_BACKGROUND_DISABLED;
+  static final int PENDING_ACQUIRE_MAX_COUNT_NOT_SPECIFIED;
+  java.time.Duration evictionInterval;
+  int maxConnections;
+  int pendingAcquireMaxCount;
+  java.time.Duration pendingAcquireTimeout;
+  java.time.Duration maxIdleTime;
+  java.time.Duration maxLifeTime;
+  boolean metricsEnabled;
+  java.lang.String leasingStrategy;
+  java.util.function.Supplier<? extends reactor.netty.resources.ConnectionProvider$MeterRegistrar> registrar;
+  java.util.function.BiFunction<java.lang.Runnable, java.time.Duration, reactor.core.Disposable> pendingAcquireTimer;
+  reactor.netty.resources.ConnectionProvider$AllocationStrategy<?> allocationStrategy;
+  java.util.function.BiPredicate<reactor.netty.Connection, reactor.netty.resources.ConnectionProvider$ConnectionMetadata> evictionPredicate;
+  reactor.netty.resources.ConnectionProvider$ConnectionPoolSpec(reactor.netty.resources.ConnectionProvider$ConnectionPoolSpec<SPEC>);
+  public final SPEC pendingAcquireTimeout(java.time.Duration);
+  public final SPEC maxConnections(int);
+  public final SPEC pendingAcquireMaxCount(int);
+  public final SPEC maxIdleTime(java.time.Duration);
+  public final SPEC maxLifeTime(java.time.Duration);
+  public final SPEC evictionPredicate(java.util.function.BiPredicate<reactor.netty.Connection, reactor.netty.resources.ConnectionProvider$ConnectionMetadata>);
+  public final SPEC metrics(boolean);
+  public final SPEC metrics(boolean, java.util.function.Supplier<? extends reactor.netty.resources.ConnectionProvider$MeterRegistrar>);
+  public final SPEC lifo();
+  public final SPEC fifo();
+  public final SPEC evictInBackground(java.time.Duration);
+  public final SPEC pendingAcquireTimer(java.util.function.BiFunction<java.lang.Runnable, java.time.Duration, reactor.core.Disposable>);
+  public final SPEC allocationStrategy(reactor.netty.resources.ConnectionProvider$AllocationStrategy<?>);
+  public SPEC get();
+  public java.lang.Object get();
+  reactor.netty.resources.ConnectionProvider$ConnectionPoolSpec(reactor.netty.resources.ConnectionProvider$1);
+  static {};
+}
+Compiled from "ConnectionProvider.java"
+public final class reactor.netty.resources.ConnectionProvider$Builder extends reactor.netty.resources.ConnectionProvider$ConnectionPoolSpec<reactor.netty.resources.ConnectionProvider$Builder> {
+  static final java.time.Duration DISPOSE_INACTIVE_POOLS_IN_BACKGROUND_DISABLED;
+  java.lang.String name;
+  java.time.Duration inactivePoolDisposeInterval;
+  java.time.Duration poolInactivity;
+  java.time.Duration disposeTimeout;
+  final java.util.Map<java.net.SocketAddress, reactor.netty.resources.ConnectionProvider$ConnectionPoolSpec<?>> confPerRemoteHost;
+  reactor.netty.resources.ConnectionProvider$Builder(reactor.netty.resources.ConnectionProvider$Builder);
+  public final reactor.netty.resources.ConnectionProvider$Builder name(java.lang.String);
+  public final reactor.netty.resources.ConnectionProvider$Builder disposeInactivePoolsInBackground(java.time.Duration, java.time.Duration);
+  public final reactor.netty.resources.ConnectionProvider$Builder disposeTimeout(java.time.Duration);
+  public final reactor.netty.resources.ConnectionProvider$Builder forRemoteHost(java.net.SocketAddress, java.util.function.Consumer<reactor.netty.resources.ConnectionProvider$HostSpecificSpec>);
+  public reactor.netty.resources.ConnectionProvider build();
+  reactor.netty.resources.ConnectionProvider$Builder(java.lang.String, reactor.netty.resources.ConnectionProvider$1);
+  static {};
+}

@@ -1,0 +1,12 @@
+{
+  "run_id": "p3c-r7-run2", "config": "C", "load": "r7", "repeat": 2, "rate": 7,
+  "jdk": {"vendor": "Zulu", "version": "1.8.0_504", "build": "1.8.0_504-b01", "sha256_java_binary": "b49708ba8e68dae58e1aad83ede16b73b4b2cfc4294dcd95a2ad3964c92cae5f"},
+  "os": {"product": "macOS", "version": "26.4.1", "build": "25E253", "arch": "arm64"},
+  "available_processors": 10, "power_source": "AC",
+  "spring_boot": "2.7.18", "spring_framework": "5.3.31", "reactor_core": "3.4.34",
+  "reactor_netty": "1.0.39", "micrometer": "1.9.17",
+  "tomcat": null,
+  "k6_version": "v1.8.0", "xk6_sse_version": "v0.1.11",
+  "gateway_config": {"CHAT_ADMISSION_LIMIT": 50, "CHAT_TOTAL_TIMEOUT_MS": 60000, "MOCK_LLM_BASE_URL": "http://127.0.0.1:8000", "WEBCLIENT_MAX_CONNECTIONS": 50},
+  "blockhound": false, "docker": false, "slow_client": false
+}

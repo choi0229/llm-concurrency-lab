@@ -1,0 +1,15 @@
+server:
+  port: 18090
+  tomcat:
+    mbeanregistry:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    use-global-registry: true

@@ -1,0 +1,386 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-08-23 01:08:02.751  INFO 18057 --- [           main] c.l.gatewaymvc.GatewayApplication        : Starting GatewayApplication using Java 1.8.0_504 on userui-MacBookAir.local with PID 18057 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-webflux/build/libs/gateway-webflux-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-webflux)
+2026-08-23 01:08:02.753  INFO 18057 --- [           main] c.l.gatewaymvc.GatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-23 01:08:03.580 ERROR 18057 --- [           main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2026-08-23 01:08:03.797  INFO 18057 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-08-23 01:08:03.940  INFO 18057 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8083
+2026-08-23 01:08:03.950  INFO 18057 --- [           main] c.l.gatewaymvc.GatewayApplication        : Started GatewayApplication in 1.498 seconds (JVM running for 1.787)
+2026-08-23 01:08:04.372  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [66bcb21e-ca6c-fd83-aa13-a7b66bdabf44] request start
+2026-08-23 01:08:04.597  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [66bcb21e-ca6c-fd83-aa13-a7b66bdabf44] terminal: outcome=completed
+2026-08-23 01:08:04.610  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [15722237-62b0-84fe-114a-ca3fe2d54aba] request start
+2026-08-23 01:08:04.768  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [15722237-62b0-84fe-114a-ca3fe2d54aba] terminal: outcome=completed
+2026-08-23 01:08:04.788  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [3e307e02-f496-57ab-9d31-1ae21556aa87] request start
+2026-08-23 01:08:04.948  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [3e307e02-f496-57ab-9d31-1ae21556aa87] terminal: outcome=completed
+2026-08-23 01:08:04.966  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [a43920da-fb81-c319-33b1-672deaa2b21f] request start
+2026-08-23 01:08:05.125  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [a43920da-fb81-c319-33b1-672deaa2b21f] terminal: outcome=completed
+2026-08-23 01:08:05.144  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [ad9d4fc2-4e29-1cf6-851c-a6c1b9b2e9c7] request start
+2026-08-23 01:08:05.305  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [ad9d4fc2-4e29-1cf6-851c-a6c1b9b2e9c7] terminal: outcome=completed
+2026-08-23 01:08:06.362  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [ffb640ef-7afc-6b24-ca20-26c110dd3ec3] request start
+2026-08-23 01:08:06.486  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [2c85e8bb-080c-6329-6700-2a0ec6e66728] request start
+2026-08-23 01:08:06.612  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [7681ac55-e313-ef41-b0dd-020548afaf6d] request start
+2026-08-23 01:08:06.736  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [bc00b742-3f1d-998f-cb3d-2acfdd878b54] request start
+2026-08-23 01:08:06.861  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [77b2dc97-5c53-494b-1bd6-1b8ff429e4a8] request start
+2026-08-23 01:08:06.987  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [0c7bd619-a735-3a6f-6e0e-f8dbf813b1bc] request start
+2026-08-23 01:08:07.114  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [a54bea57-b474-935c-4d3d-1307aa87fc1f] request start
+2026-08-23 01:08:07.239  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [14bca97f-1235-9839-91f4-5b0799dd3c1e] request start
+2026-08-23 01:08:07.362  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [0e21e7f0-7b55-9e95-fc3e-aeb32d508c1b] request start
+2026-08-23 01:08:07.486  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [eec2c1fc-0648-1c9a-04ad-d81c7d5a3b51] request start
+2026-08-23 01:08:07.611  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [870c92c2-afb0-9b8a-b221-284ea9e68dce] request start
+2026-08-23 01:08:07.739  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [f38ba7c1-26be-2aca-9a37-814e06c7f3d1] request start
+2026-08-23 01:08:07.862  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [194a6dbe-3a30-a369-6a1c-f65360e5d381] request start
+2026-08-23 01:08:07.987  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [b98b1ea2-c084-79a6-bd7d-9e8c53a5c3ef] request start
+2026-08-23 01:08:08.113  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [07c3358c-8619-d48b-91bf-5e7a25e217c4] request start
+2026-08-23 01:08:08.237  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [2d1954f5-b370-ef24-e41f-f1139007a633] request start
+2026-08-23 01:08:08.363  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [68a88715-00d1-d58b-e5c9-f17524b17246] request start
+2026-08-23 01:08:08.487  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [bbad6b33-911e-c6c4-0a07-a81b98d4a6e2] request start
+2026-08-23 01:08:08.610  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [7a6d603c-afbe-8403-a9b6-c03299a4db33] request start
+2026-08-23 01:08:08.736  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [47477065-a620-4eeb-ce44-8e302fb593ff] request start
+2026-08-23 01:08:08.862  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [e74669f9-2a21-cb10-cdd3-dae2eb0b7283] request start
+2026-08-23 01:08:08.988  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [d92bbfeb-fec1-3192-736d-b33b7645391d] request start
+2026-08-23 01:08:09.112  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [0eeb07af-1a84-1514-6464-3364265cf30d] request start
+2026-08-23 01:08:09.238  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [4afd3d32-e590-fd4c-4ed5-75337bcc6c1a] request start
+2026-08-23 01:08:09.362  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [3c139d10-3739-2b99-26f1-8cce74b6fd6e] request start
+2026-08-23 01:08:09.486  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [89118a33-a0f7-1d81-ada9-c5162cc80a9b] request start
+2026-08-23 01:08:09.610  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [f5cb34a8-cdd6-d6ad-de66-5dac69529aa8] request start
+2026-08-23 01:08:09.735  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [d3db7cc7-9cc7-f25e-5a4d-9a5a24c79010] request start
+2026-08-23 01:08:09.861  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [6a98c5f7-504a-1022-27da-a8e139e03e78] request start
+2026-08-23 01:08:09.988  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [fd6a2ddb-e5e5-cd64-cd2e-266b86100b8f] request start
+2026-08-23 01:08:10.111  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [ee4e66bf-50b7-94dd-ed10-f703da6245d2] request start
+2026-08-23 01:08:10.237  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [1cf19e8f-3949-e214-ebe6-2726e789ee90] request start
+2026-08-23 01:08:10.362  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [62a2a47e-8350-25ee-f722-b785d2d1d0d8] request start
+2026-08-23 01:08:10.485  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [97adbe70-3897-2ff2-66b6-ce51b8da143b] request start
+2026-08-23 01:08:10.612  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [377625c5-a741-e7ee-f9b2-3ef3870ecd8c] request start
+2026-08-23 01:08:10.735  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [fe068c5d-7940-5cab-42c5-c4f684561795] request start
+2026-08-23 01:08:10.861  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [ff87cbd0-d8da-9f7f-222f-3679c7fdee30] request start
+2026-08-23 01:08:10.987  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [3edfa587-7fea-ee78-20a5-04dec3d98f6c] request start
+2026-08-23 01:08:11.111  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [99dbdc71-337f-f1c8-d20d-76b368a25ed6] request start
+2026-08-23 01:08:11.235  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [15c03d68-d536-fdb0-1f7f-d237fd8c6132] request start
+2026-08-23 01:08:11.361  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [b8a19eae-137f-57bf-0d36-d5593d0fa356] request start
+2026-08-23 01:08:11.486  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [422a73f5-abbd-c599-db8b-9e3b900f5690] request start
+2026-08-23 01:08:11.610  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [894c4742-7eed-9bcd-419f-1607f519843f] request start
+2026-08-23 01:08:11.734  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [dfe7c29e-449e-645d-e2a8-eecab3edde4d] request start
+2026-08-23 01:08:11.860  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [4c97d39c-a821-3a5e-0507-467659f764f0] request start
+2026-08-23 01:08:11.986  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [d7fd4b68-0dc5-d6ae-9035-57da6dbbaa8b] request start
+2026-08-23 01:08:12.111  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [030ef160-6e69-f1c5-d7dd-980a0d39b64e] request start
+2026-08-23 01:08:12.236  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [637bfeec-44b0-cc8d-27c2-6e39d49d1d4d] request start
+2026-08-23 01:08:12.360  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [ac6facf8-80e3-4381-c734-44fc22c62f47] request start
+2026-08-23 01:08:12.486  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [07e3b9cf-cfd9-6063-c4b8-0a659b81987e] request start
+2026-08-23 01:08:12.611  WARN 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [100b1ebf-ba70-e9aa-b9f0-8ca1d0050c1d] rejected: admission ceiling reached
+2026-08-23 01:08:12.735  WARN 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [4f6ec8fb-cd52-926b-e157-4b6a1ef2e6d6] rejected: admission ceiling reached
+2026-08-23 01:08:12.860  WARN 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [d2a96e9c-08f4-ca73-e29d-b871e469d3ab] rejected: admission ceiling reached
+2026-08-23 01:08:12.985  WARN 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [5357fb45-4cfc-6f65-1a1d-745fc2e00d4a] rejected: admission ceiling reached
+2026-08-23 01:08:13.111  WARN 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [3c8c2c6a-fc33-60ed-2c33-7431a5af1a78] rejected: admission ceiling reached
+2026-08-23 01:08:13.237  WARN 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [c943c5e2-6a49-a2bb-1c74-c913a513915c] rejected: admission ceiling reached
+2026-08-23 01:08:13.361  WARN 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [16c2f65a-868c-2e66-e86f-795ebea491f7] rejected: admission ceiling reached
+2026-08-23 01:08:13.485  WARN 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [8f8f6515-3e8a-ddb3-d8d4-8032ccdb4123] rejected: admission ceiling reached
+2026-08-23 01:08:13.612  WARN 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [3e69a804-0b34-5a47-d9a6-32d432c65825] rejected: admission ceiling reached
+2026-08-23 01:08:13.736  WARN 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [e7c46d46-5b8f-125e-44ef-f1f314b3cedd] rejected: admission ceiling reached
+2026-08-23 01:08:13.861  WARN 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [6dd36c87-77da-1be7-b30b-9d25976ef04d] rejected: admission ceiling reached
+2026-08-23 01:08:13.986  WARN 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [85e00ac1-b38c-316f-736e-24d3a2688751] rejected: admission ceiling reached
+2026-08-23 01:08:14.111  WARN 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [3c6f9ada-0ae3-7b35-ab7e-abf409001bcd] rejected: admission ceiling reached
+2026-08-23 01:08:14.222  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [ffb640ef-7afc-6b24-ca20-26c110dd3ec3] terminal: outcome=completed
+2026-08-23 01:08:14.236  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [94b84422-f884-9ca9-9070-0a8647fdf9a1] request start
+2026-08-23 01:08:14.314  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [2c85e8bb-080c-6329-6700-2a0ec6e66728] terminal: outcome=completed
+2026-08-23 01:08:14.362  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [d490cf17-3e5a-ff31-d1fe-b1e368a1baa6] request start
+2026-08-23 01:08:14.445  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [7681ac55-e313-ef41-b0dd-020548afaf6d] terminal: outcome=completed
+2026-08-23 01:08:14.486  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [403a4909-678d-c7de-68e3-e2f98382ce99] request start
+2026-08-23 01:08:14.573  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [bc00b742-3f1d-998f-cb3d-2acfdd878b54] terminal: outcome=completed
+2026-08-23 01:08:14.611  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [9db563ff-c9c0-e9b4-f4fb-42737edad5c3] request start
+2026-08-23 01:08:14.698  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [77b2dc97-5c53-494b-1bd6-1b8ff429e4a8] terminal: outcome=completed
+2026-08-23 01:08:14.735  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [6805ab36-4e3f-7f6b-45e1-563fa16c0cfb] request start
+2026-08-23 01:08:14.821  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [0c7bd619-a735-3a6f-6e0e-f8dbf813b1bc] terminal: outcome=completed
+2026-08-23 01:08:14.860  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [1ee62588-66a0-7a06-e7f3-190ddcac3b0c] request start
+2026-08-23 01:08:14.952  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [a54bea57-b474-935c-4d3d-1307aa87fc1f] terminal: outcome=completed
+2026-08-23 01:08:14.985  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [1efee45b-d8af-bf03-dd1d-0913a73490aa] request start
+2026-08-23 01:08:15.087  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [14bca97f-1235-9839-91f4-5b0799dd3c1e] terminal: outcome=completed
+2026-08-23 01:08:15.110  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [92b0e931-a8ae-ce70-678f-f99f46aa1ef5] request start
+2026-08-23 01:08:15.223  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [0e21e7f0-7b55-9e95-fc3e-aeb32d508c1b] terminal: outcome=completed
+2026-08-23 01:08:15.235  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [1c41a339-8505-9bbc-8655-e8e291ec9030] request start
+2026-08-23 01:08:15.319  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [eec2c1fc-0648-1c9a-04ad-d81c7d5a3b51] terminal: outcome=completed
+2026-08-23 01:08:15.360  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [932775cb-bac7-81d2-e51d-3dfbab12c75c] request start
+2026-08-23 01:08:15.450  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [870c92c2-afb0-9b8a-b221-284ea9e68dce] terminal: outcome=completed
+2026-08-23 01:08:15.485  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [d724ed08-f387-d8cd-50ff-e6644e984c9e] request start
+2026-08-23 01:08:15.577  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [f38ba7c1-26be-2aca-9a37-814e06c7f3d1] terminal: outcome=completed
+2026-08-23 01:08:15.611  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [b76010f1-5c31-50b5-9d74-830d16ba38c6] request start
+2026-08-23 01:08:15.705  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [194a6dbe-3a30-a369-6a1c-f65360e5d381] terminal: outcome=completed
+2026-08-23 01:08:15.735  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [de1c3993-e3d1-3d4d-6557-a9f15ce4de61] request start
+2026-08-23 01:08:15.828  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [b98b1ea2-c084-79a6-bd7d-9e8c53a5c3ef] terminal: outcome=completed
+2026-08-23 01:08:15.861  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [7eb8801e-a7b1-b53b-9d20-17f438bd4319] request start
+2026-08-23 01:08:15.959  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [07c3358c-8619-d48b-91bf-5e7a25e217c4] terminal: outcome=completed
+2026-08-23 01:08:15.985  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [eacef8b1-61db-6410-ba18-409fee3ba3b6] request start
+2026-08-23 01:08:16.072  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [2d1954f5-b370-ef24-e41f-f1139007a633] terminal: outcome=completed
+2026-08-23 01:08:16.109  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [89c0ef8e-0253-86cd-f4f6-169db3c07def] request start
+2026-08-23 01:08:16.217  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [68a88715-00d1-d58b-e5c9-f17524b17246] terminal: outcome=completed
+2026-08-23 01:08:16.235  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [3d268486-fd01-cc84-19c6-e1c4117106e0] request start
+2026-08-23 01:08:16.325  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [bbad6b33-911e-c6c4-0a07-a81b98d4a6e2] terminal: outcome=completed
+2026-08-23 01:08:16.362  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [31634273-153a-fb79-f5c0-8d298488eceb] request start
+2026-08-23 01:08:16.448  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [7a6d603c-afbe-8403-a9b6-c03299a4db33] terminal: outcome=completed
+2026-08-23 01:08:16.486  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [bcdc4e0a-eb51-fdc4-abb1-09f69a95cfdb] request start
+2026-08-23 01:08:16.585  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [47477065-a620-4eeb-ce44-8e302fb593ff] terminal: outcome=completed
+2026-08-23 01:08:16.612  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [3ce8fd66-3466-b9d0-640d-8772c20933bc] request start
+2026-08-23 01:08:16.695  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [e74669f9-2a21-cb10-cdd3-dae2eb0b7283] terminal: outcome=completed
+2026-08-23 01:08:16.735  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [3ab8fbcb-3157-0381-eacc-881ad68a299d] request start
+2026-08-23 01:08:16.832  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [d92bbfeb-fec1-3192-736d-b33b7645391d] terminal: outcome=completed
+2026-08-23 01:08:16.862  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [f018dacc-c47a-a285-5c75-9611bfd49876] request start
+2026-08-23 01:08:16.938  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [0eeb07af-1a84-1514-6464-3364265cf30d] terminal: outcome=completed
+2026-08-23 01:08:16.986  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [ec829a0b-de98-e6e1-9b98-0ab1ba160cdb] request start
+2026-08-23 01:08:17.079  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [4afd3d32-e590-fd4c-4ed5-75337bcc6c1a] terminal: outcome=completed
+2026-08-23 01:08:17.110  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [107ec1aa-a082-37a8-09b2-5ed08432cc49] request start
+2026-08-23 01:08:17.200  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [3c139d10-3739-2b99-26f1-8cce74b6fd6e] terminal: outcome=completed
+2026-08-23 01:08:17.234  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [a5ea991f-a744-de11-1b6a-32aebe743825] request start
+2026-08-23 01:08:17.331  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [89118a33-a0f7-1d81-ada9-c5162cc80a9b] terminal: outcome=completed
+2026-08-23 01:08:17.360  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [0621d9e5-106b-63e2-b37e-b03a98e2fe9a] request start
+2026-08-23 01:08:17.455  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [f5cb34a8-cdd6-d6ad-de66-5dac69529aa8] terminal: outcome=completed
+2026-08-23 01:08:17.485  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [0c339fa7-a93a-4096-6453-dfb360ea34dc] request start
+2026-08-23 01:08:17.567  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [d3db7cc7-9cc7-f25e-5a4d-9a5a24c79010] terminal: outcome=completed
+2026-08-23 01:08:17.611  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [67363bd0-b11d-1c97-84de-58ee623cb6d1] request start
+2026-08-23 01:08:17.698  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [6a98c5f7-504a-1022-27da-a8e139e03e78] terminal: outcome=completed
+2026-08-23 01:08:17.737  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [ba384f1a-7186-6940-78ba-8fbf7c054c6b] request start
+2026-08-23 01:08:17.820  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [fd6a2ddb-e5e5-cd64-cd2e-266b86100b8f] terminal: outcome=completed
+2026-08-23 01:08:17.860  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [0c43eeaf-5d92-c20d-475f-8b8ce9e33450] request start
+2026-08-23 01:08:17.941  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [ee4e66bf-50b7-94dd-ed10-f703da6245d2] terminal: outcome=completed
+2026-08-23 01:08:17.985  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [d7e9fbf7-2db4-00da-7509-5da3e617cf53] request start
+2026-08-23 01:08:18.086  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [1cf19e8f-3949-e214-ebe6-2726e789ee90] terminal: outcome=completed
+2026-08-23 01:08:18.111  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [a65cf2c2-431f-a260-3c90-1ea457739aed] request start
+2026-08-23 01:08:18.189  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [62a2a47e-8350-25ee-f722-b785d2d1d0d8] terminal: outcome=completed
+2026-08-23 01:08:18.235  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [f3c70f0e-825f-d756-062b-04cdc90d98f7] request start
+2026-08-23 01:08:18.316  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [97adbe70-3897-2ff2-66b6-ce51b8da143b] terminal: outcome=completed
+2026-08-23 01:08:18.361  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [5e6c4e83-dcf8-2e98-684e-33aab79d0603] request start
+2026-08-23 01:08:18.461  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [377625c5-a741-e7ee-f9b2-3ef3870ecd8c] terminal: outcome=completed
+2026-08-23 01:08:18.485  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [c3cb7200-4dc0-8ff4-d67e-bd40583486ce] request start
+2026-08-23 01:08:18.572  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [fe068c5d-7940-5cab-42c5-c4f684561795] terminal: outcome=completed
+2026-08-23 01:08:18.611  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [57febd91-406a-9476-3531-52a4154d21b6] request start
+2026-08-23 01:08:18.702  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [ff87cbd0-d8da-9f7f-222f-3679c7fdee30] terminal: outcome=completed
+2026-08-23 01:08:18.736  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [41d76e58-59fc-22d1-7ab5-ce002547b70a] request start
+2026-08-23 01:08:18.825  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [3edfa587-7fea-ee78-20a5-04dec3d98f6c] terminal: outcome=completed
+2026-08-23 01:08:18.862  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [5d14c107-b90c-179f-e717-19207e267657] request start
+2026-08-23 01:08:18.943  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [99dbdc71-337f-f1c8-d20d-76b368a25ed6] terminal: outcome=completed
+2026-08-23 01:08:18.987  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [de009c26-af77-c5f4-aea4-2907b9805fd1] request start
+2026-08-23 01:08:19.070  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [15c03d68-d536-fdb0-1f7f-d237fd8c6132] terminal: outcome=completed
+2026-08-23 01:08:19.111  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [3d19ea80-e8a4-a313-24b9-192c0e12a3f9] request start
+2026-08-23 01:08:19.194  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [b8a19eae-137f-57bf-0d36-d5593d0fa356] terminal: outcome=completed
+2026-08-23 01:08:19.234  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [ffc08121-9020-a5c7-47ec-3de4e2e46ec1] request start
+2026-08-23 01:08:19.317  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [422a73f5-abbd-c599-db8b-9e3b900f5690] terminal: outcome=completed
+2026-08-23 01:08:19.359  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [671bbe94-7110-e773-508e-7820d33e0d51] request start
+2026-08-23 01:08:19.444  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [894c4742-7eed-9bcd-419f-1607f519843f] terminal: outcome=completed
+2026-08-23 01:08:19.486  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [056c1e96-12b9-8070-16d5-7161853b58ae] request start
+2026-08-23 01:08:19.579  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [dfe7c29e-449e-645d-e2a8-eecab3edde4d] terminal: outcome=completed
+2026-08-23 01:08:19.611  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [eddb765f-751a-be83-80a4-247f5c3ac0ca] request start
+2026-08-23 01:08:19.694  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [4c97d39c-a821-3a5e-0507-467659f764f0] terminal: outcome=completed
+2026-08-23 01:08:19.737  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [3a79dbe1-3e8a-2ffe-1081-426c42be52af] request start
+2026-08-23 01:08:19.829  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [d7fd4b68-0dc5-d6ae-9035-57da6dbbaa8b] terminal: outcome=completed
+2026-08-23 01:08:19.861  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [595e4d46-a2f0-b00c-f020-b0fc78121458] request start
+2026-08-23 01:08:19.950  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [030ef160-6e69-f1c5-d7dd-980a0d39b64e] terminal: outcome=completed
+2026-08-23 01:08:19.985  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [c8a5df97-f01a-9bd9-c3b6-8dc6aee368b3] request start
+2026-08-23 01:08:20.071  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [637bfeec-44b0-cc8d-27c2-6e39d49d1d4d] terminal: outcome=completed
+2026-08-23 01:08:20.110  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [6ab383a7-48fb-d8d5-eaf9-c2105412f776] request start
+2026-08-23 01:08:20.198  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [ac6facf8-80e3-4381-c734-44fc22c62f47] terminal: outcome=completed
+2026-08-23 01:08:20.235  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [dbdde776-9df9-f7fc-dbe6-fd12fc8b82f2] request start
+2026-08-23 01:08:20.325  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [07e3b9cf-cfd9-6063-c4b8-0a659b81987e] terminal: outcome=completed
+2026-08-23 01:08:20.360  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [548698db-8cf8-dfe2-053b-310685ec267b] request start
+2026-08-23 01:08:20.484  WARN 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [64d59e4e-c0e8-0f7f-7c7d-d9986e73e6b2] rejected: admission ceiling reached
+2026-08-23 01:08:20.611  WARN 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [67db070b-0390-af62-074a-d43d9814366d] rejected: admission ceiling reached
+2026-08-23 01:08:20.737  WARN 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [2ce37580-4777-b456-b384-d18e36d2dedc] rejected: admission ceiling reached
+2026-08-23 01:08:20.860  WARN 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [7672d631-b7a0-4c7c-8e53-4198b3e701e1] rejected: admission ceiling reached
+2026-08-23 01:08:20.987  WARN 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [b5747f5e-7c66-9920-35fc-6b30cd49daa6] rejected: admission ceiling reached
+2026-08-23 01:08:21.112  WARN 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [b4d8298d-a896-adac-77a3-8ebabec1d339] rejected: admission ceiling reached
+2026-08-23 01:08:21.236  WARN 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [2f0b62ad-f720-2fce-d4bc-9f80c0238497] rejected: admission ceiling reached
+2026-08-23 01:08:21.359  WARN 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [dfbb7718-5eaa-9897-5408-1a4c920bd156] rejected: admission ceiling reached
+2026-08-23 01:08:21.486  WARN 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [db45e2a3-9b74-1297-7493-8bede0c934b4] rejected: admission ceiling reached
+2026-08-23 01:08:21.610  WARN 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [3f91a0de-e7da-946b-d48f-fb57437f763f] rejected: admission ceiling reached
+2026-08-23 01:08:21.735  WARN 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [a1038b7b-b20d-5c05-64c4-ab9533258fb6] rejected: admission ceiling reached
+2026-08-23 01:08:21.860  WARN 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [d407f40d-2a42-61d0-df8e-ddf76e717d68] rejected: admission ceiling reached
+2026-08-23 01:08:21.986  WARN 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [0a55ef45-fb26-94cb-f66b-aed7b3f673bf] rejected: admission ceiling reached
+2026-08-23 01:08:22.075  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [94b84422-f884-9ca9-9070-0a8647fdf9a1] terminal: outcome=completed
+2026-08-23 01:08:22.111  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [d51cc43f-6d58-0257-244d-a4688a1762ab] request start
+2026-08-23 01:08:22.205  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [d490cf17-3e5a-ff31-d1fe-b1e368a1baa6] terminal: outcome=completed
+2026-08-23 01:08:22.236  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [ee41b1af-70b6-c69c-38be-60672f50582d] request start
+2026-08-23 01:08:22.320  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [403a4909-678d-c7de-68e3-e2f98382ce99] terminal: outcome=completed
+2026-08-23 01:08:22.361  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [107aa00d-cfd8-2b23-ebce-9504235da0cd] request start
+2026-08-23 01:08:22.447  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [9db563ff-c9c0-e9b4-f4fb-42737edad5c3] terminal: outcome=completed
+2026-08-23 01:08:22.484  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [30ddeb0c-5108-659a-1346-032a501ff9f5] request start
+2026-08-23 01:08:22.568  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [6805ab36-4e3f-7f6b-45e1-563fa16c0cfb] terminal: outcome=completed
+2026-08-23 01:08:22.609  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [c86b8d62-f862-fdc7-60e7-66c33b5198c5] request start
+2026-08-23 01:08:22.693  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [1ee62588-66a0-7a06-e7f3-190ddcac3b0c] terminal: outcome=completed
+2026-08-23 01:08:22.735  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [e8a1c5d0-ab7e-8874-d93a-c013795df940] request start
+2026-08-23 01:08:22.827  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [1efee45b-d8af-bf03-dd1d-0913a73490aa] terminal: outcome=completed
+2026-08-23 01:08:22.862  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [c2e45471-81cc-bf24-12d2-cd01c70fa2c1] request start
+2026-08-23 01:08:22.939  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [92b0e931-a8ae-ce70-678f-f99f46aa1ef5] terminal: outcome=completed
+2026-08-23 01:08:22.986  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [976bfe55-ad2d-ea3f-daeb-f7997478ae9b] request start
+2026-08-23 01:08:23.065  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [1c41a339-8505-9bbc-8655-e8e291ec9030] terminal: outcome=completed
+2026-08-23 01:08:23.111  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [0d977c59-5429-e889-3050-6502ed25a7c6] request start
+2026-08-23 01:08:23.198  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [932775cb-bac7-81d2-e51d-3dfbab12c75c] terminal: outcome=completed
+2026-08-23 01:08:23.236  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [3ff09150-5652-7cf6-a5df-54c15d4f3842] request start
+2026-08-23 01:08:23.326  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [d724ed08-f387-d8cd-50ff-e6644e984c9e] terminal: outcome=completed
+2026-08-23 01:08:23.360  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [2bb9392b-cd60-6a9c-4cda-3a3506f68024] request start
+2026-08-23 01:08:23.453  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [b76010f1-5c31-50b5-9d74-830d16ba38c6] terminal: outcome=completed
+2026-08-23 01:08:23.486  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [76ac82e9-3195-bc9d-6492-cf52f2607997] request start
+2026-08-23 01:08:23.568  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [de1c3993-e3d1-3d4d-6557-a9f15ce4de61] terminal: outcome=completed
+2026-08-23 01:08:23.610  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [84f1ba61-3a11-fa6e-e693-afec3a3daf95] request start
+2026-08-23 01:08:23.681  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [7eb8801e-a7b1-b53b-9d20-17f438bd4319] terminal: outcome=completed
+2026-08-23 01:08:23.735  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [1b073ae4-f3a9-edb9-452e-31aa78bd1125] request start
+2026-08-23 01:08:23.814  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [eacef8b1-61db-6410-ba18-409fee3ba3b6] terminal: outcome=completed
+2026-08-23 01:08:23.860  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [36f39f87-21df-3fc6-626c-daf4424f0b31] request start
+2026-08-23 01:08:23.945  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [89c0ef8e-0253-86cd-f4f6-169db3c07def] terminal: outcome=completed
+2026-08-23 01:08:23.985  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [34cf2ef6-6927-2556-d30d-b4260a20bc66] request start
+2026-08-23 01:08:24.067  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [3d268486-fd01-cc84-19c6-e1c4117106e0] terminal: outcome=completed
+2026-08-23 01:08:24.110  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [32b78477-d6ed-bf68-8359-f506ced68261] request start
+2026-08-23 01:08:24.204  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [31634273-153a-fb79-f5c0-8d298488eceb] terminal: outcome=completed
+2026-08-23 01:08:24.236  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [ae03466b-1098-50a2-9986-c5b129fe2cbe] request start
+2026-08-23 01:08:24.330  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [bcdc4e0a-eb51-fdc4-abb1-09f69a95cfdb] terminal: outcome=completed
+2026-08-23 01:08:24.361  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [5dbec0a4-dfb1-604e-303d-7a3d00cd0d1d] request start
+2026-08-23 01:08:24.460  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [3ce8fd66-3466-b9d0-640d-8772c20933bc] terminal: outcome=completed
+2026-08-23 01:08:24.487  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [5280ddaa-ad91-af9c-ce9d-70374ef33ace] request start
+2026-08-23 01:08:24.572  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [3ab8fbcb-3157-0381-eacc-881ad68a299d] terminal: outcome=completed
+2026-08-23 01:08:24.610  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [4841f7aa-34d7-826a-4b86-6ce2946d24ce] request start
+2026-08-23 01:08:24.686  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [f018dacc-c47a-a285-5c75-9611bfd49876] terminal: outcome=completed
+2026-08-23 01:08:24.734  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [6f0ccec7-c6fe-358d-f648-dd64c8e5adca] request start
+2026-08-23 01:08:24.817  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [ec829a0b-de98-e6e1-9b98-0ab1ba160cdb] terminal: outcome=completed
+2026-08-23 01:08:24.861  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [e142957a-9226-96e1-3762-50afe1784703] request start
+2026-08-23 01:08:24.951  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [107ec1aa-a082-37a8-09b2-5ed08432cc49] terminal: outcome=completed
+2026-08-23 01:08:24.987  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [361009b0-8b08-601b-e112-1359e5004f7f] request start
+2026-08-23 01:08:25.073  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [a5ea991f-a744-de11-1b6a-32aebe743825] terminal: outcome=completed
+2026-08-23 01:08:25.110  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [9058fcbe-25f8-23ad-8947-d074aa0f0a93] request start
+2026-08-23 01:08:25.192  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [0621d9e5-106b-63e2-b37e-b03a98e2fe9a] terminal: outcome=completed
+2026-08-23 01:08:25.236  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [fd2e128f-f4d2-d796-d5e1-15f2a80e2043] request start
+2026-08-23 01:08:25.317  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [0c339fa7-a93a-4096-6453-dfb360ea34dc] terminal: outcome=completed
+2026-08-23 01:08:25.360  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [5c310540-12f2-794a-c946-2832e81e17c4] request start
+2026-08-23 01:08:25.446  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [67363bd0-b11d-1c97-84de-58ee623cb6d1] terminal: outcome=completed
+2026-08-23 01:08:25.486  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [0c689482-87ea-7714-a105-4bac4320c9e7] request start
+2026-08-23 01:08:25.577  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [ba384f1a-7186-6940-78ba-8fbf7c054c6b] terminal: outcome=completed
+2026-08-23 01:08:25.612  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [7a6f5803-4413-bae0-b4a0-ee0e763e4bb0] request start
+2026-08-23 01:08:25.692  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [0c43eeaf-5d92-c20d-475f-8b8ce9e33450] terminal: outcome=completed
+2026-08-23 01:08:25.735  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [49203c87-2487-1368-a75f-21ab255732e6] request start
+2026-08-23 01:08:25.820  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [d7e9fbf7-2db4-00da-7509-5da3e617cf53] terminal: outcome=completed
+2026-08-23 01:08:25.860  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [a23423ab-2167-c2fa-21ff-27d084b05ae3] request start
+2026-08-23 01:08:25.957  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [a65cf2c2-431f-a260-3c90-1ea457739aed] terminal: outcome=completed
+2026-08-23 01:08:25.986  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [f0e69532-20dd-e445-9217-7b4c558bc5c2] request start
+2026-08-23 01:08:26.067  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [f3c70f0e-825f-d756-062b-04cdc90d98f7] terminal: outcome=completed
+2026-08-23 01:08:26.112  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [42fafe09-1598-3aa2-908e-542d78dbe31e] request start
+2026-08-23 01:08:26.193  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [5e6c4e83-dcf8-2e98-684e-33aab79d0603] terminal: outcome=completed
+2026-08-23 01:08:26.236  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [9035642a-79bb-f2d5-8f9b-7d54d41e4749] request start
+2026-08-23 01:08:26.319  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [c3cb7200-4dc0-8ff4-d67e-bd40583486ce] terminal: outcome=completed
+2026-08-23 01:08:26.362  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [74666d98-5163-04ea-7949-5562413f32ad] request start
+2026-08-23 01:08:26.446  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [57febd91-406a-9476-3531-52a4154d21b6] terminal: outcome=completed
+2026-08-23 01:08:26.486  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [d8f99d77-bdf1-5fc0-ef1a-cf38c024808b] request start
+2026-08-23 01:08:26.569  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [41d76e58-59fc-22d1-7ab5-ce002547b70a] terminal: outcome=completed
+2026-08-23 01:08:26.611  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [533bc8bb-ff93-5c74-6d0d-c5497e6bd0dc] request start
+2026-08-23 01:08:26.697  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [5d14c107-b90c-179f-e717-19207e267657] terminal: outcome=completed
+2026-08-23 01:08:26.734  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [3ddb8170-a717-4746-10b2-c7ab41bf99b6] request start
+2026-08-23 01:08:26.823  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [de009c26-af77-c5f4-aea4-2907b9805fd1] terminal: outcome=completed
+2026-08-23 01:08:26.860  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [b2ac4896-d108-d96f-c16b-8f2ec1de3006] request start
+2026-08-23 01:08:26.946  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [3d19ea80-e8a4-a313-24b9-192c0e12a3f9] terminal: outcome=completed
+2026-08-23 01:08:26.986  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [debdb677-ab97-f84c-c487-c95df3b4f4cf] request start
+2026-08-23 01:08:27.071  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [ffc08121-9020-a5c7-47ec-3de4e2e46ec1] terminal: outcome=completed
+2026-08-23 01:08:27.112  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [8385c3a0-d862-2532-3859-b3d19305a39e] request start
+2026-08-23 01:08:27.187  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [671bbe94-7110-e773-508e-7820d33e0d51] terminal: outcome=completed
+2026-08-23 01:08:27.237  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [7997d358-813c-6015-1ffa-aecc10f587cd] request start
+2026-08-23 01:08:27.318  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [056c1e96-12b9-8070-16d5-7161853b58ae] terminal: outcome=completed
+2026-08-23 01:08:27.361  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [57c056c6-6476-f69a-97f2-bcadaf83ac35] request start
+2026-08-23 01:08:27.448  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [eddb765f-751a-be83-80a4-247f5c3ac0ca] terminal: outcome=completed
+2026-08-23 01:08:27.486  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [c6926b7f-093d-a90d-16a0-30ff8096cf9d] request start
+2026-08-23 01:08:27.572  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [3a79dbe1-3e8a-2ffe-1081-426c42be52af] terminal: outcome=completed
+2026-08-23 01:08:27.611  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [1b024ffc-8f45-9df5-a2ca-f4a1527ef360] request start
+2026-08-23 01:08:27.702  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [595e4d46-a2f0-b00c-f020-b0fc78121458] terminal: outcome=completed
+2026-08-23 01:08:27.735  INFO 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [8ef4e8c0-8abf-3f6b-250c-4dd5e5a199d4] request start
+2026-08-23 01:08:27.823  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [c8a5df97-f01a-9bd9-c3b6-8dc6aee368b3] terminal: outcome=completed
+2026-08-23 01:08:27.860  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [a449a922-31fc-16e2-6e66-cd581244f496] request start
+2026-08-23 01:08:27.951  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [6ab383a7-48fb-d8d5-eaf9-c2105412f776] terminal: outcome=completed
+2026-08-23 01:08:27.984  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [25a488ae-cd54-9df6-3572-f1586a6570a2] request start
+2026-08-23 01:08:28.076  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [dbdde776-9df9-f7fc-dbe6-fd12fc8b82f2] terminal: outcome=completed
+2026-08-23 01:08:28.111  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [13608ac4-bc48-7bd2-afef-59ca58aec104] request start
+2026-08-23 01:08:28.191  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [548698db-8cf8-dfe2-053b-310685ec267b] terminal: outcome=completed
+2026-08-23 01:08:28.236  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [cfdd71b0-3463-48a6-61d9-015e308bc410] request start
+2026-08-23 01:08:28.361  WARN 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [6016511e-2fde-e4ff-f013-4f476390c8f3] rejected: admission ceiling reached
+2026-08-23 01:08:28.485  WARN 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [192ad7b7-1553-9518-18eb-2f6ee30ac315] rejected: admission ceiling reached
+2026-08-23 01:08:28.611  WARN 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [868b91e4-169c-ea42-1be9-045220b29f17] rejected: admission ceiling reached
+2026-08-23 01:08:28.735  WARN 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [120190d6-014c-1d0c-a790-b27adb2966e4] rejected: admission ceiling reached
+2026-08-23 01:08:28.861  WARN 18057 --- [tor-http-nio-10] c.l.gatewaymvc.chat.ChatController       : [973a0d60-fce5-a544-2efb-5454b9205781] rejected: admission ceiling reached
+2026-08-23 01:08:28.985  WARN 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [b1c2fb77-9a4b-ed67-0f7b-d41c4a60fe0e] rejected: admission ceiling reached
+2026-08-23 01:08:29.109  WARN 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [86264b75-c54f-d09d-3d41-529ba3760d76] rejected: admission ceiling reached
+2026-08-23 01:08:29.236  WARN 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [4407e2de-1b05-85f9-14b3-4cc7f0d208a9] rejected: admission ceiling reached
+2026-08-23 01:08:29.360  WARN 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [5fa3457a-e6f0-60fe-61c4-65b5546c4440] rejected: admission ceiling reached
+2026-08-23 01:08:29.485  WARN 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [22fcdf8f-509a-f53a-f5aa-c0d5e1c86b27] rejected: admission ceiling reached
+2026-08-23 01:08:29.611  WARN 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [35ba92ad-ac48-ec99-0632-0d681b6090fc] rejected: admission ceiling reached
+2026-08-23 01:08:29.735  WARN 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [92bd1697-b774-ab73-901a-b53250a8695e] rejected: admission ceiling reached
+2026-08-23 01:08:29.861  WARN 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [6657f1c9-0205-99a3-da43-b58897c9f82a] rejected: admission ceiling reached
+2026-08-23 01:08:29.946  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [d51cc43f-6d58-0257-244d-a4688a1762ab] terminal: outcome=completed
+2026-08-23 01:08:29.984  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [f768b43e-d37e-c044-7999-7b3b72d1671a] request start
+2026-08-23 01:08:30.054  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [ee41b1af-70b6-c69c-38be-60672f50582d] terminal: outcome=completed
+2026-08-23 01:08:30.110  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [802722fa-b5a8-9187-8a35-86ec7ce6c799] request start
+2026-08-23 01:08:30.199  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [107aa00d-cfd8-2b23-ebce-9504235da0cd] terminal: outcome=completed
+2026-08-23 01:08:30.235  INFO 18057 --- [ctor-http-nio-3] c.l.gatewaymvc.chat.ChatController       : [0dc4a744-1df3-3814-ac1b-c2ad616cfe8d] request start
+2026-08-23 01:08:30.314  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [30ddeb0c-5108-659a-1346-032a501ff9f5] terminal: outcome=completed
+2026-08-23 01:08:30.361  INFO 18057 --- [ctor-http-nio-4] c.l.gatewaymvc.chat.ChatController       : [2d528882-ad8f-f466-2c35-3c8ffa8744e8] request start
+2026-08-23 01:08:30.438  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [c86b8d62-f862-fdc7-60e7-66c33b5198c5] terminal: outcome=completed
+2026-08-23 01:08:30.486  INFO 18057 --- [ctor-http-nio-5] c.l.gatewaymvc.chat.ChatController       : [d4ca848b-14c5-f9d1-489f-e8adc2a81a3c] request start
+2026-08-23 01:08:30.567  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [e8a1c5d0-ab7e-8874-d93a-c013795df940] terminal: outcome=completed
+2026-08-23 01:08:30.610  INFO 18057 --- [ctor-http-nio-6] c.l.gatewaymvc.chat.ChatController       : [33d20027-7f0b-7e03-d93d-ac30d93a6ba1] request start
+2026-08-23 01:08:30.698  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [c2e45471-81cc-bf24-12d2-cd01c70fa2c1] terminal: outcome=completed
+2026-08-23 01:08:30.736  INFO 18057 --- [ctor-http-nio-7] c.l.gatewaymvc.chat.ChatController       : [74afa56a-0d0e-372c-00c3-9ac5cbd912bf] request start
+2026-08-23 01:08:30.814  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [976bfe55-ad2d-ea3f-daeb-f7997478ae9b] terminal: outcome=completed
+2026-08-23 01:08:30.859  INFO 18057 --- [ctor-http-nio-8] c.l.gatewaymvc.chat.ChatController       : [8fe431c1-e447-6bd7-5319-bcf2c0ed6c72] request start
+2026-08-23 01:08:30.938  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [0d977c59-5429-e889-3050-6502ed25a7c6] terminal: outcome=completed
+2026-08-23 01:08:30.986  INFO 18057 --- [ctor-http-nio-9] c.l.gatewaymvc.chat.ChatController       : [f684ccc7-e756-bead-1548-7b103f73e015] request start
+2026-08-23 01:08:31.057  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [3ff09150-5652-7cf6-a5df-54c15d4f3842] terminal: outcome=completed
+2026-08-23 01:08:31.109  INFO 18057 --- [ctor-http-nio-1] c.l.gatewaymvc.chat.ChatController       : [1fff786e-ef95-4e04-e73c-2c71f80fc845] request start
+2026-08-23 01:08:31.195  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [2bb9392b-cd60-6a9c-4cda-3a3506f68024] terminal: outcome=completed
+2026-08-23 01:08:31.235  INFO 18057 --- [ctor-http-nio-2] c.l.gatewaymvc.chat.ChatController       : [5883130e-94d5-9308-fd4a-c330366bc488] request start
+2026-08-23 01:08:31.317  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [76ac82e9-3195-bc9d-6492-cf52f2607997] terminal: outcome=completed
+2026-08-23 01:08:31.444  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [84f1ba61-3a11-fa6e-e693-afec3a3daf95] terminal: outcome=completed
+2026-08-23 01:08:31.570  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [1b073ae4-f3a9-edb9-452e-31aa78bd1125] terminal: outcome=completed
+2026-08-23 01:08:31.695  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [36f39f87-21df-3fc6-626c-daf4424f0b31] terminal: outcome=completed
+2026-08-23 01:08:31.819  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [34cf2ef6-6927-2556-d30d-b4260a20bc66] terminal: outcome=completed
+2026-08-23 01:08:31.943  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [32b78477-d6ed-bf68-8359-f506ced68261] terminal: outcome=completed
+2026-08-23 01:08:32.062  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [ae03466b-1098-50a2-9986-c5b129fe2cbe] terminal: outcome=completed
+2026-08-23 01:08:32.190  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [5dbec0a4-dfb1-604e-303d-7a3d00cd0d1d] terminal: outcome=completed
+2026-08-23 01:08:32.318  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [5280ddaa-ad91-af9c-ce9d-70374ef33ace] terminal: outcome=completed
+2026-08-23 01:08:32.449  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [4841f7aa-34d7-826a-4b86-6ce2946d24ce] terminal: outcome=completed
+2026-08-23 01:08:32.574  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [6f0ccec7-c6fe-358d-f648-dd64c8e5adca] terminal: outcome=completed
+2026-08-23 01:08:32.701  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [e142957a-9226-96e1-3762-50afe1784703] terminal: outcome=completed
+2026-08-23 01:08:32.824  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [361009b0-8b08-601b-e112-1359e5004f7f] terminal: outcome=completed
+2026-08-23 01:08:32.949  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [9058fcbe-25f8-23ad-8947-d074aa0f0a93] terminal: outcome=completed
+2026-08-23 01:08:33.067  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [fd2e128f-f4d2-d796-d5e1-15f2a80e2043] terminal: outcome=completed
+2026-08-23 01:08:33.196  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [5c310540-12f2-794a-c946-2832e81e17c4] terminal: outcome=completed
+2026-08-23 01:08:33.311  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [0c689482-87ea-7714-a105-4bac4320c9e7] terminal: outcome=completed
+2026-08-23 01:08:33.456  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [7a6f5803-4413-bae0-b4a0-ee0e763e4bb0] terminal: outcome=completed
+2026-08-23 01:08:33.567  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [49203c87-2487-1368-a75f-21ab255732e6] terminal: outcome=completed
+2026-08-23 01:08:33.690  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [a23423ab-2167-c2fa-21ff-27d084b05ae3] terminal: outcome=completed
+2026-08-23 01:08:33.823  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [f0e69532-20dd-e445-9217-7b4c558bc5c2] terminal: outcome=completed
+2026-08-23 01:08:33.955  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [42fafe09-1598-3aa2-908e-542d78dbe31e] terminal: outcome=completed
+2026-08-23 01:08:34.069  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [9035642a-79bb-f2d5-8f9b-7d54d41e4749] terminal: outcome=completed
+2026-08-23 01:08:34.203  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [74666d98-5163-04ea-7949-5562413f32ad] terminal: outcome=completed
+2026-08-23 01:08:34.314  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [d8f99d77-bdf1-5fc0-ef1a-cf38c024808b] terminal: outcome=completed
+2026-08-23 01:08:34.449  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [533bc8bb-ff93-5c74-6d0d-c5497e6bd0dc] terminal: outcome=completed
+2026-08-23 01:08:34.572  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [3ddb8170-a717-4746-10b2-c7ab41bf99b6] terminal: outcome=completed
+2026-08-23 01:08:34.695  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [b2ac4896-d108-d96f-c16b-8f2ec1de3006] terminal: outcome=completed
+2026-08-23 01:08:34.830  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [debdb677-ab97-f84c-c487-c95df3b4f4cf] terminal: outcome=completed
+2026-08-23 01:08:34.952  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [8385c3a0-d862-2532-3859-b3d19305a39e] terminal: outcome=completed
+2026-08-23 01:08:35.072  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [7997d358-813c-6015-1ffa-aecc10f587cd] terminal: outcome=completed
+2026-08-23 01:08:35.207  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [57c056c6-6476-f69a-97f2-bcadaf83ac35] terminal: outcome=completed
+2026-08-23 01:08:35.316  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [c6926b7f-093d-a90d-16a0-30ff8096cf9d] terminal: outcome=completed
+2026-08-23 01:08:35.455  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [1b024ffc-8f45-9df5-a2ca-f4a1527ef360] terminal: outcome=completed
+2026-08-23 01:08:35.575  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [8ef4e8c0-8abf-3f6b-250c-4dd5e5a199d4] terminal: outcome=completed
+2026-08-23 01:08:35.702  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [a449a922-31fc-16e2-6e66-cd581244f496] terminal: outcome=completed
+2026-08-23 01:08:35.819  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [25a488ae-cd54-9df6-3572-f1586a6570a2] terminal: outcome=completed
+2026-08-23 01:08:35.958  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [13608ac4-bc48-7bd2-afef-59ca58aec104] terminal: outcome=completed
+2026-08-23 01:08:36.078  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [cfdd71b0-3463-48a6-61d9-015e308bc410] terminal: outcome=completed
+2026-08-23 01:08:37.821  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [f768b43e-d37e-c044-7999-7b3b72d1671a] terminal: outcome=completed
+2026-08-23 01:08:37.944  INFO 18057 --- [ient-loop-nio-3] c.l.gatewaymvc.chat.RequestLifecycle     : [802722fa-b5a8-9187-8a35-86ec7ce6c799] terminal: outcome=completed
+2026-08-23 01:08:38.068  INFO 18057 --- [ient-loop-nio-4] c.l.gatewaymvc.chat.RequestLifecycle     : [0dc4a744-1df3-3814-ac1b-c2ad616cfe8d] terminal: outcome=completed
+2026-08-23 01:08:38.208  INFO 18057 --- [ient-loop-nio-5] c.l.gatewaymvc.chat.RequestLifecycle     : [2d528882-ad8f-f466-2c35-3c8ffa8744e8] terminal: outcome=completed
+2026-08-23 01:08:38.337  INFO 18057 --- [ient-loop-nio-6] c.l.gatewaymvc.chat.RequestLifecycle     : [d4ca848b-14c5-f9d1-489f-e8adc2a81a3c] terminal: outcome=completed
+2026-08-23 01:08:38.453  INFO 18057 --- [ient-loop-nio-7] c.l.gatewaymvc.chat.RequestLifecycle     : [33d20027-7f0b-7e03-d93d-ac30d93a6ba1] terminal: outcome=completed
+2026-08-23 01:08:38.583  INFO 18057 --- [ient-loop-nio-8] c.l.gatewaymvc.chat.RequestLifecycle     : [74afa56a-0d0e-372c-00c3-9ac5cbd912bf] terminal: outcome=completed
+2026-08-23 01:08:38.695  INFO 18057 --- [ient-loop-nio-9] c.l.gatewaymvc.chat.RequestLifecycle     : [8fe431c1-e447-6bd7-5319-bcf2c0ed6c72] terminal: outcome=completed
+2026-08-23 01:08:38.825  INFO 18057 --- [ent-loop-nio-10] c.l.gatewaymvc.chat.RequestLifecycle     : [f684ccc7-e756-bead-1548-7b103f73e015] terminal: outcome=completed
+2026-08-23 01:08:38.950  INFO 18057 --- [ient-loop-nio-1] c.l.gatewaymvc.chat.RequestLifecycle     : [1fff786e-ef95-4e04-e73c-2c71f80fc845] terminal: outcome=completed
+2026-08-23 01:08:39.074  INFO 18057 --- [ient-loop-nio-2] c.l.gatewaymvc.chat.RequestLifecycle     : [5883130e-94d5-9308-fd4a-c330366bc488] terminal: outcome=completed

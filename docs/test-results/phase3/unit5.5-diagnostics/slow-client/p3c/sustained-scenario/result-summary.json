@@ -1,0 +1,33 @@
+{
+  "target": "P3-C (gateway-webflux)",
+  "port": 8083,
+  "scenario": "sustained",
+  "workload": {
+    "chunkCount": 20,
+    "chunkSizeBytes": 65536,
+    "chunkIntervalMs": 0,
+    "slowClientSleepPerEventSeconds": 0.15
+  },
+  "purpose": "D2 — smaller-scale replication of the overflow-scenario finding, to confirm the admission-release-vs-physical-completion gap is a reproducible pattern rather than a one-off at 60 chunks.",
+  "client_observed": {
+    "http_req_duration_s": 3.18,
+    "sse_events_received": 21,
+    "data_received_bytes": 1300000,
+    "connection_result": "completed normally, all chunks delivered"
+  },
+  "gateway_log_timeline": {
+    "request_start": "2026-08-22 15:59:13.318",
+    "terminal_outcome_completed": "2026-08-22 15:59:13.343",
+    "terminal_after_request_start_ms": 25,
+    "client_observed_completion_s": 3.18
+  },
+  "postflight_metrics": {
+    "gateway_active_streams": 0.0,
+    "gateway_admission_active": 0.0,
+    "gateway_upstream_active": 0.0,
+    "reactor_netty_connection_provider_pending_connections": 0.0
+  },
+  "finding": "Same pattern as the overflow-scenario at smaller scale: terminal outcome=completed fired 25ms after request start, while the client took 3.18s to actually finish receiving the data — confirming the admission-release-vs-physical-delivery gap is reproducible, not a fluke of the larger 60-chunk run.",
+  "interpretation_constraints": "Not a bug. Not a performance claim. See p3c/overflow-scenario/result-summary.json for the full interpretation constraints — identical here.",
+  "notes": "Diagnostic only."
+}

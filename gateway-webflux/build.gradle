@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.18'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.llmconcurrencylab'
+version = '0.1.0'
+
+// Runtime frozen in Unit 0 (docs/decisions/phase3-version-compatibility.md).
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // No spring-boot-starter-web / Tomcat here on purpose — Unit 4 §1: P3-C must not depend on the
+    // Servlet API at all. This starter alone gives both the Reactor Netty server AND WebClient.
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.projectreactor:reactor-test'
+    // Unit 5.5 diagnostic only (D1) -- test-scope, never bundled into the runtime bootJar.
+    testImplementation 'io.projectreactor.tools:blockhound:1.0.17.RELEASE'
+}
+
+tasks.named('test') {
+    // Unit 5.5 D1 diagnostic requires a live Mock LLM and BlockHound instrumentation overhead --
+    // excluded from the default (offline, self-contained) unit test suite; run explicitly via
+    // `./gradlew blockhoundDiagnostic`.
+    useJUnitPlatform {
+        excludeTags 'blockhound-diagnostic'
+    }
+}
+
+tasks.register('blockhoundDiagnostic', Test) {
+    useJUnitPlatform {
+        includeTags 'blockhound-diagnostic'
+    }
+    testLogging {
+        events "passed", "failed", "skipped"
+        showStandardStreams = true
+        exceptionFormat = "full"
+    }
+}

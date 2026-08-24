@@ -1,0 +1,82 @@
+3,4d2
+< import java.net.HttpURLConnection;
+< import java.util.concurrent.Future;
+14a13
+> import reactor.core.Disposable;
+17,29c16,23
+<  * Owns one request's lifecycle state and permit (docs/decisions/phase3-timeout-cancellation.md
+<  * §9, Unit 2 §6). {@link #tryTerminate(String)} is the single terminal-transition entry point —
+<  * exactly one caller wins the CAS, and only the winner performs cleanup (permit release, upstream
+<  * cancel, pending-write discard, AsyncContext completion, terminal outcome metric) exactly once.
+<  * This is the Micrometer-registry successor to Phase 1/2's AsyncRequestState.releaseOnce()
+<  * pattern (docs/decisions/request-outcome-accounting.md), generalized to own the extra P3-A
+<  * resources (blocking outbound Future, HttpURLConnection, deadline watchdog task, write channel)
+<  * that Phase 1/2's simpler version didn't need to track itself.
+<  *
+<  * All resource setters (setConnection/setOutboundFuture/setDeadlineTask/setWriteChannel) close the
+<  * race against a concurrent tryTerminate() that already ran before the resource existed: if this
+<  * request is already terminal by the time a setter is called, the setter immediately cleans up
+<  * that resource itself instead of leaving it to leak (see each setter's javadoc).
+---
+>  * Ported from gateway-mvc-blocking-spring5 (P3-A)'s RequestLifecycle — Unit 3 §7's one prescribed
+>  * structural change: P3-A's {@code HttpURLConnection connection} + {@code Future<?> outboundFuture}
+>  * fields (there is no separate "outbound task" here — the WebClient subscription itself IS both
+>  * the connection handle and the cancellable unit of work) are replaced by a single
+>  * {@code Disposable upstreamSubscription} field. Everything else — the terminal CAS, exactly-once
+>  * cleanup order, the race-closing setters, first-chunk recording, phase tracking — is unchanged
+>  * (docs/decisions/phase3-timeout-cancellation.md §9, Unit 2 §6). See the module README's
+>  * P3-A/P3-B structural comparison table for the full diff.
+48,49c42
+<     private volatile HttpURLConnection connection;
+<     private volatile Future<?> outboundFuture;
+---
+>     private volatile Disposable upstreamSubscription;
+99,101c92,94
+<     /** If already terminal, disconnects immediately instead of leaving the connection open. */
+<     public void setConnection(HttpURLConnection connection) {
+<         this.connection = connection;
+---
+>     /** If already terminal, disposes immediately instead of leaving the subscription running. */
+>     public void setUpstreamSubscription(Disposable subscription) {
+>         this.upstreamSubscription = subscription;
+103c96
+<             safeDisconnect(connection);
+---
+>             safeDispose(subscription);
+107,114d99
+<     /** If already terminal, cancels/interrupts immediately instead of leaving the task to run to completion. */
+<     public void setOutboundFuture(Future<?> future) {
+<         this.outboundFuture = future;
+<         if (isTerminal()) {
+<             future.cancel(true);
+<         }
+<     }
+< 
+157,159c142,144
+<         HttpURLConnection c = connection;
+<         if (c != null) {
+<             safeDisconnect(c);
+---
+>         Disposable sub = upstreamSubscription;
+>         if (sub != null) {
+>             safeDispose(sub);
+162,166d146
+<         Future<?> f = outboundFuture;
+<         if (f != null) {
+<             f.cancel(true);
+<         }
+< 
+192c172
+<     private static void safeDisconnect(HttpURLConnection connection) {
+---
+>     private static void safeDispose(Disposable disposable) {
+194c174,176
+<             connection.disconnect();
+---
+>             if (!disposable.isDisposed()) {
+>                 disposable.dispose();
+>             }
+196c178
+<             log.debug("disconnect() threw while cleaning up (ignored): {}", e.toString());
+---
+>             log.debug("dispose() threw while cleaning up (ignored): {}", e.toString());

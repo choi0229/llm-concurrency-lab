@@ -1,0 +1,28 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-08-22 15:39:57.174  INFO 6622 --- [           main] c.l.gatewaymvc.GatewayApplication        : Starting GatewayApplication using Java 1.8.0_504 on userui-MacBookAir.local with PID 6622 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-webclient/build/libs/gateway-mvc-webclient-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-mvc-webclient)
+2026-08-22 15:39:57.176  INFO 6622 --- [           main] c.l.gatewaymvc.GatewayApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-22 15:39:57.940  INFO 6622 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2026-08-22 15:39:58.100  INFO 6622 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-22 15:39:58.100  INFO 6622 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-08-22 15:39:58.160  INFO 6622 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-22 15:39:58.160  INFO 6622 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 953 ms
+2026-08-22 15:39:58.471 ERROR 6622 --- [           main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2026-08-22 15:39:58.752  INFO 6622 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-08-22 15:39:58.776  INFO 6622 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2026-08-22 15:39:58.786  INFO 6622 --- [           main] c.l.gatewaymvc.GatewayApplication        : Started GatewayApplication in 1.889 seconds (JVM running for 2.184)
+2026-08-22 15:39:59.218  INFO 6622 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-22 15:39:59.218  INFO 6622 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-22 15:39:59.219  INFO 6622 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-22 15:39:59.302  INFO 6622 --- [nio-8082-exec-3] c.l.gatewaymvc.chat.ChatController       : [42e55b46-9ab9-4886-9928-e46ddc89c4be] request start
+2026-08-22 15:39:59.821  INFO 6622 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [7a82876d-ebe4-4d28-8d3b-964d72ec76ae] request start
+2026-08-22 15:39:59.821  WARN 6622 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.ChatController       : [7a82876d-ebe4-4d28-8d3b-964d72ec76ae] rejected: admission ceiling reached
+2026-08-22 15:39:59.822  INFO 6622 --- [nio-8082-exec-4] c.l.gatewaymvc.chat.RequestLifecycle     : [7a82876d-ebe4-4d28-8d3b-964d72ec76ae] terminal: outcome=rejected
+2026-08-22 15:40:03.605  INFO 6622 --- [servlet-write-8] c.l.gatewaymvc.chat.RequestLifecycle     : [42e55b46-9ab9-4886-9928-e46ddc89c4be] terminal: outcome=completed

@@ -1,0 +1,9 @@
+{
+  "scenario": "Normal SSE single request via real Spring context (@SpringBootTest RANDOM_PORT) with BlockHound installed",
+  "first_run_result": "VIOLATION_DETECTED",
+  "first_run_violation": "reactor.blockhound.BlockingOperationError: Blocking call! java.io.FileInputStream#readBytes, root cause UUID.randomUUID() -> SecureRandom.nextBytes() -> NativePRNG -> /dev/urandom read, on ChatController.java line 112 (inside the reactive flatMap), thread ctor-http-nio-2",
+  "fix_applied": "Replaced UUID.randomUUID() with a ThreadLocalRandom-based UUID construction (fastRandomRequestId()) -- requestId is a log-correlation identifier only, no security/uniqueness guarantee needed beyond distinguishing concurrent requests",
+  "after_fix_result": "NO_VIOLATION_OBSERVED",
+  "outcome": "completed",
+  "unit_tests_after_fix": "25/25 pass"
+}

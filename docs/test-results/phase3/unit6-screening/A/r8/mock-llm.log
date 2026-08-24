@@ -1,0 +1,510 @@
+INFO:     Started server process [6822]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50425 - "GET /healthz HTTP/1.1" 200 OK
+2026-08-23 01:01:52,079 INFO [55581886-7132-4c90-ac8b-005b63c9cbed] stream requested: chunkCount=3 firstChunkDelayMs=50
+INFO:     127.0.0.1:50434 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:52,235 INFO [55581886-7132-4c90-ac8b-005b63c9cbed] completed
+2026-08-23 01:01:52,251 INFO [9e291bd6-7c85-49f6-bbb3-7243c97a2696] stream requested: chunkCount=3 firstChunkDelayMs=50
+INFO:     127.0.0.1:50436 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:52,405 INFO [9e291bd6-7c85-49f6-bbb3-7243c97a2696] completed
+2026-08-23 01:01:52,422 INFO [afa79925-860a-4751-83cb-5d8485d2cc44] stream requested: chunkCount=3 firstChunkDelayMs=50
+INFO:     127.0.0.1:50438 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:52,576 INFO [afa79925-860a-4751-83cb-5d8485d2cc44] completed
+2026-08-23 01:01:52,594 INFO [c45ab2ea-ad6d-49cd-93db-3ebc3506545c] stream requested: chunkCount=3 firstChunkDelayMs=50
+INFO:     127.0.0.1:50440 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:52,749 INFO [c45ab2ea-ad6d-49cd-93db-3ebc3506545c] completed
+2026-08-23 01:01:52,769 INFO [7012eeed-9372-4783-85f0-134847973be7] stream requested: chunkCount=3 firstChunkDelayMs=50
+INFO:     127.0.0.1:50442 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:52,924 INFO [7012eeed-9372-4783-85f0-134847973be7] completed
+2026-08-23 01:01:53,982 INFO [cccbe9fd-9bd4-4916-a8ea-c14dc2c55a56] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50445 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:54,108 INFO [822439a8-e807-4b2d-b30d-6e93faaf7605] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50447 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:54,233 INFO [556532a3-d965-4a90-8638-ba2865d09974] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50449 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:54,361 INFO [7a0240a6-ad49-4c21-a3e1-7d8aeae2dacb] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50451 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:54,486 INFO [bbbc62ff-7f50-46f7-915f-5d7a6ff10761] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50453 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:54,610 INFO [6c8b24e7-7ad3-4fd8-8e4d-b4d1a44b5190] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50455 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:54,736 INFO [ea240b3b-9a54-4bf8-8ea0-09143e666ad9] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50457 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:54,862 INFO [d6eb9d3d-d1ae-4d83-a033-ffe42f3c2cca] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50459 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:54,986 INFO [410c9934-e4d9-45bb-809c-af0689b0ca27] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50461 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:55,108 INFO [4bf414c4-0c06-4227-91b6-56e36be30929] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50464 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:55,233 INFO [788bde3c-34ca-4e09-acf6-25ef1e0518fa] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50466 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:55,361 INFO [a21ae1b7-18bf-4509-b062-aec7b692de8e] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50468 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:55,487 INFO [4a7e6543-f15c-413c-bb22-1613d64d0e01] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50470 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:55,607 INFO [3c9e1903-da8d-4fcc-850a-b08865e33237] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50472 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:55,735 INFO [502dca6a-0480-4c0f-bfb9-e2adea87316d] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50474 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:55,861 INFO [fb3fc181-d74e-49ea-9fe1-6657fe9f4484] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50476 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:56,000 INFO [0154618e-0936-4cb4-b37b-c2403544b206] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50478 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:56,109 INFO [f7c480c3-3a5e-4752-a6e4-74cd90792f31] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50480 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:56,232 INFO [cc4dc66b-d17f-45f9-9fac-8b49b9218663] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50483 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:56,358 INFO [defc77d9-080b-4934-b54c-1e8bace124dc] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50485 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:56,484 INFO [dbfab7ad-1c2f-4811-8499-80434e94ccac] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50487 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:56,610 INFO [573c027b-c865-4d4d-af97-c5402886b70d] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50489 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:56,736 INFO [7e562d53-1830-4242-93cf-20beec18b6f2] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50491 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:56,861 INFO [fc8eee6c-be74-4c62-b494-599c647b09b3] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50493 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:56,985 INFO [951042f8-9c8c-47aa-b48b-6710a23068a0] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50495 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:57,108 INFO [f4339e94-5b83-457d-8006-34ec46786448] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50497 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:57,232 INFO [091f723b-da7a-457c-9eac-f39e1fc4746a] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50500 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:57,357 INFO [a66c6cce-e70c-46c8-8bcb-d5ff1a826d17] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50502 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:57,484 INFO [717d3463-ff2e-4517-ae29-e5678cfe0496] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50504 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:57,610 INFO [9b934013-82dd-4727-bda2-677b72e3d0c1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50506 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:57,735 INFO [eb0a53a9-57a0-4779-a5f1-83e00133623f] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50508 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:57,859 INFO [3668ce63-15ed-4e17-bbaf-02d9ba19cc7f] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50510 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:57,983 INFO [2901d0b3-9c28-4aa7-b788-336201d8c0c1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50512 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:58,108 INFO [a255b693-704f-443e-be58-e72880363337] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50514 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:58,232 INFO [a5e20a98-fc48-4bf6-b576-52dec268731a] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50516 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:58,356 INFO [b19ab68d-79ff-44a6-a62b-8a8924c96221] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50519 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:58,483 INFO [239f8b82-4acb-4d73-b60f-574e372df0f8] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50521 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:58,616 INFO [82d5ab8e-c285-4e5b-9e06-e33863f2651e] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50523 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:58,734 INFO [483d8171-604c-4a74-a000-001cb1af1c2a] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50526 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:58,860 INFO [91d202b5-d789-44ac-96b3-c1d9801e88d1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50528 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:58,985 INFO [570dd975-1224-4ff9-927d-c5604567a522] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50530 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:59,108 INFO [f6709112-37c0-48ff-a01a-151e861594be] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50532 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:59,235 INFO [5fee16c7-0ee4-451c-b3fe-3f845f6b0276] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50534 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:59,357 INFO [562af360-9486-4af0-86eb-36f5d30de815] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50537 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:59,482 INFO [6b2cb54a-5633-4662-a0f3-df8a0c98690c] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50539 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:59,607 INFO [deb6e97b-083f-4871-b4b6-529794325985] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50541 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:59,732 INFO [4b69b068-9dd8-4980-a590-8b80a917a11f] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50543 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:59,861 INFO [abf3fb5b-0185-4a49-a6bd-23845cc90b96] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50545 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:01:59,984 INFO [c792fa3f-cc6a-4c6f-af33-3bce915794a4] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50547 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:00,108 INFO [547b150c-59d9-43de-bb18-393cea50dcbe] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50549 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:01,832 INFO [cccbe9fd-9bd4-4916-a8ea-c14dc2c55a56] completed
+2026-08-23 01:02:01,859 INFO [8d18f5d8-5528-492c-aa18-9a6c0b18bb48] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50567 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:01,935 INFO [822439a8-e807-4b2d-b30d-6e93faaf7605] completed
+2026-08-23 01:02:01,984 INFO [137b09f2-1025-478e-af12-4786e8a56d5a] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50569 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:02,064 INFO [556532a3-d965-4a90-8638-ba2865d09974] completed
+2026-08-23 01:02:02,107 INFO [fe73fe02-6264-48d7-97af-9295c96acc1f] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50571 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:02,192 INFO [7a0240a6-ad49-4c21-a3e1-7d8aeae2dacb] completed
+2026-08-23 01:02:02,234 INFO [0b882692-6a38-42df-ad9e-d708c96944a6] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50573 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:02,308 INFO [bbbc62ff-7f50-46f7-915f-5d7a6ff10761] completed
+2026-08-23 01:02:02,359 INFO [48fd1838-2afe-41d1-8239-6bd4f248e7f1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50575 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:02,454 INFO [6c8b24e7-7ad3-4fd8-8e4d-b4d1a44b5190] completed
+2026-08-23 01:02:02,484 INFO [9860d9e4-b2d5-493c-9206-80179be6ee74] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50577 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:02,569 INFO [ea240b3b-9a54-4bf8-8ea0-09143e666ad9] completed
+2026-08-23 01:02:02,607 INFO [07a6340d-eb25-4bfb-88ab-a503693a0c81] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50580 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:02,686 INFO [d6eb9d3d-d1ae-4d83-a033-ffe42f3c2cca] completed
+2026-08-23 01:02:02,732 INFO [b375d246-f474-4c6e-bccb-26df63a01471] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50582 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:02,838 INFO [410c9934-e4d9-45bb-809c-af0689b0ca27] completed
+2026-08-23 01:02:02,858 INFO [402bce8a-3f84-42bc-a2aa-689ca6760d0b] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50584 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:02,939 INFO [4bf414c4-0c06-4227-91b6-56e36be30929] completed
+2026-08-23 01:02:02,983 INFO [d85a2b6f-d3d1-4806-981e-1fd4d8a92b63] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50586 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:03,067 INFO [788bde3c-34ca-4e09-acf6-25ef1e0518fa] completed
+2026-08-23 01:02:03,109 INFO [3cad565f-7b68-4791-8739-35334bf597d0] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50588 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:03,196 INFO [a21ae1b7-18bf-4509-b062-aec7b692de8e] completed
+2026-08-23 01:02:03,232 INFO [9e1771a0-92d4-4727-808d-b400f67af2a0] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50590 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:03,312 INFO [4a7e6543-f15c-413c-bb22-1613d64d0e01] completed
+2026-08-23 01:02:03,359 INFO [3251c82d-d391-443f-934a-a28795e9f511] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50592 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:03,442 INFO [3c9e1903-da8d-4fcc-850a-b08865e33237] completed
+2026-08-23 01:02:03,483 INFO [d806bea5-1677-4df9-ba53-fe020250fc76] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50594 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:03,575 INFO [502dca6a-0480-4c0f-bfb9-e2adea87316d] completed
+2026-08-23 01:02:03,608 INFO [2ddf0646-e1c1-4f68-8099-49eed6a8bad8] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50596 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:03,691 INFO [fb3fc181-d74e-49ea-9fe1-6657fe9f4484] completed
+2026-08-23 01:02:03,731 INFO [71ee15ed-c601-407c-81d3-d7d62b3253d1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50599 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:03,844 INFO [0154618e-0936-4cb4-b37b-c2403544b206] completed
+2026-08-23 01:02:03,857 INFO [0135508f-ef29-44d4-8af9-f948aca5dacc] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50601 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:03,940 INFO [f7c480c3-3a5e-4752-a6e4-74cd90792f31] completed
+2026-08-23 01:02:03,983 INFO [c8997001-eebf-4ec2-b7d1-d1a9cb2e342a] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50603 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:04,068 INFO [cc4dc66b-d17f-45f9-9fac-8b49b9218663] completed
+2026-08-23 01:02:04,108 INFO [9c077c72-f256-4a3b-9bd3-79e1f2df0463] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50605 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:04,190 INFO [defc77d9-080b-4934-b54c-1e8bace124dc] completed
+2026-08-23 01:02:04,234 INFO [d22cc4fb-6320-4ec3-9418-4edb8f1a3d51] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50607 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:04,314 INFO [dbfab7ad-1c2f-4811-8499-80434e94ccac] completed
+2026-08-23 01:02:04,358 INFO [799fe393-7e8a-4303-9d9f-4df28442d832] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50609 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:04,447 INFO [573c027b-c865-4d4d-af97-c5402886b70d] completed
+2026-08-23 01:02:04,483 INFO [8e7913bf-1b43-4afb-ab00-ff9e7774938e] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50611 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:04,581 INFO [7e562d53-1830-4242-93cf-20beec18b6f2] completed
+2026-08-23 01:02:04,608 INFO [18fb22a3-0045-4ce8-b589-caded2c0aa38] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50613 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:04,684 INFO [fc8eee6c-be74-4c62-b494-599c647b09b3] completed
+2026-08-23 01:02:04,731 INFO [fa219c89-0bd1-4af6-98ab-0f2c058ce811] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50616 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:04,825 INFO [951042f8-9c8c-47aa-b48b-6710a23068a0] completed
+2026-08-23 01:02:04,856 INFO [003f39c8-f84f-4c37-bf11-989d843fdfda] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50618 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:04,939 INFO [f4339e94-5b83-457d-8006-34ec46786448] completed
+2026-08-23 01:02:04,982 INFO [33dc9fc9-a13d-46f3-a4a2-1b36121db5a8] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50620 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:05,062 INFO [091f723b-da7a-457c-9eac-f39e1fc4746a] completed
+2026-08-23 01:02:05,107 INFO [be1f3cfc-8c17-4f5f-b58c-f9af85170e2d] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50622 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:05,184 INFO [a66c6cce-e70c-46c8-8bcb-d5ff1a826d17] completed
+2026-08-23 01:02:05,231 INFO [3a7a3b66-28eb-4242-bfee-94a7b26164db] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50624 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:05,315 INFO [717d3463-ff2e-4517-ae29-e5678cfe0496] completed
+2026-08-23 01:02:05,359 INFO [3401b1a5-5c44-4ab8-b7e1-bc351e8f7fae] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50626 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:05,452 INFO [9b934013-82dd-4727-bda2-677b72e3d0c1] completed
+2026-08-23 01:02:05,483 INFO [62026617-7f6c-4d2b-ac06-d8698024856e] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50628 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:05,566 INFO [eb0a53a9-57a0-4779-a5f1-83e00133623f] completed
+2026-08-23 01:02:05,609 INFO [f0a3f725-6d85-4839-b821-1c4fe6c4ed69] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50630 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:05,688 INFO [3668ce63-15ed-4e17-bbaf-02d9ba19cc7f] completed
+2026-08-23 01:02:05,733 INFO [f055b090-626b-419f-8a85-1f228ebe3e40] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50632 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:05,810 INFO [2901d0b3-9c28-4aa7-b788-336201d8c0c1] completed
+2026-08-23 01:02:05,857 INFO [db1f75e9-3a45-4260-bbf5-ce0273eba233] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50635 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:05,933 INFO [a255b693-704f-443e-be58-e72880363337] completed
+2026-08-23 01:02:05,982 INFO [2f2e984f-6cae-4f85-bb3a-f44890a1c165] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50637 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:06,064 INFO [a5e20a98-fc48-4bf6-b576-52dec268731a] completed
+2026-08-23 01:02:06,108 INFO [da09292a-9cd8-49d0-9d08-f29f36e6df3a] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50639 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:06,189 INFO [b19ab68d-79ff-44a6-a62b-8a8924c96221] completed
+2026-08-23 01:02:06,234 INFO [481cafa0-3066-4d12-888c-6e47c31771c2] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50641 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:06,311 INFO [239f8b82-4acb-4d73-b60f-574e372df0f8] completed
+2026-08-23 01:02:06,359 INFO [3717956f-301f-4e24-9be3-952b93f12207] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50643 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:06,449 INFO [82d5ab8e-c285-4e5b-9e06-e33863f2651e] completed
+2026-08-23 01:02:06,483 INFO [dfbc1d0e-5647-4ae7-8ddb-74ef825d3a06] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50645 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:06,563 INFO [483d8171-604c-4a74-a000-001cb1af1c2a] completed
+2026-08-23 01:02:06,609 INFO [471a6010-d213-43f1-9818-50252e50ce40] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50647 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:06,695 INFO [91d202b5-d789-44ac-96b3-c1d9801e88d1] completed
+2026-08-23 01:02:06,732 INFO [cf052e70-a232-4bcf-a45b-a61998ab979a] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50649 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:06,817 INFO [570dd975-1224-4ff9-927d-c5604567a522] completed
+2026-08-23 01:02:06,856 INFO [b4c46e4f-4c68-4808-8b38-c865ebea2839] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50652 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:06,937 INFO [f6709112-37c0-48ff-a01a-151e861594be] completed
+2026-08-23 01:02:06,981 INFO [32bd38ee-5004-40ca-b0c6-aa0b2f3a694b] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50654 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:07,068 INFO [5fee16c7-0ee4-451c-b3fe-3f845f6b0276] completed
+2026-08-23 01:02:07,108 INFO [f1ba702e-6e92-45ef-adb3-8ab28729ddc1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50656 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:07,193 INFO [562af360-9486-4af0-86eb-36f5d30de815] completed
+2026-08-23 01:02:07,232 INFO [06005e82-bc2e-4edd-a1d2-48b7045a0657] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50658 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:07,314 INFO [6b2cb54a-5633-4662-a0f3-df8a0c98690c] completed
+2026-08-23 01:02:07,357 INFO [86627438-4430-48a8-875c-e3e5e9e31398] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50660 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:07,439 INFO [deb6e97b-083f-4871-b4b6-529794325985] completed
+2026-08-23 01:02:07,484 INFO [88ba8ba1-6430-48d1-809f-b2083d9d99f7] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50662 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:07,552 INFO [4b69b068-9dd8-4980-a590-8b80a917a11f] completed
+2026-08-23 01:02:07,609 INFO [8f0a983a-6cfe-463d-a834-cb78fe846287] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50664 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:07,685 INFO [abf3fb5b-0185-4a49-a6bd-23845cc90b96] completed
+2026-08-23 01:02:07,733 INFO [a00fae0e-9056-461d-a39f-46936f49680b] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50666 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:07,822 INFO [c792fa3f-cc6a-4c6f-af33-3bce915794a4] completed
+2026-08-23 01:02:07,858 INFO [971e4681-44bf-41fc-9975-9e258c240758] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50668 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:07,932 INFO [547b150c-59d9-43de-bb18-393cea50dcbe] completed
+2026-08-23 01:02:07,981 INFO [93de798b-884a-4279-a2f6-70f19dc181a1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50671 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:09,684 INFO [8d18f5d8-5528-492c-aa18-9a6c0b18bb48] completed
+2026-08-23 01:02:09,734 INFO [74fa25e6-684f-40af-84de-fee49970425a] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50688 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:09,816 INFO [137b09f2-1025-478e-af12-4786e8a56d5a] completed
+2026-08-23 01:02:09,860 INFO [c46ae66c-fbf2-4f4a-b7f3-4cd3c81d7139] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50690 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:09,943 INFO [fe73fe02-6264-48d7-97af-9295c96acc1f] completed
+2026-08-23 01:02:09,984 INFO [7c1cf3ea-e1e3-4ac1-8f12-650f5428a825] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50692 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:10,066 INFO [0b882692-6a38-42df-ad9e-d708c96944a6] completed
+2026-08-23 01:02:10,107 INFO [080df60f-0657-401b-9762-47996c24d98e] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50695 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:10,181 INFO [48fd1838-2afe-41d1-8239-6bd4f248e7f1] completed
+2026-08-23 01:02:10,232 INFO [6e113cc3-3a94-4f33-b6b1-ed4b81d6e34d] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50697 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:10,316 INFO [9860d9e4-b2d5-493c-9206-80179be6ee74] completed
+2026-08-23 01:02:10,358 INFO [f276fcb3-4f1a-43a2-89fb-fca05e5b2c19] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50699 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:10,439 INFO [07a6340d-eb25-4bfb-88ab-a503693a0c81] completed
+2026-08-23 01:02:10,484 INFO [064186e8-1d5a-45d1-a6b4-8f820cf1a40d] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50701 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:10,571 INFO [b375d246-f474-4c6e-bccb-26df63a01471] completed
+2026-08-23 01:02:10,609 INFO [80b7b51c-e894-47f2-939f-20732a359d68] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50703 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:10,688 INFO [402bce8a-3f84-42bc-a2aa-689ca6760d0b] completed
+2026-08-23 01:02:10,733 INFO [e4416877-4650-4299-a518-9905964e359f] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50705 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:10,807 INFO [d85a2b6f-d3d1-4806-981e-1fd4d8a92b63] completed
+2026-08-23 01:02:10,859 INFO [3a0d2407-f7d8-4b7e-88a6-12c5b370899b] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50707 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:10,950 INFO [3cad565f-7b68-4791-8739-35334bf597d0] completed
+2026-08-23 01:02:10,984 INFO [36d15cc7-3244-48cc-bd56-45003732187d] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50709 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:11,064 INFO [9e1771a0-92d4-4727-808d-b400f67af2a0] completed
+2026-08-23 01:02:11,109 INFO [7bd634fa-6c8d-41b7-9370-f8783f9e8706] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50711 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:11,186 INFO [3251c82d-d391-443f-934a-a28795e9f511] completed
+2026-08-23 01:02:11,232 INFO [045f4d37-219b-4ee5-8d4d-d45b7c1b23f9] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50714 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:11,322 INFO [d806bea5-1677-4df9-ba53-fe020250fc76] completed
+2026-08-23 01:02:11,356 INFO [2e2e4392-5fbe-4543-8f2f-59b81d600f46] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50716 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:11,444 INFO [2ddf0646-e1c1-4f68-8099-49eed6a8bad8] completed
+2026-08-23 01:02:11,484 INFO [9e2536f5-95fc-4a61-9e4e-361be848409b] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50718 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:11,554 INFO [71ee15ed-c601-407c-81d3-d7d62b3253d1] completed
+2026-08-23 01:02:11,609 INFO [6447f308-c2ff-4c25-940a-855f2218ff23] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50720 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:11,694 INFO [0135508f-ef29-44d4-8af9-f948aca5dacc] completed
+2026-08-23 01:02:11,733 INFO [adf94d10-3d4a-4e5e-8508-9414ad757bfc] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50722 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:11,810 INFO [c8997001-eebf-4ec2-b7d1-d1a9cb2e342a] completed
+2026-08-23 01:02:11,859 INFO [d29c0b37-ed70-4779-9e2f-d7b34a2b1552] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50724 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:11,926 INFO [9c077c72-f256-4a3b-9bd3-79e1f2df0463] completed
+2026-08-23 01:02:11,982 INFO [36685ace-f9e9-446d-9639-60bcc25c0cf5] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50726 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:12,067 INFO [d22cc4fb-6320-4ec3-9418-4edb8f1a3d51] completed
+2026-08-23 01:02:12,108 INFO [f5b5cf31-8a43-49f8-b5ef-328d0cb9bd3b] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50728 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:12,192 INFO [799fe393-7e8a-4303-9d9f-4df28442d832] completed
+2026-08-23 01:02:12,232 INFO [576680b5-3753-452e-a5cf-4a5d4d2fd571] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50731 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:12,328 INFO [8e7913bf-1b43-4afb-ab00-ff9e7774938e] completed
+2026-08-23 01:02:12,356 INFO [fd9c3e2d-4918-49ba-a2f9-9f4e2118a14b] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50733 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:12,451 INFO [18fb22a3-0045-4ce8-b589-caded2c0aa38] completed
+2026-08-23 01:02:12,483 INFO [b609544a-f04d-49ba-843c-b89532f898ef] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50735 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:12,560 INFO [fa219c89-0bd1-4af6-98ab-0f2c058ce811] completed
+2026-08-23 01:02:12,607 INFO [1de65192-4358-4d61-a867-01cd7cd04848] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50737 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:12,673 INFO [003f39c8-f84f-4c37-bf11-989d843fdfda] completed
+2026-08-23 01:02:12,734 INFO [ef62b70a-5443-4b16-a184-afe491407eea] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50739 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:12,814 INFO [33dc9fc9-a13d-46f3-a4a2-1b36121db5a8] completed
+2026-08-23 01:02:12,859 INFO [2ad9c8b0-7802-471d-ab1c-e6a26bd138a4] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50741 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:12,932 INFO [be1f3cfc-8c17-4f5f-b58c-f9af85170e2d] completed
+2026-08-23 01:02:12,983 INFO [64781506-d122-4a72-ad94-1917bb03f2aa] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50743 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:13,061 INFO [3a7a3b66-28eb-4242-bfee-94a7b26164db] completed
+2026-08-23 01:02:13,109 INFO [060fa8a7-9690-4d23-9ccc-3584351a9927] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50745 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:13,200 INFO [3401b1a5-5c44-4ab8-b7e1-bc351e8f7fae] completed
+2026-08-23 01:02:13,234 INFO [1c1df7e1-3dcd-4fd2-9b98-f498911c06fd] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50747 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:13,313 INFO [62026617-7f6c-4d2b-ac06-d8698024856e] completed
+2026-08-23 01:02:13,356 INFO [65232ca8-d305-4313-80b6-4a20f9e372e3] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50750 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:13,439 INFO [f0a3f725-6d85-4839-b821-1c4fe6c4ed69] completed
+2026-08-23 01:02:13,481 INFO [02da4be5-60f6-4809-baa1-def231c408e1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50752 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:13,564 INFO [f055b090-626b-419f-8a85-1f228ebe3e40] completed
+2026-08-23 01:02:13,608 INFO [6baa7f72-5ea3-43af-b1f1-e0e964e1f3e9] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50754 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:13,677 INFO [db1f75e9-3a45-4260-bbf5-ce0273eba233] completed
+2026-08-23 01:02:13,734 INFO [d34af6a6-eabe-459b-aa2c-70b9fd2c6ca9] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50756 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:13,815 INFO [2f2e984f-6cae-4f85-bb3a-f44890a1c165] completed
+2026-08-23 01:02:13,858 INFO [31a77430-30c8-4d29-b9ca-6fc54950da39] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50758 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:13,935 INFO [da09292a-9cd8-49d0-9d08-f29f36e6df3a] completed
+2026-08-23 01:02:13,983 INFO [18a68c92-65bb-49a6-b31c-cc19afd7c94b] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50760 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:14,070 INFO [481cafa0-3066-4d12-888c-6e47c31771c2] completed
+2026-08-23 01:02:14,109 INFO [e8de5457-5509-4395-950a-be2d24c6f79e] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50762 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:14,192 INFO [3717956f-301f-4e24-9be3-952b93f12207] completed
+2026-08-23 01:02:14,234 INFO [4d494e57-df04-4b02-8276-a1983398ad7f] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50764 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:14,317 INFO [dfbc1d0e-5647-4ae7-8ddb-74ef825d3a06] completed
+2026-08-23 01:02:14,357 INFO [8f200099-3ae5-47d4-b9db-2610b145c4f1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50767 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:14,441 INFO [471a6010-d213-43f1-9818-50252e50ce40] completed
+2026-08-23 01:02:14,481 INFO [4b9d657c-1083-40bf-af41-14c81739d68d] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50769 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:14,568 INFO [cf052e70-a232-4bcf-a45b-a61998ab979a] completed
+2026-08-23 01:02:14,607 INFO [0eedcd37-243e-4c69-a709-19ae112fc0ac] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50771 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:14,681 INFO [b4c46e4f-4c68-4808-8b38-c865ebea2839] completed
+2026-08-23 01:02:14,733 INFO [eb628017-10aa-4e53-bbfc-1eb0dc99c4fe] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50773 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:14,807 INFO [32bd38ee-5004-40ca-b0c6-aa0b2f3a694b] completed
+2026-08-23 01:02:14,860 INFO [55318299-0450-465b-8c1c-dbb6fb08cfa4] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50775 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:14,939 INFO [f1ba702e-6e92-45ef-adb3-8ab28729ddc1] completed
+2026-08-23 01:02:14,983 INFO [41bb7519-da3c-46b8-93ec-df69ecc79322] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50777 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:15,076 INFO [06005e82-bc2e-4edd-a1d2-48b7045a0657] completed
+2026-08-23 01:02:15,109 INFO [ba3e5e77-b141-4e5e-b032-47dd5904ded1] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50779 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:15,196 INFO [86627438-4430-48a8-875c-e3e5e9e31398] completed
+2026-08-23 01:02:15,234 INFO [b5f75a52-8989-4899-9f1e-6ddda2f7a981] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50781 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:15,322 INFO [88ba8ba1-6430-48d1-809f-b2083d9d99f7] completed
+2026-08-23 01:02:15,358 INFO [736c521f-dc06-4938-93f5-61694972279b] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50783 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:15,444 INFO [8f0a983a-6cfe-463d-a834-cb78fe846287] completed
+2026-08-23 01:02:15,481 INFO [a0a72cfa-794e-47c1-8428-ef7d88a651d5] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50786 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:15,573 INFO [a00fae0e-9056-461d-a39f-46936f49680b] completed
+2026-08-23 01:02:15,607 INFO [8564dc94-c98f-4b68-b686-19b648c34887] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50788 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:15,680 INFO [971e4681-44bf-41fc-9975-9e258c240758] completed
+2026-08-23 01:02:15,733 INFO [eeb88dd4-95a1-4fc1-b587-cc781b43d5bd] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50790 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:15,812 INFO [93de798b-884a-4279-a2f6-70f19dc181a1] completed
+2026-08-23 01:02:15,858 INFO [a2d0ddde-4e0e-4ffe-aac1-b76a017d9837] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50792 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:17,565 INFO [74fa25e6-684f-40af-84de-fee49970425a] completed
+2026-08-23 01:02:17,606 INFO [d4375da3-8cf0-45e7-a961-db0394e19bed] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50810 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:17,691 INFO [c46ae66c-fbf2-4f4a-b7f3-4cd3c81d7139] completed
+2026-08-23 01:02:17,732 INFO [d78d778c-2104-4702-b45e-67fdb3824e08] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50812 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:17,816 INFO [7c1cf3ea-e1e3-4ac1-8f12-650f5428a825] completed
+2026-08-23 01:02:17,859 INFO [f46278a7-ff0c-49ab-abc5-6cf585656dfd] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50814 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:17,934 INFO [080df60f-0657-401b-9762-47996c24d98e] completed
+2026-08-23 01:02:17,982 INFO [b657ee10-50f1-4853-8c27-ee19ab097b73] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50816 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:18,060 INFO [6e113cc3-3a94-4f33-b6b1-ed4b81d6e34d] completed
+2026-08-23 01:02:18,108 INFO [10355490-6df4-4f08-b20d-12bc12cac8dd] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50818 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:18,187 INFO [f276fcb3-4f1a-43a2-89fb-fca05e5b2c19] completed
+2026-08-23 01:02:18,234 INFO [5ea27a97-ccca-4b59-a7ab-4fe3f8e6d001] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50820 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:18,313 INFO [064186e8-1d5a-45d1-a6b4-8f820cf1a40d] completed
+2026-08-23 01:02:18,359 INFO [cd722c96-9a57-4199-a53d-ec26c0e2ff4c] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50822 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:18,437 INFO [80b7b51c-e894-47f2-939f-20732a359d68] completed
+2026-08-23 01:02:18,481 INFO [2010ce11-f543-496c-9bd3-7a8fa60a1fa0] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50824 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:18,560 INFO [e4416877-4650-4299-a518-9905964e359f] completed
+2026-08-23 01:02:18,608 INFO [6b8bd913-c55d-4a58-be18-20ecc293d9cd] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50826 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:18,697 INFO [3a0d2407-f7d8-4b7e-88a6-12c5b370899b] completed
+2026-08-23 01:02:18,731 INFO [0f76687d-139a-4cb6-a17e-c85192211686] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50829 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:18,816 INFO [36d15cc7-3244-48cc-bd56-45003732187d] completed
+2026-08-23 01:02:18,857 INFO [f396082e-8eff-4934-bcd3-f6dc7c82e2bd] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50831 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:18,939 INFO [7bd634fa-6c8d-41b7-9370-f8783f9e8706] completed
+2026-08-23 01:02:18,983 INFO [9a3c2d5b-1c4a-4cfa-b79b-fdbb6f0e1105] stream requested: chunkCount=35 firstChunkDelayMs=1000
+INFO:     127.0.0.1:50833 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-23 01:02:19,066 INFO [045f4d37-219b-4ee5-8d4d-d45b7c1b23f9] completed
+2026-08-23 01:02:19,192 INFO [2e2e4392-5fbe-4543-8f2f-59b81d600f46] completed
+2026-08-23 01:02:19,320 INFO [9e2536f5-95fc-4a61-9e4e-361be848409b] completed
+2026-08-23 01:02:19,443 INFO [6447f308-c2ff-4c25-940a-855f2218ff23] completed
+2026-08-23 01:02:19,567 INFO [adf94d10-3d4a-4e5e-8508-9414ad757bfc] completed
+2026-08-23 01:02:19,704 INFO [d29c0b37-ed70-4779-9e2f-d7b34a2b1552] completed
+2026-08-23 01:02:19,822 INFO [36685ace-f9e9-446d-9639-60bcc25c0cf5] completed
+2026-08-23 01:02:19,943 INFO [f5b5cf31-8a43-49f8-b5ef-328d0cb9bd3b] completed
+2026-08-23 01:02:20,067 INFO [576680b5-3753-452e-a5cf-4a5d4d2fd571] completed
+2026-08-23 01:02:20,185 INFO [fd9c3e2d-4918-49ba-a2f9-9f4e2118a14b] completed
+2026-08-23 01:02:20,324 INFO [b609544a-f04d-49ba-843c-b89532f898ef] completed
+2026-08-23 01:02:20,446 INFO [1de65192-4358-4d61-a867-01cd7cd04848] completed
+2026-08-23 01:02:20,571 INFO [ef62b70a-5443-4b16-a184-afe491407eea] completed
+2026-08-23 01:02:20,687 INFO [2ad9c8b0-7802-471d-ab1c-e6a26bd138a4] completed
+2026-08-23 01:02:20,818 INFO [64781506-d122-4a72-ad94-1917bb03f2aa] completed
+2026-08-23 01:02:20,936 INFO [060fa8a7-9690-4d23-9ccc-3584351a9927] completed
+2026-08-23 01:02:21,070 INFO [1c1df7e1-3dcd-4fd2-9b98-f498911c06fd] completed
+2026-08-23 01:02:21,185 INFO [65232ca8-d305-4313-80b6-4a20f9e372e3] completed
+2026-08-23 01:02:21,314 INFO [02da4be5-60f6-4809-baa1-def231c408e1] completed
+2026-08-23 01:02:21,432 INFO [6baa7f72-5ea3-43af-b1f1-e0e964e1f3e9] completed
+2026-08-23 01:02:21,575 INFO [d34af6a6-eabe-459b-aa2c-70b9fd2c6ca9] completed
+2026-08-23 01:02:21,692 INFO [31a77430-30c8-4d29-b9ca-6fc54950da39] completed
+2026-08-23 01:02:21,826 INFO [18a68c92-65bb-49a6-b31c-cc19afd7c94b] completed
+2026-08-23 01:02:21,941 INFO [e8de5457-5509-4395-950a-be2d24c6f79e] completed
+2026-08-23 01:02:22,068 INFO [4d494e57-df04-4b02-8276-a1983398ad7f] completed
+2026-08-23 01:02:22,191 INFO [8f200099-3ae5-47d4-b9db-2610b145c4f1] completed
+2026-08-23 01:02:22,319 INFO [4b9d657c-1083-40bf-af41-14c81739d68d] completed
+2026-08-23 01:02:22,439 INFO [0eedcd37-243e-4c69-a709-19ae112fc0ac] completed
+2026-08-23 01:02:22,559 INFO [eb628017-10aa-4e53-bbfc-1eb0dc99c4fe] completed
+2026-08-23 01:02:22,692 INFO [55318299-0450-465b-8c1c-dbb6fb08cfa4] completed
+2026-08-23 01:02:22,832 INFO [41bb7519-da3c-46b8-93ec-df69ecc79322] completed
+2026-08-23 01:02:22,943 INFO [ba3e5e77-b141-4e5e-b032-47dd5904ded1] completed
+2026-08-23 01:02:23,071 INFO [b5f75a52-8989-4899-9f1e-6ddda2f7a981] completed
+2026-08-23 01:02:23,197 INFO [736c521f-dc06-4938-93f5-61694972279b] completed
+2026-08-23 01:02:23,326 INFO [a0a72cfa-794e-47c1-8428-ef7d88a651d5] completed
+2026-08-23 01:02:23,444 INFO [8564dc94-c98f-4b68-b686-19b648c34887] completed
+2026-08-23 01:02:23,566 INFO [eeb88dd4-95a1-4fc1-b587-cc781b43d5bd] completed
+2026-08-23 01:02:23,677 INFO [a2d0ddde-4e0e-4ffe-aac1-b76a017d9837] completed
+2026-08-23 01:02:25,450 INFO [d4375da3-8cf0-45e7-a961-db0394e19bed] completed
+2026-08-23 01:02:25,559 INFO [d78d778c-2104-4702-b45e-67fdb3824e08] completed
+2026-08-23 01:02:25,686 INFO [f46278a7-ff0c-49ab-abc5-6cf585656dfd] completed
+2026-08-23 01:02:25,815 INFO [b657ee10-50f1-4853-8c27-ee19ab097b73] completed
+2026-08-23 01:02:25,944 INFO [10355490-6df4-4f08-b20d-12bc12cac8dd] completed
+2026-08-23 01:02:26,075 INFO [5ea27a97-ccca-4b59-a7ab-4fe3f8e6d001] completed
+2026-08-23 01:02:26,203 INFO [cd722c96-9a57-4199-a53d-ec26c0e2ff4c] completed
+2026-08-23 01:02:26,318 INFO [2010ce11-f543-496c-9bd3-7a8fa60a1fa0] completed
+2026-08-23 01:02:26,457 INFO [6b8bd913-c55d-4a58-be18-20ecc293d9cd] completed
+2026-08-23 01:02:26,563 INFO [0f76687d-139a-4cb6-a17e-c85192211686] completed
+2026-08-23 01:02:26,691 INFO [f396082e-8eff-4934-bcd3-f6dc7c82e2bd] completed
+2026-08-23 01:02:26,820 INFO [9a3c2d5b-1c4a-4cfa-b79b-fdbb6f0e1105] completed
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6822]

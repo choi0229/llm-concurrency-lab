@@ -1,0 +1,193 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/scripts/diagnostic-tools/slow-client-k6.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 1 iterations for each of 1 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m01.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m02.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m02.0s/10m0s  0/1 iters, 1 per VU
+time="2026-08-22T15:52:09+09:00" level=info msg="sse error: {}" source=console
+
+running (00m03.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m03.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m04.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m04.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m05.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m05.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m06.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m06.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m07.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m07.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m08.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m08.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m09.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m09.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m10.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m10.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m11.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m11.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m12.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m12.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m13.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m13.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m14.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m14.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m15.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m15.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m16.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m16.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m17.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m17.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m18.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m18.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m19.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m19.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m20.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m20.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m21.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m21.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m22.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m22.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m23.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m23.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m24.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m24.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m25.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m25.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m26.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m26.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m27.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m27.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m28.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m28.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m29.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m29.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m30.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m30.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m31.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m31.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m32.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m32.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m33.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m33.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m34.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m34.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m35.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m35.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m36.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m36.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m37.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m37.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m38.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m38.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m39.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m39.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m40.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m40.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m41.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m41.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m42.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m42.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m43.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m43.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m44.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m44.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m45.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m45.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m46.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m46.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m47.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m47.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m48.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m48.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m49.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m49.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m50.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m50.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m51.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m51.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m52.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m52.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m53.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m53.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m54.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m54.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m55.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m55.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m56.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m56.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m57.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m57.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m58.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m58.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m59.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m59.0s/10m0s  0/1 iters, 1 per VU

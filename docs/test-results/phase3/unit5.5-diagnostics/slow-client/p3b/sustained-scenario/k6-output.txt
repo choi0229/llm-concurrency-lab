@@ -1,0 +1,53 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/scripts/diagnostic-tools/slow-client-k6.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 1 iterations for each of 1 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m01.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m02.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m02.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m03.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m03.0s/10m0s  0/1 iters, 1 per VU
+time="2026-08-22T15:56:56+09:00" level=info msg="slow-client done: events=21 elapsedMs=3186" source=console
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    slow_client_bytes_received_total....: 1311233 411500.574147/s
+    slow_client_events_received_total...: 21      6.590371/s
+    sse_event...........................: 21      6.590371/s
+
+    HTTP
+    http_req_duration...................: avg=3.18s min=3.18s med=3.18s max=3.18s p(90)=3.18s p(95)=3.18s
+    http_reqs...........................: 1       0.313827/s
+
+    EXECUTION
+    iteration_duration..................: avg=3.18s min=3.18s med=3.18s max=3.18s p(90)=3.18s p(95)=3.18s
+    iterations..........................: 1       0.313827/s
+    vus.................................: 1       min=1           max=1
+    vus_max.............................: 1       min=1           max=1
+
+    NETWORK
+    data_received.......................: 1.3 MB  412 kB/s
+    data_sent...........................: 266 B   84 B/s
+
+
+
+
+running (00m03.2s), 0/1 VUs, 1 complete and 0 interrupted iterations
+default ✓ [ 100% ] 1 VUs  00m03.2s/10m0s  1/1 iters, 1 per VU

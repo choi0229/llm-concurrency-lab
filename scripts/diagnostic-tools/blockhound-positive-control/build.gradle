@@ -1,0 +1,33 @@
+// Unit 5.5 §4 — standalone BlockHound capability check, deliberately separate from every
+// production Gateway module. Pins the EXACT same reactor-core version Phase 3 uses (3.4.34) so
+// this result is representative of the actual runtime, not a different Reactor version's
+// behavior.
+plugins {
+    id 'java'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'io.projectreactor:reactor-core:3.4.34'
+    testImplementation 'io.projectreactor:reactor-test:3.4.34'
+    testImplementation 'io.projectreactor.tools:blockhound:1.0.17.RELEASE'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "failed", "skipped"
+        showStandardStreams = true
+        exceptionFormat = "full"
+    }
+}

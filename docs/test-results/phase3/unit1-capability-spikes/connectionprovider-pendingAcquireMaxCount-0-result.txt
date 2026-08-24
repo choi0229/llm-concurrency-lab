@@ -1,0 +1,4 @@
+=== ConnectionProvider.ConnectionPoolSpec.pendingAcquireMaxCount(0) evidence (reactor-netty-core 1.0.39) ===
+Exception in thread "main" java.lang.IllegalArgumentException: Pending acquire max count must be strictly positive
+	at reactor.netty.resources.ConnectionProvider$ConnectionPoolSpec.pendingAcquireMaxCount(ConnectionProvider.java:598)
+	at PoolSpike0.main(PoolSpike0.java:16)

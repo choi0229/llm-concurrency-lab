@@ -1,0 +1,5 @@
+2026-08-22 14:57:13.208 ERROR 4952 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [dfb2c4b2-2] Error [com.llmconcurrencylab.gatewaymvc.deadline.AbsoluteDeadlineExceededException: absolute-deadline-exceeded] for HTTP POST "/chat/stream", but ServerHttpResponse already committed (200 OK)
+2026-08-22 14:57:13.212 ERROR 4952 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [dfb2c4b2-1, L:/0:0:0:0:0:0:0:1:8083 - R:/0:0:0:0:0:0:0:1:50879] Error finishing response. Closing connection
+
+com.llmconcurrencylab.gatewaymvc.deadline.AbsoluteDeadlineExceededException: absolute-deadline-exceeded
+	at com.llmconcurrencylab.gatewaymvc.deadline.AbsoluteDeadline.lambda$apply$1(AbsoluteDeadline.java:46) ~[classes!/:na]

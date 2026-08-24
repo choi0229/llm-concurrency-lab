@@ -1,0 +1,4 @@
+2026-08-22 14:28:55,238 INFO [e31ea1c7-b1ad-48eb-8054-ad93d7b1a7e5] stream requested: chunkCount=10 firstChunkDelayMs=100
+INFO:     127.0.0.1:50651 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-22 14:28:56,342 INFO [e31ea1c7-b1ad-48eb-8054-ad93d7b1a7e5] stalling 30000ms after chunk 2 (diagnostic knob)
+2026-08-22 14:28:57,739 INFO [e31ea1c7-b1ad-48eb-8054-ad93d7b1a7e5] client disconnected (stream closed by server)

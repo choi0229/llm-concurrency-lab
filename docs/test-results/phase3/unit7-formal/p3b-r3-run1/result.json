@@ -1,0 +1,119 @@
+{
+  "valid": true,
+  "invalid_reason": null,
+  "client_cohort": {
+    "measurement_iterations_started_total": 900,
+    "client_completed_total": 900,
+    "client_rejected_total": 0.0,
+    "client_failed_mid_stream_total": 0.0,
+    "client_failed_no_event_total": 0.0,
+    "invariant_ok": true,
+    "dropped_iterations": 0.0
+  },
+  "throughput": {
+    "target_arrival_rate": 3,
+    "completion_throughput_chronological": 2.993333333333333,
+    "client_completed_rate_cohort": 3.0,
+    "note": "chronological = population A (Sec 17, gateway_requests_total{outcome=completed} delta between the measurement-start/measurement-end Prometheus snapshots, divided by window_s); cohort rate = population B (client-arrived-in-window cohort's own completed count / window_s) -- both reported, not conflated (protocol Sec 12)."
+  },
+  "client_latency": {
+    "ttfc_completed_seconds": {
+      "p50": 1.005,
+      "p95": 1.007,
+      "p99": 1.008,
+      "min": 1,
+      "max": 1.01,
+      "avg": 1.0049988888888846
+    },
+    "stream_duration_completed_seconds": {
+      "p50": 7.871,
+      "p95": 7.88,
+      "p99": 7.8880099999999995,
+      "min": 7.845,
+      "max": 7.897,
+      "avg": 7.870202222222224
+    }
+  },
+  "platform_threads": {
+    "window_peak": 49.0
+  },
+  "cpu": {
+    "avg_cores": 0.03397885307090933,
+    "peak_instantaneous_usage_fraction": 0.015445318510062783,
+    "mean_usage_fraction": 0.0033978853070909328,
+    "note": "avg_cores = mean(process_cpu_usage in window) * available_processors -- process_cpu_seconds_total is not exposed by this stack (Unit 7 Canary finding, docs/test-plan/phase3-formal-protocol.md Sec 21)."
+  },
+  "native_rss": {
+    "measurement_start_bytes": 468615168.0,
+    "measurement_peak_bytes": 504414208.0,
+    "measurement_delta_bytes": 35799040.0
+  },
+  "heap_gc": {
+    "heap_start_bytes": 115586376.0,
+    "heap_peak_bytes": 183171048.0,
+    "heap_delta_bytes": 67584672.0,
+    "gc_pause_count_delta": 3.0,
+    "gc_pause_seconds_delta": 0.017
+  },
+  "admission": {
+    "admission_active_window_peak": 24.0,
+    "admission_active_window_mean": 23.60144927536232,
+    "active_streams_window_peak_diagnostic_only": 24.0,
+    "note": "gateway_active_streams is implementation-local diagnostic only (Sec 10) -- never used as a cross-implementation capacity claim."
+  },
+  "implementation_specific": {
+    "servlet_write_path": {
+      "active_window_peak": 0.0,
+      "queue_depth_window_peak": 1.0,
+      "buffered_frames_window_peak": 0.0,
+      "write_overflow_delta": 0.0
+    },
+    "reactor_netty_connection_pool": {
+      "pending_connections_window_peak": 0.0
+    }
+  },
+  "postflight": {
+    "gateway_admission_active": 0.0,
+    "gateway_active_streams": 0.0,
+    "gateway_upstream_active": 0.0,
+    "fail_summary": null
+  },
+  "environment": {
+    "run_id": "p3b-r3-run1",
+    "config": "B",
+    "load": "r3",
+    "repeat": 1,
+    "rate": 3,
+    "jdk": {
+      "vendor": "Zulu",
+      "version": "1.8.0_504",
+      "build": "1.8.0_504-b01",
+      "sha256_java_binary": "b49708ba8e68dae58e1aad83ede16b73b4b2cfc4294dcd95a2ad3964c92cae5f"
+    },
+    "os": {
+      "product": "macOS",
+      "version": "26.4.1",
+      "build": "25E253",
+      "arch": "arm64"
+    },
+    "available_processors": 10,
+    "power_source": "AC",
+    "spring_boot": "2.7.18",
+    "spring_framework": "5.3.31",
+    "reactor_core": "3.4.34",
+    "reactor_netty": "1.0.39",
+    "micrometer": "1.9.17",
+    "tomcat": "9.0.83",
+    "k6_version": "v1.8.0",
+    "xk6_sse_version": "v0.1.11",
+    "gateway_config": {
+      "CHAT_ADMISSION_LIMIT": 50,
+      "CHAT_TOTAL_TIMEOUT_MS": 60000,
+      "MOCK_LLM_BASE_URL": "http://127.0.0.1:8000",
+      "WEBCLIENT_MAX_CONNECTIONS": 50
+    },
+    "blockhound": false,
+    "docker": false,
+    "slow_client": false
+  }
+}

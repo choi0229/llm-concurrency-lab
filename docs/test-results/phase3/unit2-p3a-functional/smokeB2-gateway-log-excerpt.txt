@@ -1,0 +1,5 @@
+2026-08-22 13:48:02.997  INFO 2849 --- [nio-8081-exec-1] c.l.gatewaymvc.chat.ChatController       : [1bd19d18-90c3-4f51-a567-e52671de13aa] request start
+2026-08-22 13:48:05.501  INFO 2849 --- [line-watchdog-1] c.l.gatewaymvc.chat.ChatController       : [1bd19d18-90c3-4f51-a567-e52671de13aa] deadline watchdog firing at +2505ms
+2026-08-22 13:48:06.612  INFO 2849 --- [king-outbound-1] c.l.gatewaymvc.chat.ChatController       : [1bd19d18-90c3-4f51-a567-e52671de13aa] blocking read unblocked via SocketTimeoutException at +3616ms (lifecycle.isTerminal()=true)
+2026-08-22 13:48:06.612  WARN 2849 --- [king-outbound-1] c.l.gatewaymvc.chat.ChatController       : [1bd19d18-90c3-4f51-a567-e52671de13aa] upstream failure (read_timeout) after already terminal (known race): Read timed out
+2026-08-22 13:48:06.614  INFO 2849 --- [line-watchdog-1] c.l.gatewaymvc.chat.RequestLifecycle     : [1bd19d18-90c3-4f51-a567-e52671de13aa] terminal: outcome=timeout

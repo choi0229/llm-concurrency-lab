@@ -1,0 +1,15 @@
+{
+  "java": "Azul Zulu 8.96.0.205, java_version 1.8.0_504, macOS ARM64 native",
+  "spring_boot": "2.7.18",
+  "spring_framework": "5.3.31",
+  "reactor_core": "3.4.34",
+  "reactor_netty": "1.0.39",
+  "gradle": "7.6.6",
+  "k6_extension": "xk6-sse v0.1.11 (github.com/phymbert/xk6-sse), custom-built k6 binary",
+  "mock_llm": "FastAPI, workload knobs set per-scenario via chunkCount/chunkSizeBytes/chunkIntervalMs=0 (see each scenario's result-summary.json)",
+  "dns": "127.0.0.1 fixed per docs/test-plan/phase3-design.md §9-1",
+  "p3b_port": 8082,
+  "p3c_port": 8083,
+  "script": "scripts/diagnostic-tools/slow-client-k6.js",
+  "runner": "scripts/diagnostic-tools/run-slow-client-diagnostic.sh"
+}

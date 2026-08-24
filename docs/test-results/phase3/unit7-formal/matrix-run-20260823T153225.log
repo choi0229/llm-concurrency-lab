@@ -1,0 +1,546 @@
+[matrix] 27 runs frozen (expect 27)
+[matrix] === A r3 rate=3 repeat=1 ===
+[formal][p3a-r3-run1] continuous k6 start: rate=3 warmup=120s measurement=300s
+[formal][p3a-r3-run1] k6 exit=0
+[formal][p3a-r3-run1] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3a-r3-run1] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3a-r3-run1 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50:  1586 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50:  1622 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50:  1624 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85:  1593 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === B r3 rate=3 repeat=1 ===
+[formal][p3b-r3-run1] continuous k6 start: rate=3 warmup=120s measurement=300s
+[formal][p3b-r3-run1] k6 exit=0
+[formal][p3b-r3-run1] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3b-r3-run1] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3b-r3-run1 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 26171 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 26207 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 26209 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 26178 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === C r3 rate=3 repeat=1 ===
+[formal][p3c-r3-run1] continuous k6 start: rate=3 warmup=120s measurement=300s
+[formal][p3c-r3-run1] k6 exit=0
+[formal][p3c-r3-run1] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3c-r3-run1] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3c-r3-run1 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 50535 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 50571 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 50573 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 50542 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === A r7 rate=7 repeat=1 ===
+[formal][p3a-r7-run1] continuous k6 start: rate=7 warmup=120s measurement=300s
+[formal][p3a-r7-run1] k6 exit=0
+[formal][p3a-r7-run1] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3a-r7-run1] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3a-r7-run1 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 74946 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 74982 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 74984 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 74953 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === B r7 rate=7 repeat=1 ===
+[formal][p3b-r7-run1] continuous k6 start: rate=7 warmup=120s measurement=300s
+[formal][p3b-r7-run1] k6 exit=0
+[formal][p3b-r7-run1] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3b-r7-run1] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3b-r7-run1 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 99431 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 99467 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 99468 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 99438 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === C r7 rate=7 repeat=1 ===
+[formal][p3c-r7-run1] continuous k6 start: rate=7 warmup=120s measurement=300s
+[formal][p3c-r7-run1] k6 exit=0
+[formal][p3c-r7-run1] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3c-r7-run1] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3c-r7-run1 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 24539 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 24573 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 24575 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 24546 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === A r10 rate=10 repeat=1 ===
+[formal][p3a-r10-run1] continuous k6 start: rate=10 warmup=120s measurement=300s
+[formal][p3a-r10-run1] k6 exit=0
+[formal][p3a-r10-run1] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3a-r10-run1] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3a-r10-run1 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 48896 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 48930 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 48934 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 48903 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === B r10 rate=10 repeat=1 ===
+[formal][p3b-r10-run1] continuous k6 start: rate=10 warmup=120s measurement=300s
+[formal][p3b-r10-run1] k6 exit=0
+[formal][p3b-r10-run1] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3b-r10-run1] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3b-r10-run1 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 73358 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 73394 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 73396 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 73365 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === C r10 rate=10 repeat=1 ===
+[formal][p3c-r10-run1] continuous k6 start: rate=10 warmup=120s measurement=300s
+[formal][p3c-r10-run1] k6 exit=0
+[formal][p3c-r10-run1] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3c-r10-run1] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3c-r10-run1 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 97814 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 97848 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 97850 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 97821 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === B r3 rate=3 repeat=2 ===
+[formal][p3b-r3-run2] continuous k6 start: rate=3 warmup=120s measurement=300s
+[formal][p3b-r3-run2] k6 exit=0
+[formal][p3b-r3-run2] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3b-r3-run2] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3b-r3-run2 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 22933 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 22969 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 22970 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 22940 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === C r3 rate=3 repeat=2 ===
+[formal][p3c-r3-run2] continuous k6 start: rate=3 warmup=120s measurement=300s
+[formal][p3c-r3-run2] k6 exit=0
+[formal][p3c-r3-run2] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3c-r3-run2] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3c-r3-run2 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 47358 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 47392 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 47394 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 47365 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === A r3 rate=3 repeat=2 ===
+[formal][p3a-r3-run2] continuous k6 start: rate=3 warmup=120s measurement=300s
+[formal][p3a-r3-run2] k6 exit=0
+[formal][p3a-r3-run2] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3a-r3-run2] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3a-r3-run2 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 71748 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 71782 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 71784 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 71755 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === B r7 rate=7 repeat=2 ===
+[formal][p3b-r7-run2] continuous k6 start: rate=7 warmup=120s measurement=300s
+[formal][p3b-r7-run2] k6 exit=0
+[formal][p3b-r7-run2] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3b-r7-run2] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3b-r7-run2 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 96147 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 96183 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 96185 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 96154 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === C r7 rate=7 repeat=2 ===
+[formal][p3c-r7-run2] continuous k6 start: rate=7 warmup=120s measurement=300s
+[formal][p3c-r7-run2] k6 exit=0
+[formal][p3c-r7-run2] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3c-r7-run2] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3c-r7-run2 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 21223 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 21257 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 21258 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 21230 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === A r7 rate=7 repeat=2 ===
+[formal][p3a-r7-run2] continuous k6 start: rate=7 warmup=120s measurement=300s
+[formal][p3a-r7-run2] k6 exit=0
+[formal][p3a-r7-run2] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3a-r7-run2] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3a-r7-run2 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 45575 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 45609 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 45611 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 45582 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === B r10 rate=10 repeat=2 ===
+[formal][p3b-r10-run2] continuous k6 start: rate=10 warmup=120s measurement=300s
+[formal][p3b-r10-run2] k6 exit=0
+[formal][p3b-r10-run2] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3b-r10-run2] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3b-r10-run2 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 70045 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 70081 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 70083 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 70052 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === C r10 rate=10 repeat=2 ===
+[formal][p3c-r10-run2] continuous k6 start: rate=10 warmup=120s measurement=300s
+[formal][p3c-r10-run2] k6 exit=0
+[formal][p3c-r10-run2] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3c-r10-run2] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3c-r10-run2 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 94440 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 94474 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 94476 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 94447 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === A r10 rate=10 repeat=2 ===
+[formal][p3a-r10-run2] continuous k6 start: rate=10 warmup=120s measurement=300s
+[formal][p3a-r10-run2] k6 exit=0
+[formal][p3a-r10-run2] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3a-r10-run2] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3a-r10-run2 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 19507 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 19541 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 19543 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 19514 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === C r3 rate=3 repeat=3 ===
+[formal][p3c-r3-run3] continuous k6 start: rate=3 warmup=120s measurement=300s
+[formal][p3c-r3-run3] k6 exit=0
+[formal][p3c-r3-run3] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3c-r3-run3] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3c-r3-run3 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 43986 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 44020 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 44022 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 43993 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === A r3 rate=3 repeat=3 ===
+[formal][p3a-r3-run3] continuous k6 start: rate=3 warmup=120s measurement=300s
+[formal][p3a-r3-run3] k6 exit=0
+[formal][p3a-r3-run3] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3a-r3-run3] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3a-r3-run3 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 68397 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 68431 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 68433 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 68404 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === B r3 rate=3 repeat=3 ===
+[formal][p3b-r3-run3] continuous k6 start: rate=3 warmup=120s measurement=300s
+[formal][p3b-r3-run3] k6 exit=0
+[formal][p3b-r3-run3] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3b-r3-run3] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3b-r3-run3 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 92791 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 92827 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 92828 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 92798 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === C r7 rate=7 repeat=3 ===
+[formal][p3c-r7-run3] continuous k6 start: rate=7 warmup=120s measurement=300s
+[formal][p3c-r7-run3] k6 exit=0
+[formal][p3c-r7-run3] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3c-r7-run3] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3c-r7-run3 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 17831 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 17865 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 17867 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 17838 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === A r7 rate=7 repeat=3 ===
+[formal][p3a-r7-run3] continuous k6 start: rate=7 warmup=120s measurement=300s
+[formal][p3a-r7-run3] k6 exit=0
+[formal][p3a-r7-run3] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3a-r7-run3] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3a-r7-run3 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 42263 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 42297 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 42299 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 42270 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === B r7 rate=7 repeat=3 ===
+[formal][p3b-r7-run3] continuous k6 start: rate=7 warmup=120s measurement=300s
+[formal][p3b-r7-run3] k6 exit=0
+[formal][p3b-r7-run3] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3b-r7-run3] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3b-r7-run3 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 66736 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 66772 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 66774 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 66743 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === C r10 rate=10 repeat=3 ===
+[formal][p3c-r10-run3] continuous k6 start: rate=10 warmup=120s measurement=300s
+[formal][p3c-r10-run3] k6 exit=0
+[formal][p3c-r10-run3] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3c-r10-run3] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3c-r10-run3 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 91153 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 91187 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 91189 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 91160 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === A r10 rate=10 repeat=3 ===
+[formal][p3a-r10-run3] continuous k6 start: rate=10 warmup=120s measurement=300s
+[formal][p3a-r10-run3] k6 exit=0
+[formal][p3a-r10-run3] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3a-r10-run3] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3a-r10-run3 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 16225 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 16259 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 16261 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 16232 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] === B r10 rate=10 repeat=3 ===
+[formal][p3b-r10-run3] continuous k6 start: rate=10 warmup=120s measurement=300s
+[formal][p3b-r10-run3] k6 exit=0
+[formal][p3b-r10-run3] confirming drain...
+[plateau_check] no gaps >20s detected
+[formal][p3b-r10-run3] done -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase3/unit7-formal/p3b-r10-run3 (invalid_reason='')
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 40743 Terminated: 15          caffeinate -dims -w $$
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 40779 Terminated: 15          ( idx=0; while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); m=$(curl -s -m 1 "http://127.0.0.1:${PORT}/actuator/prometheus" 2>/dev/null); printf '%05d' "$idx" > /dev/null; snapfile="$SCRATCH/prom-snapshots/$(printf '%05d' "$idx").txt"; echo "$m" > "$snapfile"; echo "$idx,$ts" >> "$SNAP_IDX_FILE"; function g () 
+    { 
+        echo "$m" | awk -v k="$1" '$0 ~ "^"k" " {print $NF; exit} $0 ~ "^"k"\\{" {print $NF; exit}'
+    }; function gsum () 
+    { 
+        echo "$m" | awk -v pat="$1" '$0 ~ pat {s+=$NF} END{print s+0}'
+    }; heap_used=$(gsum '^jvm_memory_used_bytes\{area="heap"'); gc_count=$(gsum '^jvm_gc_pause_seconds_count\{'); gc_sum=$(gsum '^jvm_gc_pause_seconds_sum\{'); echo "$ts,$(g jvm_threads_live_threads),$(g process_cpu_seconds_total),$(g process_cpu_usage),${heap_used},${gc_count},${gc_sum},$(g gateway_admission_active),$(g gateway_active_streams),$(g gateway_upstream_active),$(g servlet_write_executor_active),$(g servlet_write_executor_queue_depth),$(g servlet_write_stream_buffered_frames),$(g servlet_write_executor_rejected_total),$(g gateway_write_overflow_total),$(g outbound_blocking_executor_active),$(g outbound_blocking_executor_rejected_total),$(g reactor_netty_connection_provider_pending_connections)" >> "$PROM_CSV"; idx=$((idx + 1)); sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 50: 40780 Terminated: 15          ( while kill -0 "$GATEWAY_PID" 2> /dev/null; do
+    ts=$(date +%s.%N); rss=$(ps -o rss= -p "$GATEWAY_PID" 2>/dev/null | tr -d ' '); [ -n "$rss" ] && echo "$ts,$rss" >> "$RSS_CSV"; sleep 1;
+done )
+./scripts/run-phase3-native-formal-benchmark.sh: line 85: 40750 Terminated: 15          nohup .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1
+[matrix] done. 0 run(s) reported non-zero exit -- check each result.json's
+[matrix] 'valid'/'invalid_reason' field individually (a non-zero exit does not by itself
+[matrix] mean invalid, and 'valid: true' does not require a zero exit -- Sec 13-C policy).
+[matrix] Invalid runs must be retried in a fresh environment per protocol Sec 13-C before
+[matrix] this matrix is considered complete; retries are NOT automated by this script.

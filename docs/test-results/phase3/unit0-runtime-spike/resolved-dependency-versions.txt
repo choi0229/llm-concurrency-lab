@@ -1,0 +1,27 @@
+          \--- io.projectreactor:reactor-core:3.4.34 (*)
+     \--- org.springframework:spring-webflux:5.3.31
+     +--- org.springframework.boot:spring-boot-starter-reactor-netty:2.7.18
+     |         \--- io.projectreactor:reactor-core:3.4.34 (*)
+     |         +--- io.netty:netty-codec-http:4.1.101.Final
+     |         +--- io.netty:netty-codec-http2:4.1.101.Final
+     |         +--- io.projectreactor.netty:reactor-netty-core:1.0.39
+     |         |         +--- io.netty:netty-common:4.1.101.Final
+     |         |         |    +--- io.netty:netty-common:4.1.101.Final
+     |         |    \--- io.netty:netty-codec-http:4.1.101.Final (*)
+     |         |    \--- io.projectreactor:reactor-core:3.4.34
+     |         |    +--- io.netty:netty-common:4.1.101.Final
+     |         |    |         \--- io.netty:netty-common:4.1.101.Final
+     |         |    |    \--- io.netty:netty-codec-http:4.1.101.Final (*)
+     |         |    |    \--- io.netty:netty-common:4.1.101.Final
+     |         |    |    +--- io.netty:netty-common:4.1.101.Final
+     |         |    |    |    +--- io.netty:netty-common:4.1.101.Final
+     |    \--- io.projectreactor.netty:reactor-netty-http:1.0.39
+|    \--- org.springframework:spring-webmvc:5.3.31
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:9.0.83
+|    |         +--- com.fasterxml.jackson.core:jackson-databind:2.13.5 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.5
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:9.0.83
+|    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.5 (*)
+|    |    |    |         +--- com.fasterxml.jackson.core:jackson-databind:2.13.5 (c)
+--- micrometer-core (spike-mvc + explicit dep) ---
+io.micrometer:micrometer-core -> 1.9.17

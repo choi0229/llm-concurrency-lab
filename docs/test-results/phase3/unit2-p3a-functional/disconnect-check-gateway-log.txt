@@ -1,0 +1,6 @@
+2026-08-22 13:50:50.501  INFO 2924 --- [nio-8081-exec-1] c.l.gatewaymvc.chat.ChatController       : [00a97acb-356f-4c59-a434-01d54a3458df] request start
+2026-08-22 13:50:51.622  INFO 2924 --- [servlet-write-3] c.l.g.write.PerStreamWriteChannel        : [00a97acb-356f-4c59-a434-01d54a3458df] client disconnected mid-stream (checkError)
+2026-08-22 13:50:51.622  WARN 2924 --- [nio-8081-exec-2] c.l.gatewaymvc.chat.ChatController       : [00a97acb-356f-4c59-a434-01d54a3458df] async error: Broken pipe
+2026-08-22 13:50:51.639  WARN 2924 --- [nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'text/event-stream;charset=UTF-8']
+2026-08-22 13:50:52.120  WARN 2924 --- [king-outbound-1] c.l.gatewaymvc.chat.ChatController       : [00a97acb-356f-4c59-a434-01d54a3458df] upstream failure (io_error) after already terminal (known race): stream is closed
+2026-08-22 13:50:52.121  INFO 2924 --- [servlet-write-3] c.l.gatewaymvc.chat.RequestLifecycle     : [00a97acb-356f-4c59-a434-01d54a3458df] terminal: outcome=client_disconnect

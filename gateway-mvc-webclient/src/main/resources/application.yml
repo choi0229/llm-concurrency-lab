@@ -1,0 +1,22 @@
+server:
+  port: ${SERVER_PORT:8080}
+  tomcat:
+    mbeanregistry:
+      enabled: true   # required for tomcat_threads_*/tomcat_connections_* Actuator metrics
+                       # (confirmed in Unit 1 capability spike, docs/decisions/phase3-metrics-contract.md §2-2)
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    use-global-registry: true   # required for reactor_netty_* metrics to reach /actuator/prometheus
+                                 # (confirmed in Unit 1 capability spike)
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}

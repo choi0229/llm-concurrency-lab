@@ -1,0 +1,37 @@
+{
+  "target": "P3-B (gateway-mvc-webclient)",
+  "port": 8082,
+  "scenario": "sustained",
+  "workload": {
+    "chunkCount": 20,
+    "chunkSizeBytes": 65536,
+    "chunkIntervalMs": 0,
+    "slowClientSleepPerEventSeconds": 0.15
+  },
+  "purpose": "D2 — within the 32-frame per-stream write buffer capacity (no overflow expected), to observe write-executor/write-duration behavior under sustained slow-client backpressure without triggering fail-fast.",
+  "client_observed": {
+    "http_req_duration_s": 3.18,
+    "sse_events_received": 21,
+    "data_received_bytes": 1300000,
+    "connection_result": "completed normally, all chunks delivered"
+  },
+  "gateway_log_timeline": {
+    "request_start": "2026-08-22 15:54:28.528",
+    "no_overflow": true,
+    "note": "same JVM process as overflow-scenario, run immediately after; no restart between scenarios"
+  },
+  "mid_run_metrics": {
+    "servlet_write_executor_active_peak": 1.0,
+    "servlet_write_stream_buffered_frames_peak": 8.0,
+    "servlet_write_stream_buffered_frames_capacity": 32,
+    "gateway_upstream_active_throughout": 0.0
+  },
+  "postflight_metrics": {
+    "servlet_write_duration_seconds_max": 0.604644292,
+    "servlet_write_duration_seconds_count": 34.0,
+    "servlet_write_duration_seconds_sum": 1.503255207,
+    "servlet_write_stream_buffered_frames": 0.0
+  },
+  "finding": "The slow client's TCP-level backpressure propagates into a blocking PrintWriter.write()+flush() call taking up to ~0.605s (servlet_write_duration_seconds_max), with the write executor thread genuinely occupied (active=1) for part of the request. The bounded per-stream buffer provided runway (peaked at 8/32, well below capacity) rather than growing unbounded — consistent with the overflow-scenario's fail-fast design engaging only once actual capacity is exceeded.",
+  "notes": "Diagnostic only. Not a performance measurement — no comparison implied against P3-C's handling of the same workload."
+}

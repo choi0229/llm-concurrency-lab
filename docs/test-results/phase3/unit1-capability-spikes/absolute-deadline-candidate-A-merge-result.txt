@@ -1,0 +1,6 @@
+=== Candidate A: Flux.merge(data, deadlineErrorMono) -- BUGGY: blocks normal completion until deadline mono also terminates ===
+[case1 normal-completion] items=3 sawError=true timerSubscribed=true timerCancelled=true dataCancelled=false
+[case2 deadline-fires-first] items=3 error=TimeoutException:absolute-deadline-exceeded elapsedMs=311 dataCancelledAfterDeadline=true
+[case3 downstream-cancel] dataCancelled=true timerCancelled=true
+[case4 upstream-error-first] error=IllegalStateException:simulated-upstream-error timerCancelled=true
+ALL CASES DONE

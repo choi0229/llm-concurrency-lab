@@ -1,0 +1,13 @@
+=== SpikeWebfluxTopologyApplication.java result (real Spring Boot 2.7.18 WebFlux app) ===
+GET /report after 15x GET /probe:
+serverThreads=[reactor-http-nio-3]
+clientThreads=[reactor-http-nio-2]
+intersection=[]  (this specific sample didn't overlap, same reason as above)
+allNioReactorThreadsInJvm=[reactor-http-nio-1..10]  (10 total)
+availableProcessors=10
+
+=> Confirmed at the actual application-framework level (Boot's auto-configured embedded
+   Reactor Netty WebFlux server via NettyWebServer, plus a manually-built WebClient
+   identical in construction to gateway-mvc-webclient's WebClientConfig -- HttpClient.create()
+   with no explicit .runOn(LoopResources)): only 10 reactor-http-nio-* threads exist total,
+   not 20. Server and client share reactor.netty.http.HttpResources's global default pool.

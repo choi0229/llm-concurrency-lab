@@ -76,3 +76,36 @@ Final Report §7/§8/§25).
 
 > **Phase 2는 freeze됐다.** 코드/결과/문서를 더 이상 수정하거나 추가 Benchmark·JFR diagnostic·
 > VT-Unlimited run을 수행하지 않는다 — 위 Final Report/Portfolio Summary가 최종본이다.
+
+## Phase 3 — Blocking MVC vs WebClient vs WebFlux (`gateway-mvc-blocking-spring5` / `gateway-mvc-webclient` / `gateway-webflux`) — 완료 (Frozen)
+
+동일한 Java 8 + Spring Boot 2.7.18 런타임 위에서 Spring MVC + `HttpURLConnection`(blocking
+outbound, P3-A), Spring MVC + WebClient(non-blocking outbound, P3-B), Spring WebFlux + WebClient
+(완전 reactive, P3-C) 세 아키텍처를 비교했다. Outbound 실행 모델 변경(Experiment A: P3-A vs P3-B)과
+서버 응답 모델 변경(Experiment B: P3-B vs P3-C)을 각각 하나의 변수만 바꾸는 pairwise 실험으로
+분리해, R3(안정)/R7(근접 과부하)/R10(과부하) × 3회 반복 = **27 valid Formal run**을 측정했다.
+
+- **Final Report**: [`docs/test-results/phase3/phase3-final-report.md`](docs/test-results/phase3/phase3-final-report.md)
+- **Portfolio Summary**(README/이력서/면접용 요약): [`docs/portfolio/phase3-summary.md`](docs/portfolio/phase3-summary.md)
+- **Canonical dataset**: `docs/test-results/phase3/unit7-formal/<27 canonical run dirs>/`(raw,
+  canary 제외), canonical aggregate:
+  [`docs/test-results/phase3/unit7-formal/aggregate-result.json`](docs/test-results/phase3/unit7-formal/aggregate-result.json)
+  (`scripts/aggregate_phase3_formal.py`) — Phase 3 Primary 결과의 공식 수치 source of truth.
+- **설계/결정 문서**: [`docs/test-plan/phase3-design.md`](docs/test-plan/phase3-design.md),
+  [`docs/test-plan/phase3-formal-protocol.md`](docs/test-plan/phase3-formal-protocol.md),
+  `docs/decisions/phase3-*.md`(7개 ADR). Java 8/Spring Boot 2.7.18 런타임 채택 근거:
+  `docs/decisions/phase3-version-compatibility.md`.
+
+**핵심 결과**: 동일 admission ceiling(=50)에서 completion throughput/rejection rate/client
+TTFC·stream duration은 세 구현에서 거의 동일했으나, JVM platform-thread measurement-window
+peak는 80(P3-A) → 49(P3-B) → 37(P3-C)로 단계적으로, 모든 부하 구간에서 일관되게 감소했다(약
+-38.75% / 추가 -24.49% / 전체 -53.75%). 다만 이 thread 절감은 CPU/RSS 절감으로 이어지지 않았다 —
+P3-A→P3-B에서 CPU는 오히려 27~32% 증가했고 RSS peak도 세 부하 모두 증가했으며, P3-B→P3-C에서
+CPU는 소폭 감소했지만 RSS는 부하에 따라 방향이 갈렸다(상세는 Final Report §16-25).
+
+**Unit 8(JFR/async-profiler 기반 CPU/RSS root-cause profiling)은 Optional Future Work로
+남겨졌다** — Phase 3 필수 범위에서 제외됐으며 자동 실행되지 않는다(Final Report §28).
+
+> **Phase 3는 freeze됐다.** 코드/결과/문서를 더 이상 수정하거나 추가 Formal benchmark를 수행하지
+> 않는다 — 위 Final Report/Portfolio Summary가 최종본이다. Unit 8 등 향후 profiling을 진행하더라도
+> Phase 3 canonical raw/aggregate/Final Report는 덮어쓰지 않고 별도 경로로 분리 저장한다.

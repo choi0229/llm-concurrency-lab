@@ -1,0 +1,6 @@
+=== Candidate C (SELECTED): data.takeUntilOther(completionSignal).concatWith(deferred error-if-flag) -- all 4 lifecycle cases pass, no leak ===
+[case1 normal-completion] items=3 sawError=false elapsedMs=82 (expect: items=3 sawError=false elapsedMs<<500, proving the timer branch does not block early completion)
+[case2 deadline-fires-first] items=3 error=TimeoutException:absolute-deadline-exceeded elapsedMs=306 rawTicksAtTermination=3 rawTicksAfter+2000ms=3 LEAK=false
+[case3 downstream-cancel] dataCancelled=true
+[case4 upstream-error-first] error=IllegalStateException:simulated-upstream-error
+ALL CASES DONE
