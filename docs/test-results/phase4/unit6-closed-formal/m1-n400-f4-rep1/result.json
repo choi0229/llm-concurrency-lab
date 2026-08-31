@@ -1,0 +1,152 @@
+{
+  "valid": true,
+  "invalid_reasons": [],
+  "model": "m1",
+  "concurrency": 400,
+  "run_label": "f4-rep1",
+  "client_cohort": {
+    "target_concurrency": 400,
+    "actual_started": 400,
+    "target_reached": true,
+    "completed": 350,
+    "rejected": 0,
+    "failed_mid_stream": 50,
+    "failed_no_event": 0,
+    "terminal_sum": 400,
+    "invariant_ok": true,
+    "dropped_iterations": 0
+  },
+  "model_outcome": {
+    "actual_started": 400,
+    "completed": 350,
+    "rejected": 0,
+    "failed_mid_stream": 50,
+    "failed_no_event": 0,
+    "reliability_pass": false,
+    "slo_pass": null,
+    "server_outcomes_wave_estimate": {
+      "completed": 350.0,
+      "rejected": 0.0,
+      "timeout": 50.0,
+      "upstream_error": 0.0,
+      "client_disconnect": 0.0,
+      "internal_error": 0.0,
+      "write_overflow": 0.0
+    },
+    "prewarm_contamination_ok": true,
+    "color": "RED",
+    "classification": "MODEL_TIMEOUT",
+    "classification_evidence": [
+      "server outcome=timeout count=50.0 (Gateway absolute-deadline evidence)"
+    ]
+  },
+  "client_latency": {
+    "completed_ttfc_p95_s": 48.589,
+    "completed_ttfc_avg_s": 24.782257142857134,
+    "completed_duration_p95_s": 55.514,
+    "completed_duration_avg_s": 31.693225714285695,
+    "diagnostic_all_outcomes_ttfc_p95_s": 56.524,
+    "diagnostic_all_outcomes_duration_p95_s": 60.186,
+    "slo_ttfc_threshold_s": 2.0,
+    "slo_duration_threshold_s": 10.0
+  },
+  "wave_start_spread": {
+    "spread_ms": 23,
+    "exceeds_threshold": false
+  },
+  "platform_threads": {
+    "peak": 209.0,
+    "sample_count": 97
+  },
+  "cpu": {
+    "process_cpu_usage_mean": 0.005228483974217691,
+    "process_cpu_usage_peak": 0.051144238630071816,
+    "system_cpu_count": 10.0,
+    "avg_cores_estimate": 0.05228483974217691,
+    "peak_cores_estimate_diagnostic": 0.5114423863007181
+  },
+  "rss": {
+    "count": 98,
+    "start_kib": 248096,
+    "peak_kib": 330400,
+    "delta_kib": 82304
+  },
+  "fd": {
+    "open_peak": 469.0,
+    "max_files": 1048576.0,
+    "metric_present": true
+  },
+  "heap": {
+    "peak": 77390576.0,
+    "sample_count": 776
+  },
+  "common_gateway": {
+    "gateway_active_requests_final": 0.0,
+    "gateway_upstream_active_final": 0.0,
+    "internal_error_total": 0.0
+  },
+  "implementation_specific": {
+    "executor_active_peak": {
+      "peak": 50.0,
+      "sample_count": 97
+    },
+    "executor_queue_depth_peak": {
+      "peak": 350.0,
+      "sample_count": 97
+    },
+    "executor_rejected_final": 0.0
+  },
+  "mock": {
+    "active_final": 0.0,
+    "waiting_final": 0.0,
+    "completed_final": 355.0
+  },
+  "postflight_clean": true,
+  "stall_check": {
+    "query_ok": true,
+    "window_start_s": 1787934063.284,
+    "window_end_s": 1787934163.328,
+    "gateway_scrape_gap_max_s": 1,
+    "gateway_gap_exceeds_threshold": false,
+    "mock_log_gap_max_s": 7.878000020980835,
+    "mock_gap_exceeds_threshold": false,
+    "client_max_duration_s": 60.199,
+    "client_duration_anomaly": true,
+    "thresholds": {
+      "gateway_gap_s": 5.0,
+      "mock_gap_s": 15.0,
+      "client_duration_s": 20.0
+    },
+    "stall_detected": false,
+    "evidence": [
+      "client stream_duration max 60.2s > 20.0s threshold"
+    ]
+  },
+  "timestamps": {
+    "process_start_ms": 1787934061593,
+    "k6_wall_start_ms": 1787934063284,
+    "k6_wall_end_ms": 1787934163328,
+    "drain_start_ms": 1787934163346,
+    "drain_end_ms": 1787934163371
+  },
+  "environment": {
+    "model": "m1",
+    "concurrency": 400,
+    "run_label": "f4-rep1",
+    "gateway_port": 18101,
+    "mock_port": 8000,
+    "prometheus_port": 9094,
+    "prometheus_scrape_interval": "1s",
+    "prewarm_count": 5,
+    "chat_total_timeout_ms": 60000,
+    "workload": {
+      "firstChunkDelayMs": 1000,
+      "chunkIntervalMs": 200,
+      "chunkCount": 35,
+      "chunkSizeBytes": 64
+    },
+    "gateway_jar": "gateway-phase4-platform-queue-0.1.0.jar",
+    "gateway_pid": 69113,
+    "jdk_home": "/Users/user/Documents/GitHub/llm-concurrency-lab/.native-runtime/jdk-21.0.11+10/Contents/Home"
+  }
+}

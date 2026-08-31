@@ -1,0 +1,88 @@
+     +--- io.micrometer:micrometer-core:1.17.0 (*)
+|              \--- org.springframework:spring-web:7.0.8 (*)
+|              +--- org.springframework:spring-core:7.0.8 (*)
+|         \--- org.springframework:spring-webmvc:7.0.8
+|         +--- io.micrometer:micrometer-core:1.17.0 (*)
+|         +--- org.springframework:spring-web:7.0.8 (*)
+|         |    \--- org.springframework:spring-web:7.0.8 (*)
+|         |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |         \--- io.micrometer:micrometer-core:1.17.0
+|    |         \--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |         +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |         |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |    \--- org.springframework:spring-web:7.0.8 (*)
+|    |    \--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |    |         \--- org.apache.tomcat.embed:tomcat-embed-core:11.0.22
+|    |    |    +--- org.apache.tomcat.embed:tomcat-embed-core:11.0.22
+|    |    |    |              +--- org.springframework:spring-core:7.0.8 (*)
+|    |    |    |              |    \--- org.springframework:spring-core:7.0.8 (*)
+|    |    |    |              |    |    \--- org.springframework:spring-core:7.0.8 (*)
+|    |    |    |         +--- org.springframework:spring-core:7.0.8
+|    |    |    |    \--- org.apache.tomcat.embed:tomcat-embed-core:11.0.22
+|    |    |    |    \--- org.springframework.boot:spring-boot:4.1.0
+|    |    |    |    |         +--- org.springframework:spring-core:7.0.8 (*)
+|    |    |    |    |    \--- org.springframework:spring-web:7.0.8
+|    |    |    |    |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+^^^ gateway-phase4-platform-queue
+
+     +--- io.micrometer:micrometer-core:1.17.0 (*)
+|              \--- org.springframework:spring-web:7.0.8 (*)
+|              +--- org.springframework:spring-core:7.0.8 (*)
+|         \--- org.springframework:spring-webmvc:7.0.8
+|         +--- io.micrometer:micrometer-core:1.17.0 (*)
+|         +--- org.springframework:spring-web:7.0.8 (*)
+|         |    \--- org.springframework:spring-web:7.0.8 (*)
+|         |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |         \--- io.micrometer:micrometer-core:1.17.0
+|    |         \--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |         +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |         |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |    \--- org.springframework:spring-web:7.0.8 (*)
+|    |    \--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |    |         \--- org.apache.tomcat.embed:tomcat-embed-core:11.0.22
+|    |    |    +--- org.apache.tomcat.embed:tomcat-embed-core:11.0.22
+|    |    |    |              +--- org.springframework:spring-core:7.0.8 (*)
+|    |    |    |              |    \--- org.springframework:spring-core:7.0.8 (*)
+|    |    |    |              |    |    \--- org.springframework:spring-core:7.0.8 (*)
+|    |    |    |         +--- org.springframework:spring-core:7.0.8
+|    |    |    |    \--- org.apache.tomcat.embed:tomcat-embed-core:11.0.22
+|    |    |    |    \--- org.springframework.boot:spring-boot:4.1.0
+|    |    |    |    |         +--- org.springframework:spring-core:7.0.8 (*)
+|    |    |    |    |    \--- org.springframework:spring-web:7.0.8
+|    |    |    |    |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+^^^ gateway-phase4-virtual-thread
+
+     +--- io.micrometer:micrometer-core:1.17.0 (*)
+|              \--- io.projectreactor:reactor-core:3.8.6 (*)
+|              +--- org.springframework:spring-core:7.0.8 (*)
+|              +--- org.springframework:spring-web:7.0.8 (*)
+|         \--- org.springframework:spring-webflux:7.0.8
+|         +--- io.micrometer:micrometer-core:1.17.0 (*)
+|         +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|         |    \--- org.springframework:spring-web:7.0.8 (*)
+|         |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    +--- org.springframework.boot:spring-boot-starter-reactor-netty:4.1.0
+|    |         \--- io.micrometer:micrometer-core:1.17.0
+|    |         \--- org.springframework:spring-web:7.0.8 (*)
+|    |         \--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |         +--- io.projectreactor.netty:reactor-netty-http:1.3.6
+|    |         +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |         |         +--- org.springframework:spring-core:7.0.8 (*)
+|    |         |    \--- org.springframework:spring-web:7.0.8
+|    |         |    +--- io.projectreactor:reactor-core:3.8.6 (*)
+|    |         |    +--- io.projectreactor.netty:reactor-netty-core:1.3.6
+|    |         |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |         |    |    +--- io.projectreactor:reactor-core:3.8.6 (*)
+|    |    \--- org.springframework.boot:spring-boot-reactor-netty:4.1.0
+|    |    \--- org.springframework.boot:spring-boot:4.1.0 (*)
+|    |    |              +--- org.springframework:spring-core:7.0.8 (*)
+|    |    |              |    \--- org.springframework:spring-core:7.0.8 (*)
+|    |    |              |    |    \--- org.springframework:spring-core:7.0.8 (*)
+|    |    |         +--- org.springframework:spring-core:7.0.8
+|    |    |    \--- io.projectreactor:reactor-core:3.8.6
+|    |    |    \--- org.springframework.boot:spring-boot:4.1.0
+|    |    |    +--- org.springframework.boot:spring-boot:4.1.0 (*)
+^^^ gateway-phase4-webflux
+

@@ -1,0 +1,13 @@
+=== M1 test results ===
+TEST-com.llmconcurrencylab.phase4.common.WriteChannelTest.xml:
+tests="2" skipped="0" failures="0" errors="0"
+TEST-com.llmconcurrencylab.phase4.platformqueue.PlatformTaskSubmitterTest.xml:
+tests="2" skipped="0" failures="0" errors="0"
+
+=== M2 test results ===
+TEST-com.llmconcurrencylab.phase4.common.WriteChannelTest.xml:
+tests="2" skipped="0" failures="0" errors="0"
+TEST-com.llmconcurrencylab.phase4.virtualthread.VirtualTaskSubmitterTest.xml:
+tests="1" skipped="0" failures="0" errors="0"
+
+M3: no JUnit tests written this Unit (F1-F4/F10 covered via live functional curl runs + static grep audit, see architecture-parity.md); build+test task ran clean with 0 tests.

@@ -1,0 +1,99 @@
+{
+  "canonical": false,
+  "unit": "7.2-r160-frontdoor-isolation",
+  "target": "direct-mock",
+  "environment": {
+    "diagnostic_unit": "7.2-r160-frontdoor-isolation",
+    "canonical": false,
+    "target": "direct-mock",
+    "target_rate": 160,
+    "run_label": "lifecyclefix1",
+    "warmup_sec": 60,
+    "measurement_sec": 120,
+    "target_url": "http://127.0.0.1:8000/mock/stream",
+    "mock_port": 8000,
+    "prometheus_port": 9094,
+    "chat_total_timeout_ms": 60000,
+    "workload": {
+      "firstChunkDelayMs": 1000,
+      "chunkIntervalMs": 200,
+      "chunkCount": 35,
+      "chunkSizeBytes": 64
+    },
+    "k6_pre_allocated_vus": 9600,
+    "k6_max_vus": 12000,
+    "fd_soft_limit_at_k6_launch": "1048576",
+    "server_tomcat_max_connections": null
+  },
+  "client_cohort": {
+    "iterations_total": 28801,
+    "measurement_iterations_started": 19204,
+    "client_iterations_started_total": 28801,
+    "client_sse_open_attempt_total": 28801,
+    "client_sse_open_success_total": 28801,
+    "client_first_event_total": 28801,
+    "client_sse_error_total": null,
+    "client_completed_total": 19204,
+    "client_rejected_total": null,
+    "client_failed_mid_stream_total": null,
+    "client_failed_no_event_total": null,
+    "client_zero_event_terminal_total": null,
+    "dropped_iterations": 0,
+    "http_reqs": 28801,
+    "vus_peak": 1279
+  },
+  "mock": {
+    "received_first_chunk_count": 28801.0,
+    "completed_total": 28801.0,
+    "cancelled_total": 0.0,
+    "active_final": 0.0,
+    "waiting_final": 0.0
+  },
+  "gateway": null,
+  "diag_log": {
+    "zero_event_terminal_count": 0,
+    "sse_error_count": 0,
+    "zero_event_terminal_sample": [],
+    "sse_error_sample": [],
+    "zero_event_terminal_all_unique_shapes": []
+  },
+  "socket_telemetry": {
+    "summary": {
+      "sample_count": 164,
+      "established": {
+        "peak": 1280,
+        "mean": 1200.0243902439024
+      },
+      "syn_sent": {
+        "peak": 1,
+        "mean": 0.018292682926829267
+      },
+      "time_wait": {
+        "peak": 5001,
+        "mean": 4226.707317073171
+      },
+      "close_wait": {
+        "peak": 0,
+        "mean": 0.0
+      },
+      "endpoint_aware": true,
+      "server_established": {
+        "peak": 1280,
+        "mean": 1200.0487804878048
+      },
+      "server_time_wait": {
+        "peak": 6,
+        "mean": 0.4024390243902439
+      }
+    },
+    "meta": {
+      "ephemeral_port_range_first": "49152",
+      "ephemeral_port_range_last": "65535",
+      "ephemeral_port_range_size": 16384,
+      "fd_soft_limit_at_sampler_start": "1048576",
+      "kern_maxfilesperproc": "61440",
+      "target_port": 8000,
+      "note": "read-only observation, no sysctl/ulimit changes made"
+    }
+  }
+}

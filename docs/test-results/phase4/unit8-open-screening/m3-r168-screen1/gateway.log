@@ -1,0 +1,19 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-30T16:29:04.426+09:00  INFO 88328 --- [           main] c.l.p.webflux.Phase4WebfluxApplication   : Starting Phase4WebfluxApplication v0.1.0 using Java 21.0.11 with PID 88328 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-webflux/build/libs/gateway-phase4-webflux-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-webflux)
+2026-08-30T16:29:04.428+09:00  INFO 88328 --- [           main] c.l.p.webflux.Phase4WebfluxApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-30T16:29:04.788+09:00  INFO 88328 --- [           main] c.l.phase4.webflux.WebClientConfig       : WebClient config: baseUrl=http://127.0.0.1:8000 maxConnections=3200 (FUNCTIONAL_ONLY_NOT_PHASE4_CAPACITY_CONFIG unless overridden) pendingAcquireMaxCount=3200 pendingAcquireTimeoutMs=10000 connectTimeoutMs=3000
+2026-08-30T16:29:04.922+09:00  INFO 88328 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-08-30T16:29:05.047+09:00  INFO 88328 --- [           main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 18103 (http)
+2026-08-30T16:29:05.050+09:00  INFO 88328 --- [           main] c.l.p.webflux.Phase4WebfluxApplication   : Started Phase4WebfluxApplication in 0.788 seconds (process running for 0.988)
+2026-08-30T16:29:12.571+09:00 ERROR 88328 --- [ctor-http-nio-1] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2026-08-30T16:32:20.825+09:00  INFO 88328 --- [ionShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-30T16:32:20.827+09:00  INFO 88328 --- [ netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete

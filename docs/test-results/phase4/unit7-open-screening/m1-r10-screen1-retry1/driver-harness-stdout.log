@@ -1,0 +1,5 @@
+[11:48:45] === Preflight: m1 R=10 (screen1-retry1) warmup=60s measurement=120s ===
+[11:52:34] === Done: m1 R=10 (screen1-retry1) -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase4/unit7-open-harness/m1-r10-screen1-retry1 ===
+
+---STDERR---
+/Users/user/Documents/GitHub/llm-concurrency-lab/scripts/run-phase4-open-benchmark.sh: line 227: 10062 Terminated: 15          MOCK_LLM_MAX_CONCURRENT_PROCESSING=0 MOCK_LLM_MAX_WAITING=0 nohup .venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1  (wd: ~/Documents/GitHub/llm-concurrency-lab/mock-llm-fastapi)

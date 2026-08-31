@@ -1,0 +1,18 @@
+{
+  "diagnostic_unit": "7.2-r160-frontdoor-isolation",
+  "canonical": false,
+  "target": "m2",
+  "target_rate": 160,
+  "run_label": "regression1",
+  "warmup_sec": 60,
+  "measurement_sec": 120,
+  "target_url": "http://127.0.0.1:18102/chat/stream",
+  "mock_port": 8000,
+  "prometheus_port": 9094,
+  "chat_total_timeout_ms": 60000,
+  "workload": {"firstChunkDelayMs": 1000, "chunkIntervalMs": 200, "chunkCount": 35, "chunkSizeBytes": 64},
+  "k6_pre_allocated_vus": 9600,
+  "k6_max_vus": 12000,
+  "fd_soft_limit_at_k6_launch": "1048576",
+  "server_tomcat_max_connections": 9600
+}

@@ -1,0 +1,17 @@
+server:
+  port: ${SERVER_PORT:18101}
+  tomcat:
+    mbeanregistry:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health
+  metrics:
+    use-global-registry: true
+
+logging:
+  level:
+    root: INFO

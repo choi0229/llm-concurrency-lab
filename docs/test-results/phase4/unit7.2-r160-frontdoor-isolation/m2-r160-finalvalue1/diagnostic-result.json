@@ -1,0 +1,125 @@
+{
+  "canonical": false,
+  "unit": "7.2-r160-frontdoor-isolation",
+  "target": "m2",
+  "environment": {
+    "diagnostic_unit": "7.2-r160-frontdoor-isolation",
+    "canonical": false,
+    "target": "m2",
+    "target_rate": 160,
+    "run_label": "finalvalue1",
+    "warmup_sec": 60,
+    "measurement_sec": 120,
+    "target_url": "http://127.0.0.1:18102/chat/stream",
+    "mock_port": 8000,
+    "prometheus_port": 9094,
+    "chat_total_timeout_ms": 60000,
+    "workload": {
+      "firstChunkDelayMs": 1000,
+      "chunkIntervalMs": 200,
+      "chunkCount": 35,
+      "chunkSizeBytes": 64
+    },
+    "k6_pre_allocated_vus": 9600,
+    "k6_max_vus": 12000,
+    "fd_soft_limit_at_k6_launch": "1048576",
+    "server_tomcat_max_connections": 3200
+  },
+  "client_cohort": {
+    "iterations_total": 28801,
+    "measurement_iterations_started": 19201,
+    "client_iterations_started_total": 28801,
+    "client_sse_open_attempt_total": 28801,
+    "client_sse_open_success_total": 28801,
+    "client_first_event_total": 28801,
+    "client_sse_error_total": null,
+    "client_completed_total": 19201,
+    "client_rejected_total": null,
+    "client_failed_mid_stream_total": null,
+    "client_failed_no_event_total": null,
+    "client_zero_event_terminal_total": null,
+    "dropped_iterations": 0,
+    "http_reqs": 28801,
+    "vus_peak": 1277
+  },
+  "mock": {
+    "received_first_chunk_count": 28801.0,
+    "completed_total": 28801.0,
+    "cancelled_total": 0.0,
+    "active_final": 0.0,
+    "waiting_final": 0.0
+  },
+  "gateway": {
+    "requests_started_total": 28801.0,
+    "requests_outcome_total_sum": 28801.0,
+    "virtual_tasks_started_total": 28801.0,
+    "tomcat_global_request_seconds_count": 28990.0,
+    "tomcat_threads_busy_threads_final": 1.0,
+    "tomcat_threads_current_threads_final": 12.0,
+    "tomcat_connections_current_connections_final": 3.0,
+    "process_cpu_usage_mean": 0.03548565198744333,
+    "tomcat_threads_busy_threads_timeseries": {
+      "sample_count": 187,
+      "peak": 1.0,
+      "mean": 1.0
+    },
+    "tomcat_connections_current_connections_timeseries": {
+      "sample_count": 187,
+      "peak": 1278.0,
+      "mean": 1206.909090909091
+    },
+    "virtual_tasks_active_timeseries": {
+      "sample_count": 187,
+      "peak": 1276.0,
+      "mean": 1204.850267379679
+    },
+    "tomcat_connections_configured_max": 3200,
+    "tomcat_connections_non_binding": true
+  },
+  "diag_log": {
+    "zero_event_terminal_count": 0,
+    "sse_error_count": 0,
+    "zero_event_terminal_sample": [],
+    "sse_error_sample": [],
+    "zero_event_terminal_all_unique_shapes": []
+  },
+  "socket_telemetry": {
+    "summary": {
+      "sample_count": 157,
+      "established": {
+        "peak": 1273,
+        "mean": 1194.0382165605095
+      },
+      "syn_sent": {
+        "peak": 0,
+        "mean": 0.0
+      },
+      "time_wait": {
+        "peak": 5108,
+        "mean": 4202.929936305733
+      },
+      "close_wait": {
+        "peak": 0,
+        "mean": 0.0
+      },
+      "endpoint_aware": true,
+      "server_established": {
+        "peak": 1273,
+        "mean": 1194.0828025477706
+      },
+      "server_time_wait": {
+        "peak": 1,
+        "mean": 0.1592356687898089
+      }
+    },
+    "meta": {
+      "ephemeral_port_range_first": "49152",
+      "ephemeral_port_range_last": "65535",
+      "ephemeral_port_range_size": 16384,
+      "fd_soft_limit_at_sampler_start": "1048576",
+      "kern_maxfilesperproc": "61440",
+      "target_port": 18102,
+      "note": "read-only observation, no sysctl/ulimit changes made"
+    }
+  }
+}

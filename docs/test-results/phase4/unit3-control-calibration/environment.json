@@ -1,0 +1,36 @@
+{
+  "date": "2026-08-25",
+  "host": "macOS 26.4.1, Darwin 25.4.0, arm64, native (no Docker)",
+  "power_source": "Battery Power, 90%, 13h26m remaining at preflight -- advisory only, not a hard requirement; short calibration session judged acceptable, not plugged into AC",
+  "background_load_advisory": "Google Chrome Helper (Renderer) observed at ~17.4% CPU during preflight -- moderate, not blocking-level; noted as a possible contributor to the R=20 measurement-artifact and closed-N=1600 run-to-run variance",
+  "os_limits": {
+    "ulimit_n_soft": 1048576,
+    "ulimit_n_hard": "unlimited",
+    "kern_maxfiles": 122880,
+    "kern_maxfilesperproc": 61440,
+    "kern_num_files_at_preflight": 5515,
+    "ephemeral_port_range": "49152-65535 (16384 ports)",
+    "hw_logicalcpu": 10,
+    "hw_memsize_bytes": 17179869184,
+    "vm_swapusage": "0.00M used / 0.00M free (encrypted swap, none in use)",
+    "kern_memorystatus_vm_pressure_level_at_preflight": 1,
+    "docker_desktop": "not running"
+  },
+  "fd_safety_denominator": {
+    "decision": "kern.maxfilesperproc (61440) is the binding per-process ceiling, not the much larger soft ulimit -n",
+    "threshold_85pct": 52224
+  },
+  "memory_safety_signal": {
+    "decision": "sysctl -n kern.memorystatus_vm_pressure_level -- hard-stop if != 1 (1=normal, 2=warn, 4=critical)",
+    "overhead_ms": "~3ms per call"
+  },
+  "sampler_policy": {
+    "rss": "ps -o rss= -p <pid>, 1Hz, adopted for Mock/k6 this Unit and as the future Gateway candidate",
+    "fd_non_java": "lsof -p <pid> | wc -l, 1Hz this Unit (Mock/k6); ~30ms overhead per call on a small process",
+    "fd_java_gateway": "prefer Micrometer's own process_files_open_files (confirmed exported, Unit 2) -- no external sampler process needed",
+    "cpu_non_java": "ps -o %cpu=, 1Hz",
+    "cpu_java_gateway_formula_candidate": "avg_cores ~= process_cpu_usage * system_cpu_count (both confirmed exported Unit 2) -- NOT yet cross-checked against real load, deferred to Unit 4"
+  },
+  "two_leg_connection_caveat": "Direct Mock control (this Unit) exercises only ONE connection leg (k6 -> Mock). Future Gateway tests add a SECOND leg (Gateway -> Mock) plus the k6->Gateway leg, meaning FD/ephemeral-port pressure per logical stream roughly doubles compared to what this Unit measured. This is NOT fully proven safe by Direct Mock control alone -- carried forward as an explicit limitation, not resolved this Unit.",
+  "cooldown_policy": "5s between levels; fresh Mock process per level (no in-process state carryover); TIME_WAIT sockets from the prior level may still be draining when the next level starts -- captured as diagnostic snapshot only, no active draining, no OS TCP sysctl tuning performed"
+}

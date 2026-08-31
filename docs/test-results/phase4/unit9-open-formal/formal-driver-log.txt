@@ -1,0 +1,28 @@
+[17:28:23] Canary gate: 1 PASS canary-result file(s) present -> proceeding. NO new Canary load.
+[17:28:23] caffeinate -i -w 4940 started (pid 4941)
+[17:28:23] Provenance recorded (provenance-formal-start.json)
+[17:28:23] === OPEN FORMAL 12-RUN MATRIX (frozen order) ===
+[17:28:23] RUN m1 R=6 label=f1-rep1 (warmup 120s / measure 300s)
+[17:36:49] F1 rep1: valid=True color=GREEN boundary_pass=True signature_match=True -> confirmation=None
+[17:36:49] RUN m2 R=168 label=f3-rep1 (warmup 120s / measure 300s)
+[17:45:13] F3 rep1: valid=True color=GREEN boundary_pass=True signature_match=True -> confirmation=None
+[17:45:13] RUN m1 R=7 label=f2-rep1 (warmup 120s / measure 300s)
+[17:54:25] F2 rep1: valid=True color=AMBER boundary_pass=True signature_match=True -> confirmation=None
+[17:54:25] RUN m3 R=168 label=f4-rep1 (warmup 120s / measure 300s)
+[18:02:57] F4 rep1: valid=True color=GREEN boundary_pass=True signature_match=True -> confirmation=None
+[18:02:57] RUN m3 R=168 label=f4-rep2 (warmup 120s / measure 300s)
+[18:11:26] F4 rep2: valid=True color=GREEN boundary_pass=True signature_match=True -> confirmation=None
+[18:11:26] RUN m1 R=7 label=f2-rep2 (warmup 120s / measure 300s)
+[18:20:36] F2 rep2: valid=True color=AMBER boundary_pass=True signature_match=True -> confirmation=None
+[18:20:36] RUN m2 R=168 label=f3-rep2 (warmup 120s / measure 300s)
+[18:29:03] F3 rep2: valid=True color=GREEN boundary_pass=True signature_match=True -> confirmation=None
+[18:29:03] RUN m1 R=6 label=f1-rep2 (warmup 120s / measure 300s)
+[18:37:29] F1 rep2: valid=True color=GREEN boundary_pass=True signature_match=True -> confirmation=None
+[18:37:29] RUN m1 R=7 label=f2-rep3 (warmup 120s / measure 300s)
+[18:46:39] F2 rep3: valid=True color=AMBER boundary_pass=True signature_match=True -> confirmation=CONFIRMED
+[18:46:39] RUN m1 R=6 label=f1-rep3 (warmup 120s / measure 300s)
+[18:55:05] F1 rep3: valid=True color=GREEN boundary_pass=True signature_match=True -> confirmation=CONFIRMED SUSTAINABLE
+[18:55:05] RUN m3 R=168 label=f4-rep3 (warmup 120s / measure 300s)
+[19:03:33] F4 rep3: valid=True color=GREEN boundary_pass=True signature_match=True -> confirmation=CONFIRMED SUSTAINABLE
+[19:03:33] RUN m2 R=168 label=f3-rep3 (warmup 120s / measure 300s)
+[19:12:01] F3 rep3: valid=True color=GREEN boundary_pass=True signature_match=True -> confirmation=CONFIRMED SUSTAINABLE

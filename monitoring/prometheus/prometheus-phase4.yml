@@ -1,0 +1,29 @@
+# Phase 4 Unit 4+ native macOS harness — Prometheus config.
+#
+# scrape_interval=1s (Unit 4 decision, docs/test-plan/phase4-closed-harness-protocol.md): a Closed
+# wave's canonical stream duration is ~7.8-7.9s: a 5s scrape (Phase 2/3's interval) can miss the
+# single relevant peak window entirely for a short single-wave measurement. All three gateway
+# ports are listed; only the one actually running during a given smoke/run responds — Prometheus
+# shows the other two as "down", which is expected and harmless (one Gateway model runs at a time,
+# fresh-process-per-run, docs/test-plan/phase4-design.md Unit 4 brief section 10).
+global:
+  scrape_interval: 1s
+  scrape_timeout: 900ms
+
+scrape_configs:
+  - job_name: phase4-gateway
+    static_configs:
+      - targets: ["localhost:18101"]
+        labels:
+          model: "m1-platform-queue"
+      - targets: ["localhost:18102"]
+        labels:
+          model: "m2-virtual-thread"
+      - targets: ["localhost:18103"]
+        labels:
+          model: "m3-webflux"
+    metrics_path: /actuator/prometheus
+
+  - job_name: mock-llm-fastapi
+    static_configs:
+      - targets: ["localhost:8000"]

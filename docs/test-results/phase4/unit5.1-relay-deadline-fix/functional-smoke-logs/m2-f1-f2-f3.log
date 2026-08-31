@@ -1,0 +1,24 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-28T00:06:34.958+09:00  INFO 42130 --- [           main] c.l.p.v.Phase4VirtualThreadApplication   : Starting Phase4VirtualThreadApplication v0.1.0 using Java 21.0.11 with PID 42130 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-virtual-thread/build/libs/gateway-phase4-virtual-thread-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/mock-llm-fastapi)
+2026-08-28T00:06:34.959+09:00  INFO 42130 --- [           main] c.l.p.v.Phase4VirtualThreadApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-28T00:06:35.284+09:00  INFO 42130 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 18102 (http)
+2026-08-28T00:06:35.367+09:00  INFO 42130 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-28T00:06:35.367+09:00  INFO 42130 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-28T00:06:35.383+09:00  INFO 42130 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 409 ms
+2026-08-28T00:06:35.556+09:00  INFO 42130 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-08-28T00:06:35.577+09:00  INFO 42130 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 18102 (http) with context path '/'
+2026-08-28T00:06:35.579+09:00  INFO 42130 --- [           main] c.l.p.v.Phase4VirtualThreadApplication   : Started Phase4VirtualThreadApplication in 0.762 seconds (process running for 0.935)
+2026-08-28T00:06:40.669+09:00  INFO 42130 --- [io-18102-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-28T00:06:40.669+09:00  INFO 42130 --- [io-18102-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-28T00:06:40.670+09:00  INFO 42130 --- [io-18102-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-28T00:07:12.357+09:00  INFO 42130 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-28T00:07:12.361+09:00  INFO 42130 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

@@ -1,0 +1,25 @@
+[12:40:02] === Phase 4 Open Screening: START ===
+[12:40:02] RUN m1 R=2 label=screen1
+[12:43:13] RUN m2 R=2 label=screen1
+[12:46:24] RUN m3 R=2 label=screen1
+[12:49:35] RUN m2 R=4 label=screen1
+[12:52:46] RUN m3 R=4 label=screen1
+[12:55:58] RUN m1 R=4 label=screen1
+[12:59:09] RUN m3 R=10 label=screen1
+[13:02:21] RUN m1 R=10 label=screen1
+[13:06:25] m1 R=10: known RED (MODEL_REJECTION) -- stop escalating
+[13:06:25] RUN m2 R=10 label=screen1
+[13:09:36] SKIP m1 R=20: model already inactive (known-RED or censored)
+[13:09:36] RUN m2 R=20 label=screen1
+[13:12:47] RUN m3 R=20 label=screen1
+[13:15:59] RUN m2 R=40 label=screen1
+[13:19:10] RUN m3 R=40 label=screen1
+[13:22:21] SKIP m1 R=40: model already inactive (known-RED or censored)
+[13:22:21] RUN m3 R=80 label=screen1
+[13:25:33] SKIP m1 R=80: model already inactive (known-RED or censored)
+[13:25:33] RUN m2 R=80 label=screen1
+[13:28:45] SKIP m1 R=160: model already inactive (known-RED or censored)
+[13:28:45] RUN m2 R=160 label=screen1
+[13:31:56] RUN m3 R=160 label=screen1
+[13:35:08] RUN m2 R=256 label=screen1
+[13:38:21] *** OPEN SCREENING STOP: m2 R=256: unexplained failure classification=UNCLASSIFIED_MODEL_FAILURE -- investigate before any further progression ***

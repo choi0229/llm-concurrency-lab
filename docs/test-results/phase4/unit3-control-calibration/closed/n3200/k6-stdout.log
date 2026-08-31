@@ -1,0 +1,89 @@
+time="2026-08-25T22:23:26+09:00" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/load-test-k6/scenarios/01-concurrent-connections.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 3200 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 3200 iterations shared among 3200 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m00.8s), 3200/3200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3200 VUs  00m00.8s/10m0s  0000/3200 shared iters
+
+running (00m01.8s), 3200/3200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3200 VUs  00m01.8s/10m0s  0000/3200 shared iters
+
+running (00m02.8s), 3200/3200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3200 VUs  00m02.8s/10m0s  0000/3200 shared iters
+
+running (00m03.8s), 3200/3200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3200 VUs  00m03.8s/10m0s  0000/3200 shared iters
+
+running (00m04.8s), 3200/3200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3200 VUs  00m04.8s/10m0s  0000/3200 shared iters
+
+running (00m05.8s), 3200/3200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3200 VUs  00m05.8s/10m0s  0000/3200 shared iters
+
+running (00m06.8s), 3200/3200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3200 VUs  00m06.8s/10m0s  0000/3200 shared iters
+
+running (00m07.8s), 2710/3200 VUs, 491 complete and 0 interrupted iterations
+default   [  15% ] 3200 VUs  00m07.8s/10m0s  0492/3200 shared iters
+
+running (00m08.8s), 0945/3200 VUs, 2255 complete and 0 interrupted iterations
+default   [  70% ] 3200 VUs  00m08.8s/10m0s  2255/3200 shared iters
+
+running (00m09.8s), 0548/3200 VUs, 2652 complete and 0 interrupted iterations
+default   [  83% ] 3200 VUs  00m09.8s/10m0s  2652/3200 shared iters
+
+running (00m10.8s), 0333/3200 VUs, 2867 complete and 0 interrupted iterations
+default   [  90% ] 3200 VUs  00m10.8s/10m0s  2867/3200 shared iters
+
+running (00m11.8s), 0333/3200 VUs, 2867 complete and 0 interrupted iterations
+default   [  90% ] 3200 VUs  00m11.8s/10m0s  2867/3200 shared iters
+
+running (00m12.8s), 0187/3200 VUs, 3013 complete and 0 interrupted iterations
+default   [  94% ] 3200 VUs  00m12.8s/10m0s  3013/3200 shared iters
+
+running (00m13.8s), 0187/3200 VUs, 3013 complete and 0 interrupted iterations
+default   [  94% ] 3200 VUs  00m13.8s/10m0s  3013/3200 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_events_received_total.....: 86940  6140.671381/s
+    client_stream_completed_total....: 2415   170.574205/s
+    client_stream_duration_seconds...: avg=9.063085 min=7.777 med=8.566 max=14.14  p(90)=12.155 p(95)=13.92605
+    client_stream_failed_total.......: 785    55.445446/s
+    client_ttfc_seconds..............: avg=2.218965 min=1.058 med=1.324 max=6.949  p(90)=5.0186 p(95)=6.926   
+    sse_event........................: 86940  6140.671381/s
+
+    HTTP
+    http_req_duration................: avg=9.06s    min=7.77s med=8.56s max=14.13s p(90)=12.15s p(95)=13.92s  
+    http_reqs........................: 3200   226.019651/s
+
+    EXECUTION
+    iteration_duration...............: avg=9.06s    min=7.77s med=8.56s max=14.14s p(90)=12.15s p(95)=13.92s  
+    iterations.......................: 3200   226.019651/s
+    vus..............................: 187    min=187       max=3200
+    vus_max..........................: 3200   min=3200      max=3200
+
+    NETWORK
+    data_received....................: 11 MB  739 kB/s
+    data_sent........................: 647 kB 46 kB/s
+
+
+
+
+running (00m14.2s), 0000/3200 VUs, 3200 complete and 0 interrupted iterations
+default ✓ [ 100% ] 3200 VUs  00m14.2s/10m0s  3200/3200 shared iters

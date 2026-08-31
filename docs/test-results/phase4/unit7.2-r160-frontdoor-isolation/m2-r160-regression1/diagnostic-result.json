@@ -1,0 +1,148 @@
+{
+  "canonical": false,
+  "unit": "7.2-r160-frontdoor-isolation",
+  "target": "m2",
+  "environment": {
+    "diagnostic_unit": "7.2-r160-frontdoor-isolation",
+    "canonical": false,
+    "target": "m2",
+    "target_rate": 160,
+    "run_label": "regression1",
+    "warmup_sec": 60,
+    "measurement_sec": 120,
+    "target_url": "http://127.0.0.1:18102/chat/stream",
+    "mock_port": 8000,
+    "prometheus_port": 9094,
+    "chat_total_timeout_ms": 60000,
+    "workload": {
+      "firstChunkDelayMs": 1000,
+      "chunkIntervalMs": 200,
+      "chunkCount": 35,
+      "chunkSizeBytes": 64
+    },
+    "k6_pre_allocated_vus": 9600,
+    "k6_max_vus": 12000,
+    "fd_soft_limit_at_k6_launch": "1048576",
+    "server_tomcat_max_connections": 9600
+  },
+  "client_cohort": {
+    "iterations_total": 28800,
+    "measurement_iterations_started": 19200,
+    "client_iterations_started_total": 28800,
+    "client_sse_open_attempt_total": 28800,
+    "client_sse_open_success_total": 26120,
+    "client_first_event_total": 26120,
+    "client_sse_error_total": null,
+    "client_completed_total": 16520,
+    "client_rejected_total": null,
+    "client_failed_mid_stream_total": null,
+    "client_failed_no_event_total": 2680,
+    "client_zero_event_terminal_total": 2680,
+    "dropped_iterations": 0,
+    "http_reqs": 28800,
+    "vus_peak": 1786
+  },
+  "mock": {
+    "received_first_chunk_count": 26120.0,
+    "completed_total": 26120.0,
+    "cancelled_total": 0.0,
+    "active_final": 0.0,
+    "waiting_final": 0.0
+  },
+  "gateway": {
+    "requests_started_total": 26120.0,
+    "requests_outcome_total_sum": 26120.0,
+    "virtual_tasks_started_total": 26120.0,
+    "tomcat_global_request_seconds_count": 26310.0,
+    "tomcat_threads_busy_threads_final": 1.0,
+    "tomcat_threads_current_threads_final": 200.0,
+    "tomcat_connections_current_connections_final": 3.0,
+    "process_cpu_usage_mean": 0.03639188544347385,
+    "tomcat_threads_busy_threads_timeseries": {
+      "sample_count": 188,
+      "peak": 54.0,
+      "mean": 2.101063829787234
+    },
+    "tomcat_connections_current_connections_timeseries": {
+      "sample_count": 188,
+      "peak": 9600.0,
+      "mean": 8073.81914893617
+    },
+    "virtual_tasks_active_timeseries": {
+      "sample_count": 188,
+      "peak": 1485.0,
+      "mean": 1094.8989361702127
+    },
+    "tomcat_connections_configured_max": 9600,
+    "tomcat_connections_non_binding": false
+  },
+  "diag_log": {
+    "zero_event_terminal_count": 2680,
+    "sse_error_count": 0,
+    "zero_event_terminal_sample": [
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344399 elapsed_ms=7787 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344404 elapsed_ms=7786 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344410 elapsed_ms=7785 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344416 elapsed_ms=7785 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344432 elapsed_ms=7795 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344435 elapsed_ms=7786 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344435 elapsed_ms=7792 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344448 elapsed_ms=7792 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344448 elapsed_ms=7786 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=1788022344462 elapsed_ms=7794 sawOpen=false sawError=false eventCount=0 res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console"
+    ],
+    "sse_error_sample": [],
+    "zero_event_terminal_all_unique_shapes": [
+      "time=\"2026-08-30T01:52:24+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:25+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:26+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:27+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:28+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:29+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:30+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:31+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:32+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:34+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:36+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:38+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:40+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:42+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:52:48+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:53:18+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:53:26+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:53:32+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:53:33+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console",
+      "time=\"2026-08-30T01:53:34+09:00\" level=info msg=\"diag zero_event_terminal phase=measurement t=T elapsed_ms=E sawOpen=false sawError=false eventCount=T res_present=true res_status=0 res_json={\\\"url\\\":\\\"\\\",\\\"status\\\":0,\\\"headers\\\":{},\\\"error\\\":\\\"Post \\\\\\\"http://127.0.0.1:18102/chat/stream\\\\\\\": dial tcp 127.0.0.1:18102: connect: operation timed out\\\"}\" source=console"
+    ]
+  },
+  "socket_telemetry": {
+    "summary": {
+      "sample_count": 151,
+      "established": {
+        "peak": 19400,
+        "mean": 15623.350993377484
+      },
+      "syn_sent": {
+        "peak": 1246,
+        "mean": 153.0794701986755
+      },
+      "time_wait": {
+        "peak": 3894,
+        "mean": 1505.7880794701987
+      },
+      "close_wait": {
+        "peak": 0,
+        "mean": 0.0
+      }
+    },
+    "meta": {
+      "ephemeral_port_range_first": "49152",
+      "ephemeral_port_range_last": "65535",
+      "ephemeral_port_range_size": 16384,
+      "fd_soft_limit_at_sampler_start": "1048576",
+      "kern_maxfilesperproc": "61440",
+      "target_port": 18102,
+      "note": "read-only observation, no sysctl/ulimit changes made"
+    }
+  }
+}

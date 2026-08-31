@@ -1,0 +1,12 @@
+This run was interrupted mid-postflight by a manual kill of the Open Screening driver (PID 22342)
+during the M2 R=160 UNCLASSIFIED_MODEL_FAILURE investigation (see
+docs/test-results/phase4/unit7.1-m2-r160-frontdoor-forensics/driver-stop-regression.md).
+
+k6 itself completed (k6-exit-code.txt=0, k6-summary.json/k6-stdout.log are real and complete), but
+several prom-*.json files here are 0 bytes (the harness's post-run Prometheus query loop was killed
+mid-curl) and no result.json was ever produced (the collector was never invoked). This directory was
+never moved to unit7-open-screening/ by the driver for exactly this reason.
+
+Preserved as-is for history. NOT canonical. NOT valid M3 R=160 data. Do not use for any screening
+bracket, classification, or report. A fresh M3 R=160 run must be executed once Open Screening
+resumes.

@@ -1,0 +1,20 @@
+{
+  "query_ok": true,
+  "window_start_s": 1787841632.376,
+  "window_end_s": 1787841703.772,
+  "gateway_scrape_gap_max_s": 1,
+  "gateway_gap_exceeds_threshold": false,
+  "mock_log_gap_max_s": 7.888000011444092,
+  "mock_gap_exceeds_threshold": false,
+  "client_max_duration_s": 31.71,
+  "client_duration_anomaly": true,
+  "thresholds": {
+    "gateway_gap_s": 5.0,
+    "mock_gap_s": 15.0,
+    "client_duration_s": 20.0
+  },
+  "stall_detected": false,
+  "evidence": [
+    "client stream_duration max 31.7s > 20.0s threshold"
+  ]
+}

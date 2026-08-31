@@ -1,0 +1,203 @@
+{
+  "diagnostic_unit": "8.1-m2-r256-two-leg-forensics",
+  "canonical": false,
+  "target": "m2",
+  "run_label": "diag1",
+  "k6_exit_code": "0",
+  "ephemeral_port_range_size": 16384,
+  "sampler_cpu_pct_of_one_core": 6.66,
+  "k6": {
+    "iterations": 46080.0,
+    "http_reqs": 46080.0,
+    "http_req_duration_min_ms": 0.759584,
+    "http_req_duration_avg_ms": 6807.517964043407,
+    "http_req_duration_p95_ms": 8986.0729691,
+    "vus_max": 2360.0,
+    "vus_max_configured": 15360.0,
+    "measurement_iterations_started_total": 30719.0,
+    "client_iterations_started_total": 46080.0,
+    "client_sse_open_attempt_total": 46080.0,
+    "client_sse_open_success_total": 37865.0,
+    "client_first_event_total": 37849.0,
+    "client_completed_total": 24440.0,
+    "client_failed_mid_stream_total": 0.0,
+    "client_failed_no_event_total": 6279.0,
+    "client_zero_event_terminal_total": 6279.0,
+    "client_sse_error_total": 0.0,
+    "client_rejected_total": 0.0,
+    "client_events_received_total": 879840.0,
+    "client_ttfc_completed_p95_s": 1.185,
+    "client_completed_stream_duration_p95_s": 9.089,
+    "dropped_iterations": 0.0
+  },
+  "socket_timeline_peaks": {
+    "A": {
+      "samples": 169,
+      "unique_src_ports_peak": 8282,
+      "unique_src_ports_peak_epoch_ms": 1788070277895,
+      "total_rows_peak": 8283,
+      "established_peak": 2342,
+      "syn_sent_peak": 1,
+      "time_wait_peak": 7824,
+      "close_wait_peak": 0,
+      "fin_wait_1_peak": 15,
+      "fin_wait_2_peak": 3,
+      "last_ack_peak": 0,
+      "closing_peak": 0,
+      "other_peak": 0
+    },
+    "B": {
+      "samples": 169,
+      "unique_src_ports_peak": 8120,
+      "unique_src_ports_peak_epoch_ms": 1788070348185,
+      "total_rows_peak": 8120,
+      "established_peak": 2342,
+      "syn_sent_peak": 0,
+      "time_wait_peak": 7616,
+      "close_wait_peak": 0,
+      "fin_wait_1_peak": 5,
+      "fin_wait_2_peak": 27,
+      "last_ack_peak": 0,
+      "closing_peak": 0,
+      "other_peak": 0
+    },
+    "UNION": {
+      "samples": 169,
+      "unique_src_ports_peak": 16362,
+      "unique_src_ports_peak_epoch_ms": 1788070398369,
+      "total_rows_peak": 16362,
+      "established_peak": 0,
+      "syn_sent_peak": 0,
+      "time_wait_peak": 0,
+      "close_wait_peak": 0,
+      "fin_wait_1_peak": 0,
+      "fin_wait_2_peak": 0,
+      "last_ack_peak": 0,
+      "closing_peak": 0,
+      "other_peak": 0
+    },
+    "INTERSECT": {
+      "samples": 169,
+      "unique_src_ports_peak": 1,
+      "unique_src_ports_peak_epoch_ms": 1788070357479,
+      "total_rows_peak": 1,
+      "established_peak": 0,
+      "syn_sent_peak": 0,
+      "time_wait_peak": 0,
+      "close_wait_peak": 0,
+      "fin_wait_1_peak": 0,
+      "fin_wait_2_peak": 0,
+      "last_ack_peak": 0,
+      "closing_peak": 0,
+      "other_peak": 0
+    }
+  },
+  "raw_socket_sanity": {
+    "raw_row_count": 2394568,
+    "rows_by_leg": {
+      "A": 1208173,
+      "B": 1186395
+    },
+    "rows_by_state": {
+      "TIME_WAIT": 1846901,
+      "ESTABLISHED": 547588,
+      "FIN_WAIT_2": 53,
+      "SYN_SENT": 6,
+      "FIN_WAIT_1": 20
+    }
+  },
+  "mock": {
+    "completed": 37849.0,
+    "cancelled": 0.0,
+    "failed": {},
+    "active_final": 0.0,
+    "waiting_final": 0.0,
+    "current_concurrency_final": 0.0
+  },
+  "gateway_metrics_final": {
+    "gateway_active_requests_final": 0.0,
+    "virtual_tasks_active_final": 0.0,
+    "virtual_tasks_started_total_final": 37865.0,
+    "tomcat_connections_current_final": null
+  },
+  "bindexception": {
+    "count": 16,
+    "timestamps": [
+      "2026-08-30T15:11:24.358+09:00",
+      "2026-08-30T15:11:25.300+09:00",
+      "2026-08-30T15:12:02.195+09:00",
+      "2026-08-30T15:12:03.846+09:00",
+      "2026-08-30T15:12:04.455+09:00",
+      "2026-08-30T15:12:43.479+09:00",
+      "2026-08-30T15:12:47.574+09:00",
+      "2026-08-30T15:12:49.260+09:00",
+      "2026-08-30T15:12:53.549+09:00",
+      "2026-08-30T15:13:17.974+09:00",
+      "2026-08-30T15:13:19.970+09:00",
+      "2026-08-30T15:13:20.247+09:00",
+      "2026-08-30T15:13:24.923+09:00",
+      "2026-08-30T15:13:26.850+09:00",
+      "2026-08-30T15:13:28.824+09:00",
+      "2026-08-30T15:13:32.505+09:00"
+    ],
+    "full_stack_present": false
+  },
+  "prometheus": {
+    "virtual_tasks_active": {
+      "n": 190,
+      "min": 0.0,
+      "max": 2341.0,
+      "mean": 1642.621052631579,
+      "first_half_mean": 1722.6526315789474,
+      "second_half_mean": 1562.5894736842106
+    },
+    "gateway_active_requests": {
+      "n": 190,
+      "min": 0.0,
+      "max": 2341.0,
+      "mean": 1642.6263157894737,
+      "first_half_mean": 1722.6947368421052,
+      "second_half_mean": 1562.5578947368422
+    },
+    "process_cpu_usage": {
+      "n": 190,
+      "min": 0.0006635016245863714,
+      "max": 0.13663517924430185,
+      "mean": 0.05003249289479572,
+      "first_half_mean": 0.057848731255360844,
+      "second_half_mean": 0.04221625453423063
+    },
+    "jvm_threads_live_threads": {
+      "n": 190,
+      "min": 123.0,
+      "max": 130.0,
+      "mean": 128.39473684210526,
+      "first_half_mean": 126.78947368421052,
+      "second_half_mean": 130.0
+    },
+    "tomcat_connections_current_connections": {
+      "n": 190,
+      "min": 2.0,
+      "max": 2343.0,
+      "mean": 1644.8526315789475,
+      "first_half_mean": 1725.0210526315789,
+      "second_half_mean": 1564.6842105263158
+    },
+    "process_files_open_files": {
+      "n": 190,
+      "min": 19.0,
+      "max": 4698.0,
+      "mean": 3302.1684210526314,
+      "first_half_mean": 3462.357894736842,
+      "second_half_mean": 3141.978947368421
+    },
+    "virtual_tasks_started_total": {
+      "n": 190,
+      "min": 1026.0,
+      "max": 37865.0,
+      "mean": 21033.2,
+      "first_half_mean": 11327.22105263158,
+      "second_half_mean": 30739.178947368422
+    }
+  }
+}

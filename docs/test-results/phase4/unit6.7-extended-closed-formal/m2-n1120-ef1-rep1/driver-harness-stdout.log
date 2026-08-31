@@ -1,0 +1,5 @@
+[11:06:48] === Preflight: m2 N=1120 (ef1-rep1) [EXTENDED] ===
+[11:07:40] === Done: m2 N=1120 (ef1-rep1) [EXTENDED] -> /Users/user/Documents/GitHub/llm-concurrency-lab/docs/test-results/phase4/unit4.5-extended-closed-harness/m2-n1120-ef1-rep1 ===
+
+---STDERR---
+/Users/user/Documents/GitHub/llm-concurrency-lab/scripts/run-phase4-closed-benchmark-extended.sh: line 243: 90418 Terminated: 15          MOCK_LLM_MAX_CONCURRENT_PROCESSING=0 MOCK_LLM_MAX_WAITING=0 nohup .venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port "$MOCK_PORT" > "$OUT_DIR/mock.log" 2>&1  (wd: ~/Documents/GitHub/llm-concurrency-lab/mock-llm-fastapi)

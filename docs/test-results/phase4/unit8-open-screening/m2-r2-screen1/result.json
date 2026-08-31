@@ -1,0 +1,175 @@
+{
+  "valid": true,
+  "invalid_reasons": [],
+  "model": "m2",
+  "target_rate": 2,
+  "run_label": "screen1",
+  "client_cohort": {
+    "target_rate": 2,
+    "actual_started": 240,
+    "actual_started_rate": 2.0,
+    "completed": 240,
+    "rejected": 0,
+    "failed_mid_stream": 0,
+    "failed_no_event": 0,
+    "terminal_sum": 240,
+    "invariant_ok": true,
+    "dropped_iterations": 0,
+    "completion_throughput": 2.0,
+    "completion_ratio": 1.0,
+    "throughput_sustainability_pass": true
+  },
+  "model_outcome": {
+    "actual_started": 240,
+    "completed": 240,
+    "rejected": 0,
+    "failed_mid_stream": 0,
+    "failed_no_event": 0,
+    "reliability_pass": true,
+    "slo_pass": true,
+    "throughput_sustainability_pass": true,
+    "backlog_sustainability_pass": true,
+    "server_outcomes_whole_process_estimate": {
+      "completed": 360.0,
+      "rejected": 0.0,
+      "timeout": 0.0,
+      "upstream_error": 0.0,
+      "client_disconnect": 0.0,
+      "internal_error": 0.0,
+      "write_overflow": 0.0
+    },
+    "color": "GREEN",
+    "classification": "GREEN",
+    "classification_evidence": [
+      "reliability PASS, SLO PASS, throughput>=98% arrival, no backlog growth"
+    ]
+  },
+  "client_latency": {
+    "completed_ttfc_p95_s": 1.006,
+    "completed_duration_p95_s": 7.88,
+    "diagnostic_all_outcomes_ttfc_p95_s": 1.006,
+    "diagnostic_all_outcomes_duration_p95_s": 7.88,
+    "builtin_http_req_duration_avg_s": 7.85239308418611,
+    "slo_ttfc_threshold_s": 2.0,
+    "slo_duration_threshold_s": 10.0,
+    "clock_integrity_ok": true,
+    "clock_integrity_note": "custom completed_duration_p95=7.880s vs builtin http_req_duration avg=7.852s, ratio=1.00"
+  },
+  "backlog": {
+    "virtual_tasks_active": {
+      "available": true,
+      "sample_count": 128,
+      "first_half_mean": 15.0,
+      "second_half_mean": 14.125,
+      "rising": false
+    },
+    "gateway_active_requests": {
+      "available": true,
+      "sample_count": 128,
+      "first_half_mean": 15.0,
+      "second_half_mean": 14.125,
+      "rising": false
+    }
+  },
+  "platform_threads": {
+    "peak": 98.0,
+    "sample_count": 185
+  },
+  "cpu": {
+    "process_cpu_usage_mean": 0.004484117645213925,
+    "system_cpu_count": 10.0,
+    "avg_cores_estimate": 0.04484117645213925
+  },
+  "rss": {
+    "count": 184,
+    "start_kib": 244224,
+    "peak_kib": 270304,
+    "delta_kib": 26080
+  },
+  "fd": {
+    "open_peak": 46.0,
+    "max_files": 1048576.0,
+    "metric_present": true
+  },
+  "common_gateway": {
+    "gateway_active_requests_final": 0.0,
+    "gateway_upstream_active_final": 0.0,
+    "internal_error_total": 0.0
+  },
+  "implementation_specific": {
+    "virtual_tasks_active_peak": {
+      "peak": 15.0,
+      "sample_count": 185
+    },
+    "virtual_tasks_started_final": 360.0,
+    "tomcat_connections_current_peak": {
+      "peak": 17.0,
+      "sample_count": 185
+    },
+    "tomcat_connections_configured_max": 3200
+  },
+  "mock": {
+    "active_final": 0.0,
+    "waiting_final": 0.0,
+    "completed_final": 360.0
+  },
+  "postflight_clean": true,
+  "stall_check": {
+    "query_ok": true,
+    "window_start_s": 1788061395.718,
+    "window_end_s": 1788061583.373,
+    "gateway_scrape_gap_max_s": 1,
+    "gateway_gap_exceeds_threshold": false,
+    "mock_log_gap_max_s": 0.5099999904632568,
+    "mock_gap_exceeds_threshold": false,
+    "client_max_duration_s": 7.886,
+    "client_duration_anomaly": false,
+    "thresholds": {
+      "gateway_gap_s": 5.0,
+      "mock_gap_s": 15.0,
+      "client_duration_s": 20.0
+    },
+    "stall_detected": false,
+    "evidence": [
+      "no anomaly signal observed"
+    ]
+  },
+  "measurement_window": {
+    "start_s": 1788061455.736,
+    "end_s": 1788061583.373
+  },
+  "timestamps": {
+    "process_start_ms": 1788061394050,
+    "k6_wall_start_ms": 1788061395718,
+    "k6_wall_end_ms": 1788061583373,
+    "drain_start_ms": 1788061583395,
+    "drain_end_ms": 1788061583419
+  },
+  "environment": {
+    "screening_epoch": "open-final-client-lifecycle-v1",
+    "model": "m2",
+    "target_rate": 2,
+    "run_label": "screen1",
+    "warmup_sec": 60,
+    "measurement_sec": 120,
+    "gateway_port": 18102,
+    "mock_port": 8000,
+    "prometheus_port": 9094,
+    "prometheus_scrape_interval": "1s",
+    "chat_total_timeout_ms": 60000,
+    "workload": {
+      "firstChunkDelayMs": 1000,
+      "chunkIntervalMs": 200,
+      "chunkCount": 35,
+      "chunkSizeBytes": 64
+    },
+    "gateway_jar": "gateway-phase4-virtual-thread-0.1.0.jar",
+    "gateway_pid": 17750,
+    "jdk_home": "/Users/user/Documents/GitHub/llm-concurrency-lab/.native-runtime/jdk-21.0.11+10/Contents/Home",
+    "open_m3_max_connections": 3200,
+    "open_m3_pending_acquire_max_count": 3200,
+    "server_tomcat_max_connections": 3200,
+    "k6_pre_allocated_vus": 120,
+    "k6_max_vus": 150
+  }
+}

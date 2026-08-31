@@ -1,0 +1,27 @@
+INFO:     Started server process [42069]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51674 - "GET /healthz HTTP/1.1" 200 OK
+2026-08-28 00:05:48,985 INFO [a8e0c4d7-0289-4be9-a2ff-4794c115968a] stream requested: chunkCount=3 firstChunkDelayMs=100
+INFO:     127.0.0.1:51678 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-28 00:05:49,298 INFO [a8e0c4d7-0289-4be9-a2ff-4794c115968a] completed
+2026-08-28 00:05:49,319 INFO [150b5420-d593-464b-abff-81c851dda475] stream requested: chunkCount=20 firstChunkDelayMs=200
+INFO:     127.0.0.1:51680 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-28 00:05:52,031 INFO [150b5420-d593-464b-abff-81c851dda475] client disconnected (stream closed by server)
+2026-08-28 00:06:05,226 INFO [8fd5a939-2b64-46f5-9012-3078c8d01611] stream requested: chunkCount=10 firstChunkDelayMs=100
+INFO:     127.0.0.1:51683 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-28 00:06:06,536 INFO [8fd5a939-2b64-46f5-9012-3078c8d01611] client disconnected (stream closed by server)
+2026-08-28 00:06:46,889 INFO [0f58eda1-1426-47b2-9e6d-01a65ea8b8ac] stream requested: chunkCount=3 firstChunkDelayMs=100
+INFO:     127.0.0.1:51697 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-28 00:06:47,196 INFO [0f58eda1-1426-47b2-9e6d-01a65ea8b8ac] completed
+2026-08-28 00:06:47,215 INFO [3b4e343f-ac56-456f-9a97-78ddb879bbf4] stream requested: chunkCount=20 firstChunkDelayMs=200
+INFO:     127.0.0.1:51699 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-28 00:06:49,930 INFO [3b4e343f-ac56-456f-9a97-78ddb879bbf4] client disconnected (stream closed by server)
+2026-08-28 00:07:01,911 INFO [d4bc61f9-dc39-436e-a4b1-c7672cd3bd23] stream requested: chunkCount=10 firstChunkDelayMs=100
+INFO:     127.0.0.1:51702 - "POST /mock/stream HTTP/1.1" 200 OK
+2026-08-28 00:07:03,223 INFO [d4bc61f9-dc39-436e-a4b1-c7672cd3bd23] client disconnected (stream closed by server)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [42069]

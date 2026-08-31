@@ -1,0 +1,25 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-25T20:12:49.309+09:00  INFO 2095 --- [           main] c.l.phase4spike.SpikeBApplication        : Starting SpikeBApplication v0.0.1 using Java 21.0.11 with PID 2095 (/private/tmp/claude-501/-Users-user-Documents-GitHub-llm-concurrency-lab/24e8b9d1-d9a9-4390-93c2-df9eaa35e8d5/scratchpad/phase4-spikes/spike-b-mvc-vt/build/libs/spike-b-mvc-vt-0.0.1.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab)
+2026-08-25T20:12:49.310+09:00  INFO 2095 --- [           main] c.l.phase4spike.SpikeBApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-25T20:12:49.687+09:00  INFO 2095 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 18092 (http)
+2026-08-25T20:12:49.696+09:00  INFO 2095 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-25T20:12:49.696+09:00  INFO 2095 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-25T20:12:49.709+09:00  INFO 2095 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 368 ms
+2026-08-25T20:12:49.881+09:00  INFO 2095 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 18092 (http) with context path '/'
+2026-08-25T20:12:49.889+09:00  INFO 2095 --- [           main] c.l.phase4spike.SpikeBApplication        : Started SpikeBApplication in 0.814 seconds (process running for 1.111)
+2026-08-25T20:12:58.734+09:00  INFO 2095 --- [io-18092-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-25T20:12:58.735+09:00  INFO 2095 --- [io-18092-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-25T20:12:58.735+09:00  INFO 2095 --- [io-18092-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+GET /ping -> 
+spike-b pong java=21.0.11 arch=aarch64 requestThread=Thread[#39,http-nio-18092-exec-3,5,main] requestThreadVirtual=false
+GET /vt-check -> 
+taskThread=VirtualThread[#52]/runnable@ForkJoinPool-1-worker-1 isVirtual=true name=

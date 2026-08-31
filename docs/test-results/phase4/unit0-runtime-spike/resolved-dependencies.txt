@@ -1,0 +1,41 @@
+Phase 4 Unit 0 — Resolved dependency versions (common candidate runtime)
+Resolved via: ./gradlew dependencies --configuration compileClasspath (Gradle 8.14, JDK 21.0.11+10 Temurin)
+Source: spike-a-mvc-platform (MVC-only), spike-b-mvc-vt (MVC + VirtualThreadPerTaskExecutor, same deps as A),
+        spike-c-webflux (WebFlux + WebClient, no starter-web/Tomcat), and existing gateway-mvc-java21 (Phase 2, MVC-only).
+Full trees: existing-java21-module-resolved-dependencies-full.txt, spike-c-resolved-dependencies-full.txt
+
+| Dependency                                    | Spike A/B (MVC)      | Spike C (WebFlux)     | Notes |
+|------------------------------------------------|----------------------|------------------------|-------|
+| org.springframework.boot:spring-boot           | 4.1.0                | 4.1.0                  | plugin-declared, resolution-confirmed |
+| org.springframework:spring-core/-context/-web  | 7.0.8                | 7.0.8                  | identical across A/B/C |
+| org.springframework:spring-webmvc              | 7.0.8                | (absent)               | MVC only |
+| org.springframework:spring-webflux             | (absent)             | 7.0.8                  | WebFlux only |
+| org.apache.tomcat.embed:tomcat-embed-core      | 11.0.22               | ABSENT (confirmed via jar unzip -l grep, exit 1) | matches Phase 2's gateway-mvc-java21 |
+| org.apache.tomcat.embed:tomcat-embed-el/-websocket | 11.0.22          | ABSENT                 | |
+| io.projectreactor:reactor-core                 | (not on MVC classpath by default) | 3.8.6      | WebClient path only in MVC (M1/M2 would only pull reactor-core if WebClient is added for outbound use — Phase 4 M1/M2 outbound plan is HttpURLConnection per Unit 0 design brief §3, so reactor-core would NOT normally appear on M1/M2's classpath) |
+| io.projectreactor.netty:reactor-netty-http/-core | n/a                 | 1.3.6                  | Reactor Netty server + client |
+| io.micrometer:micrometer-core                  | (not added in Spike A/B; Phase 2 module uses io.prometheus:simpleclient instead) | 1.17.0 | see "Metrics library" note below |
+| io.micrometer:micrometer-registry-prometheus    | n/a (not added)       | 1.17.0                  | |
+
+## Metrics library note (open question carried to Unit 1)
+
+- Phase 1/2 (gateway-mvc-executor-java8, gateway-mvc-java21) use `io.prometheus:simpleclient*` directly.
+- Phase 3 (gateway-mvc-blocking-spring5, gateway-mvc-webclient, gateway-webflux) use Micrometer
+  (`io.micrometer:micrometer-registry-prometheus`) per docs/decisions/phase3-metrics-contract.md.
+- `io.prometheus:simpleclient` 0.16.0 (Phase 1/2's exact pinned version) has NOT been tested against
+  Spring Boot 4.1.0 / Java 21 in this Unit 0 pass — Spike A/B only proved the web/MVC/VT skeleton, not
+  the metrics library. Micrometer 1.17.0 (resolved above) is Spring Boot 4.1.0's own managed version
+  and is confirmed compatible (Spike C built and ran with it).
+- Because Phase 4 needs the *same* metrics library across M1/M2/M3 (Unit 0 design brief §4 "공통 Runtime"
+  requires identical Micrometer version), and only Micrometer was actually proven under Boot 4.1.0 in
+  this pass, Micrometer is the reuse candidate for Unit 1 — NOT io.prometheus:simpleclient. This is a
+  deviation from Phase 2's own metrics library choice and must be decided explicitly in Unit 1, not
+  assumed here.
+
+## Gradle / JDK
+
+| Item | Value |
+|---|---|
+| Gradle (resolving both A/B and C) | 8.14 (Build time 2025-04-25, Kotlin 2.0.21, Groovy 3.0.24) |
+| Gradle Launcher JVM | 21.0.11 (Eclipse Adoptium 21.0.11+10-LTS) |
+| JDK (toolchain + runtime) | Temurin 21.0.11+10-LTS, aarch64, native (see environment.txt) |

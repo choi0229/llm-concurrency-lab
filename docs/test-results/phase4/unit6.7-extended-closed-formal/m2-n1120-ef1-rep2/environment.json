@@ -1,0 +1,17 @@
+{
+  "model": "m2",
+  "concurrency": 1120,
+  "run_label": "ef1-rep2",
+  "gateway_port": 18102,
+  "mock_port": 8000,
+  "prometheus_port": 9094,
+  "prometheus_scrape_interval": "1s",
+  "prewarm_count": 5,
+  "chat_total_timeout_ms": 60000,
+  "workload": {"firstChunkDelayMs": 1000, "chunkIntervalMs": 200, "chunkCount": 35, "chunkSizeBytes": 64},
+  "gateway_jar": "gateway-phase4-virtual-thread-0.1.0.jar",
+  "gateway_pid": 92126,
+  "jdk_home": "/Users/user/Documents/GitHub/llm-concurrency-lab/.native-runtime/jdk-21.0.11+10/Contents/Home",
+  "extended_m3_max_connections": 1400,
+  "extended_m3_pending_acquire_max_count": 1400
+}

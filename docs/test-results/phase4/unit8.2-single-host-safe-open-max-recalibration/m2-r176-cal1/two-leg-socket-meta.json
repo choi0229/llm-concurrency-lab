@@ -1,0 +1,27 @@
+{
+  "diagnostic_unit": "8.1-m2-r256-two-leg-forensics",
+  "legs": {
+    "A": "18102",
+    "B": "8000"
+  },
+  "ephemeral_port_range_first": 49152,
+  "ephemeral_port_range_last": 65535,
+  "ephemeral_port_range_size": 16384,
+  "net_inet_tcp_msl_ms": "15000",
+  "kern_maxfilesperproc": "61440",
+  "kern_ipc_somaxconn": "128",
+  "fd_soft_limit_at_sampler_start": "1048576",
+  "sampler_pid": 66482,
+  "k6_pid": 66480,
+  "sample_interval_s": 1.0,
+  "start_epoch_ms": 1788071872434,
+  "note": "read-only observation; no sysctl/ulimit/OS-tuning changes made",
+  "end_epoch_ms": 1788072062122,
+  "elapsed_s": 189.688,
+  "samples_taken": 170,
+  "sampler_cpu_user_s": 5.872,
+  "sampler_cpu_sys_s": 4.648,
+  "sampler_cpu_total_s": 10.52,
+  "sampler_cpu_pct_of_one_core": 5.55,
+  "sampler_maxrss_kib": 33824
+}

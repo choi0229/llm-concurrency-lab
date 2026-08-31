@@ -1,0 +1,30 @@
+{
+  "label": "f6-rep4-replacement",
+  "dir": "docs/test-results/phase4/unit6-closed-formal/m3-n640-f6-rep4-replacement",
+  "valid": true,
+  "invalid_reasons": [],
+  "model_outcome": {
+    "actual_started": 640,
+    "completed": 640,
+    "rejected": 0,
+    "failed_mid_stream": 0,
+    "failed_no_event": 0,
+    "reliability_pass": true,
+    "slo_pass": true,
+    "server_outcomes_wave_estimate": {
+      "completed": 640.0,
+      "rejected": 0.0,
+      "timeout": 0.0,
+      "upstream_error": 0.0,
+      "client_disconnect": 0.0,
+      "internal_error": 0.0,
+      "write_overflow": 0.0
+    },
+    "prewarm_contamination_ok": true,
+    "color": "GREEN",
+    "classification": "GREEN",
+    "classification_evidence": [
+      "reliability PASS, SLO PASS"
+    ]
+  }
+}

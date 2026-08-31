@@ -1,0 +1,275 @@
+{
+  "safe_closed_max": 640,
+  "stop_triggered": true,
+  "stop_reason": "m1 N=400: no-retry INVALID ({'prewarm_contamination_ok'}) -- environment/safety/harness-consistency violation",
+  "models": {
+    "m1": {
+      "points": [
+        {
+          "N": 100,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m1-n100-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "server_outcomes_wave_estimate": {
+            "completed": 100.0,
+            "rejected": 0.0,
+            "timeout": 0.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        },
+        {
+          "N": 50,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m1-n50-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "server_outcomes_wave_estimate": {
+            "completed": 50.0,
+            "rejected": 0.0,
+            "timeout": 0.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        },
+        {
+          "N": 200,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m1-n200-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "server_outcomes_wave_estimate": {
+            "completed": 200.0,
+            "rejected": 0.0,
+            "timeout": 0.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        },
+        {
+          "N": 400,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m1-n400-screen1",
+          "valid": false,
+          "invalid_reasons": [
+            "prewarm_contamination_ok"
+          ],
+          "color": "RED",
+          "classification": "MODEL_TIMEOUT",
+          "reliability_pass": false,
+          "slo_pass": null,
+          "server_outcomes_wave_estimate": {
+            "completed": 399.0,
+            "rejected": 0.0,
+            "timeout": 1.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        }
+      ],
+      "green_high": 50,
+      "non_green_low": 100,
+      "reliability_high": 200,
+      "red_low": null,
+      "red_classification": null,
+      "msc_bracket": [
+        50,
+        100
+      ],
+      "mrc_bracket": [
+        200,
+        null
+      ],
+      "msc_censored": false,
+      "mrc_censored": false,
+      "non_monotonic": false,
+      "msc_refinement_count": 0,
+      "mrc_refinement_count": 0
+    },
+    "m2": {
+      "points": [
+        {
+          "N": 100,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m2-n100-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "server_outcomes_wave_estimate": {
+            "completed": 100.0,
+            "rejected": 0.0,
+            "timeout": 0.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        },
+        {
+          "N": 50,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m2-n50-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "server_outcomes_wave_estimate": {
+            "completed": 50.0,
+            "rejected": 0.0,
+            "timeout": 0.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        },
+        {
+          "N": 200,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m2-n200-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "server_outcomes_wave_estimate": {
+            "completed": 200.0,
+            "rejected": 0.0,
+            "timeout": 0.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        }
+      ],
+      "green_high": 200,
+      "non_green_low": null,
+      "reliability_high": 200,
+      "red_low": null,
+      "red_classification": null,
+      "msc_bracket": [
+        200,
+        null
+      ],
+      "mrc_bracket": [
+        200,
+        null
+      ],
+      "msc_censored": false,
+      "mrc_censored": false,
+      "non_monotonic": false,
+      "msc_refinement_count": 0,
+      "mrc_refinement_count": 0
+    },
+    "m3": {
+      "points": [
+        {
+          "N": 100,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m3-n100-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "server_outcomes_wave_estimate": {
+            "completed": 100.0,
+            "rejected": 0.0,
+            "timeout": 0.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        },
+        {
+          "N": 200,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m3-n200-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "server_outcomes_wave_estimate": {
+            "completed": 200.0,
+            "rejected": 0.0,
+            "timeout": 0.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        },
+        {
+          "N": 50,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit5-closed-screening/m3-n50-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "server_outcomes_wave_estimate": {
+            "completed": 50.0,
+            "rejected": 0.0,
+            "timeout": 0.0,
+            "upstream_error": 0.0,
+            "client_disconnect": 0.0,
+            "internal_error": 0.0,
+            "write_overflow": 0.0
+          }
+        }
+      ],
+      "green_high": 200,
+      "non_green_low": null,
+      "reliability_high": 200,
+      "red_low": null,
+      "red_classification": null,
+      "msc_bracket": [
+        200,
+        null
+      ],
+      "mrc_bracket": [
+        200,
+        null
+      ],
+      "msc_censored": false,
+      "mrc_censored": false,
+      "non_monotonic": false,
+      "msc_refinement_count": 0,
+      "mrc_refinement_count": 0
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "purpose": "Direct Mock (k6 -> Mock LLM directly, no Gateway) closed-model control calibration. Confirms measurement environment capability only, not Gateway capability.",
+  "workload": {
+    "firstChunkDelayMs": 1000,
+    "chunkIntervalMs": 200,
+    "chunkCount": 35,
+    "chunkSizeBytes": 64,
+    "expected_ttfc_baseline_s": 1.0,
+    "expected_duration_baseline_s": 7.8
+  },
+  "mock_config": {
+    "MOCK_LLM_MAX_CONCURRENT_PROCESSING": 0,
+    "MOCK_LLM_MAX_WAITING": 0
+  },
+  "levels": [
+    {"N": 100,  "completed": 100,  "failed": 0,   "dropped": 0, "ttfc_p95_s": 1.033, "duration_p95_s": 7.911,  "k6_peak_cpu_pct": null, "mock_peak_cpu_pct": null, "classification": "CLEAN"},
+    {"N": 200,  "completed": 200,  "failed": 0,   "dropped": 0, "ttfc_p95_s": 1.048, "duration_p95_s": 7.943,  "k6_peak_cpu_pct": null, "mock_peak_cpu_pct": null, "classification": "CLEAN"},
+    {"N": 400,  "completed": 400,  "failed": 0,   "dropped": 0, "ttfc_p95_s": 1.096, "duration_p95_s": 7.990,  "k6_peak_cpu_pct": null, "mock_peak_cpu_pct": null, "classification": "CLEAN"},
+    {"N": 800,  "completed": 800,  "failed": 0,   "dropped": 0, "ttfc_p95_s": 1.182, "duration_p95_s": 8.076,  "k6_peak_cpu_pct": 19.9, "mock_peak_cpu_pct": 40.9, "classification": "CLEAN_ROBUST"},
+    {"N": 1600, "completed": 1600, "failed": 0,   "dropped": 0, "ttfc_p95_s": 2.091, "duration_p95_s": 9.155,  "k6_peak_cpu_pct": 48.1, "mock_peak_cpu_pct": 42.9, "classification": "CLEAN_MARGINAL", "note": "A prior independent run at the same N=1600 measured ttfc_p95=5.03s, duration_p95=12.12s (run3 vs run2 raw logs both preserved as evidence) -- run-to-run variance of ~2.4x at this N, likely host-noise-driven (see SUMMARY.md), makes this level unsuitable as the basis for headroom computation despite passing the strict completed==N/failed==0 gate both times."},
+    {"N": 3200, "completed": 2415, "failed": 785, "dropped": 0, "ttfc_p95_s": 6.926, "duration_p95_s": 13.926, "k6_peak_cpu_pct": 65.4, "mock_peak_cpu_pct": 48.4, "classification": "FAIL", "failure_taxonomy": "LOADGEN_LIMIT (primary candidate) with possible DOWNSTREAM_LIMIT contribution -- not fully isolated, see SUMMARY.md rationale"}
+  ],
+  "robust_clean_ceiling_N": 800,
+  "marginal_ceiling_N": 1600,
+  "first_hard_failure_N": 3200,
+  "headroom_ratio": 1.25,
+  "SAFE_CLOSED_MAX": 640,
+  "SAFE_CLOSED_MAX_basis": "robust_clean_ceiling_N (800) / 1.25 -- deliberately NOT using the marginal N=1600 ceiling as the basis, given its demonstrated run-to-run instability",
+  "m1_hard_architecture_ceiling": 550,
+  "m1_headroom_check": "800 / 550 = 1.45x >= 1.25x minimum -- PASS, no CONTROL BLOCKER for M1's own architecture boundary"
+}

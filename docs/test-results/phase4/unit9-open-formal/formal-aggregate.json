@@ -1,0 +1,539 @@
+{
+  "unit": "9-open-formal",
+  "stop_triggered": false,
+  "stop_reason": null,
+  "provenance_drift_at_end": false,
+  "window": {
+    "warmup_sec": 120,
+    "measurement_sec": 300
+  },
+  "frozen_order": [
+    "F1",
+    "F3",
+    "F2",
+    "F4",
+    "F4",
+    "F2",
+    "F3",
+    "F1",
+    "F2",
+    "F1",
+    "F4",
+    "F3"
+  ],
+  "cells": {
+    "F1": {
+      "model": "m1",
+      "rate": 6,
+      "role": "MSAR lower endpoint",
+      "expected": "SUSTAINABLE",
+      "expected_signature": "GREEN",
+      "confirmation": "CONFIRMED SUSTAINABLE",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "physical_attempts": 3,
+      "boundary_predicate_pass_count": 3,
+      "boundary_predicate_fail_count": 0,
+      "signature_match_count": 3,
+      "reliability_pass_count": 3,
+      "color_distribution": {
+        "GREEN": 3,
+        "AMBER": 0,
+        "RED": 0
+      },
+      "classification_distribution": {
+        "GREEN": 3
+      },
+      "resource": {
+        "client_cohort.actual_started_rate": {
+          "n": 3,
+          "min": 6.0,
+          "max": 6.0,
+          "median": 6.0,
+          "cv": 0.0
+        },
+        "client_cohort.completion_throughput": {
+          "n": 3,
+          "min": 6.0,
+          "max": 6.0,
+          "median": 6.0,
+          "cv": 0.0
+        },
+        "client_cohort.completion_ratio": {
+          "n": 3,
+          "min": 1.0,
+          "max": 1.0,
+          "median": 1.0,
+          "cv": 0.0
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 1.005,
+          "max": 1.006,
+          "median": 1.006,
+          "cv": 0.000468748280534721
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 7.847,
+          "max": 7.873,
+          "median": 7.873,
+          "cv": 0.0015584941559657606
+        },
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 138.0,
+          "max": 138.0,
+          "median": 138.0,
+          "cv": 0.0
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.056802407814632125,
+          "max": 0.06312787049788521,
+          "median": 0.060139565720215414,
+          "cv": 0.04304443237644148
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 281248,
+          "max": 282064,
+          "median": 281808,
+          "cv": 0.0012095897648590143
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 108.0,
+          "max": 108.0,
+          "median": 108.0,
+          "cv": 0.0
+        },
+        "backlog.gateway_active_requests.first_half_mean": {
+          "n": 3,
+          "min": 47.0,
+          "max": 47.0,
+          "median": 47.0,
+          "cv": 0.0
+        },
+        "backlog.gateway_active_requests.second_half_mean": {
+          "n": 3,
+          "min": 45.90909090909091,
+          "max": 46.0,
+          "median": 45.95454545454545,
+          "cv": 0.0008076128396911467
+        },
+        "implementation_specific.executor_active_peak.peak": {
+          "n": 3,
+          "min": 47.0,
+          "max": 47.0,
+          "median": 47.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_queue_depth_peak.peak": {
+          "n": 3,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_rejected_final": {
+          "n": 3,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0,
+          "cv": 0.0
+        }
+      }
+    },
+    "F2": {
+      "model": "m1",
+      "rate": 7,
+      "role": "MSAR upper endpoint",
+      "expected": "BOUNDARY",
+      "expected_signature": "AMBER",
+      "confirmation": "CONFIRMED",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "physical_attempts": 3,
+      "boundary_predicate_pass_count": 3,
+      "boundary_predicate_fail_count": 0,
+      "signature_match_count": 3,
+      "reliability_pass_count": 3,
+      "color_distribution": {
+        "GREEN": 0,
+        "AMBER": 3,
+        "RED": 0
+      },
+      "classification_distribution": {
+        "AMBER": 3
+      },
+      "resource": {
+        "client_cohort.actual_started_rate": {
+          "n": 3,
+          "min": 6.996666666666667,
+          "max": 7.003333333333333,
+          "median": 7.0,
+          "cv": 0.00038880789567982677
+        },
+        "client_cohort.completion_throughput": {
+          "n": 3,
+          "min": 6.996666666666667,
+          "max": 7.003333333333333,
+          "median": 7.0,
+          "cv": 0.00038880789567982677
+        },
+        "client_cohort.completion_ratio": {
+          "n": 3,
+          "min": 1.0,
+          "max": 1.0,
+          "median": 1.0,
+          "cv": 0.0
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 40.633,
+          "max": 42.3402,
+          "median": 40.64635,
+          "cv": 0.019454536911337895
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 47.49,
+          "max": 49.2263,
+          "median": 47.50635,
+          "cv": 0.01694615823177107
+        },
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 138.0,
+          "max": 138.0,
+          "median": 138.0,
+          "cv": 0.0
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.06149152298017524,
+          "max": 0.06658024661695511,
+          "median": 0.061701272886892505,
+          "cv": 0.037164953748195735
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 353104,
+          "max": 359856,
+          "median": 358688,
+          "cv": 0.008248406392886773
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 376.0,
+          "max": 387.0,
+          "median": 377.0,
+          "cv": 0.013069881075220472
+        },
+        "backlog.gateway_active_requests.first_half_mean": {
+          "n": 3,
+          "min": 176.79310344827587,
+          "max": 181.86285714285714,
+          "median": 177.38505747126436,
+          "cv": 0.012666858943310925
+        },
+        "backlog.gateway_active_requests.second_half_mean": {
+          "n": 3,
+          "min": 239.81142857142856,
+          "max": 246.53977272727272,
+          "median": 240.54857142857142,
+          "cv": 0.012435379774105181
+        },
+        "implementation_specific.executor_active_peak.peak": {
+          "n": 3,
+          "min": 50.0,
+          "max": 50.0,
+          "median": 50.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_queue_depth_peak.peak": {
+          "n": 3,
+          "min": 262.0,
+          "max": 273.0,
+          "median": 263.0,
+          "cv": 0.01867125867888639
+        },
+        "implementation_specific.executor_rejected_final": {
+          "n": 3,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0,
+          "cv": 0.0
+        }
+      }
+    },
+    "F3": {
+      "model": "m2",
+      "rate": 168,
+      "role": "control-censored lower-bound",
+      "expected": "SUSTAINABLE",
+      "expected_signature": "GREEN",
+      "confirmation": "CONFIRMED SUSTAINABLE",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "physical_attempts": 3,
+      "boundary_predicate_pass_count": 3,
+      "boundary_predicate_fail_count": 0,
+      "signature_match_count": 3,
+      "reliability_pass_count": 3,
+      "color_distribution": {
+        "GREEN": 3,
+        "AMBER": 0,
+        "RED": 0
+      },
+      "classification_distribution": {
+        "GREEN": 3
+      },
+      "resource": {
+        "client_cohort.actual_started_rate": {
+          "n": 3,
+          "min": 168.0,
+          "max": 168.00333333333333,
+          "median": 168.00333333333333,
+          "cv": 9.353140582610077e-06
+        },
+        "client_cohort.completion_throughput": {
+          "n": 3,
+          "min": 168.0,
+          "max": 168.00333333333333,
+          "median": 168.00333333333333,
+          "cv": 9.353140582610077e-06
+        },
+        "client_cohort.completion_ratio": {
+          "n": 3,
+          "min": 1.0,
+          "max": 1.0,
+          "median": 1.0,
+          "cv": 0.0
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 1.027,
+          "max": 1.03,
+          "median": 1.028,
+          "cv": 0.0012128549065718195
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 8.067,
+          "max": 8.11,
+          "median": 8.069,
+          "cv": 0.002451845904099889
+        },
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 110.0,
+          "max": 110.0,
+          "median": 110.0,
+          "cv": 0.0
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.389521224586506,
+          "max": 0.3995371667605027,
+          "median": 0.39100892166076273,
+          "cv": 0.011218601389045648
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 1180880,
+          "max": 1235600,
+          "median": 1186736,
+          "cv": 0.02042488030116728
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 2742.0,
+          "max": 2768.0,
+          "median": 2756.0,
+          "cv": 0.003856128103196038
+        },
+        "backlog.virtual_tasks_active.first_half_mean": {
+          "n": 3,
+          "min": 1336.4935064935064,
+          "max": 1339.4155844155844,
+          "median": 1337.8618421052631,
+          "cv": 0.0008922284161910145
+        },
+        "backlog.virtual_tasks_active.second_half_mean": {
+          "n": 3,
+          "min": 1304.7434210526317,
+          "max": 1308.1623376623377,
+          "median": 1306.1948051948052,
+          "cv": 0.0010724849228689937
+        },
+        "backlog.gateway_active_requests.first_half_mean": {
+          "n": 3,
+          "min": 1336.5454545454545,
+          "max": 1339.2337662337663,
+          "median": 1337.875,
+          "cv": 0.000820339920815815
+        },
+        "backlog.gateway_active_requests.second_half_mean": {
+          "n": 3,
+          "min": 1304.7368421052631,
+          "max": 1308.2077922077922,
+          "median": 1306.0974025974026,
+          "cv": 0.0010931155759283978
+        },
+        "implementation_specific.virtual_tasks_active_peak.peak": {
+          "n": 3,
+          "min": 1363.0,
+          "max": 1376.0,
+          "median": 1370.0,
+          "cv": 0.003878651119617723
+        },
+        "implementation_specific.tomcat_connections_current_peak.peak": {
+          "n": 3,
+          "min": 1365.0,
+          "max": 1378.0,
+          "median": 1372.0,
+          "cv": 0.00387299573523918
+        },
+        "implementation_specific.virtual_tasks_started_final": {
+          "n": 3,
+          "min": 70561.0,
+          "max": 70561.0,
+          "median": 70561.0,
+          "cv": 0.0
+        }
+      }
+    },
+    "F4": {
+      "model": "m3",
+      "rate": 168,
+      "role": "control-censored lower-bound",
+      "expected": "SUSTAINABLE",
+      "expected_signature": "GREEN",
+      "confirmation": "CONFIRMED SUSTAINABLE",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "physical_attempts": 3,
+      "boundary_predicate_pass_count": 3,
+      "boundary_predicate_fail_count": 0,
+      "signature_match_count": 3,
+      "reliability_pass_count": 3,
+      "color_distribution": {
+        "GREEN": 3,
+        "AMBER": 0,
+        "RED": 0
+      },
+      "classification_distribution": {
+        "GREEN": 3
+      },
+      "resource": {
+        "client_cohort.actual_started_rate": {
+          "n": 3,
+          "min": 167.99666666666667,
+          "max": 170.25333333333333,
+          "median": 167.99666666666667,
+          "cv": 0.00630405850722693
+        },
+        "client_cohort.completion_throughput": {
+          "n": 3,
+          "min": 167.99666666666667,
+          "max": 170.25333333333333,
+          "median": 167.99666666666667,
+          "cv": 0.00630405850722693
+        },
+        "client_cohort.completion_ratio": {
+          "n": 3,
+          "min": 1.0,
+          "max": 1.0,
+          "median": 1.0,
+          "cv": 0.0
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 1.015,
+          "max": 1.024,
+          "median": 1.022,
+          "cv": 0.00378171738085279
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 8.03,
+          "max": 8.097,
+          "median": 8.059,
+          "cv": 0.0034029733471516266
+        },
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 30.0,
+          "max": 30.0,
+          "median": 30.0,
+          "cv": 0.0
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.3267496918535222,
+          "max": 0.3392772126785809,
+          "median": 0.32786413265035586,
+          "cv": 0.01708788571954398
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 434176,
+          "max": 476784,
+          "median": 460528,
+          "cv": 0.03840353174832256
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 2781.0,
+          "max": 2803.0,
+          "median": 2791.0,
+          "cv": 0.0032216686718166067
+        },
+        "backlog.gateway_active_requests.first_half_mean": {
+          "n": 3,
+          "min": 1332.2532467532467,
+          "max": 1340.844155844156,
+          "median": 1338.4102564102564,
+          "cv": 0.002703728948079613
+        },
+        "backlog.gateway_active_requests.second_half_mean": {
+          "n": 3,
+          "min": 1283.9290322580646,
+          "max": 1306.0389610389611,
+          "median": 1302.6602564102564,
+          "cv": 0.007494683951876849
+        },
+        "implementation_specific.reactor_connection_active_peak.peak": {
+          "n": 3,
+          "min": 1367.0,
+          "max": 1379.0,
+          "median": 1370.0,
+          "cv": 0.0037164865259422626
+        },
+        "implementation_specific.reactor_connection_pending_peak.peak": {
+          "n": 3,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0,
+          "cv": 0.7071067811865476
+        },
+        "implementation_specific.max_connections_configured": {
+          "n": 3,
+          "min": 3200.0,
+          "max": 3200.0,
+          "median": 3200.0,
+          "cv": 0.0
+        }
+      }
+    }
+  },
+  "conclusions": {
+    "m1": "Formal-confirmed Open MSAR bracket = [6, 7]",
+    "m2": "M2 Formal: Open MSAR >= 168, CONTROL_CENSORED",
+    "m3": "M3 Formal: Open MSAR >= 168, CONTROL_CENSORED",
+    "m2_vs_m3_exact_ranking": "INCONCLUSIVE (both control-censored at the single-host ceiling)",
+    "note": "168 is SAFE_OPEN_MAX_SINGLE_HOST_FINAL, not a model MSAR and not an architecture ceiling."
+  }
+}

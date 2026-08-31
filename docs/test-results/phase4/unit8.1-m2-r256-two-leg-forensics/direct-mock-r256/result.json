@@ -1,0 +1,96 @@
+{
+  "diagnostic_unit": "8.1-m2-r256-two-leg-forensics",
+  "canonical": false,
+  "target": "direct-mock",
+  "run_label": "diag1",
+  "k6_exit_code": "0",
+  "ephemeral_port_range_size": 16384,
+  "sampler_cpu_pct_of_one_core": 2.53,
+  "k6": {
+    "iterations": 46080.0,
+    "http_reqs": 46080.0,
+    "http_req_duration_min_ms": 7848.558542,
+    "http_req_duration_avg_ms": 8420.127553414439,
+    "http_req_duration_p95_ms": 9093.85538125,
+    "vus_max": 2495.0,
+    "vus_max_configured": 15360.0,
+    "measurement_iterations_started_total": 30716.0,
+    "client_iterations_started_total": 46080.0,
+    "client_sse_open_attempt_total": 46080.0,
+    "client_sse_open_success_total": 46080.0,
+    "client_first_event_total": 46080.0,
+    "client_completed_total": 30716.0,
+    "client_failed_mid_stream_total": 0.0,
+    "client_failed_no_event_total": 0.0,
+    "client_zero_event_terminal_total": 0.0,
+    "client_sse_error_total": 0.0,
+    "client_rejected_total": 0.0,
+    "client_events_received_total": 1105776.0,
+    "client_ttfc_completed_p95_s": 1.269,
+    "client_completed_stream_duration_p95_s": 45.249,
+    "dropped_iterations": 0.0
+  },
+  "socket_timeline_peaks": {
+    "DIRECT": {
+      "samples": 175,
+      "unique_src_ports_peak": 10324,
+      "unique_src_ports_peak_epoch_ms": 1788069857533,
+      "total_rows_peak": 10324,
+      "established_peak": 2498,
+      "syn_sent_peak": 1,
+      "time_wait_peak": 8181,
+      "close_wait_peak": 0,
+      "fin_wait_1_peak": 1,
+      "fin_wait_2_peak": 52,
+      "last_ack_peak": 0,
+      "closing_peak": 0,
+      "other_peak": 0
+    }
+  },
+  "raw_socket_sanity": {
+    "raw_row_count": 1526269,
+    "rows_by_leg": {
+      "DIRECT": 1526269
+    },
+    "rows_by_state": {
+      "TIME_WAIT": 1170772,
+      "ESTABLISHED": 355343,
+      "FIN_WAIT_2": 140,
+      "SYN_SENT": 11,
+      "FIN_WAIT_1": 3
+    }
+  },
+  "mock": {
+    "completed": 46080.0,
+    "cancelled": 0.0,
+    "failed": {},
+    "active_final": 0.0,
+    "waiting_final": 0.0,
+    "current_concurrency_final": 0.0
+  },
+  "gateway_metrics_final": {},
+  "bindexception": {
+    "count": 0,
+    "timestamps": [],
+    "full_stack_present": false
+  },
+  "direct_mock_gate": {
+    "checks": {
+      "k6_exit_zero": true,
+      "dropped_eq_0": true,
+      "arrival_within_5pct": true,
+      "open_attempt_eq_success": true,
+      "zero_event_terminal_eq_0": true,
+      "mid_stream_eq_0": true,
+      "sse_error_eq_0": true,
+      "mock_population_consistent": true,
+      "no_syn_sent_accumulation": true,
+      "no_bindexception": true
+    },
+    "arrival_ratio": 0.9999,
+    "expected_measurement_cohort": 30720,
+    "measurement_started": 30716.0,
+    "syn_sent_peak": 1,
+    "GATE": "PASS"
+  }
+}

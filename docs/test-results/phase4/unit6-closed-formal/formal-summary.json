@@ -1,0 +1,259 @@
+{
+  "stop_triggered": false,
+  "stop_reason": null,
+  "canary_pass": true,
+  "cells": {
+    "F1": {
+      "role": "MSC lower endpoint",
+      "model": "m1",
+      "N": 50,
+      "confirmation": "CONFIRMED SUSTAINABLE",
+      "extras_used": 0,
+      "reps": [
+        {
+          "label": "f1-rep1",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n50-f1-rep1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f1-rep2",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n50-f1-rep2",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f1-rep3",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n50-f1-rep3",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "boundary_pass": true,
+          "signature_pass": true
+        }
+      ]
+    },
+    "F2": {
+      "role": "MSC upper endpoint",
+      "model": "m1",
+      "N": 56,
+      "confirmation": "CONFIRMED",
+      "extras_used": 0,
+      "reps": [
+        {
+          "label": "f2-rep1",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n56-f2-rep1",
+          "valid": true,
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f2-rep2",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n56-f2-rep2",
+          "valid": true,
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f2-rep3",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n56-f2-rep3",
+          "valid": true,
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "boundary_pass": true,
+          "signature_pass": true
+        }
+      ]
+    },
+    "F3": {
+      "role": "MRC lower endpoint",
+      "model": "m1",
+      "N": 350,
+      "confirmation": "CONFIRMED",
+      "extras_used": 0,
+      "reps": [
+        {
+          "label": "f3-rep1",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n350-f3-rep1",
+          "valid": true,
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f3-rep2",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n350-f3-rep2",
+          "valid": true,
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f3-rep3",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n350-f3-rep3",
+          "valid": true,
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "boundary_pass": true,
+          "signature_pass": true
+        }
+      ]
+    },
+    "F4": {
+      "role": "MRC upper endpoint",
+      "model": "m1",
+      "N": 400,
+      "confirmation": "CONFIRMED",
+      "extras_used": 0,
+      "reps": [
+        {
+          "label": "f4-rep1",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n400-f4-rep1",
+          "valid": true,
+          "color": "RED",
+          "classification": "MODEL_TIMEOUT",
+          "reliability_pass": false,
+          "slo_pass": null,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f4-rep2",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n400-f4-rep2",
+          "valid": true,
+          "color": "RED",
+          "classification": "MODEL_TIMEOUT",
+          "reliability_pass": false,
+          "slo_pass": null,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f4-rep3",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m1-n400-f4-rep3",
+          "valid": true,
+          "color": "RED",
+          "classification": "MODEL_TIMEOUT",
+          "reliability_pass": false,
+          "slo_pass": null,
+          "boundary_pass": true,
+          "signature_pass": true
+        }
+      ]
+    },
+    "F5": {
+      "role": "control-censored lower-bound confirmation",
+      "model": "m2",
+      "N": 640,
+      "confirmation": "CONFIRMED SUSTAINABLE",
+      "extras_used": 0,
+      "reps": [
+        {
+          "label": "f5-rep1",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m2-n640-f5-rep1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f5-rep2",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m2-n640-f5-rep2",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f5-rep3",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m2-n640-f5-rep3",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "boundary_pass": true,
+          "signature_pass": true
+        }
+      ]
+    },
+    "F6": {
+      "role": "control-censored lower-bound confirmation",
+      "model": "m3",
+      "N": 640,
+      "confirmation": "CONFIRMED SUSTAINABLE",
+      "extras_used": 0,
+      "reps": [
+        {
+          "label": "f6-rep1",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m3-n640-f6-rep1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f6-rep2",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m3-n640-f6-rep2",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "boundary_pass": true,
+          "signature_pass": true
+        },
+        {
+          "label": "f6-rep3",
+          "dir": "docs/test-results/phase4/unit6-closed-formal/m3-n640-f6-rep3",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "boundary_pass": true,
+          "signature_pass": true
+        }
+      ]
+    }
+  }
+}

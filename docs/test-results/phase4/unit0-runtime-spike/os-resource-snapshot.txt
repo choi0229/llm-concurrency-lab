@@ -1,0 +1,45 @@
+=== date ===
+2026년  8월 25일 화요일 20시 15분 54초 KST
+=== uname -a ===
+Darwin userui-MacBookAir.local 25.4.0 Darwin Kernel Version 25.4.0: Thu Mar 19 19:33:43 PDT 2026; root:xnu-12377.101.15~1/RELEASE_ARM64_T8142 arm64
+=== sw_vers ===
+ProductName:		macOS
+ProductVersion:		26.4.1
+BuildVersion:		25E253
+=== ulimit -n (soft) ===
+1048576
+=== ulimit -Hn (hard) ===
+unlimited
+=== sysctl kern.maxfiles ===
+kern.maxfiles: 122880
+=== sysctl kern.maxfilesperproc ===
+kern.maxfilesperproc: 61440
+=== sysctl kern.num_files (current open, system-wide) ===
+kern.num_files: 5463
+=== ephemeral port range ===
+net.inet.ip.portrange.first: 49152
+net.inet.ip.portrange.last: 65535
+=== hw.physicalcpu / hw.logicalcpu ===
+hw.physicalcpu: 10
+hw.logicalcpu: 10
+=== hw.memsize (bytes) ===
+hw.memsize: 17179869184
+=== vm_stat (swap-relevant summary) ===
+Mach Virtual Memory Statistics: (page size of 16384 bytes)
+Pages free:                               23989.
+Pages active:                            408863.
+Pages inactive:                          406945.
+Pages speculative:                         1792.
+Pages throttled:                              0.
+Pages wired down:                        122402.
+Pages purgeable:                          10037.
+"Translation faults":                   6374749.
+Pages copy-on-write:                     311223.
+=== sysctl vm.swapusage ===
+vm.swapusage: total = 0.00M  used = 0.00M  free = 0.00M  (encrypted)
+=== Docker Desktop process check ===
+no Docker Desktop process detected
+=== docker info (best-effort) ===
+docker daemon NOT responsive (consistent with Docker Desktop not running, or it may still be starting)
+=== current shell process count / approx system-wide fd pressure ratio ===
+kern.num_files / kern.maxfiles ratio computed below in report text

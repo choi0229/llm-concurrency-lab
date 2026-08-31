@@ -1,0 +1,283 @@
+# HELP application_ready_time_seconds Time taken for the application to be ready to service requests
+# TYPE application_ready_time_seconds gauge
+application_ready_time_seconds{main_application_class="com.llmconcurrencylab.phase4.webflux.Phase4WebfluxApplication"} 0.666
+# HELP application_started_time_seconds Time taken to start the application
+# TYPE application_started_time_seconds gauge
+application_started_time_seconds{main_application_class="com.llmconcurrencylab.phase4.webflux.Phase4WebfluxApplication"} 0.665
+# HELP disk_free_bytes Usable space for path
+# TYPE disk_free_bytes gauge
+disk_free_bytes{path="/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-webflux/."} 3.315076096E11
+# HELP disk_total_bytes Total space for path
+# TYPE disk_total_bytes gauge
+disk_total_bytes{path="/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-webflux/."} 4.94332366848E11
+# HELP executor_active_threads The approximate number of threads that are actively executing tasks
+# TYPE executor_active_threads gauge
+executor_active_threads{name="applicationTaskExecutor"} 0.0
+# HELP executor_completed_tasks_total The approximate total number of tasks that have completed execution
+# TYPE executor_completed_tasks_total counter
+executor_completed_tasks_total{name="applicationTaskExecutor"} 0.0
+# HELP executor_pool_core_threads The core number of threads for the pool
+# TYPE executor_pool_core_threads gauge
+executor_pool_core_threads{name="applicationTaskExecutor"} 8.0
+# HELP executor_pool_max_threads The maximum allowed number of threads in the pool
+# TYPE executor_pool_max_threads gauge
+executor_pool_max_threads{name="applicationTaskExecutor"} 2.147483647E9
+# HELP executor_pool_size_threads The current number of threads in the pool
+# TYPE executor_pool_size_threads gauge
+executor_pool_size_threads{name="applicationTaskExecutor"} 0.0
+# HELP executor_queue_remaining_tasks The number of additional elements that this queue can ideally accept without blocking
+# TYPE executor_queue_remaining_tasks gauge
+executor_queue_remaining_tasks{name="applicationTaskExecutor"} 2.147483647E9
+# HELP executor_queued_tasks The approximate number of tasks that are queued for execution
+# TYPE executor_queued_tasks gauge
+executor_queued_tasks{name="applicationTaskExecutor"} 0.0
+# HELP gateway_active_requests  
+# TYPE gateway_active_requests gauge
+gateway_active_requests 0.0
+# HELP gateway_bytes_relayed_total  
+# TYPE gateway_bytes_relayed_total counter
+gateway_bytes_relayed_total 0.0
+# HELP gateway_first_upstream_event_seconds  
+# TYPE gateway_first_upstream_event_seconds summary
+gateway_first_upstream_event_seconds_count 0
+gateway_first_upstream_event_seconds_sum 0.0
+# HELP gateway_first_upstream_event_seconds_max  
+# TYPE gateway_first_upstream_event_seconds_max gauge
+gateway_first_upstream_event_seconds_max 0.0
+# HELP gateway_request_duration_seconds  
+# TYPE gateway_request_duration_seconds summary
+gateway_request_duration_seconds_count 0
+gateway_request_duration_seconds_sum 0.0
+# HELP gateway_request_duration_seconds_max  
+# TYPE gateway_request_duration_seconds_max gauge
+gateway_request_duration_seconds_max 0.0
+# HELP gateway_requests_total  
+# TYPE gateway_requests_total counter
+gateway_requests_total{outcome="client_disconnect"} 0.0
+gateway_requests_total{outcome="completed"} 0.0
+gateway_requests_total{outcome="internal_error"} 0.0
+gateway_requests_total{outcome="rejected"} 0.0
+gateway_requests_total{outcome="timeout"} 0.0
+gateway_requests_total{outcome="upstream_error"} 0.0
+gateway_requests_total{outcome="write_overflow"} 0.0
+# HELP gateway_requests_started_total  
+# TYPE gateway_requests_started_total counter
+gateway_requests_started_total 0.0
+# HELP gateway_upstream_active  
+# TYPE gateway_upstream_active gauge
+gateway_upstream_active 0.0
+# HELP http_server_requests_active_seconds  
+# TYPE http_server_requests_active_seconds summary
+http_server_requests_active_seconds_count{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN"} 1
+http_server_requests_active_seconds_sum{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN"} 0.0104195
+# HELP http_server_requests_active_seconds_max  
+# TYPE http_server_requests_active_seconds_max gauge
+http_server_requests_active_seconds_max{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN"} 0.010544583
+# HELP http_server_requests_seconds  
+# TYPE http_server_requests_seconds summary
+http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/healthz"} 2
+http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/healthz"} 0.028351374
+# HELP http_server_requests_seconds_max  
+# TYPE http_server_requests_seconds_max gauge
+http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/healthz"} 0.027550666
+# HELP jvm_info JVM version info
+# TYPE jvm_info gauge
+jvm_info{runtime="OpenJDK Runtime Environment",vendor="Eclipse Adoptium",version="21.0.11+10-LTS"} 1
+# HELP jvm_buffer_count_buffers An estimate of the number of buffers in the pool
+# TYPE jvm_buffer_count_buffers gauge
+jvm_buffer_count_buffers{id="direct"} 11.0
+jvm_buffer_count_buffers{id="mapped"} 0.0
+jvm_buffer_count_buffers{id="mapped - 'non-volatile memory'"} 0.0
+# HELP jvm_buffer_memory_used_bytes An estimate of the memory that the Java virtual machine is using for this buffer pool
+# TYPE jvm_buffer_memory_used_bytes gauge
+jvm_buffer_memory_used_bytes{id="direct"} 927752.0
+jvm_buffer_memory_used_bytes{id="mapped"} 0.0
+jvm_buffer_memory_used_bytes{id="mapped - 'non-volatile memory'"} 0.0
+# HELP jvm_buffer_total_capacity_bytes An estimate of the total capacity of the buffers in this pool
+# TYPE jvm_buffer_total_capacity_bytes gauge
+jvm_buffer_total_capacity_bytes{id="direct"} 927751.0
+jvm_buffer_total_capacity_bytes{id="mapped"} 0.0
+jvm_buffer_total_capacity_bytes{id="mapped - 'non-volatile memory'"} 0.0
+# HELP jvm_classes_loaded_classes The number of classes that are currently loaded in the Java virtual machine
+# TYPE jvm_classes_loaded_classes gauge
+jvm_classes_loaded_classes 9572.0
+# HELP jvm_classes_loaded_count_classes_total The number of classes loaded in the Java virtual machine
+# TYPE jvm_classes_loaded_count_classes_total counter
+jvm_classes_loaded_count_classes_total 9573.0
+# HELP jvm_classes_unloaded_classes_total The number of classes unloaded in the Java virtual machine
+# TYPE jvm_classes_unloaded_classes_total counter
+jvm_classes_unloaded_classes_total 0.0
+# HELP jvm_compilation_time_ms_total The approximate accumulated elapsed time spent in compilation
+# TYPE jvm_compilation_time_ms_total counter
+jvm_compilation_time_ms_total{compiler="HotSpot 64-Bit Tiered Compilers"} 2171.0
+# HELP jvm_gc_concurrent_phase_time_seconds Time spent in concurrent phase
+# TYPE jvm_gc_concurrent_phase_time_seconds summary
+jvm_gc_concurrent_phase_time_seconds_count{action="end of concurrent GC pause",cause="No GC",gc="G1 Concurrent GC"} 2
+jvm_gc_concurrent_phase_time_seconds_sum{action="end of concurrent GC pause",cause="No GC",gc="G1 Concurrent GC"} 0.001
+# HELP jvm_gc_concurrent_phase_time_seconds_max Time spent in concurrent phase
+# TYPE jvm_gc_concurrent_phase_time_seconds_max gauge
+jvm_gc_concurrent_phase_time_seconds_max{action="end of concurrent GC pause",cause="No GC",gc="G1 Concurrent GC"} 0.001
+# HELP jvm_gc_live_data_size_bytes Size of long-lived heap memory pool after reclamation
+# TYPE jvm_gc_live_data_size_bytes gauge
+jvm_gc_live_data_size_bytes 0.0
+# HELP jvm_gc_max_data_size_bytes Max size of long-lived heap memory pool
+# TYPE jvm_gc_max_data_size_bytes gauge
+jvm_gc_max_data_size_bytes 4.294967296E9
+# HELP jvm_gc_memory_allocated_bytes_total Incremented for an increase in the size of the (young) heap memory pool after one GC to before the next
+# TYPE jvm_gc_memory_allocated_bytes_total counter
+jvm_gc_memory_allocated_bytes_total 5.8720256E7
+# HELP jvm_gc_memory_promoted_bytes_total Count of positive increases in the size of the old generation memory pool before GC to after GC
+# TYPE jvm_gc_memory_promoted_bytes_total counter
+jvm_gc_memory_promoted_bytes_total 2952160.0
+# HELP jvm_gc_overhead An approximation of the percent of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1]
+# TYPE jvm_gc_overhead gauge
+jvm_gc_overhead 0.003298875660702941
+# HELP jvm_gc_pause_seconds Time spent in GC pause
+# TYPE jvm_gc_pause_seconds summary
+jvm_gc_pause_seconds_count{action="end of minor GC",cause="G1 Evacuation Pause",gc="G1 Young Generation"} 1
+jvm_gc_pause_seconds_sum{action="end of minor GC",cause="G1 Evacuation Pause",gc="G1 Young Generation"} 0.001
+jvm_gc_pause_seconds_count{action="end of minor GC",cause="Metadata GC Threshold",gc="G1 Young Generation"} 1
+jvm_gc_pause_seconds_sum{action="end of minor GC",cause="Metadata GC Threshold",gc="G1 Young Generation"} 0.002
+# HELP jvm_gc_pause_seconds_max Time spent in GC pause
+# TYPE jvm_gc_pause_seconds_max gauge
+jvm_gc_pause_seconds_max{action="end of minor GC",cause="G1 Evacuation Pause",gc="G1 Young Generation"} 0.001
+jvm_gc_pause_seconds_max{action="end of minor GC",cause="Metadata GC Threshold",gc="G1 Young Generation"} 0.002
+# HELP jvm_memory_committed_bytes The amount of memory in bytes that is committed for the Java virtual machine to use
+# TYPE jvm_memory_committed_bytes gauge
+jvm_memory_committed_bytes{area="heap",id="G1 Eden Space"} 3.5651584E7
+jvm_memory_committed_bytes{area="heap",id="G1 Old Gen"} 2.3068672E7
+jvm_memory_committed_bytes{area="heap",id="G1 Survivor Space"} 4194304.0
+jvm_memory_committed_bytes{area="nonheap",id="CodeHeap 'non-nmethods'"} 2555904.0
+jvm_memory_committed_bytes{area="nonheap",id="CodeHeap 'non-profiled nmethods'"} 3145728.0
+jvm_memory_committed_bytes{area="nonheap",id="CodeHeap 'profiled nmethods'"} 1.0092544E7
+jvm_memory_committed_bytes{area="nonheap",id="Compressed Class Space"} 6160384.0
+jvm_memory_committed_bytes{area="nonheap",id="Metaspace"} 4.3319296E7
+# HELP jvm_memory_max_bytes The maximum amount of memory in bytes that can be used for memory management
+# TYPE jvm_memory_max_bytes gauge
+jvm_memory_max_bytes{area="heap",id="G1 Eden Space"} -1.0
+jvm_memory_max_bytes{area="heap",id="G1 Old Gen"} 4.294967296E9
+jvm_memory_max_bytes{area="heap",id="G1 Survivor Space"} -1.0
+jvm_memory_max_bytes{area="nonheap",id="CodeHeap 'non-nmethods'"} 5849088.0
+jvm_memory_max_bytes{area="nonheap",id="CodeHeap 'non-profiled nmethods'"} 1.22912768E8
+jvm_memory_max_bytes{area="nonheap",id="CodeHeap 'profiled nmethods'"} 1.22896384E8
+jvm_memory_max_bytes{area="nonheap",id="Compressed Class Space"} 1.073741824E9
+jvm_memory_max_bytes{area="nonheap",id="Metaspace"} -1.0
+# HELP jvm_memory_usage_after_gc The percentage of long-lived heap pool used after the last GC event, in the range [0..1]
+# TYPE jvm_memory_usage_after_gc gauge
+jvm_memory_usage_after_gc{area="heap",pool="long-lived"} 0.003165973350405693
+# HELP jvm_memory_used_bytes The amount of used memory
+# TYPE jvm_memory_used_bytes gauge
+jvm_memory_used_bytes{area="heap",id="G1 Eden Space"} 2.7262976E7
+jvm_memory_used_bytes{area="heap",id="G1 Old Gen"} 1.3597752E7
+jvm_memory_used_bytes{area="heap",id="G1 Survivor Space"} 2879712.0
+jvm_memory_used_bytes{area="nonheap",id="CodeHeap 'non-nmethods'"} 1525760.0
+jvm_memory_used_bytes{area="nonheap",id="CodeHeap 'non-profiled nmethods'"} 3012608.0
+jvm_memory_used_bytes{area="nonheap",id="CodeHeap 'profiled nmethods'"} 9020544.0
+jvm_memory_used_bytes{area="nonheap",id="Compressed Class Space"} 5776328.0
+jvm_memory_used_bytes{area="nonheap",id="Metaspace"} 4.2476576E7
+# HELP jvm_threads_daemon_threads The current number of live daemon threads
+# TYPE jvm_threads_daemon_threads gauge
+jvm_threads_daemon_threads 12.0
+# HELP jvm_threads_live_threads The current number of live threads including both daemon and non-daemon threads
+# TYPE jvm_threads_live_threads gauge
+jvm_threads_live_threads 14.0
+# HELP jvm_threads_peak_threads The peak live thread count since the Java virtual machine started or peak was reset
+# TYPE jvm_threads_peak_threads gauge
+jvm_threads_peak_threads 14.0
+# HELP jvm_threads_started_threads_total The total number of application threads started in the JVM
+# TYPE jvm_threads_started_threads_total counter
+jvm_threads_started_threads_total 17.0
+# HELP jvm_threads_states_threads The current number of threads
+# TYPE jvm_threads_states_threads gauge
+jvm_threads_states_threads{state="blocked"} 0.0
+jvm_threads_states_threads{state="new"} 0.0
+jvm_threads_states_threads{state="runnable"} 9.0
+jvm_threads_states_threads{state="terminated"} 0.0
+jvm_threads_states_threads{state="timed-waiting"} 3.0
+jvm_threads_states_threads{state="waiting"} 2.0
+# HELP logback_events_total Number of log events that were enabled by the effective log level
+# TYPE logback_events_total counter
+logback_events_total{level="debug"} 0.0
+logback_events_total{level="error"} 0.0
+logback_events_total{level="info"} 2.0
+logback_events_total{level="trace"} 0.0
+logback_events_total{level="warn"} 0.0
+# HELP process_cpu_time_ns_total The "cpu time" used by the Java Virtual Machine process
+# TYPE process_cpu_time_ns_total counter
+process_cpu_time_ns_total 3.274613E9
+# HELP process_cpu_usage The "recent cpu usage" for the Java Virtual Machine process
+# TYPE process_cpu_usage gauge
+process_cpu_usage 0.0
+# HELP process_files_max_files The maximum file descriptor count
+# TYPE process_files_max_files gauge
+process_files_max_files 1048576.0
+# HELP process_files_open_files The open file descriptor count
+# TYPE process_files_open_files gauge
+process_files_open_files 41.0
+# HELP process_start_time_seconds Start time of the process since unix epoch.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.787969261205E9
+# HELP process_uptime_seconds The uptime of the Java virtual machine
+# TYPE process_uptime_seconds gauge
+process_uptime_seconds 1.684
+# HELP reactor_netty_bytebuf_allocator_used_direct_memory  
+# TYPE reactor_netty_bytebuf_allocator_used_direct_memory gauge
+reactor_netty_bytebuf_allocator_used_direct_memory{id="421696217",type="adaptive"} 917504.0
+# HELP reactor_netty_bytebuf_allocator_used_heap_memory  
+# TYPE reactor_netty_bytebuf_allocator_used_heap_memory gauge
+reactor_netty_bytebuf_allocator_used_heap_memory{id="421696217",type="adaptive"} 0.0
+# HELP reactor_netty_eventloop_pending_tasks  
+# TYPE reactor_netty_eventloop_pending_tasks gauge
+reactor_netty_eventloop_pending_tasks{name="reactor-http-nio-2"} 0.0
+reactor_netty_eventloop_pending_tasks{name="reactor-http-nio-3"} 0.0
+reactor_netty_eventloop_pending_tasks{name="reactor-http-nio-4"} 0.0
+# HELP reactor_netty_http_server_connections  
+# TYPE reactor_netty_http_server_connections gauge
+reactor_netty_http_server_connections{local_address="127.0.0.1:18103",uri="http"} 1.0
+# HELP reactor_netty_http_server_connections_active  
+# TYPE reactor_netty_http_server_connections_active gauge
+reactor_netty_http_server_connections_active{local_address="127.0.0.1:18103",uri="http"} 1.0
+# HELP reactor_netty_http_server_data_received_bytes  
+# TYPE reactor_netty_http_server_data_received_bytes summary
+reactor_netty_http_server_data_received_bytes_count{uri="/chat/stream"} 3
+reactor_netty_http_server_data_received_bytes_sum{uri="/chat/stream"} 0.0
+# HELP reactor_netty_http_server_data_received_bytes_max  
+# TYPE reactor_netty_http_server_data_received_bytes_max gauge
+reactor_netty_http_server_data_received_bytes_max{uri="/chat/stream"} 0.0
+# HELP reactor_netty_http_server_data_received_time_seconds  
+# TYPE reactor_netty_http_server_data_received_time_seconds summary
+reactor_netty_http_server_data_received_time_seconds_count{method="GET",uri="/chat/stream"} 3
+reactor_netty_http_server_data_received_time_seconds_sum{method="GET",uri="/chat/stream"} 0.042573625
+# HELP reactor_netty_http_server_data_received_time_seconds_max  
+# TYPE reactor_netty_http_server_data_received_time_seconds_max gauge
+reactor_netty_http_server_data_received_time_seconds_max{method="GET",uri="/chat/stream"} 0.035083
+# HELP reactor_netty_http_server_data_sent_bytes  
+# TYPE reactor_netty_http_server_data_sent_bytes summary
+reactor_netty_http_server_data_sent_bytes_count{uri="/chat/stream"} 2
+reactor_netty_http_server_data_sent_bytes_sum{uri="/chat/stream"} 30.0
+# HELP reactor_netty_http_server_data_sent_bytes_max  
+# TYPE reactor_netty_http_server_data_sent_bytes_max gauge
+reactor_netty_http_server_data_sent_bytes_max{uri="/chat/stream"} 15.0
+# HELP reactor_netty_http_server_data_sent_time_seconds  
+# TYPE reactor_netty_http_server_data_sent_time_seconds summary
+reactor_netty_http_server_data_sent_time_seconds_count{method="GET",status="200",uri="/chat/stream"} 2
+reactor_netty_http_server_data_sent_time_seconds_sum{method="GET",status="200",uri="/chat/stream"} 0.001141667
+# HELP reactor_netty_http_server_data_sent_time_seconds_max  
+# TYPE reactor_netty_http_server_data_sent_time_seconds_max gauge
+reactor_netty_http_server_data_sent_time_seconds_max{method="GET",status="200",uri="/chat/stream"} 0.001019542
+# HELP reactor_netty_http_server_response_time_seconds  
+# TYPE reactor_netty_http_server_response_time_seconds summary
+reactor_netty_http_server_response_time_seconds_count{method="GET",status="200",uri="/chat/stream"} 2
+reactor_netty_http_server_response_time_seconds_sum{method="GET",status="200",uri="/chat/stream"} 0.033924458
+# HELP reactor_netty_http_server_response_time_seconds_max  
+# TYPE reactor_netty_http_server_response_time_seconds_max gauge
+reactor_netty_http_server_response_time_seconds_max{method="GET",status="200",uri="/chat/stream"} 0.033078833
+# HELP system_cpu_count The number of processors available to the Java virtual machine
+# TYPE system_cpu_count gauge
+system_cpu_count 10.0
+# HELP system_cpu_usage The "recent cpu usage" of the system the application is running in
+# TYPE system_cpu_usage gauge
+system_cpu_usage 0.0
+# HELP system_load_average_1m The sum of the number of runnable entities queued to available processors and the number of runnable entities running on the available processors averaged over a period of time
+# TYPE system_load_average_1m gauge
+system_load_average_1m 2.3271484375

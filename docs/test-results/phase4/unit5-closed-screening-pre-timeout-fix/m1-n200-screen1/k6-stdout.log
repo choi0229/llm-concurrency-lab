@@ -1,0 +1,263 @@
+time="2026-08-27T23:40:32+09:00" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/load-test-k6/scenarios/04-phase4-closed-wave.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 200 iterations shared among 200 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+running (00m40.0s), 200/200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 200 VUs  00m00.6s/10m0s  000/200 shared iters
+
+running (00m41.0s), 200/200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 200 VUs  00m01.6s/10m0s  000/200 shared iters
+
+running (00m42.0s), 200/200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 200 VUs  00m02.6s/10m0s  000/200 shared iters
+
+running (00m43.0s), 200/200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 200 VUs  00m03.6s/10m0s  000/200 shared iters
+
+running (00m44.0s), 200/200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 200 VUs  00m04.6s/10m0s  000/200 shared iters
+
+running (00m45.0s), 200/200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 200 VUs  00m05.6s/10m0s  000/200 shared iters
+
+running (00m46.0s), 200/200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 200 VUs  00m06.6s/10m0s  000/200 shared iters
+
+running (00m47.0s), 200/200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 200 VUs  00m07.6s/10m0s  000/200 shared iters
+
+running (00m48.0s), 150/200 VUs, 50 complete and 0 interrupted iterations
+default   [  25% ] 200 VUs  00m08.6s/10m0s  050/200 shared iters
+
+running (00m49.0s), 150/200 VUs, 50 complete and 0 interrupted iterations
+default   [  25% ] 200 VUs  00m09.6s/10m0s  050/200 shared iters
+
+running (00m50.0s), 150/200 VUs, 50 complete and 0 interrupted iterations
+default   [  25% ] 200 VUs  00m10.6s/10m0s  050/200 shared iters
+
+running (00m51.0s), 150/200 VUs, 50 complete and 0 interrupted iterations
+default   [  25% ] 200 VUs  00m11.6s/10m0s  050/200 shared iters
+
+running (00m52.0s), 150/200 VUs, 50 complete and 0 interrupted iterations
+default   [  25% ] 200 VUs  00m12.6s/10m0s  050/200 shared iters
+
+running (00m53.0s), 150/200 VUs, 50 complete and 0 interrupted iterations
+default   [  25% ] 200 VUs  00m13.6s/10m0s  050/200 shared iters
+
+running (00m54.0s), 150/200 VUs, 50 complete and 0 interrupted iterations
+default   [  25% ] 200 VUs  00m14.6s/10m0s  050/200 shared iters
+
+running (00m55.0s), 150/200 VUs, 50 complete and 0 interrupted iterations
+default   [  25% ] 200 VUs  00m15.6s/10m0s  050/200 shared iters
+
+running (00m56.0s), 100/200 VUs, 100 complete and 0 interrupted iterations
+default   [  50% ] 200 VUs  00m16.6s/10m0s  100/200 shared iters
+
+running (00m57.0s), 100/200 VUs, 100 complete and 0 interrupted iterations
+default   [  50% ] 200 VUs  00m17.6s/10m0s  100/200 shared iters
+
+running (00m58.0s), 100/200 VUs, 100 complete and 0 interrupted iterations
+default   [  50% ] 200 VUs  00m18.6s/10m0s  100/200 shared iters
+
+running (00m59.0s), 100/200 VUs, 100 complete and 0 interrupted iterations
+default   [  50% ] 200 VUs  00m19.6s/10m0s  100/200 shared iters
+
+running (01m00.0s), 100/200 VUs, 100 complete and 0 interrupted iterations
+default   [  50% ] 200 VUs  00m20.6s/10m0s  100/200 shared iters
+
+running (01m01.0s), 100/200 VUs, 100 complete and 0 interrupted iterations
+default   [  50% ] 200 VUs  00m21.6s/10m0s  100/200 shared iters
+
+running (01m02.0s), 100/200 VUs, 100 complete and 0 interrupted iterations
+default   [  50% ] 200 VUs  00m22.6s/10m0s  100/200 shared iters
+
+running (01m03.0s), 100/200 VUs, 100 complete and 0 interrupted iterations
+default   [  50% ] 200 VUs  00m23.6s/10m0s  100/200 shared iters
+
+running (01m04.0s), 050/200 VUs, 150 complete and 0 interrupted iterations
+default   [  75% ] 200 VUs  00m24.6s/10m0s  150/200 shared iters
+
+running (01m05.0s), 050/200 VUs, 150 complete and 0 interrupted iterations
+default   [  75% ] 200 VUs  00m25.6s/10m0s  150/200 shared iters
+
+running (01m06.0s), 050/200 VUs, 150 complete and 0 interrupted iterations
+default   [  75% ] 200 VUs  00m26.6s/10m0s  150/200 shared iters
+
+running (01m07.0s), 050/200 VUs, 150 complete and 0 interrupted iterations
+default   [  75% ] 200 VUs  00m27.6s/10m0s  150/200 shared iters
+
+running (01m08.0s), 050/200 VUs, 150 complete and 0 interrupted iterations
+default   [  75% ] 200 VUs  00m28.6s/10m0s  150/200 shared iters
+
+running (01m09.0s), 050/200 VUs, 150 complete and 0 interrupted iterations
+default   [  75% ] 200 VUs  00m29.6s/10m0s  150/200 shared iters
+
+running (01m10.0s), 050/200 VUs, 150 complete and 0 interrupted iterations
+default   [  75% ] 200 VUs  00m30.6s/10m0s  150/200 shared iters
+
+running (01m11.0s), 050/200 VUs, 150 complete and 0 interrupted iterations
+default   [  75% ] 200 VUs  00m31.6s/10m0s  150/200 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_actual_started_total................: 200    2.812062/s
+    client_completed_stream_duration_seconds...: avg=19.808885     min=7.91          med=19.7885       max=31.71         p(90)=31.6951       p(95)=31.69905     
+    client_completed_ttfc_seconds..............: avg=12.90316      min=1.02          med=12.8895       max=24.804        p(90)=24.79         p(95)=24.79305     
+    client_events_received_total...............: 7200   101.234235/s
+    client_stream_completed_total..............: 200    2.812062/s
+    client_stream_duration_seconds.............: avg=19.808885     min=7.91          med=19.7885       max=31.71         p(90)=31.6951       p(95)=31.69905     
+    client_ttfc_seconds........................: avg=12.90316      min=1.02          med=12.8895       max=24.804        p(90)=24.79         p(95)=24.79305     
+    client_wave_start_epoch_ms.................: avg=496622h41m11s min=496622h41m11s med=496622h41m11s max=496622h41m11s p(90)=496622h41m11s p(95)=496622h41m11s
+    sse_event..................................: 7380   103.765091/s
+
+    HTTP
+    http_req_duration..........................: avg=19.51s        min=7.87s         med=15.88s        max=31.71s        p(90)=31.69s        p(95)=31.69s       
+    http_reqs..................................: 205    2.882364/s
+
+    EXECUTION
+    iteration_duration.........................: avg=19.8s         min=7.91s         med=19.78s        max=31.71s        p(90)=31.69s        p(95)=31.69s       
+    iterations.................................: 200    2.812062/s
+    vus........................................: 50     min=0        max=200
+    vus_max....................................: 200    min=200      max=200
+
+    NETWORK
+    data_received..............................: 868 kB 12 kB/s
+    data_sent..................................: 55 kB  775 B/s
+
+
+
+
+running (01m11.1s), 000/200 VUs, 200 complete and 0 interrupted iterations
+default ✓ [ 100% ] 200 VUs  00m31.7s/10m0s  200/200 shared iters

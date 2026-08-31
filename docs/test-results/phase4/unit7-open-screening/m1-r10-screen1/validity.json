@@ -1,0 +1,23 @@
+{
+  "valid": false,
+  "checks": {
+    "actual_started_generated": true,
+    "cohort_invariant_ok": true,
+    "dropped_eq_0_or_reliability_failed": false,
+    "k6_exit_zero": true,
+    "pid_match": true,
+    "rss_samples_valid": true,
+    "fd_metric_present": true,
+    "cpu_metric_parsable": true,
+    "prometheus_sampling_valid": true,
+    "internal_error_eq_0": true,
+    "postflight_clean": true,
+    "environment_stall_false": true,
+    "control_range_ok": true,
+    "clock_integrity_ok": true,
+    "measurement_window_available": true
+  },
+  "invalid_reasons": [
+    "dropped_eq_0_or_reliability_failed"
+  ]
+}

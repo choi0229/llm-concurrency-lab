@@ -1,0 +1,629 @@
+{
+  "stop_triggered": false,
+  "stop_reason": null,
+  "canary_pass": true,
+  "cells": {
+    "F1": {
+      "role": "MSC lower endpoint",
+      "model": "m1",
+      "N": 50,
+      "confirmation": "CONFIRMED SUSTAINABLE",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "color_counts": {
+        "GREEN": 3,
+        "AMBER": 0,
+        "RED": 0
+      },
+      "boundary_predicate_pass_count": 3,
+      "signature_predicate_pass_count": 3,
+      "classification_distribution": {
+        "GREEN": 3
+      },
+      "resource": {
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 148.0,
+          "max": 156.0,
+          "median": 155.0,
+          "cv": 0.02326160839222508
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.0409455924659253,
+          "max": 0.04263021699906298,
+          "median": 0.04139255042997786,
+          "cv": 0.01710553398299825
+        },
+        "rss.start_kib": {
+          "n": 3,
+          "min": 233760,
+          "max": 244000,
+          "median": 242640,
+          "cv": 0.018909077861341533
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 259664,
+          "max": 267280,
+          "median": 265520,
+          "cv": 0.012324817981825305
+        },
+        "rss.delta_kib": {
+          "n": 3,
+          "min": 22880,
+          "max": 25904,
+          "median": 23280,
+          "cv": 0.05583472944955239
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 119.0,
+          "max": 119.0,
+          "median": 119.0,
+          "cv": 0.0
+        },
+        "heap.peak": {
+          "n": 3,
+          "min": 43026096.0,
+          "max": 43060008.0,
+          "median": 43053152.0,
+          "cv": 0.00034010584398210913
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 1.03555,
+          "max": 1.0365499999999999,
+          "median": 1.0365499999999999,
+          "cv": 0.0004549285260074114
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 7.928,
+          "max": 7.947,
+          "median": 7.937,
+          "cv": 0.0009776958446852753
+        },
+        "implementation_specific.executor_active_peak.peak": {
+          "n": 3,
+          "min": 50.0,
+          "max": 50.0,
+          "median": 50.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_queue_depth_peak.peak": {
+          "n": 3,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_rejected_final": {
+          "n": 3,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0,
+          "cv": 0.0
+        }
+      }
+    },
+    "F2": {
+      "role": "MSC upper endpoint",
+      "model": "m1",
+      "N": 56,
+      "confirmation": "CONFIRMED",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "color_counts": {
+        "GREEN": 0,
+        "AMBER": 3,
+        "RED": 0
+      },
+      "boundary_predicate_pass_count": 3,
+      "signature_predicate_pass_count": 3,
+      "classification_distribution": {
+        "AMBER": 3
+      },
+      "resource": {
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 152.0,
+          "max": 155.0,
+          "median": 155.0,
+          "cv": 0.009183204950474644
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.041126939767566706,
+          "max": 0.050063399097738104,
+          "median": 0.04206632624468147,
+          "cv": 0.09026912071502745
+        },
+        "rss.start_kib": {
+          "n": 3,
+          "min": 243376,
+          "max": 246272,
+          "median": 243888,
+          "cv": 0.005161052416264518
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 267856,
+          "max": 270272,
+          "median": 268528,
+          "cv": 0.0037866620711071194
+        },
+        "rss.delta_kib": {
+          "n": 3,
+          "min": 23968,
+          "max": 25152,
+          "median": 24000,
+          "cv": 0.022596640076018533
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 125.0,
+          "max": 125.0,
+          "median": 125.0,
+          "cv": 0.0
+        },
+        "heap.peak": {
+          "n": 3,
+          "min": 43101480.0,
+          "max": 43142856.0,
+          "median": 43129152.0,
+          "cv": 0.0003990663242016892
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 8.899,
+          "max": 8.91325,
+          "median": 8.905249999999999,
+          "cv": 0.0006548677161756683
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 15.77625,
+          "max": 15.79225,
+          "median": 15.779,
+          "cv": 0.00044258534430953163
+        },
+        "implementation_specific.executor_active_peak.peak": {
+          "n": 3,
+          "min": 50.0,
+          "max": 50.0,
+          "median": 50.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_queue_depth_peak.peak": {
+          "n": 3,
+          "min": 6.0,
+          "max": 6.0,
+          "median": 6.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_rejected_final": {
+          "n": 3,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0,
+          "cv": 0.0
+        }
+      }
+    },
+    "F3": {
+      "role": "MRC lower endpoint",
+      "model": "m1",
+      "N": 350,
+      "confirmation": "CONFIRMED",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "color_counts": {
+        "GREEN": 0,
+        "AMBER": 3,
+        "RED": 0
+      },
+      "boundary_predicate_pass_count": 3,
+      "signature_predicate_pass_count": 3,
+      "classification_distribution": {
+        "AMBER": 3
+      },
+      "resource": {
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 190.0,
+          "max": 196.0,
+          "median": 193.0,
+          "cv": 0.012691656698358434
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.049609580089793284,
+          "max": 0.05242135458408409,
+          "median": 0.052119101727912315,
+          "cv": 0.02452733963989374
+        },
+        "rss.start_kib": {
+          "n": 3,
+          "min": 245568,
+          "max": 255760,
+          "median": 253472,
+          "cv": 0.01735432787873571
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 317808,
+          "max": 330816,
+          "median": 328592,
+          "cv": 0.017439912271033337
+        },
+        "rss.delta_kib": {
+          "n": 3,
+          "min": 72240,
+          "max": 75120,
+          "median": 75056,
+          "cv": 0.018112199101481867
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 419.0,
+          "max": 419.0,
+          "median": 419.0,
+          "cv": 0.0
+        },
+        "heap.peak": {
+          "n": 3,
+          "min": 70268392.0,
+          "max": 71303168.0,
+          "median": 71040496.0,
+          "cv": 0.0061969041910226175
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 48.56455,
+          "max": 48.592,
+          "median": 48.581,
+          "cv": 0.00023219410586282758
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 55.47255,
+          "max": 55.529,
+          "median": 55.507,
+          "cv": 0.0004185676105520674
+        },
+        "implementation_specific.executor_active_peak.peak": {
+          "n": 3,
+          "min": 50.0,
+          "max": 50.0,
+          "median": 50.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_queue_depth_peak.peak": {
+          "n": 3,
+          "min": 300.0,
+          "max": 300.0,
+          "median": 300.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_rejected_final": {
+          "n": 3,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0,
+          "cv": 0.0
+        }
+      }
+    },
+    "F4": {
+      "role": "MRC upper endpoint",
+      "model": "m1",
+      "N": 400,
+      "confirmation": "CONFIRMED",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "color_counts": {
+        "GREEN": 0,
+        "AMBER": 0,
+        "RED": 3
+      },
+      "boundary_predicate_pass_count": 3,
+      "signature_predicate_pass_count": 3,
+      "classification_distribution": {
+        "MODEL_TIMEOUT": 3
+      },
+      "resource": {
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 194.0,
+          "max": 209.0,
+          "median": 199.0,
+          "cv": 0.03107688859446795
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.05190782130097203,
+          "max": 0.05425836836203402,
+          "median": 0.05228483974217691,
+          "cv": 0.0195155132249329
+        },
+        "rss.start_kib": {
+          "n": 3,
+          "min": 237840,
+          "max": 248096,
+          "median": 244192,
+          "cv": 0.017366399636155546
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 327360,
+          "max": 330400,
+          "median": 328688,
+          "cv": 0.0037843985434747773
+        },
+        "rss.delta_kib": {
+          "n": 3,
+          "min": 82304,
+          "max": 89520,
+          "median": 84496,
+          "cv": 0.0353534378902307
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 469.0,
+          "max": 469.0,
+          "median": 469.0,
+          "cv": 0.0
+        },
+        "heap.peak": {
+          "n": 3,
+          "min": 77390576.0,
+          "max": 77881472.0,
+          "median": 77409232.0,
+          "cv": 0.002928568974004645
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 48.509,
+          "max": 48.589,
+          "median": 48.57455,
+          "cv": 0.0007168811469341446
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 55.424,
+          "max": 55.514,
+          "median": 55.5,
+          "cv": 0.0007127306324919704
+        },
+        "implementation_specific.executor_active_peak.peak": {
+          "n": 3,
+          "min": 50.0,
+          "max": 50.0,
+          "median": 50.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_queue_depth_peak.peak": {
+          "n": 3,
+          "min": 350.0,
+          "max": 350.0,
+          "median": 350.0,
+          "cv": 0.0
+        },
+        "implementation_specific.executor_rejected_final": {
+          "n": 3,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0,
+          "cv": 0.0
+        }
+      }
+    },
+    "F5": {
+      "role": "control-censored lower-bound confirmation",
+      "model": "m2",
+      "N": 640,
+      "confirmation": "CONFIRMED SUSTAINABLE",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "color_counts": {
+        "GREEN": 3,
+        "AMBER": 0,
+        "RED": 0
+      },
+      "boundary_predicate_pass_count": 3,
+      "signature_predicate_pass_count": 3,
+      "classification_distribution": {
+        "GREEN": 3
+      },
+      "resource": {
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 188.0,
+          "max": 230.0,
+          "median": 228.0,
+          "cv": 0.08983664475880439
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.1084229643917049,
+          "max": 0.11431846043931689,
+          "median": 0.1126411370920856,
+          "cv": 0.02218555929931968
+        },
+        "rss.start_kib": {
+          "n": 3,
+          "min": 238944,
+          "max": 243920,
+          "median": 241984,
+          "cv": 0.00847643229853495
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 373824,
+          "max": 462848,
+          "median": 392768,
+          "cv": 0.09343362223376661
+        },
+        "rss.delta_kib": {
+          "n": 3,
+          "min": 131840,
+          "max": 218928,
+          "median": 153824,
+          "cv": 0.21984707167263748
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 1301.0,
+          "max": 1301.0,
+          "median": 1301.0,
+          "cv": 0.0
+        },
+        "heap.peak": {
+          "n": 3,
+          "min": 119537664.0,
+          "max": 138412032.0,
+          "median": 138026920.0,
+          "cv": 0.06673192477495664
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 1.135,
+          "max": 1.15305,
+          "median": 1.13905,
+          "cv": 0.006769351836069008
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 8.178,
+          "max": 8.265,
+          "median": 8.204,
+          "cv": 0.004438236432920661
+        },
+        "implementation_specific.virtual_tasks_active_peak.peak": {
+          "n": 3,
+          "min": 640.0,
+          "max": 640.0,
+          "median": 640.0,
+          "cv": 0.0
+        },
+        "implementation_specific.virtual_tasks_started_final": {
+          "n": 3,
+          "min": 645.0,
+          "max": 645.0,
+          "median": 645.0,
+          "cv": 0.0
+        }
+      }
+    },
+    "F6": {
+      "role": "control-censored lower-bound confirmation",
+      "model": "m3",
+      "N": 640,
+      "confirmation": "CONFIRMED SUSTAINABLE",
+      "extras_used": 0,
+      "valid_rep_count": 3,
+      "color_counts": {
+        "GREEN": 3,
+        "AMBER": 0,
+        "RED": 0
+      },
+      "boundary_predicate_pass_count": 3,
+      "signature_predicate_pass_count": 3,
+      "classification_distribution": {
+        "GREEN": 3
+      },
+      "resource": {
+        "platform_threads.peak": {
+          "n": 3,
+          "min": 30.0,
+          "max": 30.0,
+          "median": 30.0,
+          "cv": 0.0
+        },
+        "cpu.avg_cores_estimate": {
+          "n": 3,
+          "min": 0.11099376772831429,
+          "max": 0.11461630880889984,
+          "median": 0.11200098575005729,
+          "cv": 0.013566167052241082
+        },
+        "rss.start_kib": {
+          "n": 3,
+          "min": 217360,
+          "max": 264944,
+          "median": 227984,
+          "cv": 0.08613586588215848
+        },
+        "rss.peak_kib": {
+          "n": 3,
+          "min": 263904,
+          "max": 299744,
+          "median": 267616,
+          "cv": 0.058074425468335494
+        },
+        "rss.delta_kib": {
+          "n": 3,
+          "min": 34800,
+          "max": 46544,
+          "median": 39632,
+          "cv": 0.11951466404820933
+        },
+        "fd.open_peak": {
+          "n": 3,
+          "min": 1326.0,
+          "max": 1326.0,
+          "median": 1326.0,
+          "cv": 0.0
+        },
+        "heap.peak": {
+          "n": 3,
+          "min": 47720744.0,
+          "max": 47762032.0,
+          "median": 47720968.0,
+          "cv": 0.0004066395351165104
+        },
+        "client_latency.completed_ttfc_p95_s": {
+          "n": 3,
+          "min": 1.152,
+          "max": 1.157,
+          "median": 1.15505,
+          "cv": 0.0017819964355300668
+        },
+        "client_latency.completed_duration_p95_s": {
+          "n": 3,
+          "min": 6.337,
+          "max": 8.227,
+          "median": 8.142,
+          "cv": 0.11516042854894847
+        },
+        "implementation_specific.reactor_connection_pool.active_peak_wave": {
+          "n": 3,
+          "min": 640.0,
+          "max": 640.0,
+          "median": 640.0,
+          "cv": 0.0
+        },
+        "implementation_specific.reactor_connection_pool.pending_peak_wave": {
+          "n": 3,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0,
+          "cv": 0.0
+        },
+        "implementation_specific.reactor_connection_pool.connection_limit_evaluable": {
+          "n": 3,
+          "all_true": true,
+          "all_false": false,
+          "true_count": 3
+        },
+        "implementation_specific.reactor_connection_pool.connection_limit_binding": {
+          "n": 3,
+          "all_true": false,
+          "all_false": true,
+          "true_count": 0
+        }
+      }
+    }
+  }
+}

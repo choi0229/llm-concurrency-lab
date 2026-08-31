@@ -1,0 +1,70 @@
+time="2026-08-29T10:51:42+09:00" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/load-test-k6/scenarios/01-concurrent-connections.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1200 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 1200 iterations shared among 1200 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 1200/1200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1200 VUs  00m01.0s/10m0s  0000/1200 shared iters
+
+running (00m02.0s), 1200/1200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1200 VUs  00m02.0s/10m0s  0000/1200 shared iters
+
+running (00m03.0s), 1200/1200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1200 VUs  00m03.0s/10m0s  0000/1200 shared iters
+
+running (00m04.0s), 1200/1200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1200 VUs  00m04.0s/10m0s  0000/1200 shared iters
+
+running (00m05.0s), 1200/1200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1200 VUs  00m05.0s/10m0s  0000/1200 shared iters
+
+running (00m06.0s), 1200/1200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1200 VUs  00m06.0s/10m0s  0000/1200 shared iters
+
+running (00m07.0s), 1200/1200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1200 VUs  00m07.0s/10m0s  0000/1200 shared iters
+
+running (00m08.0s), 1200/1200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1200 VUs  00m08.0s/10m0s  0000/1200 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_events_received_total.....: 43200  5272.208905/s
+    client_stream_completed_total....: 1200   146.450247/s
+    client_stream_duration_seconds...: avg=8.079527 min=7.99  med=8.083 max=8.19  p(90)=8.18  p(95)=8.183
+    client_ttfc_seconds..............: avg=1.090998 min=1.016 med=1.084 max=1.228 p(90)=1.181 p(95)=1.215
+    sse_event........................: 43200  5272.208905/s
+
+    HTTP
+    http_req_duration................: avg=8.07s    min=7.99s med=8.08s max=8.18s p(90)=8.17s p(95)=8.18s
+    http_reqs........................: 1200   146.450247/s
+
+    EXECUTION
+    iteration_duration...............: avg=8.07s    min=7.99s med=8.08s max=8.18s p(90)=8.17s p(95)=8.18s
+    iterations.......................: 1200   146.450247/s
+    vus..............................: 1200   min=1200      max=1200
+    vus_max..........................: 1200   min=1200      max=1200
+
+    NETWORK
+    data_received....................: 5.2 MB 634 kB/s
+    data_sent........................: 322 kB 39 kB/s
+
+
+
+
+running (00m08.2s), 0000/1200 VUs, 1200 complete and 0 interrupted iterations
+default ✓ [ 100% ] 1200 VUs  00m08.2s/10m0s  1200/1200 shared iters

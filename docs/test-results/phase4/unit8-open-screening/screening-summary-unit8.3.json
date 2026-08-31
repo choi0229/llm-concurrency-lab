@@ -1,0 +1,291 @@
+{
+  "screening_epoch": "open-final-client-lifecycle-v1",
+  "unit": "8.3-canonical-screening-completion",
+  "safe_open_max_single_host_final": 168,
+  "stop_triggered": false,
+  "stop_reason": null,
+  "models": {
+    "m1": {
+      "points": [
+        {
+          "R": 2,
+          "dir": "m1-r2-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 4,
+          "dir": "m1-r4-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 6,
+          "dir": "m1-r6-refine2",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 7,
+          "dir": "m1-r7-refine1",
+          "valid": true,
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "backlog_sustain": false,
+          "control_invalid_history": false
+        },
+        {
+          "R": 10,
+          "dir": "m1-r10-screen1",
+          "valid": true,
+          "color": "RED",
+          "classification": "MODEL_REJECTION",
+          "reliability_pass": false,
+          "slo_pass": null,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        }
+      ],
+      "green_high": 6,
+      "first_non_green": 7,
+      "msar_bracket": [
+        6,
+        7
+      ],
+      "msar_bracket_rel_width": 0.1667,
+      "refinement_points_in_order": [
+        "m1-r7-refine1 (AMBER)",
+        "m1-r6-refine2 (GREEN)"
+      ],
+      "reliability_boundary": "R7 reliability_pass=True (AMBER, MODEL_SATURATION); R10 reliability_pass=False (RED, MODEL_REJECTION) -> reliability boundary in (7,10], not further refined",
+      "control_censored": false
+    },
+    "m2": {
+      "points": [
+        {
+          "R": 2,
+          "dir": "m2-r2-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 4,
+          "dir": "m2-r4-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 10,
+          "dir": "m2-r10-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 20,
+          "dir": "m2-r20-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 40,
+          "dir": "m2-r40-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 80,
+          "dir": "m2-r80-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 160,
+          "dir": "m2-r160-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 168,
+          "dir": "m2-r168-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 256,
+          "dir": "m2-r256-screen1",
+          "valid": true,
+          "color": "RED",
+          "classification": "UNCLASSIFIED_MODEL_FAILURE",
+          "reliability_pass": false,
+          "slo_pass": null,
+          "backlog_sustain": true,
+          "control_invalid_history": true
+        }
+      ],
+      "green_high": 168,
+      "first_non_green": null,
+      "msar_status": "CONTROL_CENSORED: Screening MSAR >= 168 (SAFE_OPEN_MAX_SINGLE_HOST_FINAL); exact model MSAR not found",
+      "control_censored": true,
+      "r168_color": "GREEN",
+      "control_invalid_history": {
+        "R": 256,
+        "dir": "m2-r256-screen1",
+        "note": "Unit 8.1 forensic verdict Case B = shared-host ephemeral-port confound; NOT a model RED; excluded from highest-GREEN/first-non-GREEN, MSAR, reliability boundary, Formal cell selection. Raw artifact retained."
+      }
+    },
+    "m3": {
+      "points": [
+        {
+          "R": 2,
+          "dir": "m3-r2-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 4,
+          "dir": "m3-r4-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 10,
+          "dir": "m3-r10-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 20,
+          "dir": "m3-r20-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 40,
+          "dir": "m3-r40-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 80,
+          "dir": "m3-r80-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 160,
+          "dir": "m3-r160-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        },
+        {
+          "R": 168,
+          "dir": "m3-r168-screen1",
+          "valid": true,
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "backlog_sustain": true,
+          "control_invalid_history": false
+        }
+      ],
+      "green_high": 168,
+      "first_non_green": null,
+      "msar_status": "CONTROL_CENSORED: Screening MSAR >= 168 (SAFE_OPEN_MAX_SINGLE_HOST_FINAL); exact model MSAR not found",
+      "control_censored": true,
+      "r168_color": "GREEN"
+    }
+  }
+}

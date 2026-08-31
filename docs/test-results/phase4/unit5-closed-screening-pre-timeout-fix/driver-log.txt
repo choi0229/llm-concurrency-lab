@@ -1,0 +1,20 @@
+[23:40:30] === Phase 4 Unit 5 Closed Screening: START ===
+[23:40:30] RESUMED m1 N=100 from existing valid artifact (m1-n100-screen1): color=AMBER
+[23:40:30] RESUMED m1 N=50 from existing valid artifact (m1-n50-screen1): color=GREEN
+[23:40:30] RESUMED m2 N=100 from existing valid artifact (m2-n100-screen1): color=GREEN
+[23:40:30] RESUMED m2 N=50 from existing valid artifact (m2-n50-screen1): color=GREEN
+[23:40:30] RESUMED m3 N=100 from existing valid artifact (m3-n100-screen1): color=GREEN
+[23:40:30] RESUMED m3 N=200 from existing valid artifact (m3-n200-screen1): color=GREEN
+[23:40:30] RESUMED m3 N=50 from existing valid artifact (m3-n50-screen1): color=GREEN
+[23:40:30] SKIP m1 N=50: already resumed from existing valid artifact (color=GREEN)
+[23:40:30] SKIP m2 N=50: already resumed from existing valid artifact (color=GREEN)
+[23:40:30] SKIP m3 N=50: already resumed from existing valid artifact (color=GREEN)
+[23:40:30] SKIP m2 N=100: already resumed from existing valid artifact (color=GREEN)
+[23:40:30] SKIP m3 N=100: already resumed from existing valid artifact (color=GREEN)
+[23:40:30] SKIP m1 N=100: already resumed from existing valid artifact (color=AMBER)
+[23:40:30] SKIP m3 N=200: already resumed from existing valid artifact (color=GREEN)
+[23:40:30] RUN m1 N=200 label=screen1
+[23:41:44] RUN m2 N=200 label=screen1
+[23:42:35] RUN m1 N=400 label=screen1
+[23:44:18] NO-RETRY invalid reason(s) {'prewarm_contamination_ok'} for m1 N=400 -- Unit 5 STOP
+[23:44:18] *** UNIT 5 STOP TRIGGERED: m1 N=400: no-retry INVALID ({'prewarm_contamination_ok'}) -- environment/safety/harness-consistency violation ***

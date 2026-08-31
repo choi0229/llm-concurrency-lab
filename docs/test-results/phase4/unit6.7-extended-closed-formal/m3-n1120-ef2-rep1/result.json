@@ -1,0 +1,175 @@
+{
+  "valid": true,
+  "invalid_reasons": [],
+  "model": "m3",
+  "concurrency": 1120,
+  "run_label": "ef2-rep1",
+  "client_cohort": {
+    "target_concurrency": 1120,
+    "actual_started": 1120,
+    "target_reached": true,
+    "completed": 1120,
+    "rejected": 0,
+    "failed_mid_stream": 0,
+    "failed_no_event": 0,
+    "terminal_sum": 1120,
+    "invariant_ok": true,
+    "dropped_iterations": 0
+  },
+  "model_outcome": {
+    "actual_started": 1120,
+    "completed": 1120,
+    "rejected": 0,
+    "failed_mid_stream": 0,
+    "failed_no_event": 0,
+    "reliability_pass": true,
+    "slo_pass": true,
+    "server_outcomes_wave_estimate": {
+      "completed": 1120.0,
+      "rejected": 0.0,
+      "timeout": 0.0,
+      "upstream_error": 0.0,
+      "client_disconnect": 0.0,
+      "internal_error": 0.0,
+      "write_overflow": 0.0
+    },
+    "prewarm_contamination_ok": true,
+    "color": "GREEN",
+    "classification": "GREEN",
+    "classification_evidence": [
+      "reliability PASS, SLO PASS"
+    ]
+  },
+  "client_latency": {
+    "completed_ttfc_p95_s": 1.301,
+    "completed_ttfc_avg_s": 1.1830241071428569,
+    "completed_duration_p95_s": 8.3742,
+    "completed_duration_avg_s": 8.20940714285716,
+    "diagnostic_all_outcomes_ttfc_p95_s": 1.301,
+    "diagnostic_all_outcomes_duration_p95_s": 8.3742,
+    "slo_ttfc_threshold_s": 2.0,
+    "slo_duration_threshold_s": 10.0
+  },
+  "wave_start_spread": {
+    "spread_ms": 48,
+    "exceeds_threshold": false
+  },
+  "platform_threads": {
+    "peak": 30.0,
+    "sample_count": 46
+  },
+  "cpu": {
+    "process_cpu_usage_mean": 0.016247764731353136,
+    "process_cpu_usage_peak": 0.20892184144626944,
+    "system_cpu_count": 10.0,
+    "avg_cores_estimate": 0.16247764731353137,
+    "peak_cores_estimate_diagnostic": 2.089218414462694
+  },
+  "rss": {
+    "count": 48,
+    "start_kib": 222368,
+    "peak_kib": 294128,
+    "delta_kib": 71760
+  },
+  "fd": {
+    "open_peak": 2286.0,
+    "max_files": 1048576.0,
+    "metric_present": true
+  },
+  "heap": {
+    "peak": 61020896.0,
+    "sample_count": 368
+  },
+  "common_gateway": {
+    "gateway_active_requests_final": 0.0,
+    "gateway_upstream_active_final": 0.0,
+    "internal_error_total": 0.0
+  },
+  "implementation_specific": {
+    "reactor_connection_active_peak": {
+      "peak": 1120.0,
+      "sample_count": 46
+    },
+    "reactor_connection_pending_peak": {
+      "peak": 0.0,
+      "sample_count": 46
+    },
+    "reactor_connection_pool": {
+      "max_connections_configured": 1400.0,
+      "pending_series_count": 1,
+      "active_series_count": 1,
+      "series_identity_match": true,
+      "max_connections_series_count": 1,
+      "max_connections_identity_match": true,
+      "max_connections_value_ok": true,
+      "pending_wave_sample_count": 9,
+      "active_wave_sample_count": 9,
+      "common_wave_sample_count": 9,
+      "timestamp_alignment_ok": true,
+      "connection_limit_evaluable": true,
+      "active_peak_wave": 1120.0,
+      "pending_peak_wave": 0.0,
+      "pending_nonzero_samples_wave": 0,
+      "pending_max_consecutive_samples_wave": 0,
+      "sustained_pending": false,
+      "binding_nonzero_samples_wave": 0,
+      "binding_max_consecutive_samples_wave": 0,
+      "connection_limit_binding": false
+    }
+  },
+  "mock": {
+    "active_final": 0.0,
+    "waiting_final": 0.0,
+    "completed_final": 1125.0
+  },
+  "postflight_clean": true,
+  "stall_check": {
+    "query_ok": true,
+    "window_start_s": 1787969262.9,
+    "window_end_s": 1787969311.066,
+    "gateway_scrape_gap_max_s": 1,
+    "gateway_gap_exceeds_threshold": false,
+    "mock_log_gap_max_s": 7.877000093460083,
+    "mock_gap_exceeds_threshold": false,
+    "client_max_duration_s": 8.405,
+    "client_duration_anomaly": false,
+    "thresholds": {
+      "gateway_gap_s": 5.0,
+      "mock_gap_s": 15.0,
+      "client_duration_s": 20.0
+    },
+    "stall_detected": false,
+    "evidence": [
+      "no anomaly signal observed"
+    ]
+  },
+  "timestamps": {
+    "process_start_ms": 1787969261185,
+    "k6_wall_start_ms": 1787969262900,
+    "k6_wall_end_ms": 1787969311066,
+    "drain_start_ms": 1787969311083,
+    "drain_end_ms": 1787969311108
+  },
+  "environment": {
+    "model": "m3",
+    "concurrency": 1120,
+    "run_label": "ef2-rep1",
+    "gateway_port": 18103,
+    "mock_port": 8000,
+    "prometheus_port": 9094,
+    "prometheus_scrape_interval": "1s",
+    "prewarm_count": 5,
+    "chat_total_timeout_ms": 60000,
+    "workload": {
+      "firstChunkDelayMs": 1000,
+      "chunkIntervalMs": 200,
+      "chunkCount": 35,
+      "chunkSizeBytes": 64
+    },
+    "gateway_jar": "gateway-phase4-webflux-0.1.0.jar",
+    "gateway_pid": 90988,
+    "jdk_home": "/Users/user/Documents/GitHub/llm-concurrency-lab/.native-runtime/jdk-21.0.11+10/Contents/Home",
+    "extended_m3_max_connections": 1400,
+    "extended_m3_pending_acquire_max_count": 1400
+  }
+}

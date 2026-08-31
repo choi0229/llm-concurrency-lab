@@ -1,0 +1,3 @@
+time=2026-08-29T11:26:24.911+09:00 level=WARN source=scrape_append_v2.go:399 msg="Error on ingesting out-of-order samples" component="scrape manager" scrape_pool=mock-llm-fastapi target=http://localhost:8000/metrics num_dropped=55
+time=2026-08-29T11:26:25.704+09:00 level=WARN source=scrape_append_v2.go:402 msg="Error on ingesting samples with different value but same timestamp" component="scrape manager" scrape_pool=phase4-gateway target=http://localhost:18102/actuator/prometheus num_dropped=39
+time=2026-08-29T11:28:59.305+09:00 level=WARN source=main.go:1243 msg="Received an OS signal, exiting gracefully..." signal=terminated

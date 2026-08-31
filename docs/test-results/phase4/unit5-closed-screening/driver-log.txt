@@ -1,0 +1,39 @@
+[00:12:47] === Phase 4 Unit 5 Closed Screening: START ===
+[00:12:47] RESUMED m1 N=100 from existing valid artifact (m1-n100-screen1): color=AMBER
+[00:12:47] RESUMED m1 N=200 from existing valid artifact (m1-n200-screen1): color=AMBER
+[00:12:47] RESUMED m1 N=400 from existing valid artifact (m1-n400-screen1): color=RED
+[00:12:47] RESUMED m1 N=50 from existing valid artifact (m1-n50-screen1): color=GREEN
+[00:12:47] RESUMED m2 N=100 from existing valid artifact (m2-n100-screen1): color=GREEN
+[00:12:47] RESUMED m2 N=200 from existing valid artifact (m2-n200-screen1): color=GREEN
+[00:12:47] RESUMED m2 N=400 from existing valid artifact (m2-n400-screen1): color=GREEN
+[00:12:47] RESUMED m2 N=50 from existing valid artifact (m2-n50-screen1): color=GREEN
+[00:12:47] RESUMED m3 N=100 from existing valid artifact (m3-n100-screen1): color=GREEN
+[00:12:47] RESUMED m3 N=200 from existing valid artifact (m3-n200-screen1): color=GREEN
+[00:12:47] RESUMED m3 N=400 from existing valid artifact (m3-n400-screen1): color=GREEN
+[00:12:47] RESUMED m3 N=50 from existing valid artifact (m3-n50-screen1): color=GREEN
+[00:12:47] SKIP m1 N=50: model already inactive (known-RED boundary or censored)
+[00:12:47] SKIP m2 N=50: already resumed from existing valid artifact (color=GREEN)
+[00:12:47] SKIP m3 N=50: already resumed from existing valid artifact (color=GREEN)
+[00:12:47] SKIP m2 N=100: already resumed from existing valid artifact (color=GREEN)
+[00:12:47] SKIP m3 N=100: already resumed from existing valid artifact (color=GREEN)
+[00:12:47] SKIP m1 N=100: model already inactive (known-RED boundary or censored)
+[00:12:47] SKIP m3 N=200: already resumed from existing valid artifact (color=GREEN)
+[00:12:47] SKIP m1 N=200: model already inactive (known-RED boundary or censored)
+[00:12:47] SKIP m2 N=200: already resumed from existing valid artifact (color=GREEN)
+[00:12:47] SKIP m1 N=400: model already inactive (known-RED boundary or censored)
+[00:12:47] SKIP m2 N=400: already resumed from existing valid artifact (color=GREEN)
+[00:12:47] SKIP m3 N=400: already resumed from existing valid artifact (color=GREEN)
+[00:12:47] RUN m2 N=640 label=screen1
+[00:13:38] RUN m3 N=640 label=screen1
+[00:14:29] SKIP m1 N=640: model already inactive (known-RED boundary or censored)
+[00:14:29] m1: MSC refinement starting, bracket=[50, 100]
+[00:14:29] RUN m1 N=75 label=msc-refine1
+[00:15:27] RUN m1 N=62 label=msc-refine2
+[00:16:26] RUN m1 N=56 label=msc-refine3
+[00:17:25] m1: MRC refinement starting, bracket=[200, 400]
+[00:17:25] RUN m1 N=300 label=mrc-refine1
+[00:18:55] RUN m1 N=350 label=mrc-refine2
+[00:20:33] m2: MSC >= 640, CONTROL_CENSORED
+[00:20:33] m2: MRC >= 640, CONTROL_CENSORED
+[00:20:33] m3: MSC >= 640, CONTROL_CENSORED
+[00:20:33] m3: MRC >= 640, CONTROL_CENSORED

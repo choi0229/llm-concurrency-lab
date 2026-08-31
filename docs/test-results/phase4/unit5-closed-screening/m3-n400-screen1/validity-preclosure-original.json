@@ -1,0 +1,25 @@
+{
+  "valid": false,
+  "checks": {
+    "target_reached": true,
+    "cohort_invariant_ok": true,
+    "dropped_eq_0": true,
+    "k6_exit_zero": true,
+    "pid_match": true,
+    "rss_samples_valid": true,
+    "fd_metric_present": true,
+    "cpu_metric_parsable": true,
+    "prometheus_sampling_valid": true,
+    "start_spread_ok": true,
+    "internal_error_eq_0": true,
+    "write_overflow_eq_0": true,
+    "m3_pending_no_anomaly": false,
+    "prewarm_contamination_ok": true,
+    "postflight_clean": true,
+    "environment_stall_false": true,
+    "control_range_ok": true
+  },
+  "invalid_reasons": [
+    "m3_pending_no_anomaly"
+  ]
+}

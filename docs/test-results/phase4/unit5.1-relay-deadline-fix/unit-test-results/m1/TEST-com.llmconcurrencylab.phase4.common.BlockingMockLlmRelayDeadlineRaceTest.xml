@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.llmconcurrencylab.phase4.common.BlockingMockLlmRelayDeadlineRaceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-08-27T15:04:45.255Z" hostname="userui-MacBookAir.local" time="0.249">
+  <properties/>
+  <testcase name="terminalWonByAnotherPathWhileRelayStillReadingIsRespectedExactlyOnce()" classname="com.llmconcurrencylab.phase4.common.BlockingMockLlmRelayDeadlineRaceTest" time="0.07"/>
+  <testcase name="deadlineObservedBeforeWatchdogMustNotCompleteStream()" classname="com.llmconcurrencylab.phase4.common.BlockingMockLlmRelayDeadlineRaceTest" time="0.172"/>
+  <testcase name="normalCompletionStillWorksUnaffectedByTheFix()" classname="com.llmconcurrencylab.phase4.common.BlockingMockLlmRelayDeadlineRaceTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

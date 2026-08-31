@@ -1,0 +1,40 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-30T15:10:31.072+09:00  INFO 52353 --- [           main] c.l.p.v.Phase4VirtualThreadApplication   : Starting Phase4VirtualThreadApplication v0.1.0 using Java 21.0.11 with PID 52353 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-virtual-thread/build/libs/gateway-phase4-virtual-thread-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-virtual-thread)
+2026-08-30T15:10:31.074+09:00  INFO 52353 --- [           main] c.l.p.v.Phase4VirtualThreadApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-30T15:10:31.760+09:00  INFO 52353 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 18102 (http)
+2026-08-30T15:10:31.935+09:00  INFO 52353 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-30T15:10:31.935+09:00  INFO 52353 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-30T15:10:31.966+09:00  INFO 52353 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 862 ms
+2026-08-30T15:10:32.321+09:00  INFO 52353 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-08-30T15:10:32.366+09:00  INFO 52353 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 18102 (http) with context path '/'
+2026-08-30T15:10:32.372+09:00  INFO 52353 --- [           main] c.l.p.v.Phase4VirtualThreadApplication   : Started Phase4VirtualThreadApplication in 1.588 seconds (process running for 1.975)
+2026-08-30T15:10:32.478+09:00  INFO 52353 --- [io-18102-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-30T15:10:32.478+09:00  INFO 52353 --- [io-18102-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-30T15:10:32.479+09:00  INFO 52353 --- [io-18102-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-30T15:11:24.358+09:00  INFO 52353 --- [   virtual-8671] c.l.phase4.common.BlockingMockLlmRelay   : [p4-8520] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:11:25.300+09:00  INFO 52353 --- [   virtual-8893] c.l.phase4.common.BlockingMockLlmRelay   : [p4-8742] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:12:02.195+09:00  INFO 52353 --- [  virtual-16765] c.l.phase4.common.BlockingMockLlmRelay   : [p4-16608] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:12:03.846+09:00  INFO 52353 --- [  virtual-17012] c.l.phase4.common.BlockingMockLlmRelay   : [p4-16855] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:12:04.455+09:00  INFO 52353 --- [  virtual-17157] c.l.phase4.common.BlockingMockLlmRelay   : [p4-17000] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:12:43.479+09:00  INFO 52353 --- [  virtual-25421] c.l.phase4.common.BlockingMockLlmRelay   : [p4-25264] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:12:47.574+09:00  INFO 52353 --- [  virtual-25993] c.l.phase4.common.BlockingMockLlmRelay   : [p4-25836] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:12:49.260+09:00  INFO 52353 --- [  virtual-26387] c.l.phase4.common.BlockingMockLlmRelay   : [p4-26230] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:12:53.549+09:00  INFO 52353 --- [  virtual-27313] c.l.phase4.common.BlockingMockLlmRelay   : [p4-27156] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:13:17.974+09:00  INFO 52353 --- [  virtual-33185] c.l.phase4.common.BlockingMockLlmRelay   : [p4-33028] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:13:19.970+09:00  INFO 52353 --- [  virtual-33246] c.l.phase4.common.BlockingMockLlmRelay   : [p4-33089] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:13:20.247+09:00  INFO 52353 --- [  virtual-33314] c.l.phase4.common.BlockingMockLlmRelay   : [p4-33157] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:13:24.923+09:00  INFO 52353 --- [  virtual-34023] c.l.phase4.common.BlockingMockLlmRelay   : [p4-33866] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:13:26.850+09:00  INFO 52353 --- [  virtual-34338] c.l.phase4.common.BlockingMockLlmRelay   : [p4-34181] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:13:28.824+09:00  INFO 52353 --- [  virtual-34788] c.l.phase4.common.BlockingMockLlmRelay   : [p4-34631] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:13:32.505+09:00  INFO 52353 --- [  virtual-35424] c.l.phase4.common.BlockingMockLlmRelay   : [p4-35267] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T15:13:56.750+09:00  INFO 52353 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-30T15:13:56.758+09:00  INFO 52353 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

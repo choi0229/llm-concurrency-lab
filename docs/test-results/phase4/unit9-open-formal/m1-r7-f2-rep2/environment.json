@@ -1,0 +1,22 @@
+{
+  "screening_epoch": "open-final-client-lifecycle-v1",
+  "model": "m1",
+  "target_rate": 7,
+  "run_label": "f2-rep2",
+  "warmup_sec": 120,
+  "measurement_sec": 300,
+  "gateway_port": 18101,
+  "mock_port": 8000,
+  "prometheus_port": 9094,
+  "prometheus_scrape_interval": "1s",
+  "chat_total_timeout_ms": 60000,
+  "workload": {"firstChunkDelayMs": 1000, "chunkIntervalMs": 200, "chunkCount": 35, "chunkSizeBytes": 64},
+  "gateway_jar": "gateway-phase4-platform-queue-0.1.0.jar",
+  "gateway_pid": 30957,
+  "jdk_home": "/Users/user/Documents/GitHub/llm-concurrency-lab/.native-runtime/jdk-21.0.11+10/Contents/Home",
+  "open_m3_max_connections": 3200,
+  "open_m3_pending_acquire_max_count": 3200,
+  "server_tomcat_max_connections": 3200,
+  "k6_pre_allocated_vus": 420,
+  "k6_max_vus": 525
+}

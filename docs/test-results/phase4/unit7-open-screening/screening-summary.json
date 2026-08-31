@@ -1,0 +1,148 @@
+{
+  "stop_triggered": true,
+  "stop_reason": "m1 R=10: original AND retry both INVALID",
+  "models": {
+    "m1": {
+      "points": [
+        {
+          "R": 2,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit7-open-screening/m1-r2-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "throughput_sustainability_pass": true,
+          "backlog_sustainability_pass": true
+        },
+        {
+          "R": 5,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit7-open-screening/m1-r5-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "throughput_sustainability_pass": true,
+          "backlog_sustainability_pass": true
+        },
+        {
+          "R": 10,
+          "label": "screen1-retry1",
+          "dir": "docs/test-results/phase4/unit7-open-screening/m1-r10-screen1-retry1",
+          "valid": false,
+          "invalid_reasons": [
+            "dropped_eq_0"
+          ],
+          "color": "AMBER",
+          "classification": "AMBER",
+          "reliability_pass": true,
+          "slo_pass": false,
+          "throughput_sustainability_pass": true,
+          "backlog_sustainability_pass": true
+        }
+      ],
+      "green_high": 5,
+      "non_green_low": null,
+      "reliability_high": 5,
+      "red_low": null,
+      "red_classification": null,
+      "msc_censored": false,
+      "mrc_censored": false,
+      "refinement_count": 0
+    },
+    "m2": {
+      "points": [
+        {
+          "R": 2,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit7-open-screening/m2-r2-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "throughput_sustainability_pass": true,
+          "backlog_sustainability_pass": true
+        },
+        {
+          "R": 5,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit7-open-screening/m2-r5-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "throughput_sustainability_pass": true,
+          "backlog_sustainability_pass": true
+        }
+      ],
+      "green_high": 5,
+      "non_green_low": null,
+      "reliability_high": 5,
+      "red_low": null,
+      "red_classification": null,
+      "msc_censored": false,
+      "mrc_censored": false,
+      "refinement_count": 0
+    },
+    "m3": {
+      "points": [
+        {
+          "R": 2,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit7-open-screening/m3-r2-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "throughput_sustainability_pass": true,
+          "backlog_sustainability_pass": true
+        },
+        {
+          "R": 5,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit7-open-screening/m3-r5-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "throughput_sustainability_pass": true,
+          "backlog_sustainability_pass": true
+        },
+        {
+          "R": 10,
+          "label": "screen1",
+          "dir": "docs/test-results/phase4/unit7-open-screening/m3-r10-screen1",
+          "valid": true,
+          "invalid_reasons": [],
+          "color": "GREEN",
+          "classification": "GREEN",
+          "reliability_pass": true,
+          "slo_pass": true,
+          "throughput_sustainability_pass": true,
+          "backlog_sustainability_pass": true
+        }
+      ],
+      "green_high": 10,
+      "non_green_low": null,
+      "reliability_high": 10,
+      "red_low": null,
+      "red_classification": null,
+      "msc_censored": false,
+      "mrc_censored": false,
+      "refinement_count": 0
+    }
+  }
+}

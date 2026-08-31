@@ -1,0 +1,191 @@
+time="2026-08-28T00:07:37+09:00" level=warning msg="There were unknown fields in the options exported in the script" error="json: unknown field \"maxDuration\""
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/load-test-k6/scenarios/04-phase4-closed-wave.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 20 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 20 iterations shared among 20 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+running (00m40.0s), 20/20 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 20 VUs  00m00.6s/10m0s  00/20 shared iters
+
+running (00m41.0s), 20/20 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 20 VUs  00m01.6s/10m0s  00/20 shared iters
+
+running (00m42.0s), 20/20 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 20 VUs  00m02.6s/10m0s  00/20 shared iters
+
+running (00m43.0s), 20/20 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 20 VUs  00m03.6s/10m0s  00/20 shared iters
+
+running (00m44.0s), 20/20 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 20 VUs  00m04.6s/10m0s  00/20 shared iters
+
+running (00m45.0s), 20/20 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 20 VUs  00m05.6s/10m0s  00/20 shared iters
+
+running (00m46.0s), 20/20 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 20 VUs  00m06.6s/10m0s  00/20 shared iters
+
+running (00m47.0s), 20/20 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 20 VUs  00m07.6s/10m0s  00/20 shared iters
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_actual_started_total................: 20     0.422826/s
+    client_completed_stream_duration_seconds...: avg=7.90985      min=7.909        med=7.91         max=7.911        p(90)=7.91         p(95)=7.91005     
+    client_completed_ttfc_seconds..............: avg=1.01145      min=1.009        med=1.009        max=1.016        p(90)=1.016        p(95)=1.016       
+    client_events_received_total...............: 720    15.22175/s
+    client_stream_completed_total..............: 20     0.422826/s
+    client_stream_duration_seconds.............: avg=7.90985      min=7.909        med=7.91         max=7.911        p(90)=7.91         p(95)=7.91005     
+    client_ttfc_seconds........................: avg=1.01145      min=1.009        med=1.009        max=1.016        p(90)=1.016        p(95)=1.016       
+    client_wave_start_epoch_ms.................: avg=496623h8m17s min=496623h8m17s med=496623h8m17s max=496623h8m17s p(90)=496623h8m17s p(95)=496623h8m17s
+    sse_event..................................: 900    19.027188/s
+
+    HTTP
+    http_req_duration..........................: avg=7.9s         min=7.86s        med=7.9s         max=7.91s        p(90)=7.91s        p(95)=7.91s       
+    http_reqs..................................: 25     0.528533/s
+
+    EXECUTION
+    iteration_duration.........................: avg=7.91s        min=7.9s         med=7.91s        max=7.91s        p(90)=7.91s        p(95)=7.91s       
+    iterations.................................: 20     0.422826/s
+    vus........................................: 20     min=0       max=20
+    vus_max....................................: 20     min=20      max=20
+
+    NETWORK
+    data_received..............................: 106 kB 2.2 kB/s
+    data_sent..................................: 6.7 kB 142 B/s
+
+
+
+
+running (00m47.3s), 00/20 VUs, 20 complete and 0 interrupted iterations
+default ✓ [ 100% ] 20 VUs  00m07.9s/10m0s  20/20 shared iters

@@ -1,8 +1,34 @@
 # llm-concurrency-lab
 
-LLM 스트리밍 Gateway의 concurrency/Executor 전략을 실측 Benchmark로 비교하는 연구용 랩.
-Java 8 Spring MVC Baseline으로 시작해(Phase 1), 이후 Virtual Thread 등 다른 동시성 모델과
-비교한다(Phase 2+).
+LLM 스트리밍(SSE) Gateway의 concurrency 전략을 실측 Benchmark로 비교하는 연구용 랩.
+Java 8 Spring MVC Baseline으로 시작해(Phase 1), Virtual Thread(Phase 2)·WebClient/WebFlux(Phase 3)로
+질문을 확장하고, 세 아키텍처의 실제 scalability boundary를 두 축으로 측정한다(Phase 4).
+
+## Phase 1 → 4 Research Journey (완료 / Frozen)
+
+> **P1 Executor** — Async Servlet 뒤 `ThreadPoolExecutor`에서 overload는 어디로 가는가? → 사라지지
+> 않고 queue wait / 503 reject / platform-thread 증가 / caller-thread 전파로 이동. **queue wait이
+> client latency를 가장 먼저 무너뜨림**(동일 core/max, queue 유무만 다른 두 config에서 TTFC ~9.6배).
+>
+> **P2 Virtual Thread** — 같은 blocking 코드를 VT로 처리하면? → JVM platform-thread 수가 부하와
+> **분리**됨(peak −30~52%). 하지만 **RSS/CPU는 따라오지 않음**(CPU +18~27%). admission control은 여전히
+> 필요.
+>
+> **P3 WebClient/WebFlux** — thread-per-request를 걷어내면 모든 resource가 좋아지나? → platform
+> threads **80→49→37**(−53.75%), throughput/latency 불변. 하지만 **CPU/RSS는 또 따라오지 않음**
+> (A→B CPU +27~32%).
+>
+> **P4 Scalability Boundary** — 그래서 실제 경계는? → **Platform Thread+Queue는 경계를 발견**
+> (Closed MSC [50,56] / MRC [350,400], Open MSAR [6,7] req/s). **Virtual Thread / WebFlux는 single-host
+> control-valid 범위 내에서 경계 미발견**(Closed ≥1120, Open ≥168 req/s, 둘 다 CONTROL-CENSORED;
+> M2 vs M3 ranking INCONCLUSIVE) — Virtual Thread 한계처럼 보이던 실패를 shared-host ephemeral-port
+> confound로 규명해 architecture 한계와 benchmark 한계를 분리.
+
+- **전체 프로젝트 Final Report**: [`docs/test-results/llm-concurrency-lab-final-report.md`](docs/test-results/llm-concurrency-lab-final-report.md)
+- **전체 프로젝트 Portfolio Summary**: [`docs/portfolio/llm-concurrency-lab-summary.md`](docs/portfolio/llm-concurrency-lab-summary.md)
+- 각 Phase의 상세 결과는 아래 Phase별 섹션 참조. **Phase마다 runtime이 다르므로**(Java 8/1.5.22 →
+  Java 21/3.x → Java 8/2.7.18 → Java 21/4.1.0) Phase 간 절대 수치를 직접 비교하지 않고 방향·패턴만
+  비교한다.
 
 ## Phase 1 — Baseline (`gateway-mvc-executor-java8`) — 완료 (Frozen)
 
@@ -109,3 +135,64 @@ CPU는 소폭 감소했지만 RSS는 부하에 따라 방향이 갈렸다(상세
 > **Phase 3는 freeze됐다.** 코드/결과/문서를 더 이상 수정하거나 추가 Formal benchmark를 수행하지
 > 않는다 — 위 Final Report/Portfolio Summary가 최종본이다. Unit 8 등 향후 profiling을 진행하더라도
 > Phase 3 canonical raw/aggregate/Final Report는 덮어쓰지 않고 별도 경로로 분리 저장한다.
+
+## Phase 4 — Concurrency-Model Scalability Boundaries (`gateway-phase4-platform-queue` / `gateway-phase4-virtual-thread` / `gateway-phase4-webflux`) — 완료 (Frozen)
+
+동일한 Java 21(Temurin 21.0.11+10) + Spring Boot 4.1.0 런타임 / native macOS ARM64 host / 고정
+SSE workload 위에서 세 아키텍처의 **실제 scalability boundary**를 두 축으로 측정했다:
+
+- **M1** — Platform thread + fixed `ThreadPoolExecutor`(50) + bounded `ArrayBlockingQueue`(500) +
+  blocking `HttpURLConnection`
+- **M2** — Virtual thread per request + M1과 byte-identical한 blocking `HttpURLConnection`
+- **M3** — Spring WebFlux + Reactor Netty `WebClient`(pooled, non-blocking)
+
+**Research question**: "누가 가장 빠른가"가 아니라 — (Closed) 동시에 몇 개의 streaming stream을
+SLO·reliability를 유지하며 *보유*할 수 있는가, (Open) 어느 arrival rate까지 backlog 누적 없이
+*지속*할 수 있는가. Closed와 Open은 하나의 숫자로 합치지 않는다.
+
+- **Final Report**: [`docs/test-results/phase4/phase4-final-report.md`](docs/test-results/phase4/phase4-final-report.md) (30 sections)
+- **Portfolio Summary**: [`docs/portfolio/phase4-summary.md`](docs/portfolio/phase4-summary.md)
+- **Canonical datasets**:
+  - Closed Formal (N≤640): `docs/test-results/phase4/unit6-closed-formal/` (`formal-aggregate.json`)
+  - Extended Closed Formal (N=1120, Phase 4.1): `docs/test-results/phase4/unit6.7-extended-closed-formal/`
+  - Open Screening: `docs/test-results/phase4/unit8-open-screening/` (`UNIT8.3-COMPLETION.md`)
+  - Open control recalibration: `docs/test-results/phase4/unit8.2-single-host-safe-open-max-recalibration/`
+  - Open Formal: `docs/test-results/phase4/unit9-open-formal/` (`formal-aggregate.json`)
+- **설계/결정 문서**: [`docs/test-plan/phase4-design.md`](docs/test-plan/phase4-design.md) §13(H4-a~g),
+  [`docs/test-plan/phase4-open-formal-protocol.md`](docs/test-plan/phase4-open-formal-protocol.md),
+  [`docs/decisions/phase4-open-single-host-ephemeral-headroom.md`](docs/decisions/phase4-open-single-host-ephemeral-headroom.md),
+  `docs/decisions/phase4-*.md`.
+
+**핵심 결과**:
+
+| model | Closed (concurrent streams) | Open (arrival rate) |
+|---|---|---|
+| **M1 (PT+queue)** | Formal-confirmed **MSC [50,56]**, **MRC [350,400]** | Formal-confirmed **MSAR [6,7] req/s** |
+| **M2 (Virtual Thread)** | **MSC/MRC ≥ 1120 — CONTROL-CENSORED** | **MSAR ≥ 168 req/s — CONTROL-CENSORED** |
+| **M3 (WebFlux)** | **MSC/MRC ≥ 1120 — CONTROL-CENSORED** | **MSAR ≥ 168 req/s — CONTROL-CENSORED** |
+
+- **M2 vs M3 exact ceiling ranking: INCONCLUSIVE** — 둘 다 test rig에 의해 censored됨. `168 req/s`는
+  단일-host benchmark rig의 transport-safe 상한(`SAFE_OPEN_MAX_SINGLE_HOST_FINAL`)이며 **architecture
+  한계가 아니다.**
+- M1의 boundary는 **queue-wait latency**: R=7에서 모든 요청이 rejection 없이 완료되지만 backlog가
+  누적되며 TTFC·stream duration p95가 ~40s·~48s로 무너진다(SLO fail). Executor capacity와
+  service-quality boundary는 같지 않다.
+- **Measurement-integrity 과정 자체가 결과의 일부**: (1) M2 R=160 "VT 실패"가 실제로는 Tomcat
+  `maxConnections` 기본값 binding, (2) xk6-sse v0.1.11이 `sse.open()`마다 새 transport를 만들고
+  닫지 않아 connection population이 ~8배 부풀려짐(`client.close()` fix로 ~10.5k→~1.28k), (3) R=256
+  실패가 k6와 Gateway가 같은 host의 16384-port ephemeral pool을 공유해 발생한 **shared-host
+  transport confound**(A∪B ≈ 16362, A∩B ≈ 1)로 확인 — model 결과에서 제외.
+- Extended Closed(Phase 4.1): `SAFE_CLOSED_MAX_EXTENDED = 1120`까지 M2/M3 모두 GREEN, boundary
+  미발견.
+
+**H4-a~g 가설 판정**(Final Report §21): H4-a NOT SUPPORTED, H4-b SUPPORTED, H4-c NOT SUPPORTED,
+H4-d SUPPORTED(characterised), H4-e NOT EVALUABLE(model boundary 미도달), H4-f PARTIALLY SUPPORTED,
+H4-g NOT SUPPORTED.
+
+**Optional Future Work**(자동 실행 안 함): Phase 4.2 — 별도 LoadGen host 기반 Extended Open
+Boundary(single-host ephemeral-port confound 제거, M2/M3 실제 Open ceiling 탐색; 별도 environment
+epoch, 현재 결과를 대체하지 않음); JFR/async-profiler 기반 CPU/RSS root-cause profiling.
+
+> **Phase 4는 freeze됐다.** canonical raw/aggregate/Final Report/Portfolio Summary가 최종본이며 더
+> 이상 수정하지 않는다. Phase 4.2·profiling을 진행하더라도 별도 경로로 분리 저장하고 자동 시작하지
+> 않는다. Phase 1~3 섹션의 의미는 변경되지 않는다.

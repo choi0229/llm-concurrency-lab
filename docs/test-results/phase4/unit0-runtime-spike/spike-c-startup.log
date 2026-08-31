@@ -1,0 +1,17 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-25T20:13:37.776+09:00  INFO 2163 --- [           main] c.l.phase4spike.SpikeCApplication        : Starting SpikeCApplication v0.0.1 using Java 21.0.11 with PID 2163 (/private/tmp/claude-501/-Users-user-Documents-GitHub-llm-concurrency-lab/24e8b9d1-d9a9-4390-93c2-df9eaa35e8d5/scratchpad/phase4-spikes/spike-c-webflux/build/libs/spike-c-webflux-0.0.1.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab)
+2026-08-25T20:13:37.778+09:00  INFO 2163 --- [           main] c.l.phase4spike.SpikeCApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-25T20:13:38.401+09:00  INFO 2163 --- [           main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 18093 (http)
+2026-08-25T20:13:38.409+09:00  INFO 2163 --- [           main] c.l.phase4spike.SpikeCApplication        : Started SpikeCApplication in 0.871 seconds (process running for 1.174)
+GET /ping -> 
+spike-c pong java=21.0.11 arch=aarch64 thread=Thread[#39,reactor-http-nio-3,5,main] webClientClass=org.springframework.web.reactive.function.client.DefaultWebClient
+jar tomcat/servlet-api grep: NONE FOUND (exit 1)

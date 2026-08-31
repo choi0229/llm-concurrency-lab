@@ -1,0 +1,13 @@
+[11:22:39] === Phase 4 Open Screening: START ===
+[11:22:39] RUN m1 R=2 label=screen1
+[11:25:51] RUN m2 R=2 label=screen1
+[11:29:00] RUN m3 R=2 label=screen1
+[11:32:11] RUN m2 R=5 label=screen1
+[11:35:22] RUN m3 R=5 label=screen1
+[11:38:33] RUN m1 R=5 label=screen1
+[11:41:44] RUN m3 R=10 label=screen1
+[11:44:56] RUN m1 R=10 label=screen1
+[11:48:45] INVALID (recoverable) for m1 R=10: {'dropped_eq_0'} -- one retry
+[11:48:45] RUN m1 R=10 label=screen1-retry1
+[11:52:34] Retry ALSO invalid for m1 R=10 -- STOP
+[11:52:34] *** OPEN SCREENING STOP: m1 R=10: original AND retry both INVALID ***

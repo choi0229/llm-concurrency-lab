@@ -1,0 +1,33 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-30T01:56:38.662+09:00  INFO 60939 --- [           main] c.l.p.v.Phase4VirtualThreadApplication   : Starting Phase4VirtualThreadApplication v0.1.0 using Java 21.0.11 with PID 60939 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-virtual-thread/build/libs/gateway-phase4-virtual-thread-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-virtual-thread)
+2026-08-30T01:56:38.663+09:00  INFO 60939 --- [           main] c.l.p.v.Phase4VirtualThreadApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-30T01:56:38.978+09:00  INFO 60939 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 18102 (http)
+2026-08-30T01:56:39.061+09:00  INFO 60939 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-30T01:56:39.061+09:00  INFO 60939 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-30T01:56:39.078+09:00  INFO 60939 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 393 ms
+2026-08-30T01:56:39.244+09:00  INFO 60939 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-08-30T01:56:39.268+09:00  INFO 60939 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 18102 (http) with context path '/'
+2026-08-30T01:56:39.271+09:00  INFO 60939 --- [           main] c.l.p.v.Phase4VirtualThreadApplication   : Started Phase4VirtualThreadApplication in 0.75 seconds (process running for 0.906)
+2026-08-30T01:56:39.424+09:00  INFO 60939 --- [io-18102-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-30T01:56:39.424+09:00  INFO 60939 --- [io-18102-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-30T01:56:39.425+09:00  INFO 60939 --- [io-18102-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-30T01:57:46.937+09:00  INFO 60939 --- [  virtual-10557] c.l.phase4.common.BlockingMockLlmRelay   : [p4-10427] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T01:57:49.953+09:00  INFO 60939 --- [  virtual-10886] c.l.phase4.common.BlockingMockLlmRelay   : [p4-10749] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T01:58:50.452+09:00  INFO 60939 --- [  virtual-20369] c.l.phase4.common.BlockingMockLlmRelay   : [p4-20110] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T01:59:03.618+09:00  INFO 60939 --- [  virtual-22298] c.l.phase4.common.BlockingMockLlmRelay   : [p4-22039] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T01:59:04.577+09:00  INFO 60939 --- [  virtual-22449] c.l.phase4.common.BlockingMockLlmRelay   : [p4-22190] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T01:59:15.477+09:00  INFO 60939 --- [  virtual-24071] c.l.phase4.common.BlockingMockLlmRelay   : [p4-23812] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T01:59:36.683+09:00  INFO 60939 --- [  virtual-27408] c.l.phase4.common.BlockingMockLlmRelay   : [p4-27139] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T01:59:37.670+09:00  INFO 60939 --- [  virtual-27564] c.l.phase4.common.BlockingMockLlmRelay   : [p4-27295] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T01:59:39.801+09:00  INFO 60939 --- [  virtual-27840] c.l.phase4.common.BlockingMockLlmRelay   : [p4-27571] upstream relay ended with IOException: java.net.BindException: Can't assign requested address
+2026-08-30T01:59:49.419+09:00  INFO 60939 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-30T01:59:49.423+09:00  INFO 60939 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

@@ -1,0 +1,38 @@
+Phase 4 Unit 0 — Runtime artifact checksums
+
+## JDK — Eclipse Temurin 21.0.11+10 (macOS aarch64)
+
+Reused verbatim from Phase 2 (docs/decisions/phase2-formal-native-macos-environment.md §5,
+scripts/setup-phase2-native-runtime.sh lines 22-39). Not re-downloaded in Unit 0 — the artifact
+was already present at .native-runtime/jdk-21.0.11+10 and verified again in this Unit via
+`java -version` / `release` file inspection (see environment.txt), which matches this record.
+
+  Source URL: https://api.adoptium.net/v3/binary/version/jdk-21.0.11%2B10/mac/aarch64/jdk/hotspot/normal/eclipse?project=jdk
+  Artifact:   OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.11_10.tar.gz
+  SHA256:     6ebcf221c9b41507b14c098e93c6ead6440b8d9bd154f8ec666c4c73abbdb201
+  (verified as a 64-char hex string in this Unit; script setup-phase2-native-runtime.sh enforces
+   this exact value at download time via `shasum -a 256` comparison, so re-verification here is
+   a length/format sanity check, not a fresh download+hash.)
+
+## Gradle 8.14 (binary distribution)
+
+Fetched fresh in this Unit from the official Gradle distribution service (priority-3 official source
+per Unit 0 research-source ordering).
+
+  Source URL: https://services.gradle.org/distributions/gradle-8.14-bin.zip.sha256 (redirects, -L followed)
+  SHA256 (official, published sibling file): 61ad310d3c7d3e5da131b76bbf22b5a4c0786e9d892dae8c1658d4b484de3caa
+
+  This Unit did NOT re-download gradle-8.14-bin.zip to hash it locally — the wrapper had already
+  fetched, verified (Gradle wrapper's own built-in SHA-256 integrity check on the *.zip.ok marker
+  mechanism), and extracted it during Phase 2 (~/.gradle/wrapper/dists/gradle-8.14-bin/), and the
+  original zip was deleted by the wrapper after successful extraction (only gradle-8.14-bin.zip.ok
+  remains, per Gradle wrapper's normal behavior). `gradle --version` output (environment.txt) matches
+  the expected 8.14 build metadata (Build time 2025-04-25 09:29:08 UTC, revision 34c560e...).
+  distributionSha256Sum was NOT pinned in gateway-mvc-java21/gradle/wrapper/gradle-wrapper.properties
+  in Phase 2 — noted as a Unit 1 hardening candidate (add `validateDistributionUrl=true` is already
+  present; `distributionSha256Sum=<value above>` is not).
+
+## Azul Zulu JDK 8 (Phase 3 legacy runtime — NOT part of Phase 4 common runtime)
+
+Recorded for completeness only (Phase 1/Phase 3 use it, Phase 4 does not).
+SHA256 (from docs/decisions/phase3-version-compatibility.md §2): 58bb3c08f2aa63d9743cf31899fa4b8c6c9effefce9479e7288c26621c3bb21b

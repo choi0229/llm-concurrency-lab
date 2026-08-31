@@ -1,0 +1,18 @@
+{
+  "calibration_unit": "8.2-single-host-safe-open-max-recalibration",
+  "canonical": false,
+  "target": "m2",
+  "target_rate": 192,
+  "run_label": "cal1",
+  "warmup_sec": 60,
+  "measurement_sec": 120,
+  "target_url": "http://127.0.0.1:18102/chat/stream",
+  "legs": "A:18102,B:8000",
+  "chat_total_timeout_ms": 60000,
+  "workload": {"firstChunkDelayMs": 1000, "chunkIntervalMs": 200, "chunkCount": 35, "chunkSizeBytes": 64},
+  "k6_pre_allocated_vus": 11520,
+  "k6_max_vus": 14400,
+  "k6_scenario": "06-phase4-open-diagnostic-r160.js",
+  "server_tomcat_max_connections": 3200,
+  "k6_pid": 59924, "gateway_pid": 59868, "mock_pid": 59860
+}

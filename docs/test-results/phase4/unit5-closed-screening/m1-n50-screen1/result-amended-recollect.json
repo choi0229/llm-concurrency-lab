@@ -1,0 +1,152 @@
+{
+  "valid": true,
+  "invalid_reasons": [],
+  "model": "m1",
+  "concurrency": 50,
+  "run_label": "screen1",
+  "client_cohort": {
+    "target_concurrency": 50,
+    "actual_started": 50,
+    "target_reached": true,
+    "completed": 50,
+    "rejected": 0,
+    "failed_mid_stream": 0,
+    "failed_no_event": 0,
+    "terminal_sum": 50,
+    "invariant_ok": true,
+    "dropped_iterations": 0
+  },
+  "model_outcome": {
+    "actual_started": 50,
+    "completed": 50,
+    "rejected": 0,
+    "failed_mid_stream": 0,
+    "failed_no_event": 0,
+    "reliability_pass": true,
+    "slo_pass": true,
+    "server_outcomes_wave_estimate": {
+      "completed": 50.0,
+      "rejected": 0.0,
+      "timeout": 0.0,
+      "upstream_error": 0.0,
+      "client_disconnect": 0.0,
+      "internal_error": 0.0,
+      "write_overflow": 0.0
+    },
+    "prewarm_contamination_ok": true,
+    "color": "GREEN",
+    "classification": "GREEN",
+    "classification_evidence": [
+      "reliability PASS, SLO PASS"
+    ]
+  },
+  "client_latency": {
+    "completed_ttfc_p95_s": 1.03,
+    "completed_ttfc_avg_s": 1.0242600000000002,
+    "completed_duration_p95_s": 7.92155,
+    "completed_duration_avg_s": 7.9074599999999995,
+    "diagnostic_all_outcomes_ttfc_p95_s": 1.03,
+    "diagnostic_all_outcomes_duration_p95_s": 7.92155,
+    "slo_ttfc_threshold_s": 2.0,
+    "slo_duration_threshold_s": 10.0
+  },
+  "wave_start_spread": {
+    "spread_ms": 7,
+    "exceeds_threshold": false
+  },
+  "platform_threads": {
+    "peak": 148.0,
+    "sample_count": 44
+  },
+  "cpu": {
+    "process_cpu_usage_mean": 0.004355202621059913,
+    "process_cpu_usage_peak": 0.020723237822292306,
+    "system_cpu_count": 10.0,
+    "avg_cores_estimate": 0.043552026210599136,
+    "peak_cores_estimate_diagnostic": 0.20723237822292306
+  },
+  "rss": {
+    "count": 47,
+    "start_kib": 216272,
+    "peak_kib": 240320,
+    "delta_kib": 24048
+  },
+  "fd": {
+    "open_peak": 119.0,
+    "max_files": 1048576.0,
+    "metric_present": true
+  },
+  "heap": {
+    "peak": 43065312.0,
+    "sample_count": 352
+  },
+  "common_gateway": {
+    "gateway_active_requests_final": 0.0,
+    "gateway_upstream_active_final": 0.0,
+    "internal_error_total": 0.0
+  },
+  "implementation_specific": {
+    "executor_active_peak": {
+      "peak": 50.0,
+      "sample_count": 44
+    },
+    "executor_queue_depth_peak": {
+      "peak": 0.0,
+      "sample_count": 44
+    },
+    "executor_rejected_final": 0.0
+  },
+  "mock": {
+    "active_final": 0.0,
+    "waiting_final": 0.0,
+    "completed_final": 55.0
+  },
+  "postflight_clean": true,
+  "stall_check": {
+    "query_ok": true,
+    "window_start_s": 1787920665.412,
+    "window_end_s": 1787920712.941,
+    "gateway_scrape_gap_max_s": 1,
+    "gateway_gap_exceeds_threshold": false,
+    "mock_log_gap_max_s": 7.8480000495910645,
+    "mock_gap_exceeds_threshold": false,
+    "client_max_duration_s": 7.922,
+    "client_duration_anomaly": false,
+    "thresholds": {
+      "gateway_gap_s": 5.0,
+      "mock_gap_s": 15.0,
+      "client_duration_s": 20.0
+    },
+    "stall_detected": false,
+    "evidence": [
+      "no anomaly signal observed"
+    ]
+  },
+  "timestamps": {
+    "process_start_ms": 1787920663745,
+    "k6_wall_start_ms": 1787920665412,
+    "k6_wall_end_ms": 1787920712941,
+    "drain_start_ms": 1787920712961,
+    "drain_end_ms": 1787920712987
+  },
+  "environment": {
+    "model": "m1",
+    "concurrency": 50,
+    "run_label": "screen1",
+    "gateway_port": 18101,
+    "mock_port": 8000,
+    "prometheus_port": 9094,
+    "prometheus_scrape_interval": "1s",
+    "prewarm_count": 5,
+    "chat_total_timeout_ms": 60000,
+    "workload": {
+      "firstChunkDelayMs": 1000,
+      "chunkIntervalMs": 200,
+      "chunkCount": 35,
+      "chunkSizeBytes": 64
+    },
+    "gateway_jar": "gateway-phase4-platform-queue-0.1.0.jar",
+    "gateway_pid": 49181,
+    "jdk_home": "/Users/user/Documents/GitHub/llm-concurrency-lab/.native-runtime/jdk-21.0.11+10/Contents/Home"
+  }
+}

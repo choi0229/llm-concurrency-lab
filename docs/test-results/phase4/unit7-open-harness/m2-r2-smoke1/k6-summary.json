@@ -1,0 +1,117 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    },
+    "metrics": {
+        "http_req_sending": {
+            "avg": 1006.1598975409835,
+            "min": 1003.448875,
+            "med": 1005.74425,
+            "max": 1015.368209,
+            "p(90)": 1007.581,
+            "p(95)": 1008.783083
+        },
+        "measurement_iterations_started_total": {
+            "count": 41,
+            "rate": 1.0824283154587897
+        },
+        "client_stream_duration_seconds": {
+            "min": 7.856,
+            "med": 7.87,
+            "max": 7.884,
+            "p(90)": 7.881,
+            "p(95)": 7.881,
+            "avg": 7.871048780487802
+        },
+        "data_sent": {
+            "count": 16409,
+            "rate": 433.2089323991044
+        },
+        "iteration_duration": {
+            "p(95)": 7881.747125,
+            "avg": 7872.199581262294,
+            "min": 7855.76,
+            "med": 7873.425709,
+            "max": 7887.781125,
+            "p(90)": 7880.867875
+        },
+        "client_completed_stream_duration_seconds": {
+            "p(95)": 7.881,
+            "avg": 7.871048780487802,
+            "min": 7.856,
+            "med": 7.87,
+            "max": 7.884,
+            "p(90)": 7.881
+        },
+        "data_received": {
+            "count": 258274,
+            "rate": 6818.611969434231
+        },
+        "iterations": {
+            "count": 61,
+            "rate": 1.6104421278777115
+        },
+        "sse_event": {
+            "count": 2196,
+            "rate": 57.97591660359762
+        },
+        "http_req_duration": {
+            "p(95)": 7881.424125,
+            "avg": 7871.945243836065,
+            "min": 7855.625833,
+            "med": 7873.221291,
+            "max": 7887.620292,
+            "p(90)": 7880.625125
+        },
+        "client_events_received_total": {
+            "count": 1476,
+            "rate": 38.96741935651643
+        },
+        "vus_max": {
+            "max": 50,
+            "value": 50,
+            "min": 50
+        },
+        "client_ttfc_completed_seconds": {
+            "med": 1.006,
+            "max": 1.009,
+            "p(90)": 1.007,
+            "p(95)": 1.007,
+            "avg": 1.0058048780487807,
+            "min": 1.004
+        },
+        "measurement_start_epoch_s": {
+            "value": 1787969997.289,
+            "min": 1787969997.289,
+            "max": 1787969997.289
+        },
+        "http_reqs": {
+            "count": 61,
+            "rate": 1.6104421278777115
+        },
+        "client_ttfc_seconds": {
+            "p(90)": 1.007,
+            "p(95)": 1.007,
+            "avg": 1.0058048780487807,
+            "min": 1.004,
+            "med": 1.006,
+            "max": 1.009
+        },
+        "vus": {
+            "max": 15,
+            "value": 2,
+            "min": 2
+        },
+        "client_completed_total": {
+            "count": 41,
+            "rate": 1.0824283154587897
+        }
+    },
+    "setup_data": {
+        "measurementStartMs": 1787969997289
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "purpose": "Direct Mock (k6 -> Mock LLM directly, no Gateway) open-model (constant-arrival-rate) control calibration.",
+  "workload": {
+    "firstChunkDelayMs": 1000, "chunkIntervalMs": 200, "chunkCount": 35, "chunkSizeBytes": 64,
+    "warmup_sec": 15, "measurement_sec": 30
+  },
+  "rates": [
+    {"target_rate": 10,  "started": 301,  "actual_rate": 10.03,  "completed": 301,  "rejected": 0, "failed_mid": 0, "failed_noevt": 0, "dropped": 0, "http_req_duration_p95_s": null, "custom_duration_p95_s": 7.848,   "classification": "CLEAN"},
+    {"target_rate": 20,  "started": 601,  "actual_rate": 20.03,  "completed": 601,  "rejected": 0, "failed_mid": 0, "failed_noevt": 0, "dropped": 0, "http_req_duration_avg_s": 7.85, "http_req_duration_max_s": 8.09, "custom_duration_p95_s": 104.925, "classification": "CLEAN_WITH_MEASUREMENT_ARTIFACT", "note": "custom client_stream_duration_seconds Trend metric showed p95=104.9s / max=104.965s (JS-side Date.now() read skew, see SUMMARY.md), but k6's own built-in iteration_duration/http_req_duration metrics (Go-runtime-timed, more authoritative) were normal for ALL 901 iterations (avg=7.85s, max=8.09s) -- classified CLEAN based on the authoritative built-in metric, not the skewed custom one"},
+    {"target_rate": 40,  "started": 1201, "actual_rate": 40.03,  "completed": 1201, "rejected": 0, "failed_mid": 0, "failed_noevt": 0, "dropped": 0, "custom_duration_p95_s": 7.878,  "classification": "CLEAN"},
+    {"target_rate": 80,  "started": 2401, "actual_rate": 80.03,  "completed": 2401, "rejected": 0, "failed_mid": 0, "failed_noevt": 0, "dropped": 0, "custom_duration_p95_s": 7.917,  "classification": "CLEAN"},
+    {"target_rate": 160, "started": 4800, "actual_rate": 160.00, "completed": 4800, "rejected": 0, "failed_mid": 0, "failed_noevt": 0, "dropped": 0, "custom_duration_p95_s": 7.955,  "k6_peak_cpu_pct": 97.0, "classification": "CLEAN", "note": "k6 peak CPU 97% -- near single-core saturation, a LOADGEN warning sign for rates beyond this candidate range, though this run itself completed clean"},
+    {"target_rate": 320, "started": 9600, "actual_rate": 320.00, "completed": 9600, "rejected": 0, "failed_mid": 0, "failed_noevt": 0, "dropped": 0, "custom_duration_p95_s": 9.179,  "k6_peak_cpu_pct": 66.0, "mock_peak_cpu_pct": 70.6, "classification": "CLEAN"}
+  ],
+  "robust_clean_ceiling_R": 320,
+  "headroom_ratio": 1.25,
+  "SAFE_OPEN_MAX": 256,
+  "SAFE_OPEN_MAX_basis": "robust_clean_ceiling_R (320, top of initial candidate list, no failures/degradation) / 1.25",
+  "measurement_tooling_finding": "Custom JS-computed Trend metrics (client_stream_duration_seconds, client_ttfc_seconds) in load-test-k6/scenarios/03-constant-arrival-rate-continuous.js can show large transient outliers under high-VU host contention (observed once, R=20) that do NOT reflect actual request/network duration -- k6's own built-in iteration_duration/http_req_duration metrics stayed normal throughout the same run. Recommend cross-checking against built-in metrics during Unit 7+ Open screening/Formal rather than trusting only the custom Trend metrics in isolation.",
+  "little_law_sanity_check_R320": "R=320 * W~7.8s =~ 2496 expected concurrent in-flight -- used as sanity expectation only per Unit 1 design brief section 18, not as a capacity determinant"
+}

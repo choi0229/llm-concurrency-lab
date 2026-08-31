@@ -1,0 +1,204 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Users/user/Documents/GitHub/llm-concurrency-lab/load-test-k6/scenarios/03-constant-arrival-rate-continuous.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 400 max VUs, 2m15s max duration (incl. graceful stop):
+              * arrival: 10.00 iterations/s for 45s (maxVUs: 150-400, gracefulStop: 1m30s)
+
+
+running (0m01.0s), 010/150 VUs, 0 complete and 0 interrupted iterations
+arrival   [   2% ] 010/150 VUs  01.0s/45s  10.00 iters/s
+
+running (0m02.0s), 020/150 VUs, 0 complete and 0 interrupted iterations
+arrival   [   4% ] 020/150 VUs  02.0s/45s  10.00 iters/s
+
+running (0m03.0s), 030/150 VUs, 0 complete and 0 interrupted iterations
+arrival   [   7% ] 030/150 VUs  03.0s/45s  10.00 iters/s
+
+running (0m04.0s), 040/150 VUs, 0 complete and 0 interrupted iterations
+arrival   [   9% ] 040/150 VUs  04.0s/45s  10.00 iters/s
+
+running (0m05.0s), 050/150 VUs, 0 complete and 0 interrupted iterations
+arrival   [  11% ] 050/150 VUs  05.0s/45s  10.00 iters/s
+
+running (0m06.0s), 060/150 VUs, 0 complete and 0 interrupted iterations
+arrival   [  13% ] 060/150 VUs  06.0s/45s  10.00 iters/s
+
+running (0m07.0s), 070/150 VUs, 0 complete and 0 interrupted iterations
+arrival   [  16% ] 070/150 VUs  07.0s/45s  10.00 iters/s
+
+running (0m08.0s), 078/150 VUs, 2 complete and 0 interrupted iterations
+arrival   [  18% ] 078/150 VUs  08.0s/45s  10.00 iters/s
+
+running (0m09.0s), 078/150 VUs, 12 complete and 0 interrupted iterations
+arrival   [  20% ] 078/150 VUs  09.0s/45s  10.00 iters/s
+
+running (0m10.0s), 078/150 VUs, 22 complete and 0 interrupted iterations
+arrival   [  22% ] 078/150 VUs  10.0s/45s  10.00 iters/s
+
+running (0m11.0s), 078/150 VUs, 32 complete and 0 interrupted iterations
+arrival   [  24% ] 078/150 VUs  11.0s/45s  10.00 iters/s
+
+running (0m12.0s), 078/150 VUs, 42 complete and 0 interrupted iterations
+arrival   [  27% ] 078/150 VUs  12.0s/45s  10.00 iters/s
+
+running (0m13.0s), 078/150 VUs, 52 complete and 0 interrupted iterations
+arrival   [  29% ] 078/150 VUs  13.0s/45s  10.00 iters/s
+
+running (0m14.0s), 078/150 VUs, 62 complete and 0 interrupted iterations
+arrival   [  31% ] 078/150 VUs  14.0s/45s  10.00 iters/s
+
+running (0m15.0s), 078/150 VUs, 72 complete and 0 interrupted iterations
+arrival   [  33% ] 078/150 VUs  15.0s/45s  10.00 iters/s
+
+running (0m16.0s), 078/150 VUs, 82 complete and 0 interrupted iterations
+arrival   [  36% ] 078/150 VUs  16.0s/45s  10.00 iters/s
+
+running (0m17.0s), 078/150 VUs, 92 complete and 0 interrupted iterations
+arrival   [  38% ] 078/150 VUs  17.0s/45s  10.00 iters/s
+
+running (0m18.0s), 078/150 VUs, 102 complete and 0 interrupted iterations
+arrival   [  40% ] 078/150 VUs  18.0s/45s  10.00 iters/s
+
+running (0m19.0s), 078/150 VUs, 112 complete and 0 interrupted iterations
+arrival   [  42% ] 078/150 VUs  19.0s/45s  10.00 iters/s
+
+running (0m20.0s), 078/150 VUs, 122 complete and 0 interrupted iterations
+arrival   [  44% ] 078/150 VUs  20.0s/45s  10.00 iters/s
+
+running (0m21.0s), 078/150 VUs, 132 complete and 0 interrupted iterations
+arrival   [  47% ] 078/150 VUs  21.0s/45s  10.00 iters/s
+
+running (0m22.0s), 078/150 VUs, 142 complete and 0 interrupted iterations
+arrival   [  49% ] 078/150 VUs  22.0s/45s  10.00 iters/s
+
+running (0m23.0s), 078/150 VUs, 152 complete and 0 interrupted iterations
+arrival   [  51% ] 078/150 VUs  23.0s/45s  10.00 iters/s
+
+running (0m24.0s), 078/150 VUs, 162 complete and 0 interrupted iterations
+arrival   [  53% ] 078/150 VUs  24.0s/45s  10.00 iters/s
+
+running (0m25.0s), 078/150 VUs, 172 complete and 0 interrupted iterations
+arrival   [  56% ] 078/150 VUs  25.0s/45s  10.00 iters/s
+
+running (0m26.0s), 078/150 VUs, 182 complete and 0 interrupted iterations
+arrival   [  58% ] 078/150 VUs  26.0s/45s  10.00 iters/s
+
+running (0m27.0s), 078/150 VUs, 192 complete and 0 interrupted iterations
+arrival   [  60% ] 078/150 VUs  27.0s/45s  10.00 iters/s
+
+running (0m28.0s), 078/150 VUs, 202 complete and 0 interrupted iterations
+arrival   [  62% ] 078/150 VUs  28.0s/45s  10.00 iters/s
+
+running (0m29.0s), 078/150 VUs, 212 complete and 0 interrupted iterations
+arrival   [  64% ] 078/150 VUs  29.0s/45s  10.00 iters/s
+
+running (0m30.0s), 078/150 VUs, 222 complete and 0 interrupted iterations
+arrival   [  67% ] 078/150 VUs  30.0s/45s  10.00 iters/s
+
+running (0m31.0s), 078/150 VUs, 232 complete and 0 interrupted iterations
+arrival   [  69% ] 078/150 VUs  31.0s/45s  10.00 iters/s
+
+running (0m32.0s), 078/150 VUs, 242 complete and 0 interrupted iterations
+arrival   [  71% ] 078/150 VUs  32.0s/45s  10.00 iters/s
+
+running (0m33.0s), 078/150 VUs, 252 complete and 0 interrupted iterations
+arrival   [  73% ] 078/150 VUs  33.0s/45s  10.00 iters/s
+
+running (0m34.0s), 078/150 VUs, 262 complete and 0 interrupted iterations
+arrival   [  76% ] 078/150 VUs  34.0s/45s  10.00 iters/s
+
+running (0m35.0s), 078/150 VUs, 272 complete and 0 interrupted iterations
+arrival   [  78% ] 078/150 VUs  35.0s/45s  10.00 iters/s
+
+running (0m36.0s), 078/150 VUs, 282 complete and 0 interrupted iterations
+arrival   [  80% ] 078/150 VUs  36.0s/45s  10.00 iters/s
+
+running (0m37.0s), 078/150 VUs, 292 complete and 0 interrupted iterations
+arrival   [  82% ] 078/150 VUs  37.0s/45s  10.00 iters/s
+
+running (0m38.0s), 078/150 VUs, 302 complete and 0 interrupted iterations
+arrival   [  84% ] 078/150 VUs  38.0s/45s  10.00 iters/s
+
+running (0m39.0s), 078/150 VUs, 312 complete and 0 interrupted iterations
+arrival   [  87% ] 078/150 VUs  39.0s/45s  10.00 iters/s
+
+running (0m40.0s), 078/150 VUs, 322 complete and 0 interrupted iterations
+arrival   [  89% ] 078/150 VUs  40.0s/45s  10.00 iters/s
+
+running (0m41.0s), 078/150 VUs, 332 complete and 0 interrupted iterations
+arrival   [  91% ] 078/150 VUs  41.0s/45s  10.00 iters/s
+
+running (0m42.0s), 078/150 VUs, 342 complete and 0 interrupted iterations
+arrival   [  93% ] 078/150 VUs  42.0s/45s  10.00 iters/s
+
+running (0m43.0s), 078/150 VUs, 352 complete and 0 interrupted iterations
+arrival   [  96% ] 078/150 VUs  43.0s/45s  10.00 iters/s
+
+running (0m44.0s), 078/150 VUs, 362 complete and 0 interrupted iterations
+arrival   [  98% ] 078/150 VUs  44.0s/45s  10.00 iters/s
+
+running (0m45.0s), 078/150 VUs, 372 complete and 0 interrupted iterations
+arrival   [ 100% ] 078/150 VUs  45.0s/45s  10.00 iters/s
+
+running (0m46.0s), 069/150 VUs, 382 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 079/150 VUs  45s  10.00 iters/s
+
+running (0m47.0s), 059/150 VUs, 392 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 079/150 VUs  45s  10.00 iters/s
+
+running (0m48.0s), 049/150 VUs, 402 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 079/150 VUs  45s  10.00 iters/s
+
+running (0m49.0s), 039/150 VUs, 412 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 079/150 VUs  45s  10.00 iters/s
+
+running (0m50.0s), 029/150 VUs, 422 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 079/150 VUs  45s  10.00 iters/s
+
+running (0m51.0s), 019/150 VUs, 432 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 079/150 VUs  45s  10.00 iters/s
+
+running (0m52.0s), 009/150 VUs, 442 complete and 0 interrupted iterations
+arrival ↓ [ 100% ] 079/150 VUs  45s  10.00 iters/s
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    client_completed_total.................: 301            5.695458/s
+    client_events_received_total...........: 10836          205.036476/s
+    client_stream_duration_seconds.........: avg=7.837176 min=7.819 med=7.837 max=7.854 p(90)=7.846 p(95)=7.848
+    client_ttfc_completed_seconds..........: avg=1.002754 min=1.001 med=1.003 max=1.006 p(90)=1.004 p(95)=1.004
+    client_ttfc_seconds....................: avg=1.002754 min=1.001 med=1.003 max=1.006 p(90)=1.004 p(95)=1.004
+    measurement_iterations_started_total...: 301            5.695458/s
+    measurement_start_epoch_s..............: 1787664318.359 min=1787664318.359 max=1787664318.359
+    sse_event..............................: 16236          307.214122/s
+
+    HTTP
+    http_req_duration......................: avg=7.83s    min=7.81s med=7.83s max=7.87s p(90)=7.84s p(95)=7.85s
+    http_reqs..............................: 451            8.533726/s
+
+    EXECUTION
+    iteration_duration.....................: avg=7.83s    min=7.81s med=7.83s max=7.87s p(90)=7.84s p(95)=7.85s
+    iterations.............................: 451            8.533726/s
+    vus....................................: 9              min=9              max=78            
+    vus_max................................: 150            min=150            max=150           
+
+    NETWORK
+    data_received..........................: 2.0 MB         37 kB/s
+    data_sent..............................: 121 kB         2.3 kB/s
+
+
+
+
+running (0m52.8s), 000/150 VUs, 451 complete and 0 interrupted iterations
+arrival ✓ [ 100% ] 000/150 VUs  45s  10.00 iters/s

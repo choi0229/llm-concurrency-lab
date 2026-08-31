@@ -1,0 +1,24 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-30T01:43:19.982+09:00  INFO 52049 --- [           main] c.l.p.p.Phase4PlatformQueueApplication   : Starting Phase4PlatformQueueApplication v0.1.0 using Java 21.0.11 with PID 52049 (/Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-platform-queue/build/libs/gateway-phase4-platform-queue-0.1.0.jar started by user in /Users/user/Documents/GitHub/llm-concurrency-lab/gateway-phase4-platform-queue)
+2026-08-30T01:43:19.983+09:00  INFO 52049 --- [           main] c.l.p.p.Phase4PlatformQueueApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-30T01:43:20.305+09:00  INFO 52049 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 18101 (http)
+2026-08-30T01:43:20.389+09:00  INFO 52049 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-30T01:43:20.389+09:00  INFO 52049 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-30T01:43:20.405+09:00  INFO 52049 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 404 ms
+2026-08-30T01:43:20.573+09:00  INFO 52049 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-08-30T01:43:20.596+09:00  INFO 52049 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 18101 (http) with context path '/'
+2026-08-30T01:43:20.599+09:00  INFO 52049 --- [           main] c.l.p.p.Phase4PlatformQueueApplication   : Started Phase4PlatformQueueApplication in 0.756 seconds (process running for 0.912)
+2026-08-30T01:43:20.736+09:00  INFO 52049 --- [io-18101-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-30T01:43:20.737+09:00  INFO 52049 --- [io-18101-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-30T01:43:20.737+09:00  INFO 52049 --- [io-18101-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-30T01:47:21.925+09:00  INFO 52049 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-30T01:47:21.934+09:00  INFO 52049 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
